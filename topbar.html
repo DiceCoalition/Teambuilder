@@ -1,0 +1,61 @@
+<!-- Navbar -->
+<div class="w3-top" style="font-family:Verdana,sans-serif;font-size:15px;line-height:1.5">
+ <div class="w3-bar w3-theme-d2 w3-right-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right tdc-gold-bg-hover" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <!--<a href="https://cse.google.com/cse/publicurl?cx=000051281200302988646:yvhkao3jun8" class="w3-bar-item w3-button w3-hide-small w3-right w3-button" title="Search"><i class="fa fa-search"></i></a>-->
+  <a href="http://dicecoalition.com/tiki/tiki-searchindex.php" class="w3-bar-item w3-button w3-hide-small w3-right w3-button" title="Search"><i class="fa fa-search"></i></a>
+ 
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Community <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="http://dicecoalition.com/tiki/tiki-list_blogs.php" class="w3-bar-item w3-button">Blogs</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Create+an+Article&structure=Community" class="w3-bar-item w3-button">Create an Article/Blog</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Events&structure=Community" class="w3-bar-item w3-button">Events</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Local+Scenes&structure=Community" class="w3-bar-item w3-button">Local Scenes</a>
+      <a href="http://win.wizkids.com/bb/viewforum.php?f=10" target="_blank" class="w3-bar-item w3-button">Rulings</a>
+      <a href="http://dicecoalition.com/tiki/tiki-view_blog.php?blogId=2" class="w3-bar-item w3-button">What Have You Played?</a>
+      <a href="http://dicecoalition.com/tiki/tiki-list_comments.php" class="w3-bar-item w3-button">Article Comments</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Discussions&structure=Community" class="w3-bar-item w3-button">Discussion Links</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Links&structure=Community" class="w3-bar-item w3-button">General Information Links</a>
+    </div>
+  </div>
+  <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Articles" class="w3-bar-item w3-button w3-hide-small">Articles and Blogs</a>
+  <a href="http://wiki.dicecoalition.com" class="w3-bar-item w3-button w3-hide-small">Wiki</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">New Players <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=How+to+Play&structure=New+Players" class="w3-bar-item w3-button">How to Play</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Rulebooks&structure=New+Players" class="w3-bar-item w3-button">Rulebooks</a>
+      <a href="http://win.wizkids.com/" target="_blank" class="w3-bar-item w3-button">Where to Play</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Gear+and+Storage&structure=New+Players" class="w3-bar-item w3-button">Gear and Storage</a>
+      <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Online+Play&structure=New+Players" class="w3-bar-item w3-button">Online Play</a>
+    </div>
+  </div>
+  <a href="http://tb.dicecoalition.com" class="w3-bar-item w3-button w3-hide-small">Team Builder</a>
+  <a href="http://dicecoalition.com/" class="w3-bar-item w3-button tdc-gold-bg-hover tdc-gold-bg w3-left"><i class="fa fa-cube w3-margin-right"></i>The Dice Coalition</a>
+</div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large">
+    <a href="http://dicecoalition.com/teambuilder.html" class="w3-bar-item w3-button">Team Builder</a>
+    <a href="http://dicecoalition.com/tiki/tiki-index.php?page=New+Players" class="w3-bar-item w3-button">New Players</a>
+    <a href="http://wiki.dicecoalition.com" class="w3-bar-item w3-button">Wiki</a>
+    <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Articles" class="w3-bar-item w3-button">Articles and Blogs</a>
+    <a href="http://dicecoalition.com/tiki/tiki-index.php?page=Community" class="w3-bar-item w3-button">Community</a>
+	<a href="http://dicecoalition.com/tiki/tiki-searchindex.php" class="w3-bar-item w3-button">Search</a>
+	<!--<a href="https://cse.google.com/cse/publicurl?cx=006138548068799998894:qvlkperwosg" class="w3-bar-item w3-button">Search</a>-->
+    <!--<a href="https://cse.google.com/cse/publicurl?cx=000051281200302988646:yvhkao3jun8" class="w3-bar-item w3-button">Search</a> -->
+  </div>
+</div>
+<div style="height:50 px"></div>
+<script>  
+  // Used to toggle the menu on smaller screens when clicking on the menu button
+  function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+</script>
