@@ -1392,7 +1392,7 @@
     t += '<div class="im_title"><span class="im_main">'+a.mainname+'</span><br><span class="im_sub">'+a.subname+'</span></div>';
     t += '<div class="im_text">'+a.text+'</div>';
     t += '<div class="im_rarity r'+a.rarity+'"></div>';
-    if (trpcode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + trpaddress(a.nr) + '">';
+    if (trpcode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
     t += '</div>';
     t += '<td></tr></table>';
     return t;
@@ -1872,6 +1872,41 @@
       if (!code) return '';
       return 'http://www.thereservepool.com/images/smilies/cards/'+code+'large.jpg';
   }
+  //list of sets currently available on TDC CardService
+  var tdcsetname = {
+      avx:'avx',      
+      uxm:'uxm',      
+      bff:'bff',      
+      ygo:'ygo',
+      jl:'jl',
+      aou:'aou',
+      wol:'wol',
+      asm:'asm',
+      fus:'fus',
+      wf:'wf',
+      cw:'cw',
+	  drs:'drs',
+	  imw:'imw',
+	  def:'def',
+	  smc:'smc',
+	  gotg:'gotg',
+	  xfc:'xfc',
+	  thor:'thor',
+	  gaf:'gaf',
+	  bat:'bat',
+	  sww:'sww',
+	  toa:'toa',
+	  tmnt:'tmnt',
+	  hhs:'hhs'
+  };
+  //check for card in setnames for TDC. If it doesn't exist, try it in TRP list.
+  function tdcaddress(nr) {      
+	  var sn = tdcsetname[setnames[nr/1000|0]];
+	  if (!sn){ return trpaddress(nr);}
+	  var cardNum = nr%1000;
+      return 'http://dicecoalition.com/cardservice/Image.php?set='+sn+'&cardnum='+cardNum+'&res=l';
+  }
+  
   function visualize_team_link() {
       var f = function(x){
     return addtosearchlink(type, trpcode(x.nr));
@@ -2050,7 +2085,7 @@
   function showcardpreview(tr) {
       var cardpreview = E('cardpreview');
       var nr = tr ? parseInt(tr.dataset.nr) : 0;
-      if (nr === lastcardpreview || !nr || !trpaddress(nr))
+      if (nr === lastcardpreview || !nr || !tdcaddress(nr))
           return hidecardpreview();
       var prevnr = tr.previousElementSibling && tr.previousElementSibling.childNodes[5] ? parseInt(tr.previousElementSibling.childNodes[5].id.substring(4)) : 0;
       var nextnr = tr.nextElementSibling && tr.nextElementSibling.childNodes[5] ? parseInt(tr.nextElementSibling.childNodes[5].id.substring(4)) : 0;
@@ -2080,9 +2115,9 @@
           if (rect) window.scrollTo(0,rect.top + window.pageYOffset);
       }
       cardpreview.src = '';
-      cardpreview.src = trpaddress(nr);
-      if (nextnr) preloadpreview0.src = trpaddress(nextnr);
-      if (prevnr) preloadpreview1.src = trpaddress(prevnr);
+      cardpreview.src = tdcaddress(nr);
+      if (nextnr) preloadpreview0.src = tdcaddress(nextnr);
+      if (prevnr) preloadpreview1.src = tdcaddress(prevnr);
   }
   for (var i = 0; i < C('mm').length; i++) {
       C('mm')[i].addEventListener('click',function(ev) {
