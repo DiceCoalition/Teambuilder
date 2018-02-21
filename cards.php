@@ -585,7 +585,7 @@
     '264V4Sentinel|TARGET IDENTIFIED|When fielded, KO target opposing [XMEN] character die of equal or lower level.',
     '223X4Storm|Misspent Youth|Awaken -  Prep a die from your bag. (<em>When this Die spins up 1 or more levels, you may use this effect.</em>)',
     '244X4Sunfire|Moeagaru!|Awaken -  Character dice you control gain +1A and +1D until end of turn.  (<em>When this Die spins up 1 or more levels, you may use this effect.</em>)',
-    '22404The Blackbird|Under the Radar|[XMEN] character dice you control cannot be targeted by Global Abilities or Aciton dice until the start of your next turn.|Global: Pay [1]. Target Global Ability cannot be used until the start of your next turn. Use this Global Ability only once per turn.',
+    '22404The Blackbird|Under the Radar|[XMEN] character dice you control cannot be targeted by Global Abilities or Action dice until the start of your next turn.|Global: Pay [1]. Target Global Ability cannot be used until the start of your next turn. Use this Global Ability only once per turn.',
     '24204The Hellfire Club|Members Only|If you control the character die with the highest A, KO all other character dice.',
     '242X4Thunderbird|Warrior of the Apache|When Thunderbird is KO\'d, spin all your other character dice up 1 level.',
     '262X4Wolverine|Patch|When Wolverine is KO\'d, deal damage equal to his A divided as you choose to any number of target opposing character dice.',
