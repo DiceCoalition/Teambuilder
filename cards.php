@@ -299,7 +299,7 @@
     '263V4Ragnarok|Thou Art No Thor|When Ragnarok attacks, you may pay [2B]. If you do, deal 2 damage to target character die or opponent.',
     '253F4SP//dr|Legacy Lives On|While SP//dr is active, your Sidekick character dice cannot be KO\'d except by combat damage.',
     '254H4Samantha Wilson|Civilian Air Patrol|While Samantha Wilson is active, when a Sidekick die you control deals combat damage to an opponent, Prep a die from your bag.|Globa: Pay [S]. Prevent 1 damage to target character die or player.',
-    '25104Sif|Daughter of Asgard|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) Sif gets +1A and +1D for each different character die withImmortal you control.',
+    '25104Sif|Daughter of Asgard|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) Sif gets +1A and +1D for each different character die with Immortal you control.',
     '271V4Surtur|Ancient Menace|Surter gets +2A and +2D for each opposing character die.',
     '23404The Bifrost|Einstein-Rosen Bridge|When you field a character die this turn, you may Prep a die of the same energy type in your Used Pile.  ** Also, Prep a die from your bag.',
     '273A4Thor (M)|A God Amongst Men|While Thor is active, when you would take damage, redirect that damage to Thor.|Global: Pay [2B]. Once per turn, deal 1 damage to target character die.',
