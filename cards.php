@@ -4132,7 +4132,7 @@
     'Gold Dragon':2,
     'Human Outlander':1,
     'Pseudodragon':2,
-    'Queen Grabstag':1,
+    'Queen Grabstab':1,
     'Red Dragon':2,
     'Silver Dragon':2,
     'Tabaxi Rogue':2,
