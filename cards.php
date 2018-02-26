@@ -631,7 +631,7 @@
     '423X4Jubilee|Mallrat|While Jubilee is active, when you field a Sidekick die, deal 1 damage to target opponent or character die.',
     '451E4Mimic|Calvin Rankin|When fielded, Mimic copies the abilities and printed A and D of target character die until he leaves the Field Zone. Once per turn, when you could use a Global Ability, you may target a different character die. If you do, Mimic copies the abilities and printed A and D of that character die (replacing all previous choices) until he leaves the Field Zone.',
     '44BX1Blink In-Betweener|Agent of Order and Chaos|"You my not use [Q] energy to purchase this die, this text may not be ignored.|When fielded, and when Blink In-Betweener attacks, roll target die in your Used Pile. If it shows an energy face, KO all opposing character dice that match that energy type. Then, return the die to your Used Pile."',
-    '44BX1Comic X-23|Uni-Powered|You my not use [Q] energy to purchase this die, this text may not be ignored.  |When Cosmic X-23 is blocked, deal damage equal to her A to all character dice declared as blockers.      * Also deal damage to the opponent.',
+    '44BX1Cosmic X-23|Uni-Powered|You my not use [Q] energy to purchase this die, this text may not be ignored.  |When Cosmic X-23 is blocked, deal damage equal to her A to all character dice declared as blockers.      * Also deal damage to the opponent.',
     '44BX1Czar Colossus|Powering the State|"You my not use ? energy to purchase this die, this text may not be ignored.|When fielded, KO all Sidekick dice and deal 1 damage to target opponent for each Sidekick die KO\'d by this effect."',
     '44BX1Phoenix Storm|From the Ashes|You my not use [Q] energy to purchase this die, this text may not be ignored.|When fielded, draw a die from your bag. Deal damage equal to that die\'s purchase cost to your opponent and all opposing character dice. Then, return it to your bag.'
     ];
@@ -4115,7 +4115,7 @@
     'Boom Boom':1,
     'Jean Grey':1,
     'Jubilee':1,
-    'Nocturn':1,
+    'Nocturne':1,
     'Polaris':1,
     'Sasquatch':1,
     'Blink In-Betweener':1,
