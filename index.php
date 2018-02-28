@@ -35,7 +35,7 @@
     table.m { border-collapse:collapse; width:100%; table-layout: auto;}
     table.m td { border-top: 1px solid #1d2731; border-bottom:1px solid #1d2731; padding:1px; margin:0px; vertical-align:top;}
     table.m tr:hover td { background: #d9b310; color: #1d2731}
-    table.s tr td:hover { background: #d9b310 !important; cursor: pointer; }
+    table.s tr td:hover { background: #328CC1 !important; cursor: pointer; }
     table.m td:nth-child(1) { text-align:center; width: 28px;}
     table.m td:nth-child(2) { text-align:center; width: 28px;}
     table.m td:nth-child(3) { text-align:center; width: 32px;}
@@ -322,14 +322,14 @@
   <button onclick="document.getElementById('search_affiliation_off').style.display='block';document.getElementById('search_affiliation_on').style.display='none';filter()">X</button>
   <span id="search_aff"></span>
   </span>
-  </span><span class="search_category">
+  </span><!--<span class="search_category">
   <select id="incollection">
    <option value="">Collection status</option>
    <option value="C">In collection</option>
    <option value="N">Not in Collection</option>
    <option value="W">Want in Trade</option>
    <option value="H">Have for Trade</option>
-  </select></span>
+  </select></span>-->
   <span class="search_category">
   <select id="informat">
    <option value="">No Format</option>
