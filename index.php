@@ -322,14 +322,16 @@
   <button onclick="document.getElementById('search_affiliation_off').style.display='block';document.getElementById('search_affiliation_on').style.display='none';filter()">X</button>
   <span id="search_aff"></span>
   </span>
-  </span><!--<span class="search_category">
-  <select id="incollection">
-   <option value="">Collection status</option>
-   <option value="C">In collection</option>
-   <option value="N">Not in Collection</option>
-   <option value="W">Want in Trade</option>
-   <option value="H">Have for Trade</option>
-  </select></span>-->
+  </span>
+  <span class="search_category" style="display:none">
+    <select id="incollection">
+     <option value="">Collection status</option>
+     <option value="C">In collection</option>
+     <option value="N">Not in Collection</option>
+     <option value="W">Want in Trade</option>
+     <option value="H">Have for Trade</option>
+    </select>
+  </span>
   <span class="search_category">
   <select id="informat">
    <option value="">No Format</option>
