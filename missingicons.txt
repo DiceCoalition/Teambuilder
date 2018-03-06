@@ -1,3 +1,7 @@
+wondering if this is up todate?
+
+testing git stuff with this file.
+
 /aD.png:1 GET http://tb.dicecoalition.com/aD.png net::ERR_BLOCKED_BY_CLIENT
 Image (async)
 (anonymous) @ (index):6069
