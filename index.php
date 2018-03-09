@@ -1898,7 +1898,23 @@
 	  sww:'sww',
 	  toa:'toa',
 	  tmnt:'tmnt',
-	  hhs:'hhs'
+	  hhs:'hhs',
+	  //op sets
+	  m2017:'m2017',
+	  m2016:'m2016',
+	  m2015:'m2015',
+	  m2014:'m2014',
+	  uxmop:'uxmop',
+	  avxop:'avxop',	  
+	  dc2017:'dc2017',
+	  dc2016:'dc2016',
+	  dc015:'dc2015',
+	  dd2016:'dd2016',
+	  dd2015:'dd2015',
+	  wolop:'wolop',
+	  wko16dd:'wko16dd',
+	  wko16m:'wko16m',
+	  wko16dc:'wko16dc',	  	  
   };
   //check for card in setnames for TDC. If it doesn't exist, try it in TRP list.
   function tdcaddress(nr) {      
