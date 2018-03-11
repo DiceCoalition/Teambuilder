@@ -241,7 +241,6 @@
   <input type="checkbox" id="set3" checked>YGO
   <button id="setall" type="button">All</button>
   <button id="setnone" type="button">None</button>
-  <button id="setmodern" type="button">Modern</button>
   </span>
   <br>
   <span class="search_category">
@@ -1393,7 +1392,7 @@
     t += '<div class="im_title"><span class="im_main">'+a.mainname+'</span><br><span class="im_sub">'+a.subname+'</span></div>';
     t += '<div class="im_text">'+a.text+'</div>';
     t += '<div class="im_rarity r'+a.rarity+'"></div>';
-    if (trpcode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + trpaddress(a.nr) + '">';
+    if (trpcode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
     t += '</div>';
     t += '<td></tr></table>';
     return t;
@@ -1521,8 +1520,7 @@
       k6 -= 1 << set.cost_min;
       if (!sets) sets = -1;
       if (k6 < 0) k6 = 0;
-	  if(sets > 0)
-	  {
+	  if(sets>0){
 		  for (var i = 0; i < set_names.length; i++) {
 		if (sets & (1 << i)) rows.extend(trs_by_set[i]);
 		  }
@@ -1828,18 +1826,6 @@
       update_affiliations();
       filter();
   }
-  function modernsets() {
-      for(var i = 0; i < set_names.length; i++) {		  
-		  if(i< 6){
-			E('set' + i).checked = false;
-			  }
-		  else{
-			  E('set' + i).checked = true;
-			}
-	  }
-      update_affiliations();
-      filter();
-  }
   function num2cardname(a) {
       return a%1000 + setnames[a/1000|0];
   }
@@ -1886,6 +1872,52 @@
       if (!code) return '';
       return 'http://www.thereservepool.com/images/smilies/cards/'+code+'large.jpg';
   }
+  //list of sets currently available on TDC CardService
+  var tdcsetname = {
+      avx:'avx',      
+      uxm:'uxm',      
+      bff:'bff',      
+      ygo:'ygo',
+      jl:'jl',
+      aou:'aou',
+      wol:'wol',
+      asm:'asm',
+      fus:'fus',
+      wf:'wf',
+      cw:'cw',
+	  drs:'drs',
+	  dp:'dp',
+	  imw:'imw',
+	  def:'def',
+	  smc:'smc',
+	  gotg:'gotg',
+	  xfc:'xfc',
+	  thor:'thor',
+	  gaf:'gaf',
+	  bat:'bat',
+	  sww:'sww',
+	  toa:'toa',
+	  tmnt:'tmnt',
+	  hhs:'hhs',
+	  m2017:'m_op2017',
+	  m2016:'m_op2016',
+	  m2015:'m_op2015',
+	  uxmop2:'m_op2014',
+	  uxmop:'uxmop',
+	  avxop:'avxop',
+	  dc2017:'dc_op2017',
+	  dc2016:'dc_op2016',
+	  wolop:'dc_op2015',
+	  jlop:'dctw'
+  };
+  //check for card in setnames for TDC. If it doesn't exist, try it in TRP list.
+  function tdcaddress(nr) {      
+	  var sn = tdcsetname[setnames[nr/1000|0]];
+	  if (!sn){ return trpaddress(nr);}
+	  var cardNum = nr%1000;
+      return 'http://dicecoalition.com/cardservice/Image.php?set='+sn+'&cardnum='+cardNum+'&res=l';
+  }
+  
   function visualize_team_link() {
       var f = function(x){
     return addtosearchlink(type, trpcode(x.nr));
@@ -2051,7 +2083,6 @@
   E('clear').addEventListener('click',function() { clearfilters() },false);
   E('setall').addEventListener('click',function() { clearsets(true) },false);
   E('setnone').addEventListener('click',function() { clearsets(false) },false);
-  E('setmodern').addEventListener('click',function() { modernsets() },false);
   E('showlink').addEventListener('click',function() { showlink() },false);
   var lastcardpreview = undefined;
   var preloadpreview0 = new Image();
@@ -2063,21 +2094,28 @@
       lastcardpreviewtr = undefined;
   }
   function showcardpreview(tr) {
+	  var text = tr.fin
       var cardpreview = E('cardpreview');
       var nr = tr ? parseInt(tr.dataset.nr) : 0;
-      if (nr === lastcardpreview || !nr || !trpaddress(nr))
+      if (nr === lastcardpreview || !nr || !tdcaddress(nr))
           return hidecardpreview();
       var prevnr = tr.previousElementSibling && tr.previousElementSibling.childNodes[5] ? parseInt(tr.previousElementSibling.childNodes[5].id.substring(4)) : 0;
       var nextnr = tr.nextElementSibling && tr.nextElementSibling.childNodes[5] ? parseInt(tr.nextElementSibling.childNodes[5].id.substring(4)) : 0;
       var rect = tr.childNodes[7] ? tr.childNodes[7].getBoundingClientRect() : undefined;
       showelem('cardpreview');
       lastcardpreview = nr;
-      lastcardpreviewtr = tr;
+      lastcardpreviewtr = tr;	
+	
+	  var flipcard = (tr.innerHTML.indexOf("<hr>") > -1);
       if (rect && window.innerHeight > 800 && window.innerWidth > 500) {
           cardpreview.style.top = (rect.bottom + window.pageYOffset)+'px';
           cardpreview.style.left = (rect.left + window.pageXOffset)+'px';
           cardpreview.style.height = '521px';
-          cardpreview.style.width = '368px';
+		  if(flipcard){
+			  cardpreview.style.width = '736px';
+		  }else{
+			  cardpreview.style.width = '368px';
+		  }
           cardpreview.style.position = 'absolute';
       } else {
           var w = window.innerWidth - 4;
@@ -2087,6 +2125,10 @@
           } else {
               w = h / 521 * 368;
           }
+		  if(flipcard){
+			w = w*2;
+		  }
+			  
           cardpreview.style.height = h + 'px';
           cardpreview.style.width = w + 'px';
           cardpreview.style.top = ((window.innerHeight - 4 - h) / 2) + 'px';
@@ -2095,9 +2137,9 @@
           if (rect) window.scrollTo(0,rect.top + window.pageYOffset);
       }
       cardpreview.src = '';
-      cardpreview.src = trpaddress(nr);
-      if (nextnr) preloadpreview0.src = trpaddress(nextnr);
-      if (prevnr) preloadpreview1.src = trpaddress(prevnr);
+      cardpreview.src = tdcaddress(nr);
+      if (nextnr) preloadpreview0.src = tdcaddress(nextnr);
+      if (prevnr) preloadpreview1.src = tdcaddress(prevnr);
   }
   for (var i = 0; i < C('mm').length; i++) {
       C('mm')[i].addEventListener('click',function(ev) {
