@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -18,7 +19,7 @@
 	
 	<?php
  	
- 		require ('cardsTest.php');
+ 		require ('cards.php');
  	
  	?>
  	
@@ -35,7 +36,7 @@
     table.m { border-collapse:collapse; width:100%; table-layout: auto;}
     table.m td { border-top: 1px solid #1d2731; border-bottom:1px solid #1d2731; padding:1px; margin:0px; vertical-align:top;}
     table.m tr:hover td { background: #d9b310; color: #1d2731}
-    table.s tr td:hover { background: #328CC1 !important; cursor: pointer; }
+    table.s tr td:hover { background: #d9b310 !important; cursor: pointer; }
     table.m td:nth-child(1) { text-align:center; width: 28px;}
     table.m td:nth-child(2) { text-align:center; width: 28px;}
     table.m td:nth-child(3) { text-align:center; width: 32px;}
@@ -322,16 +323,14 @@
   <button onclick="document.getElementById('search_affiliation_off').style.display='block';document.getElementById('search_affiliation_on').style.display='none';filter()">X</button>
   <span id="search_aff"></span>
   </span>
-  </span>
-  <span class="search_category" style="display:none">
-    <select id="incollection">
-     <option value="">Collection status</option>
-     <option value="C">In collection</option>
-     <option value="N">Not in Collection</option>
-     <option value="W">Want in Trade</option>
-     <option value="H">Have for Trade</option>
-    </select>
-  </span>
+  </span><span class="search_category">
+  <select id="incollection">
+   <option value="">Collection status</option>
+   <option value="C">In collection</option>
+   <option value="N">Not in Collection</option>
+   <option value="W">Want in Trade</option>
+   <option value="H">Have for Trade</option>
+  </select></span>
   <span class="search_category">
   <select id="informat">
    <option value="">No Format</option>
@@ -388,10 +387,10 @@
   //navbar
   "use strict";
   w3.includeHTML();
-  
+
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
-  
+
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
   function escapeHtml(x) {
       return x.replace(/[&<>"'\/]/g, function(s){return entityMap[s]});
@@ -401,7 +400,7 @@
   var team_num = {};
   var team_name = "Unnamed";
   var team_search = [];
-  
+
   var collection_num_string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXWZ';
   var MAXCOLNUM = collection_num_string.length - 1;
   var collection_sub_table = function (t) {
@@ -443,7 +442,7 @@
     return a;
   }
   }
-  
+
   var collection_table = function (t,id) {
     var tab = [];
     if (t) {
@@ -485,14 +484,14 @@
     return diff;
   },
   }
-  
-  
+
+
   var havecards = new collection_table;
   var havedice = new collection_table;
   var wantcards = new collection_table;
   var wantdice = new collection_table;
   var lastsavetime = 0;
-  
+
   function update_export_link(c) {
   //   var cardtrades = havecards.diff(wantcards);
   //   var dicetrades = havedice.diff(wantdice);
@@ -772,7 +771,7 @@
       display_saved_teams();
       nv_save_teams();
   }
-  
+
   var click_minus;
   var click_plus;
   var collection_edit_mode = 3; // 1 = cards, 2 = dice, 3 = both, 4 = want cards, 8 = want dice
@@ -926,24 +925,24 @@
     }
     click_all("set to max dice", function (tab,nr){tab.set(nr,max[nr])});
   }
-  
+
   var pool_bac = [];
   var pool_oth = [];
-  
+
   function add_random() {
     if (!pool_oth.length) return;
     var i = Math.floor(Math.random() * pool_oth.length);
     team_click_plus(pool_oth[i].nr);
     team_search[team.length-1] = lastsearch;
   }
-  
+
   function add_random_bac() {
     if (!pool_bac.length) return;
     var i = Math.floor(Math.random() * pool_bac.length);
     team_click_plus(pool_bac[i].nr);
     team_search[team.length-1] = lastsearch;
   }
-  
+
   function click_update_team() {
     var pluses = C("inc");
     var minuses = C("dec");
@@ -1031,7 +1030,7 @@
   function decode(t,v) {
       return t[v];
   }
-  
+
   var team_serial = '';
   var team_coloncode = '';
   var mode = localStorage !== undefined && localStorage.mode ? parseInt(localStorage.mode) : 0;
@@ -1261,7 +1260,7 @@
   }
   //console.log("dice nr " + setname + ": " + (new_die - setbase - 1),new_dice_name);
   }
-  
+
   var format_bans = convert_to_map({
   P: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS" ],
@@ -1276,7 +1275,7 @@
     }
     return map;
   }
-  
+
   init(0,avx,'AvX','avx');
    init(1,avxop,'AvXop','avx',['avx']);
   init(2,uxm,'UXM','uxm');
@@ -1318,13 +1317,13 @@
   init(38,xfc,'XFC','xfc',[],xfc_aff);
   init(39,toa,'TOA','toa');
   init(40,thor,'THOR','thor',[],thor_aff);
-  
+
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
   }
   var rows = [];
   var dn = 0;
-  
+
   if (localStorage !== undefined && "current_team" in localStorage) {
     nv_load_current_team(localStorage.current_team);
   }
@@ -1376,7 +1375,7 @@
     if (!event.target) return;
     event.target.style.opacity = "";
   }, false);
-  
+
   function display_pic(a) {
     var t = '';
     t += '<table data-nr="'+a.nr+'" class="cardimage"><tr><td class="edit">';
@@ -2080,6 +2079,7 @@
     E('sort'+i).addEventListener('click',function(x){return function() { setsort(x) }}(i),false);
   for (var i = 1; i <= 8; i++)
     E('teamsort'+i).addEventListener('click',function(x){return function() { teamsort(x) }}(i),false);
+
   E('clear').addEventListener('click',function() { clearfilters() },false);
   E('setall').addEventListener('click',function() { clearsets(true) },false);
   E('setnone').addEventListener('click',function() { clearsets(false) },false);
@@ -2189,6 +2189,7 @@
   // }
   // window.addEventListener('orientationchange', function() { screen.width < 400 ? hidecol("extra") : showcol("extra"); });
   // TODO
+
   // save team
   // - fix link update when saved with a new name
   // - fix add random update when no results
@@ -2203,6 +2204,7 @@
   // !!- trade reports
   // !!-- minimum have rarity
   // -- match your collection
+
   
   // Script for side navigation
   function w3_open() {
@@ -2211,10 +2213,12 @@
       x.style.paddingTop = "10%";
       x.style.display = "block";
   }
+
   // Close side navigation
   function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
   }
+
   // Used to toggle the menu on smaller screens when clicking on the menu button
   function openNav() {
       var x = document.getElementById("navDemo");
