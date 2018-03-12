@@ -20,6 +20,8 @@
      MSTARK:"stark industries",
      DCNG:"new gods", A:"action", FLIP:"flip",
      MDFD:"defenders",
+     BOM:'brotherhood of evil mutant',
+     MEX:'exiles',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -57,6 +59,7 @@
     'dp', 'ih',
     'si',
     'def',
+    'ex','bom',
     'jl', 'js', 'ld', 'cs',
     'bl', 'gl', 'kl', 'il', 'pl', 'rl', 'ol', 'yl', 'tt', 'co',
     'bat', 'sup',
@@ -155,6 +158,7 @@
      JLC:'cs',
      L:'lords',
      M:'monster',
+     MBOM:'brotherhoodofmutants',
      MBOMV:['brotherhoodofmutants','villain'],
      MDP:'deadpool',
      MDFD:'defenfers',
@@ -616,7 +620,7 @@
     '333B4Quicksilver|Quick on His Feet|Awaken -  Field your next character die for free. (<em>When this die spins up 1 or more levels, you may use this effect.</em>)',
     '342B4Sabretooth|Fangs Out|Awaken: prevent all damage dealt to Sabretooth (until end of turn). (When this die spins up one or more levels, you may use this effect.)',
     '352E4Sasquatch|Hulking Beast|Overcrush|When your opponent uses a Global Ability, spin Sasquatch up 1 level.',
-    '333B4Scarlet Witch|Hexes and O\'s|Awaken: Roll a [Brotherhood of Mutants] character die in your Used Pile. If you roll a character face, you may field it for free. Otherwise, return it to the Used Pile. (When this die spins up 1 or more levels, you may use this effect.)',
+    '333B4Scarlet Witch|Hexes and O\'s|Awaken: Roll a [BOM] character die in your Used Pile. If you roll a character face, you may field it for free. Otherwise, return it to the Used Pile. (When this die spins up 1 or more levels, you may use this effect.)',
     '342V4Sebastian Shaw|Overclocked|Awaken -  Prep a Die from your bag. (<em>When this Die spins up 1 or more levels, you may use this effect.</em>)',
     '374V4Sentinel|SURRENDER OR DIE|When fielded, spin all [XMEN] character dice down 1 level and deal 2 damage to your opponent for each that cannot spin down.',
     '333X4Storm|Morlock Champion|Awaken: Reroll target opposing die. If it is an energy face, put it in the opponent\'s Used Pile. Otherwise return it to the Field Zone on its original face. (When this die spins up 1 or more levels, you may use this effect.)',
@@ -841,19 +845,23 @@
     '54104Poison Ivy™|Eternal Youth|While Poison Ivy is active, when an opponent uses an action die, field a Plant Token. It has 0A and 2D.|While Poison Ivy is active, once during your turn, you may sacrifice one of your characters in the Field Zone and deal 2 damage to target player.',
     ];
     var m_op2017_aff = {
-    D:'MDP', X:'1', I:'MIH', G:'GA'
+    D:'MDP', X:'1', I:'MIH', G:'GA', E:'MEX', B:'MBOM', 0:'0'
     };
-    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp','dp','dp','aou','aou'];
+    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'xfc','uxm','aou','','avx','avx'];
     var m_op2017 = [
-    // DP dice
-    '552D4Deadpool|Deadpool Family Values|While Deadpool is active, damage dealt to your Deadpool, Lady Deadpool, Kidpool, and Dogpool character dice is reduced by 1.',
-    '544D4Lady Deadpool|Deadpool Family Values|Regenerate|While Lady Deadpool is active, your [MDP] character dice cost 2 less to field.',
-    '542X4Colossus|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Iron Will||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|When fielded, target [XMEN] character die other than Colossus gains Overcrush.',
-    '544X4Wolverine|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Regenerate||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|While Wolverine is active, your [XMEN] character dice cost 2 less to field.',
-    '554I4Lockjaw|LJ|When fielded, Prep all [MIH] character dice in your Used Pile.',
-    '551I4Medusa|Devoted Wife|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|While Medusa is active, Black Bolt gains Iron Will.',
-    '594G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
-    '533G4Rocket Raccoon|Rigging Up Destruction|When Rocket Raccoon is KO\'d, deal damage equal to his A to target character die.',
+        // DP dice
+        '552D4Deadpool|Deadpool Family Values|While Deadpool is active, damage dealt to your Deadpool, Lady Deadpool, Kidpool, and Dogpool character dice is reduced by 1.',
+        '544D4Lady Deadpool|Deadpool Family Values|Regenerate|While Lady Deadpool is active, your [MDP] character dice cost 2 less to field.',
+        '542X4Colossus|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Iron Will||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|When fielded, target [XMEN] character die other than Colossus gains Overcrush.',
+        '544X4Wolverine|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Regenerate||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|While Wolverine is active, your [XMEN] character dice cost 2 less to field.',
+        '554I4Lockjaw|LJ|When fielded, Prep all [MIH] character dice in your Used Pile.',
+        '551I4Medusa|Devoted Wife|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|While Medusa is active, Black Bolt gains Iron Will.',
+        '531E4Morph|Exile|While Morph is active, when one of your [MEX] character dice would be dealt damage, instead that damage is dealt to Morph.',
+        '542E4Sabretooth|Exile|While Sabretooth is active, your [MEX] character dice get +1A and +1D.',
+        '594G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
+        '53003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.',
+        '531B4Mystique|The Brotherhood|Deadly (At the end of turn, KO all character dice that were engaged with this character.)',
+        '571B4Magneto|The Brotherhood|When Fielded, you may field a [BOM] die from your Used Pile at level 3 for free.',
     ];
 
     var def_aff = { 0:'0', V:'4', D:'MDFD' };

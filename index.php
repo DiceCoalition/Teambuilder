@@ -1310,14 +1310,14 @@
   init(30,imw,'IMW','imw',[],imw_aff);
   init(31,bat,'BAT','bat',[],bat_aff);
   init(32,def,'Def','def',[],def_aff);
-   init(33,m_op2017,'M2017','dp',m_op2017_dice,m_op2017_aff);
-   init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
-  init(35,sww,'SWW','sww',[],bat_aff);
-  init(36,smc,'SMC','smc',[],asm_aff);
-  init(37,gotg,'GotG','gotg',[],gotg_aff);
-  init(38,xfc,'XFC','xfc',[],xfc_aff);
-  init(39,toa,'TOA','toa');
-  init(40,thor,'THOR','thor',[],thor_aff);
+   init(33,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
+  init(34,sww,'SWW','sww',[],bat_aff);
+  init(35,smc,'SMC','smc',[],asm_aff);
+  init(36,gotg,'GotG','gotg',[],gotg_aff);
+  init(37,xfc,'XFC','xfc',[],xfc_aff);
+  init(38,toa,'TOA','toa');
+  init(39,thor,'THOR','thor',[],thor_aff);
+  init(40,m_op2017,'M2017','dp',m_op2017_dice,m_op2017_aff);
   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
