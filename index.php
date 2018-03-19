@@ -2141,21 +2141,25 @@
       var nextnr = tr.nextElementSibling && tr.nextElementSibling.childNodes[5] ? parseInt(tr.nextElementSibling.childNodes[5].id.substring(4)) : 0;
       var rect = tr.childNodes[7] ? tr.childNodes[7].getBoundingClientRect() : undefined;
       showelem('cardpreview');
+	  var width = 368;
+	  if(tr.innerHTML.indexOf('<hr>') > 0){
+		  width = 736;
+	  }
       lastcardpreview = nr;
       lastcardpreviewtr = tr;
       if (rect && window.innerHeight > 800 && window.innerWidth > 500) {
           cardpreview.style.top = (rect.bottom + window.pageYOffset)+'px';
           cardpreview.style.left = (rect.left + window.pageXOffset)+'px';
           cardpreview.style.height = '521px';
-          cardpreview.style.width = '368px';
+          cardpreview.style.width = width +'px';
           cardpreview.style.position = 'absolute';
       } else {
           var w = window.innerWidth - 4;
           var h = window.innerHeight - 4;
-          if (h / w > 521 / 368) {
-              h = w / 368 * 521;
+          if (h / w > 521 / width) {
+              h = w / width * 521;
           } else {
-              w = h / 521 * 368;
+              w = h / 521 * width;
           }
           cardpreview.style.height = h + 'px';
           cardpreview.style.width = w + 'px';
