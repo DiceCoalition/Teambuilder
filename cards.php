@@ -847,7 +847,7 @@
     var m_op2017_aff = {
     D:'MDP', X:'1', I:'MIH', G:'GA', E:'MEX', B:'MBOM', 0:'0'
     };
-    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'xfc','uxm','aou','','avx','avx'];
+    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'dp','uxm','aou','','avx','avx'];
     var m_op2017 = [
         // DP dice
         '552D4Deadpool|Deadpool Family Values|While Deadpool is active, damage dealt to your Deadpool, Lady Deadpool, Kidpool, and Dogpool character dice is reduced by 1.',

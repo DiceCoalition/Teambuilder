@@ -738,11 +738,24 @@
       }
       t.innerHTML = s;
   }
+  //check team for errors.  Remove problem entries
+  function check_team(team) {
+      var probs = [];
+      for (var i = 0; i < team.length; i++) {
+          if(team[i] == null || team[i].nr == null) {
+              probs.push(i);
+          }
+      }
+      for(var i = 0; i < probs.length; i++){
+          team.splice(probs[i]-i, 1);
+      }
+  }
   function load_team(nr) {
       if (!("cards" in saved_teams[nr])) return;
       if (!("dice" in saved_teams[nr])) return;
       team_name = saved_teams[nr].name || "Unnamed";
       team = saved_teams[nr].cards.map(function(e){return trs_all[e]});
+      check_team(team);
       team_num = {};
       for (var i = 0; i < team.length; i++) {
     team_num[team[i].nr] = saved_teams[nr].dice[i] || 0;
@@ -1017,8 +1030,10 @@
     document.body.scrollTop = 0;
     team_update();
   }
-  function clearteam() {
-    if(team.length && !confirm('Clear the current team?')) return false;
+  function clearteam(prompt = true) {
+      if(prompt) {
+          if (team.length && !confirm('Clear the current team?')) return false;
+      }
     team_name = "Unnamed";
     team_serial = '';
     team_coloncode = '';
@@ -1310,14 +1325,14 @@
   init(30,imw,'IMW','imw',[],imw_aff);
   init(31,bat,'BAT','bat',[],bat_aff);
   init(32,def,'Def','def',[],def_aff);
-   init(33,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
-  init(34,sww,'SWW','sww',[],bat_aff);
-  init(35,smc,'SMC','smc',[],asm_aff);
-  init(36,gotg,'GotG','gotg',[],gotg_aff);
-  init(37,xfc,'XFC','xfc',[],xfc_aff);
-  init(38,toa,'TOA','toa');
-  init(39,thor,'THOR','thor',[],thor_aff);
-  init(40,m_op2017,'M2017','dp',m_op2017_dice,m_op2017_aff);
+  init(33,m_op2017,'M2017','dp',m_op2017_dice,m_op2017_aff);
+  init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
+  init(35,sww,'SWW','sww',[],bat_aff);
+  init(36,smc,'SMC','smc',[],asm_aff);
+  init(37,gotg,'GotG','gotg',[],gotg_aff);
+  init(38,xfc,'XFC','xfc',[],xfc_aff);
+  init(39,toa,'TOA','toa');
+  init(40,thor,'THOR','thor',[],thor_aff);
   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
@@ -1399,43 +1414,61 @@
     return t;
   }
   function display_team() {
-    var bac = team.filter(function(a){return a.type == 2});
-	var cString = "class='bac' ";
-	for(var i = 0; i < bac.length; i++){	
-		var html = bac[i].html;
-		var newHtml = [html.slice(0, 4), cString, html.slice(4)].join('');
-		bac[i].html = newHtml;
-	}
-    var oth = team.filter(function(a){return a.type != 2});
-    var bactxt = bac.map(function(a){return a.html}).join('');
-    var othtxt = oth.map(function(a){return a.html}).join('');
-    var all = othtxt + '<tr><td style="background-color: transparent;">&nbsp;</td>' + bactxt;
-    var allpic = oth.map(display_pic).join('') + bac.map(display_pic).join('');
-    var num_bac = 0, num_cards = 0, num_dice = 0;
-    for (var i = 0; i < team.length; i++) {
-      if (team[i].type != 2) {
-        num_dice += team_num[team[i].nr];
-        num_cards++;
-      } else {
-        num_bac++;
-      }
+    try {
+        var bac = team.filter(function (a) {
+            return a.type == 2
+        });
+        var cString = "class='bac' ";
+        for (var i = 0; i < bac.length; i++) {
+            var html = bac[i].html;
+            var newHtml = [html.slice(0, 4), cString, html.slice(4)].join('');
+            bac[i].html = newHtml;
+        }
+        var oth = team.filter(function (a) {
+            return a.type != 2
+        });
+        var bactxt = bac.map(function (a) {
+            return a.html
+        }).join('');
+        var othtxt = oth.map(function (a) {
+            return a.html
+        }).join('');
+        var all = othtxt + '<tr><td style="background-color: transparent;">&nbsp;</td>' + bactxt;
+        var allpic = oth.map(display_pic).join('') + bac.map(display_pic).join('');
+        var num_bac = 0, num_cards = 0, num_dice = 0;
+        for (var i = 0; i < team.length; i++) {
+            if (team[i].type != 2) {
+                num_dice += team_num[team[i].nr];
+                num_cards++;
+            } else {
+                num_bac++;
+            }
+        }
+        team_serial = oth.concat(bac).map(function (a) {
+            return team_num[a.nr] + 'x' + num2cardname(a.nr)
+        }).join(';');
+        team_coloncode = oth.concat(bac).map(function (a) {
+            return ':' + trpcode(a.nr) + ':'
+        }).join(' ');
+        E('team').innerHTML = all;
+        E('teampic').innerHTML = allpic;
+        if (mode == 1) {
+            var team_rows = E('team').getElementsByTagName('TR');
+            for (var i = 0; i < team_rows.length; i++) make_draggable(team_rows[i]);
+            team_rows = E('teampic').getElementsByTagName('TABLE');
+            for (var i = 0; i < team_rows.length; i++) make_draggable(team_rows[i]);
+        }
+        E('teamstatus').innerHTML = 'Cards: ' + num_cards + ', Dice: ' + num_dice + ', Basic Actions: ' + num_bac + '.';
+        hideelem('nonempty');
+        hideelem('empty');
+        if (team.length > 0) showelem('nonempty');
+        else showelem('empty');
+        maketeamlink();
     }
-    team_serial = oth.concat(bac).map(function(a){return team_num[a.nr] + 'x' + num2cardname(a.nr)}).join(';');
-    team_coloncode = oth.concat(bac).map(function(a){return ':'+trpcode(a.nr)+':'}).join(' ');
-    E('team').innerHTML = all;
-    E('teampic').innerHTML = allpic;
-    if (mode == 1) {
-      var team_rows = E('team').getElementsByTagName('TR');
-      for (var i = 0; i < team_rows.length; i++) make_draggable(team_rows[i]);
-      team_rows = E('teampic').getElementsByTagName('TABLE');
-      for (var i = 0; i < team_rows.length; i++) make_draggable(team_rows[i]);
+    catch(err){
+       //there was error with the team saved in the cache.  Clear it and start over.
+        clearteam(false);
     }
-    E('teamstatus').innerHTML = 'Cards: '+num_cards+', Dice: ' + num_dice + ', Basic Actions: ' + num_bac + '.';
-    hideelem('nonempty');
-    hideelem('empty');
-    if (team.length > 0) showelem('nonempty');
-    else showelem('empty');
-    maketeamlink();
   }
   function display() {
       var changed = false;
@@ -1910,8 +1943,9 @@
 	  dc2016:'dc2016',
 	  dc015:'dc2015',
 	  dd2016:'dd2016',
-	  dd2015:'dd2015',
+	  dd2015:'dd2015',	  
 	  wolop:'wolop',
+	  jlop:'jlop',
 	  wko16dd:'wko16dd',
 	  wko16m:'wko16m',
 	  wko16dc:'wko16dc',	  	  
