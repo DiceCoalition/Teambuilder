@@ -336,8 +336,9 @@
   <select id="informat">
    <option value="">No Format</option>
    <option value="G">Golden Era</option>
-   <option value="M">Modern Era</option>
+   <option value="M">Modern Era</option>   
    <option value="P">PDC Prime</option>
+   <option value="K">Modern Era (2018)</option>
   </select>
   </span>
   </div>
@@ -1257,7 +1258,7 @@
       affiliationflipimg:affiliationB,
       energyimg:set[i][2],
       text:txt,
-      formats:7^(format_bans[setname]||0)^(format_bans[(i+1)+setname]||0),
+      formats:15^(format_bans[setname]||0)^(format_bans[(i+1)+setname]||0),
       sk:[
     i - setbase,
     namekey,
@@ -1278,15 +1279,17 @@
   }
   
   var format_bans = convert_to_map({
+  K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG"],
   P: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS" ],
+       "WoLop", "M2015", "ASM", "FUS" ],  
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "15FUS" ],
   G: [ "31UXM", "119YGO" ],
   });
   function convert_to_map(bans) {
     var map = {};
     for (var i in bans) {
-      var bit = 1 << "GMP".indexOf(i);
+      var bit = 1 << "GMPK".indexOf(i);
       bans[i].forEach(function (e) {map[e] = (map[e] || 0)|bit;});
     }
     return map;
@@ -1523,7 +1526,7 @@
       set.cost_min = E('cost_min').selectedIndex;
       set.gender = getcheckboxval('gender',3);
       set.incollection = E('incollection').value;
-      set.informat = E('informat').value ? 1 << "GMP".indexOf(E('informat').value) : 0;
+      set.informat = E('informat').value ? 1 << "GMPK".indexOf(E('informat').value) : 0;
       set.affiliation = '';
       var all = E('search_affiliation_on').style.display === 'none';
       for (var i = 0; i < affiliation_properites.length; i++)
@@ -1734,7 +1737,7 @@
       settextbox('filt0', set.n);
       settextbox('filt1', set.name);
       settextbox('filt2', set.text);
-      setselectbox('informat', set.format === undefined ? undefined : "GMP".indexOf(set.format) + 1, 0);
+      setselectbox('informat', set.format === undefined ? undefined : "GMPK".indexOf(set.format) + 1, 0);
       if (set.sort !== undefined)
     skeys = set.sort.split('.');
       filter();
