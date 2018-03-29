@@ -3832,7 +3832,7 @@
     'Thunderbird':'142 253 255',
     'XFC@Wolverine':'152*263*384',
     'Blink In-Betweener':'033 144 254',
-    'Comic X-23':'133*145 256',
+    'Cosmic X-23':'133*145 256',
     'Czar Colossus':'144 166 288',
     'Phoenix Storm':'033 145 266',
 
