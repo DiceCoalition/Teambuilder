@@ -141,7 +141,7 @@
   <span class="show_mode2 hide" style="margin:0 4px; background-color:#0b3c5d; color:#d9b310;">View Team</span>
   <!--<span class="show_mode0 show_mode1 show_mode2 hide" style="cursor:pointer; margin:0 4px; background-color:gray; color:white;" onclick="setmode(3)">My Collection</span>-->
   <!--<span class="show_mode3 hide" style="margin:0 4px; background-color:white; color:black;">My Collection</span>-->
-  <span style="float:right;cursor:pointer; margin: 0 4px;background-color:#0b3c5d; color:white"><a style="text-decoration:none;color:white" href="mailto:thedicecoalition@gmail.com">Contact</a></span>
+  <span style="float:right;cursor:pointer; margin: 0 4px;background-color:#0b3c5d; color:white"><a style="text-decoration:none;color:white" href="mailto:thedicecoalition@gmail.com" target="_blank">Contact</a></span>
   </div>
   <div style="margin:4px;">
   <span class="show_nonempty hide">
@@ -1412,7 +1412,7 @@
     t += '<div class="im_title"><span class="im_main">'+a.mainname+'</span><br><span class="im_sub">'+a.subname+'</span></div>';
     t += '<div class="im_text">'+a.text+'</div>';
     t += '<div class="im_rarity r'+a.rarity+'"></div>';
-    if (trpcode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
+    if (tdccode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
     t += '</div>';
     t += '<td></tr></table>';
     return t;
@@ -1452,7 +1452,7 @@
             return team_num[a.nr] + 'x' + num2cardname(a.nr)
         }).join(';');
         team_coloncode = oth.concat(bac).map(function (a) {
-            return ':' + trpcode(a.nr) + ':'
+            return ':' + tdccode(a.nr) + ':'
         }).join(' ');
         E('team').innerHTML = all;
         E('teampic').innerHTML = allpic;
@@ -1955,6 +1955,13 @@
 	  wko16m:'wko16m',
 	  wko16dc:'wko16dc',	  	  
   };
+  
+  function tdccode(nr) {
+      var sn = tdcsetname[setnames[nr/1000|0]];
+      if (!sn) return '';
+      return sn+(nr%1000);
+  }
+  
   //check for card in setnames for TDC. If it doesn't exist, try it in TRP list.
   function tdcaddress(nr) {      
 	  var sn = tdcsetname[setnames[nr/1000|0]];
@@ -1965,7 +1972,7 @@
   
   function visualize_team_link() {
       var f = function(x){
-    return addtosearchlink(type, trpcode(x.nr));
+    return addtosearchlink(type, tdccode(x.nr));
       };
       var loc = window.location;
       var pn = window.location.pathname;
@@ -2159,8 +2166,8 @@
           cardpreview.style.width = width +'px';
           cardpreview.style.position = 'absolute';
       } else {
-          var w = window.innerWidth - 4;
-          var h = window.innerHeight - 4;
+          var w = window.innerWidth *0.8;//- 4;
+          var h = window.innerHeight *0.8;//- 4;
           if (h / w > 521 / width) {
               h = w / width * 521;
           } else {
