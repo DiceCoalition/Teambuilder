@@ -108,6 +108,7 @@
     .cardpreview { border: 2px solid black; border-radius: 3.5%/2.5%; position: absolute; top:0px; left: 0px; }
     .cardimage { display: inline-block; margin: 0px; padding: 0px;}
     .cardimage div.cardimagebox { overflow: hidden; border: 1px solid black; border-radius: 3.5%/2.5%; display: inline-block; width: 175px; height: 245px; font-family: "serif"; text-align: center; position: relative; background-color: black; }
+	.cardimage div.cardimageboxflip { overflow: hidden; border: 1px solid black; border-radius: 3.5%/2.5%; display: inline-block; width: 350px; height: 245px; font-family: "serif"; text-align: center; position: relative; background-color: black; }
     .cardimage div.im_title .im_main { font-size: 14px; }
     .cardimage div.im_title .im_sub { font-size: 10px; }
     .cardimage div.im_title { position: absolute; top: 2%; right: 1%; width: 78%; color:white; }
@@ -119,6 +120,7 @@
     .cardimage div.im_text img { height: 10px; vertical-align: -20%}
     .cardimage div.im_rarity { width: 100%; height: 1%; position: absolute; top: 84%; }
     .cardimage img.ci_img { position: absolute; width: 175px; height: 245px; left: 0; top: 0; }
+	.cardimage img.ci_imgflip { position: absolute; width: 350px; height: 245px; left: 0; top: 0; }
     .cardimage td.edit { width: 30px; }
     hr { color: white; }
     @font-face { font-family: "Doop"; src: url(roswreck.ttf); }
@@ -1397,14 +1399,17 @@
   }, false);
   
   function display_pic(a) {
-    var t = '';
-    t += '<table data-nr="'+a.nr+'" class="cardimage"><tr><td class="edit">';
+    var t = '';	
+	t += '<table data-nr="'+a.nr+'" class="cardimage"><tr><td class="edit">';    
     t += '<button class="dec" id="dec'+a.nr+'" onclick="click_minus('+a.nr+');event.stopPropagation();">-</button>';
     t += '</td><td class="edit">';
     t += '<button class="inc" id="dec'+a.nr+'" onclick="click_plus('+a.nr+');event.stopPropagation();">+</button>';
     t += '</td><td class="team teamcount" id="team'+a.nr+'">'
     t += '</td></tr><tr><td colspan="3">';
-    t += '<div class="cardimagebox">';
+	if(a.html.indexOf('<hr>') > 0)
+		t += '<div class="cardimageboxflip">';
+	else
+		t += '<div class="cardimagebox">';
     t += '<div class="im_costbg"></div>';
     t += '<div class="im_cost">'+a.cost+'</div>';
     if (a.energyimg != '0') t += '<div class="im_energy"><img src="e'+a.energyimg+'.png"></div>';
@@ -1412,7 +1417,12 @@
     t += '<div class="im_title"><span class="im_main">'+a.mainname+'</span><br><span class="im_sub">'+a.subname+'</span></div>';
     t += '<div class="im_text">'+a.text+'</div>';
     t += '<div class="im_rarity r'+a.rarity+'"></div>';
-    if (tdccode(a.nr)) t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
+    if (tdccode(a.nr)){ 
+		if(a.html.indexOf('<hr>') > 0)
+		  t += '<img class="ci_imgflip" draggable="false" src="' + tdcaddress(a.nr) + '">';
+		else
+			t += '<img class="ci_img" draggable="false" src="' + tdcaddress(a.nr) + '">';
+	}
     t += '</div>';
     t += '<td></tr></table>';
     return t;
