@@ -1034,7 +1034,7 @@
     '032F4Iron Spider|Version 2.0|When fielded, target [MSTARK] or [SF] character die you control gets +1D <em>(until end of turn)</em>.|* Instead, when fielded, each of your [MSTARK] and [SF] character dice get +1D.',
     '032F4Iron Spider|Waldoes|Suit Up - Iron Spider or Spider-Man <em>(When purchased, you may KO an Iron Spider or Spider-Man character die to field this die at level 2.)</em>',
     '042F4Iron Spider|Too Cool For Words|When fielded, deal 2 damage to target character die for each different active [MSTARK] or [SF] character die you control.',
-    '031A4Jarvis|Butler|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, deal X damage to target character die, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.|Global: Pay  . Once per turn, on your turn, spin down one of your [MSTARK] character dice. You may field an [MSTARK] die for [1] less.',
+    '031A4Jarvis|Butler|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, deal X damage to target character die, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.|Global: Pay [0]. Once per turn, on your turn, spin down one of your [MSTARK] character dice. You may field an [MSTARK] die for [1] less.',
     '041A4Jarvis|Loyal Confidant|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, the next character die you field this turn costs [1] less to field, and gets +1A and +1D this turn.',
     '051A4Jarvis|Chief of Staff|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, gain X life, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.',
     '023I4Rescue|Mark 1616|',
