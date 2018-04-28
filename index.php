@@ -1339,6 +1339,9 @@
   init(38,xfc,'XFC','xfc',[],xfc_aff);
   init(39,toa,'TOA','toa');
   init(40,thor,'THOR','thor',[],thor_aff);
+  init(41,sk_op2017,'sk2017','avx');
+
+
   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
@@ -1947,6 +1950,7 @@
 	  tmnt:'tmnt',
 	  hhs:'hhs',
 	  //op sets
+	  sk2017:'sk2017',
 	  m2017:'m2017',
 	  m2016:'m2016',
 	  m2015:'m2015',
