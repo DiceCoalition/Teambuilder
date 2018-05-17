@@ -20,8 +20,7 @@
      MSTARK:"stark industries",
      DCNG:"new gods", A:"action", FLIP:"flip",
      MDFD:"defenders",
-     BOM:'brotherhood of evil mutant',
-     MEX:'exiles',
+     MBOM:"brotherhood of mutants"
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -58,8 +57,7 @@
     'nw', 'tb', 'mk', 'm',
     'dp', 'ih',
     'si',
-    'def',
-    'ex','bom',
+    'def','aMBOM',
     'jl', 'js', 'ld', 'cs',
     'bl', 'gl', 'kl', 'il', 'pl', 'rl', 'ol', 'yl', 'tt', 'co',
     'bat', 'sup',
@@ -137,7 +135,7 @@
      ASF:'spideyfriends',
      ASS:['sinistersix','villain'],
      B:'egyptian',
-     BV:'brotherhoodofmutants',
+     BV:['brotherhoodofmutants','villain'],
      C:['cs','villain'],
      CWW:'newwarriors',
      CWT:'thunderbolts',
@@ -214,6 +212,8 @@
     }
 
 
+
+
     //BEGIN THOR HACK
     var thor_aff = { 0:'0', I:'MIH', A:'2', V:'6', F:'ASF', G:'G',  S:'MSTARK', M:'MYSTIC', g:'GA', H:'F'};
     // Dice / Genders
@@ -245,7 +245,7 @@
     '161V4Hela|The Death Queen|When fielded, each player may Prep up to 3 non-Sidekick dice from their Used Pile.',
     '15204Hogun|The Grim|Intimidate|While Hogun is active, Fandral and Volstagg get +2A and +2D and gain Intimidate.',
     '162A4Hulk|Power of Attorney|While Hulk is active, when a different character die you control is damaged, spin Hulk up 1 level. If you cannot, deal 2 damage to target opponent.|Global: Pay [F]. Target character die gets +1A until end of turn.',
-    '143S4Iron Man|Amalgam of Metal|Iron Man gets +1D for each opposing [DCV] character die in the Field Zone.',
+    '143S4Iron Man|Amalgam of Metal|Iron Man gets +1D for each opposing [B] character die in the Field Zone.',
     '12404Jane Foster|Hospital Romance|Ally|When Jane Foster is KO\'d, you may field a Thor character die from your Used Pile for free on the same level Jane Foster was on.',
     '14204Jarnbjorn|And My Axe|Replace target character die\'s A with double its printed A (until end of turn).',
     '134I4Karnak|The Shatterer|Deadly',
@@ -254,22 +254,22 @@
     '143V4Malekith|The Accursed|While Malekith is active, when you use an action die, Prep a die from your bag.',
     '14304Mjolnir|Whosoever Holds This Hammer|KO all level 1 character dice other than Thor.    ** Also, KO all level 2 character dice.',
     '16204Mr. Fixit|Muscle For Hire|When Mr. Fixit is damaged, he gets +XA, where X is his printed A value (until end of turn).',
-    '124H4Nick Fury|Commanding the Commandos|While Nick Fury and an opposing [DCV] character die are active, you may field character dice for free.',
+    '124H4Nick Fury|Commanding the Commandos|While Nick Fury and an opposing [B] character die are active, you may field character dice for free.',
     '16404Odin|The All-Father|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)',
     '123S4Pepper Potts|Virginia|Pepper Potts can\'t attack.    While Pepper Potts is active, draw an extra die at the beginning of your Clear and Draw Step. If it is a non-Sidekick die, Prep it.',
     '15304Punisher|Wedding Day Massacre|When Punisher deals damage to an opponent, you may purchase a Punisher character die for [1].',
     '163V4Ragnarok|Codename: Lightning|When Ragnarok attacks, deal 1 damage to all opposing character dice.',
-    '143F4SP//dr|Mechanized|While SP//dr is active, double all damage dealt to [DCV] character dice.',
+    '143F4SP//dr|Mechanized|While SP//dr is active, double all damage dealt to [B] character dice.',
     '144H4Samantha Wilson|Project: Rebirth|While Samantha Wilson is active, when you field a Sidekick die, draw and roll a die.|Global: Pay [S]. Prevent 1 damage to target character die or player.',
     '15104Sif|The Stunning|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) While Thor is active, Sif gets +3A.',
     '171V4Surtur|The Fire Giant|Breath Weapon 2(Pay [2] to deal 2 damage to your opponent and all their character dice.)',
     '13404The Bifrost|Rainbow Road|Until the end of the turn, when you field a character die, you may move one copy of that character die from your Used pile to the Field Zone at the same level.',
     '163A4Thor (M)|A Journey Into Mystery|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)|Global: Pay [2B]. Once per turn, deal 1 damage to target character die.',
-    '164A4Thor (F)|Warrior\'s Spirit|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) Thor cannot be damaged by [DCV] character dice or action dice.|Global: Pay [S]. Target attacking character die goes to the Used Pile if KO\'d this turn.',
+    '164A4Thor (F)|Warrior\'s Spirit|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) Thor cannot be damaged by [B] character dice or action dice.|Global: Pay [S]. Target attacking character die goes to the Used Pile if KO\'d this turn.',
     '161S4Thorbuster Iron Man|Model 22|Thorbuster Iron Man gets +4A and +4D while blocking, and when blocked by, Thor character dice.',
     '152A4US Agent|John Walker|When fielded, you may sacrifice a Sidekick die. If you do, Prep 2 dice from your Used Pile.',
     '15404Volstagg|The Voluminous|Overcrush|While Volstagg is active, Hogun and Fandral get +2A and +2D and gainOvercrush.',
-    '142V4Wrecker|Dirk Garthwaite|While Wrecker is active, your other [DCV] character dice get +1A and +1D.',
+    '142V4Wrecker|Dirk Garthwaite|While Wrecker is active, your other [B] character dice get +1A and +1D.',
     '231V4Absorbing Man|Harold\'s Ice Cream|While Absorbing Man is active, when a "when KO\'d" effect is used, you may use a copy of that effect.',
     '26104Balder|Barry Landers|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) When Balder is blocked, he gets +2A (until end of turn).',
     '264G4Beta Ray Bill|Shake the Planet to Its Foundation|Beta Ray Bill cannot be targeted by action dice or Global Abilities.',
@@ -278,7 +278,7 @@
     '24404Chipmunk Hunk|Handsome Puncher|While Chipmunk Hunk is active, at the beginning of your turn, you may place a Chipmunk token with 1A and 1D into the Field Zone.',
     '232I4Crystal|Geokinesis|While Crystal is active, when your opponent rolls dice during their Roll and Reroll Step, the first time they roll a character die and it lands on its level 3 face, they must reroll it.',
     '232F4Daredevil|Parker Protector|While Daredevil is active, when an opponent fields a [DCV] character die, Prep a die from your bag.',
-    '24204Destroyer|Confronting the Celestials|While Destroyer is active, when a [DCV] character die is fielded, Destroyer gets +1A and +1D, and gains the [DCV] affiliation (until end of turn).',
+    '24204Destroyer|Confronting the Celestials|While Destroyer is active, when a [B] character die is fielded, Destroyer gets +1A and +1D, and gains the [B] affiliation (until end of turn).',
     '261M4Enchantress|The Art of Seduction|While Enchantress is active, when an opposing character die is fielded, that die deals 1 damage to all other opposing character dice.',
     '25304Fandral|Path of Cunning|Deadly|While Fandral is active, Hogun and Volstagg get +2A and +2D and gainDeadly.',
     '26104Heimdall|Guardian of the Bifrost|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) When Heimdall is KO\'d, draw a die. If it is a character die withImmortal, field it for free at level 3. Otherwise, Prep it.|Global: Pay [M]. Once per turn, on your turn, you may Prep 2 Sidekick dice from your Used Pile.',
@@ -294,7 +294,7 @@
     '243V4Malekith|King of the Dark|While Malekith is active, your Sidekick character dice get +1A and +1D, and gain the [DCV] affiliation.',
     '25304Mjolnir|If He Be Worthy|Deal 1 damage to target character die for each [B] in your Reserve Pool.  */** Also deal that same amount of damage to target opponent.',
     '26204Mr. Fixit|Smashing Style|When a character die is KO\'d, Mr. Fixit gets +2A and +2D (until end of turn).',
-    '234H4Nick Fury|Agent of H|When fielded, you may KO target level 1 [DCV] character die.',
+    '234H4Nick Fury|Agent of H|When fielded, you may KO target level 1 [B] character die.',
     '26404Odin|Wielder of Gungnir|While Odin is active, your other character dice get +1A and +1D.',
     '223S4Pepper Potts|Salt of the Earth|While a single Pepper Potts character die is the only character die in your Field Zone, she gets +3A and +3D.',
     '25304Punisher|Vengeful Widow|When Punisher is KO\'d, roll her and any Punisher character dice in your Used Pile. Deal 1 damage to target opponent for each [B] rolled, then Prep those dice.',
@@ -333,7 +333,7 @@
     '363M4Loki|Brotherly Hate|When fielded, you may take control of target opposing character die of equal or lower purchase cost and remove Loki from play. At end of turn, return the character die and Loki to the Field Zone under their owner\'s control (regardless of their location).',
     '33304Mjolnir|Possess the Power of Thor|Deal 1 damage to target character die, then deal 2 damage to a target character die that hasn\'t been damaged by this effect. Continue increasing the damage dealt and selecting new targets in this way until a character die is KO\'d or all character dice have been damaged.|Global: Pay [0]. Once per turn on your turn, spin one of your Sidekick character dice to its [B] face.',
     '37204Mr. Fixit|Joe|When Mr. Fixit KOs an opposing character die with combat damage, target opponent draws 1 less die during their next Clear and Draw Step.',
-    '334H4Nick Fury|The Unseen|When fielded, spin each opposing [DCV] character die down 1 level.',
+    '334H4Nick Fury|The Unseen|When fielded, sping each opposing [B] character die down 1 level.',
     '37404Odin|Entering Odinsleep|When fielded, draw 3 dice. Field any drawn character dice with Immortal at level 3 for free. Add the rest to your Used Pile.',
     '323S4Pepper Potts|Behind Every Great Man|While Iron Man is active, Pepper Potts gets +3A and +3D.',
     '36304Punisher|Bringing Down The Exchange|While Punisher is active, each time a character die you control is damaged during an opponent\'s turn, deal 1 damage to target opponent.',
@@ -391,7 +391,7 @@
     '113M4n0Chwinga|Lesser Elemental|Swarm|If Chwinga is level 2 or 3, it must attack each turn (if able).',
     '131M4n0Doppelganger|Lesser Monstrosity|When fielded, you may select a target character die you control. If you do, your Doppelganger character dice become copies of that target character die. (The copy has all of the names, subtitles, affiliations, abilities, and stats of the original in place of its own.) They remain copies until another character die is selected or you no longer have any active Doppelganger character dice.',
     '13404n0Dragon Statue Trap|Lesser Trap|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|&nbsp;|Trigger: An opponent attacks you.|&nbsp;|Effect: You may pay [X] to deal X damage to all opposing character dice.',
-    '133O4g1Dragonborn Sorceror|Lesser Order of the Gauntlet|Experience',
+    '133O4g1Dragonborn Sorcerer|Lesser Order of the Gauntlet|Experience',
     '131E4g1Elf Druid|Lesser Emerald Enclave|Experience|While Elf Druid is active, at the end of your turn, if you control an active Dragon character die, Elf Druid gains an Experience token.',
     '134M4e0Fenthaza|High Priestess|When fielded, swap target character die\'s A and D (until end of turn).',
     '163M4e1Frost Giant|Lesser Giant|While Frost Giant is active, opposing character dice cannot attack. Your opponent may pay 1 per character die to ignore this effect (until end of turn).',
@@ -431,11 +431,11 @@
     '223M4n0Chwinga|Greater Elemental|Swarm.| When a NPC is fielded spin each of your Chwinga character dice up 1 level.',
     '231M4n0Doppelganger|Greater Monstrosity|When fielded, your Doppelganger character dice become copies of the active character die with the lowest purchase cost (in case of a tie, you choose). (The copy has all of the names, subtitles, affiliations, abilities, and stats of the original in place of its own.) Doppelganger remains a copy of the original die until another character die is selected or you no longer have any active Doppelganger character dice. If you damage the copied character die the turn Doppelganger copies it, KO that die.',
     '23401n0Dragon Statue Trap|Greater Trap|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|&nbsp;|Trigger: An opponent attacks you.|&nbsp;|Effect: Move an unpurchased Dragon character die from one of your cards to the Field Zone at level 3. Return the die to its card at the end of the turn.',
-    '243E4g1Dragonborn Sorceror|Greater Emerald Enclave|Experience|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|While Dragonborn Sorceror is active, when your action dice deal damage to a character die or player, increase that damage by 1. If your action die damages more than one character die and/or player, only increase the damage done to one of those character dice or players.',
+    '243E4g1Dragonborn Sorcerer|Greater Emerald Enclave|Experience|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|While Dragonborn Sorcerer is active, when your action dice deal damage to a character die or player, increase that damage by 1. If your action die damages more than one character die and/or player, only increase the damage done to one of those character dice or players.',
     '231O4g1Elf Druid|Greater Order of the Gauntlet|Experience|Attune (While this character is active, when you use an action die, deal 1 damage to target player of character die.)',
     '244M4e0Fenthaza|Dender\'s Nightmare Speaker|When fielded, your [S] character dice have A equal to their D (until end of turn).',
     '263M4e1Frost Giant|Greater Giant|Frost Giant cannot be blocked by level 1 character dice.',
-    '262M2g0Gold Dragon|Greater Dragon|Breath Weapon 2.|While Gold Dragon is active, when an opposing character die uses Breath Weapon, that Breath Weapon also damages its controller and their character dice.',
+    '262M4g0Gold Dragon|Greater Dragon|Breath Weapon 2.|While Gold Dragon is active, when an opposing character die uses Breath Weapon, that Breath Weapon also damages its controller and their character dice.',
     '232L4g1Goliath Fighter|Greater Lords\' Alliance|Experience|Goliath Fighter character dice get +1A and +1D for each gear equipped to them.',
     '24104n0Green Devil Mask|Greater Trap|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|&nbsp;|Trigger:|Your opponent fields a character die with purchase cost greater than the purchase cost of any character dice you have fielded.|&nbsp;|Effect: Prep 3 dice from your bag.',
     '243E4n0Human Outlander|Greater Emerald Enclave|Experience|While Human Outlander is active, your NPC character dice get +1A and +1D.',
@@ -470,11 +470,11 @@
     '34404e1Captain Laskilar|Flamboyant Pirate Captain|When fielded, place the next die you purchase this turn into your bag (instead of the Used Pile).|Captain Laskilar counts as a Pirate, this text cannot be ignored.',
     '323M4n0Chwinga|Paragon Elemental|Swarm|When fielded, when Chwinga attacks, it gets +1A (until end of turn).|When Chwinga is KO\'d by non-combat damage, Prep a die from your bag.',
     '32401n0Dragon Statue Trap|Paragon Trap|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|&nbsp;|Trigger: An opponent attacks you.|&nbsp;|Effect: Roll all Dragon dice in your Used Pile. Field any that roll a character face for free. Return the rest to your Used Pile.|** Also, Prep this die when triggered (it is still triggered and its effect still occurs).',
-    '353H4g1Dragonborn Sorceror|Paragon Harper|Experience|When fielded, deal 2 damage to all Evil character dice.',
+    '353H4g1Dragonborn Sorcerer|Paragon Harper|Experience|When fielded, deal 2 damage to all Evil character dice.',
     '331H4g1Elf Druid|Paragon Harper|Experience|While Elf Druid is active, when a Dragon character die is fielded, Prep a die from your bag.',
     '344M4e0Fenthaza|Dreams of the Black Opal Crown|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|While Fenthaza is active, when you use an action die, character dice you control get +1A (until end of turn).',
     '373M4e1Frost Giant|Paragon Giant|When fielded, deal 4 damage to all Adventurer character dice.',
-    '362M2g0Gold Dragon|Paragon Dragon|Breath Weapon 3|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)',
+    '362M4g0Gold Dragon|Paragon Dragon|Breath Weapon 3|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)',
     '332H4g1Goliath Fighter|Paragon Harper|Experience|While Goliath Fighter is active, when you KO an opposing monster character die that is a higher level than the highest level of your active Goliath Fighter character dice, Goliath Fighter gains an additional Experience token at the end of your turn.',
     '33104n0Green Devil Mask|Paragon Trap|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|&nbsp;|Trigger: Three or more of your character dice are KO\'d during an opponent\'s turn.|&nbsp;|Effect: Return all friendly character dice KO\'d this turn to your Field Zone at level 3.',
     '343Z4e1Human Outlander|Paragon Zhentarim|Experience|When Human Outlander is KO\'d, deal 2 damage to target character die or player.',
@@ -639,6 +639,9 @@
     ];
     //END X-Men First Class Hack
 
+
+
+
     var gotg_aff = { 0:'0', I:'MIH', A:'2', V:'4', F:'ASF', G:'G', K:'MK', S:'F', M:'MYSTIC', g:'GA', i:'MIHV', k:'MKMYSTIC' };
     // Dice / Genders
     var gotg = [
@@ -767,15 +770,6 @@
     '44Bi1King Black Bolt|Ruler of Attilan|You may not use [Q] energy to purchase this die, this text may not be ignored.|When King Black Bolt is targeted by a Global Ability or Action die, he deals 1 damage to your opponent.',
     '44Bk1Punisher Sorcerer Supreme|Calm. Dust.|You may not use [Q] energy to purchase this die, this text may not be ignored.|When fielded, each player KOs their character die with the lowest A. When Punisher Sorcerer Supreme attacks, KO target character die in the Field Zone with the lowest A.',
     ];
-    
-	//Rigorous Training add
-    var sk_op2017 = [
-         '50000Rigorous Training|Sidekick Card|All Sidekicks get +1D.|While this card is on your team, each player gets all of the benefits listed on it. This card takes up one of the spaces for a character or action card when building your team.|NOTE: Team Builder will show this card as using 1 die of the max 20 per team.',
-
-    ];
-    
-    
-    
     var smc = [
     '044F4Black Cat|Keeping the Bloodhounds at Bay|While Black Cat is active, your opponent cannot field level 3 character dice.',
     '044F4Black Cat|Possessive|While Black Cat is active, your opponent must choose to reroll dice that show a [Q] energy face during their Roll and Reroll Step.',
@@ -852,23 +846,25 @@
     '54104Poison Ivy™|Eternal Youth|While Poison Ivy is active, when an opponent uses an action die, field a Plant Token. It has 0A and 2D.|While Poison Ivy is active, once during your turn, you may sacrifice one of your characters in the Field Zone and deal 2 damage to target player.',
     ];
     var m_op2017_aff = {
-    D:'MDP', X:'1', I:'MIH', G:'GA', E:'MEX', B:'MBOM', 0:'0'
+    D:'MDP', X:'1', I:'MIH', G:'GA',E:'MEX',B:'MBOM'
     };
-    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'dp','uxm','aou','','avx','avx'];
+    var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp','dp','dp','xfc','xfc','aou','aou','uxm','xfc'];
     var m_op2017 = [
-        // DP dice
-        '552D4Deadpool|Deadpool Family Values|While Deadpool is active, damage dealt to your Deadpool, Lady Deadpool, Kidpool, and Dogpool character dice is reduced by 1.',
-        '544D4Lady Deadpool|Deadpool Family Values|Regenerate|While Lady Deadpool is active, your [MDP] character dice cost 2 less to field.',
-        '542X4Colossus|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Iron Will||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|When fielded, target [XMEN] character die other than Colossus gains Overcrush.',
-        '544X4Wolverine|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Regenerate||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|While Wolverine is active, your [XMEN] character dice cost 2 less to field.',
-        '554I4Lockjaw|LJ|When fielded, Prep all [MIH] character dice in your Used Pile.',
-        '551I4Medusa|Devoted Wife|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|While Medusa is active, Black Bolt gains Iron Will.',
-        '531E4Morph|Exile|While Morph is active, when one of your [MEX] character dice would be dealt damage, instead that damage is dealt to Morph.',
-        '542E4Sabretooth|Exile|While Sabretooth is active, your [MEX] character dice get +1A and +1D.',
-        '594G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
-        '53003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.',
-        '531B4Mystique|The Brotherhood|Deadly (At the end of turn, KO all character dice that were engaged with this character.)',
-        '571B4Magneto|The Brotherhood|When Fielded, you may field a [BOM] die from your Used Pile at level 3 for free.',
+    // DP dice
+    '552D4Deadpool|Deadpool Family Values|While Deadpool is active, damage dealt to your Deadpool, Lady Deadpool, Kidpool, and Dogpool character dice is reduced by 1.',
+    '544D4Lady Deadpool|Deadpool Family Values|Regenerate|While Lady Deadpool is active, your [MDP] character dice cost 2 less to field.',
+    '542X4Colossus|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Iron Will||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|When fielded, target [XMEN] character die other than Colossus gains Overcrush.',
+    '544X4Wolverine|Xavier\'s School|Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|Regenerate||Flip [FLIP] <em>(At the beginning of your turn, you may flip this character to its other side.)</em>|While Wolverine is active, your [XMEN] character dice cost 2 less to field.',
+    '554I4Lockjaw|LJ|When fielded, Prep all [MIH] character dice in your Used Pile.',
+    '551I4Medusa|Devoted Wife|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|While Medusa is active, Black Bolt gains Iron Will.',
+    '531E4Morph|Exile|While Morph is active, when one of your [MEX] character dice would be dealt damage, instead that damage is dealt to Morph.',
+    '542E4Sabretooth|Exile|While Sabretooth is active, your [MEX] character dice get +1A and +1D.',
+    '594G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
+    '533G4Rocket Raccoon|Rigging Up Destruction|When Rocket Raccoon is KO\'d, deal damage equal to his A to target character die.',
+    '531B4Mystique|The Brotherhood|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
+    '571B4Magneto|The Brotherhood|When Fielded, you may field a [BOM] die from your Used Pile at level 3 for free.'
+
+
     ];
 
     var def_aff = { 0:'0', V:'4', D:'MDFD' };
@@ -1041,7 +1037,7 @@
     '032F4Iron Spider|Version 2.0|When fielded, target [MSTARK] or [SF] character die you control gets +1D <em>(until end of turn)</em>.|* Instead, when fielded, each of your [MSTARK] and [SF] character dice get +1D.',
     '032F4Iron Spider|Waldoes|Suit Up - Iron Spider or Spider-Man <em>(When purchased, you may KO an Iron Spider or Spider-Man character die to field this die at level 2.)</em>',
     '042F4Iron Spider|Too Cool For Words|When fielded, deal 2 damage to target character die for each different active [MSTARK] or [SF] character die you control.',
-    '031A4Jarvis|Butler|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, deal X damage to target character die, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.|Global: Pay [0]. Once per turn, on your turn, spin down one of your [MSTARK] character dice. You may field an [MSTARK] die for [1] less.',
+    '031A4Jarvis|Butler|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, deal X damage to target character die, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.|Global: Pay  . Once per turn, on your turn, spin down one of your [MSTARK] character dice. You may field an [MSTARK] die for [1] less.',
     '041A4Jarvis|Loyal Confidant|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, the next character die you field this turn costs [1] less to field, and gets +1A and +1D this turn.',
     '051A4Jarvis|Chief of Staff|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|When fielded, gain X life, where X is the number of character dice you fielded this turn <em>(including Jarvis)</em>.',
     '023I4Rescue|Mark 1616|',
@@ -3671,7 +3667,6 @@
     'Charles Xavier, Juggernaut':'124 154 274',
     'Phoenix Force Magneto':'166 277 399',
     'Wolverine Lord of Vampires':'144 266 388',
-    'Rigorous Training':'000 000 000',
 
     "HHS@April":"011 122 124",
     //Casey Jones 022 133 243 //Reused
@@ -3773,7 +3768,7 @@
     'Dum Dum Dugan':'022 132 133',
     //'Gamora':'133*243 245', reused
     'GotG@Ghost Rider':'023 134 255',
-    //'Groot':'012 126*237*', reused
+    'GotG@Groot':'012 126*237*',
     'GotG@Hulk':'166 177 188',
     'Ironheart':'144*255 366', // reused CW Iron Man
     'Madame Masque':'032 133 144',
@@ -3808,11 +3803,8 @@
     'Banshee':'121 232 252',
     'XFC@Beast':'021 122 132',
     'Bishop':'125 136 256',
-    'Blink':'013 123 135',
     'Blob':'015 116 218',
     'Boom Boom':'112 122 242',
-    'Colossus':'144 165 287',
-    'Cyclops':'142 153 164',
     'Doop':'011 132 266',
     //'Emma Frost':'135 146 257',
     'Havok':'114 134 154',
@@ -3856,8 +3848,8 @@
     'Captain Elok Jaharwon':'025 135 146',
     'Captain Laskilar':'025 135 146',
     'Chwinga':'001 111 112',
-    'TOA@Doppelganger':'011 122 133',
-    'Dragonborn Sorceror':'013 124 126',
+    'toa@Doppelganger':'011 122 133',
+    'Dragonborn Sorcerer':'013 124 126',
     'Elf Druid':'022 123 234',
     'Fenthaza':'114 125 245',
     'Gold Dragon':'144 266 378',
@@ -3917,10 +3909,7 @@
     'Earth X Machine Man':'022 123 134',
     'Earth X The Skull':'011 013 124',
     'Earth X Thor':'144 255 266',
-    
-    
-    //Sidekick Card
-    'Rigorous Training':'011 011 011',
+
 
 
 
@@ -4182,7 +4171,6 @@
     'Thor (F)':1,
     'Earth X Thor':1,
     
- 
     };
 
 
