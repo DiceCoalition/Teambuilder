@@ -1335,10 +1335,13 @@
   init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
   init(35,sww,'SWW','sww',[],bat_aff);
   init(36,smc,'SMC','smc',[],asm_aff);
-  init(37,gotg,'GotG','gotg',[],gotg_aff);
-  init(38,xfc,'XFC','xfc',[],xfc_aff);
-  init(39,toa,'TOA','toa');
-  init(40,thor,'THOR','thor',[],thor_aff);
+  init(37,sk_op2017,'sk2017','avx');
+  init(38,gotg,'GotG','gotg',[],gotg_aff);
+  init(39,xfc,'XFC','xfc',[],xfc_aff);
+  init(40,toa,'TOA','toa');
+  init(41,thor,'THOR','thor',[],thor_aff);
+
+
   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
@@ -1947,6 +1950,7 @@
 	  tmnt:'tmnt',
 	  hhs:'hhs',
 	  //op sets
+	  sk2017:'sk2017',
 	  m2017:'m2017',
 	  m2016:'m2016',
 	  m2015:'m2015',

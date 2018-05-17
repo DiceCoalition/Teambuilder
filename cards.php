@@ -214,8 +214,6 @@
     }
 
 
-
-
     //BEGIN THOR HACK
     var thor_aff = { 0:'0', I:'MIH', A:'2', V:'6', F:'ASF', G:'G',  S:'MSTARK', M:'MYSTIC', g:'GA', H:'F'};
     // Dice / Genders
@@ -769,6 +767,15 @@
     '44Bi1King Black Bolt|Ruler of Attilan|You may not use [Q] energy to purchase this die, this text may not be ignored.|When King Black Bolt is targeted by a Global Ability or Action die, he deals 1 damage to your opponent.',
     '44Bk1Punisher Sorcerer Supreme|Calm. Dust.|You may not use [Q] energy to purchase this die, this text may not be ignored.|When fielded, each player KOs their character die with the lowest A. When Punisher Sorcerer Supreme attacks, KO target character die in the Field Zone with the lowest A.',
     ];
+    
+	//Rigorous Training add
+    var sk_op2017 = [
+         '50000Rigorous Training|Sidekick Card|All Sidekicks get +1D.|While this card is on your team, each player gets all of the benefits listed on it. This card takes up one of the spaces for a character or action card when building your team.|NOTE: Team Builder will show this card as using 1 die of the max 20 per team.',
+
+    ];
+    
+    
+    
     var smc = [
     '044F4Black Cat|Keeping the Bloodhounds at Bay|While Black Cat is active, your opponent cannot field level 3 character dice.',
     '044F4Black Cat|Possessive|While Black Cat is active, your opponent must choose to reroll dice that show a [Q] energy face during their Roll and Reroll Step.',
@@ -3664,6 +3671,7 @@
     'Charles Xavier, Juggernaut':'124 154 274',
     'Phoenix Force Magneto':'166 277 399',
     'Wolverine Lord of Vampires':'144 266 388',
+    'Rigorous Training':'000 000 000',
 
     "HHS@April":"011 122 124",
     //Casey Jones 022 133 243 //Reused
@@ -3909,7 +3917,10 @@
     'Earth X Machine Man':'022 123 134',
     'Earth X The Skull':'011 013 124',
     'Earth X Thor':'144 255 266',
-
+    
+    
+    //Sidekick Card
+    'Rigorous Training':'011 011 011',
 
 
 
@@ -4171,6 +4182,7 @@
     'Thor (F)':1,
     'Earth X Thor':1,
     
+ 
     };
 
 
