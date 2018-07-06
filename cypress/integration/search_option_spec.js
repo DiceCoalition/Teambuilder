@@ -57,7 +57,7 @@ describe("search options", function() {
 
     cy.get("#search_energy_off").click()
     cy.get("#energy0").should("be.visible")
-    cy.get("#search_energy_on img").last().should("have.attr", "src", "e4.png")
+    cy.get("#search_energy_on img").last().should("have.attr", "src", "images/e4.png")
 
     cy.get("#energy0").click()
     cy.get("#main").should("not.contain", maskCard).should("contain", genericCard)
@@ -153,7 +153,7 @@ describe("search options", function() {
 
     cy.get("#search_affiliation_off").click()
     cy.get("#affiliation0").should("be.visible")
-    cy.get("#search_affiliation_on img").first().should("have.attr", "src", "a0.png")
+    cy.get("#search_affiliation_on img").first().should("have.attr", "src", "images/a0.png")
 
     cy.get("#affiliation0").click()
     cy.get("#main").should("not.contain", xmenCard).should("contain", neutralCard)

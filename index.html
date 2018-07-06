@@ -4370,10 +4370,10 @@
   <span id="search_energy_on" style="display:none">
   <button onclick="document.getElementById('search_energy_off').style.display='block';document.getElementById('search_energy_on').style.display='none';filter()">X</button>
   <input type="checkbox" id="energy0">Generic
-  <input type="checkbox" id="energy1"><img src="e1.png">
-  <input type="checkbox" id="energy2"><img src="e2.png">
-  <input type="checkbox" id="energy3"><img src="e3.png">
-  <input type="checkbox" id="energy4"><img src="e4.png">
+  <input type="checkbox" id="energy1"><img src="images/e1.png">
+  <input type="checkbox" id="energy2"><img src="images/e2.png">
+  <input type="checkbox" id="energy3"><img src="images/e3.png">
+  <input type="checkbox" id="energy4"><img src="images/e4.png">
   </span>
   </span><span class="search_category">
   <span id="search_rarity_off">
@@ -5239,12 +5239,12 @@
   t += "<td>"+(i+1)+"<small>"+setname+"</small></td>";
   t += "<td>"+name+': '+subname+"</td>";
   t += "<td>"+cost+"</td>";
-  if(energy > 1) t += '<td><img src="e'+set[i][2]+'.png"></td>'; else t+='<td></td>';
+  if(energy > 1) t += '<td><img src="images/e'+set[i][2]+'.png"></td>'; else t+='<td></td>';
   t += '<td>';
-  if(affiliation!=0) t += '<img src="a'+affiliation+'.png">';
+  if(affiliation!=0) t += '<img src="images/a'+affiliation+'.png">';
   if(affiliationB!==undefined) {
     t += "<hr>";
-    if(affiliationB!=0) t += '<img src="a'+affiliationB+'.png">';
+    if(affiliationB!=0) t += '<img src="images/a'+affiliationB+'.png">';
   }
   t += '</td>';
   t += "<td>"+set[i][4]+"</td>";
@@ -5252,8 +5252,8 @@
   t += '<td class="extra">';
   if (is_dnd) {
   t += '<div class="dnd">';
-  if (set[i][5] != 0) t += '<img src="d'+set[i][5]+'.png">';
-  if (set[i][6] != 0) t += '<img src="eq.png">';
+  if (set[i][5] != 0) t += '<img src="images/d'+set[i][5]+'.png">';
+  if (set[i][6] != 0) t += '<img src="images/eq.png">';
   t += '</div>';
   }
   affiliation_add(nr,affiliation,trs_idx);
@@ -5263,8 +5263,8 @@
   var pj=p[j];
   var pc="";
   var pjk = pj;
-  pj = pj.replace(/\[([0-9A-Z]+)\]/g,function(m,id){if(iconid[id]===undefined) console.log('Undefined icon: '+id); return '<img src="'+iconid[id]+'.png" alt="'+iconname[id]+'">'});
-  pj = pj.replace(/\*/g,'<img src="burst.png" alt="*">');
+  pj = pj.replace(/\[([0-9A-Z]+)\]/g,function(m,id){if(iconid[id]===undefined) console.log('Undefined icon: '+id); return '<img src="images/'+iconid[id]+'.png" alt="'+iconname[id]+'">'});
+  pj = pj.replace(/\*/g,'<img src="images/burst.png" alt="*">');
   pjk = pjk.replace(/\]\[/g,'] [').replace(/\[([0-9A-Z]+)\]/g,function(m,id){return iconname[id]}).toLowerCase();
   if (!is_dnd) pj = pj.replace("Overcrush", "<strong>Overcrush</strong>");
   pj = pj.replace("Ally", "<strong>Ally</strong>");
@@ -5497,8 +5497,8 @@
     t += '<div class="cardimagebox">';
     t += '<div class="im_costbg"></div>';
     t += '<div class="im_cost">'+a.cost+'</div>';
-    if (a.energyimg != '0') t += '<div class="im_energy"><img src="e'+a.energyimg+'.png"></div>';
-    if (a.affiliationimg != '0') t += '<div class="im_aff"><img src="a'+a.affiliationimg+'.png"></div>';
+    if (a.energyimg != '0') t += '<div class="im_energy"><img src="images/e'+a.energyimg+'.png"></div>';
+    if (a.affiliationimg != '0') t += '<div class="im_aff"><img src="images/a'+a.affiliationimg+'.png"></div>';
     t += '<div class="im_title"><span class="im_main">'+a.mainname+'</span><br><span class="im_sub">'+a.subname+'</span></div>';
     t += '<div class="im_text">'+a.text+'</div>';
     t += '<div class="im_rarity r'+a.rarity+'"></div>';
@@ -6075,7 +6075,7 @@
   }
   var txt = '';
   for (var i = 0; i < affiliation_properites.length; i++)
-      txt += '<span id="affiliationbox'+i+'"><input type="checkbox" id="affiliation'+i+'"><img src="'+affiliation_properites[i].pic+'.png"></span>'
+      txt += '<span id="affiliationbox'+i+'"><input type="checkbox" id="affiliation'+i+'"><img src="images/'+affiliation_properites[i].pic+'.png"></span>'
   E('search_aff').innerHTML = txt;
   for (var i = 0; i < affiliation_properites.length; i++)
       E('affiliation'+i).addEventListener('change',function() { filter() },false);
