@@ -1198,6 +1198,7 @@
   pj = pj.replace("Trap", "<strong>Trap</strong>");
   pj = pj.replace("Trigger", "<strong>Trigger</strong>");
   pj = pj.replace("Effect", "<strong>Effect</strong>");
+    pj = pj.replace("Amplify", "<strong>Amplify</strong>");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
