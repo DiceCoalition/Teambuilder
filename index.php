@@ -1198,7 +1198,8 @@
   pj = pj.replace("Trap", "<strong>Trap</strong>");
   pj = pj.replace("Trigger", "<strong>Trigger</strong>");
   pj = pj.replace("Effect", "<strong>Effect</strong>");
-    pj = pj.replace("Amplify", "<strong>Amplify</strong>");
+  pj = pj.replace("Amplify", "<strong>Amplify</strong>");
+  pj = pj.replace("Impulse", "<strong>Impulse</strong>");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
@@ -1219,8 +1220,6 @@
       pj = '<strong>Vengeance</strong> -'+pj.substring(11);
   } else if (pj.substring(0,9) == 'Synergy -') {
       pj = '<strong>Synergy</strong> -'+pj.substring(9);
-  } else if (pj.substring(0,9) == 'Impulse -') {
-      pj = '<strong>Impulse</strong> -'+pj.substring(9);
   } else if (pj.substring(0,12) == 'Crosspulse -') {
       pj = '<strong>Crosspulse</strong> -'+pj.substring(12);
   } else if (pj.substring(0,12) == 'Continuous: ') {
