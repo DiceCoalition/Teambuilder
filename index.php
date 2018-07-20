@@ -229,6 +229,7 @@
   <input type="checkbox" id="set22" checked>XFC
   <input type="checkbox" id="set24" checked>Thor
   <input type="checkbox" id="set25" checked>AI
+  <input type="checkbox" id="set26" checked>KI
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -1343,7 +1344,7 @@
   init(40,thor,'THOR','thor',[],thor_aff);
   init(41,sk_op2017,'sk2017','avx');
   init(42,ai,'AI','ai',[],ai_aff);
-
+  init(43,ai,'KI','ki',[],ki_aff);
 
   
   Array.prototype.extend = function (a) {
@@ -1947,6 +1948,7 @@
 	  xfc:'xfc',
 	  thor:'thor',
 	  ai:'ai',
+	  ki:'ki',
 	  gaf:'gaf',
 	  bat:'bat',
 	  sww:'sww',

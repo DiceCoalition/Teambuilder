@@ -49,7 +49,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -212,7 +212,35 @@
       affiliation_add_one(nr, affiliation_map[aff], set_idx);
         }
     }
-
+//BEGIN AVENGERS HACK
+    var ki_aff = { 0:'0', A:'2', V:'6', G:'G'};
+    // Dice / Genders
+    var ki =[
+    '034G4Drax|Time Gem|If your opponent has 2 or more energy in their Reserve Pool, you may field Drax for free.',
+'034G4Drax|Avenging Agent of Kronos|If you have fielded a non-Drax [GG] character die this turn, you may field Drax for free.',
+'034G4Drax|Honest to a Fault|If Drax and a non-Drax [GG] character die are KO\'d in the same turn, return all KO\'d Drax character dice to play at level 1 at end of turn.',
+'044G4Groot|Flora Colossus|Regenerate (Reroll when KO\'d.)',
+'054G4Groot|Chlorokinesis|While Groot is active, prevent 1 damage to you from each attacking character die.|Global: Pay [S]. Choose an affiliation of a character die you have fielded this turn. Move a character die with that affiliation from your Used Pile to your bag.',
+'054G4Groot|I Am Groot!|While Groot is active, when one of your character dice blocks and is not KO\'d, Prep a die from your bag. (Do this for each eligible die, at the end of the turn.)|Global: Pay [S]. Choose an affiliation of a character die you have fielded this turn. Move a character die with that affiliation from your Used Pile to your bag.',
+'022V4Kree Captain|Warmonger|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
+'032V4Kree Captain|Impact Resistant Uniform|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
+'032V4Kree Captain|Lost Purpose|Kree Captain gets +1A and +1D for every active [DCV] character die.|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
+'022V4Kree Soldier|Protecting the Seat of Hala|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
+'022V4Kree Soldier|Blue Angels|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|When Kree Soldier damages and opponent, Prep a die from your bag.',
+'022V4Kree Soldier|Stagnant Evolution|While Kree Soldier is active, your character dice with purchase cost of 3 or less are free to field. ',
+'041G4Mantis|This One Knows|While Mantis is blocking, if she is assigned combat damage equal to or greater than her D, prevent all damage to you from target attacking character die.',
+'031G4Mantis|Gift From the Priests of Pama|While Mantis is active, when a non-Mantis [GG] character die is KO\'d , Prep a die from your bag.',
+'031G4Mantis|Fragmented Mind|While Mantis is active, your [GG] character dice cost [1] less to field (minimum 0).',
+'033G4Rocket Raccoon|Rocky|Rocket Raccoon gets +2D for each active non-Rocket Raccoon [GG] character.',
+'033G4Rocket Raccoon|For the Love of Battle|When Rocket Raccoon attacks, he gets +1A and +1D for each other attacking [GG] character die (until end of turn).',
+'043G4Rocket Raccoon|One of a Kind?|While Rocket Raccoon is active, when you field a non-Rocket Raccoon [GG] character die, Rocket Raccoon gets +2A (until end of turn).',
+'071V4Supreme Intelligence|Supremor|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |For each character with "Kree" in its name die fabricated to purchase this die, gain 1 life. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Guiding Hand of the Kree|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |If you fabricated 2 character dice with "Kree" in its name die fabricated to purchase Supreme Intelligence, add it to your bag. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Assimilated Hivemind|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |While Supreme Intelligence is active, when you feilde a character die with "Kree" in its name, character dice you control get +1A and +1D (until end of turn).|Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'081V4Thanos|Reality Gem|Overcrush|You may return a [DCV] character die you control in the Field Zone to its card to reduce the cost of this character die by [3] (as many times as you\'d like) (to a minimum of 1).',
+'081V4Thanos|Prove Love For Lady Death|Overcrush|When Thanos deals Overcrush damage to an opponent, double that damage. ',
+'091V4Thanos|Go, Cull Obsidian|Thanos costs [1] less to purchase for each of your active [DCV] character dice.|While Thanos is active, your non-Thanos character dice get +1A and +1D.',
+    ];
   //BEGIN AVENGERS HACK
     var ai_aff = { 0:'0', A:'2', V:'6', G:'G'};
     // Dice / Genders
