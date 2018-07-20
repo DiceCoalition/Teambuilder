@@ -228,6 +228,7 @@
   <input type="checkbox" id="set21" checked>GotG
   <input type="checkbox" id="set22" checked>XFC
   <input type="checkbox" id="set24" checked>Thor
+  <input type="checkbox" id="set25" checked>AI
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -1335,19 +1336,13 @@
   init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
   init(35,sww,'SWW','sww',[],bat_aff);
   init(36,smc,'SMC','smc',[],asm_aff);
-<<<<<<< HEAD
-  init(37,sk_op2017,'sk2017','avx');
-  init(38,gotg,'GotG','gotg',[],gotg_aff);
-  init(39,xfc,'XFC','xfc',[],xfc_aff);
-  init(40,toa,'TOA','toa');
-  init(41,thor,'THOR','thor',[],thor_aff);
-=======
+
   init(37,gotg,'GotG','gotg',[],gotg_aff);
   init(38,xfc,'XFC','xfc',[],xfc_aff);
   init(39,toa,'TOA','toa');
   init(40,thor,'THOR','thor',[],thor_aff);
   init(41,sk_op2017,'sk2017','avx');
->>>>>>> 5fc90cdbeefcca0d0d16187c15c9133afea1d5f8
+  init(42,ai,'AI','ai',[],ai_aff);
 
 
   
@@ -1951,6 +1946,7 @@
 	  gotg:'gotg',
 	  xfc:'xfc',
 	  thor:'thor',
+	  ai:'ai',
 	  gaf:'gaf',
 	  bat:'bat',
 	  sww:'sww',

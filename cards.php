@@ -49,7 +49,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -213,6 +213,69 @@
         }
     }
 
+  //BEGIN AVENGERS HACK
+    var ai_aff = { 0:'0', A:'2', V:'6', G:'G'};
+    // Dice / Genders
+    var ai =[
+'023V4|Arnim Zola|Scientist Supreme|When Arnim Zola would be KO\'d, you may pay [1] to clear all damage from him and return him to the Field Zone at level 1 (this does not triggr any When KO\'d effects).',							
+'033V4|Arnim Zola|Controlling ESP Box|When fielded, you may KO target Sidekick character die. If you do, Arnim Zola gets +1A and +1D (until end of turn).',							
+'023V4|Arnim Zola|Amongst My Creations In Dimension Z|When Arnim Zola is blocked, you may pay [1] to remove him from combat (before combat damage is dealt).',							
+'02104|Avengers ID Cards|Priority Indenticard|[AV] character dice cost [1] less to purchase and are free to field (until end of turn).|*/** Also, Prep a die from your bag. |Global: Pay [M]. Target character die in your Reserve Pool or Field Zone gains [AV] (until end of turn).',							
+'02104|Avengers ID Cards|Making It Official|[AV] character dice cost [1] less to purchase and are free to field (until end of turn).|*/** Also, Prep a die from your bag. |Global: Pay [M]. Target character die in your Reserve Pool or Field Zone gains [AV] (until end of turn).',							
+'02104|Avengers ID Cards|Badge of Heroism|Draw 3 dice. Roll any [AV] character dice you draw and place them in your Reserve Pool. Place the rest in your Used Pile.|*/** Also, Prep a die from your bag.|Global: Pay [M]. Target character die in your Reserve Pool or Field Zone gains [AV] (until end of turn).',							
+'052A4|Black Panther|The Orphan King|Black Panther cannot be blocked by [DCV] character dice or Sidekick character dice.',							
+'052A4|Black Panther|Look Homeward|Black Panther gets +1A and +1D for each opposing [DCV] character.',							
+'052A4|Black Panther|Vibranium Daggers|When Black Panther is KO\'d, KO target opposing [DCV] character die.',							
+'022A4|Black Widow|Crimson Shadow|When Black Widow attacks, if an opponent controls a higher level character die, deal that opponent 1 damage. |Global: Pay [F]. Once per turn, target character die must attacke this turn (if able).',							
+'022A4|Black Widow|Red Alert|When fielded, you may KO target Sidekick character die.|Global: Pay [F]. Once per turn, target character die must attacke this turn (if able).',							
+'022A4|Black Widow|The Widow\'s Bite|When fielded, your other character dice get +1A (until end of turn).',							
+'054A4|Captain America|Living Legend|While Captain America is active, your Sidekick character dice get +2D.',							
+'044A4|Captain America|Stars and Stripes Forever|While Captain America is active, when you use an action die, you may field a Sidekick die from your Used Pile.',							
+'044A4|Captain America|The Good Old Days|While Captain America is active, when a Sidekick character die you control is KO\'d, Prep a die from your bag. If it is not a Sidekick die, Captain America gets +1A and +1D (until end of turn).',							
+'071A4|Doctor Strange|Defender of the Black Arts|Attune|While Doctor Strange is active, your action dice cost [1] less to purchase.',							
+'071A4|Doctor Strange|Strange Tales|Attune|When fielded, when you use an action die (this turn), you may reroll that action die and place it in your Prep Area if it rolls an action face.',							
+'071A4|Doctor Strange|Never Have you Known His Like|While Doctor Strange is active, when an action die is used, you may use a copy fo its effect. You may choose new targets fo the copy.',							
+'061V4|Dormammu|Call Upon the Shadowy Shapes|While Dormammu is active, non-[DCV] character dice cost your opponents [1] more to purchase.',							
+'071V4|Dormammu|From Here To Eternity|While Dormammu is active, character dice cost [1] more to field and Global Abilities cost [1] to use. ',							
+'061V4|Dormammu|Crimson Bands of Cyttorak|While Dormammu is active, at the end of each player\'s turn, KO the character die with the lowest purchase cost controlled by the active player (you break ties) (Sidekick character dice are considered to have a purchase cost of 0).',							
+'042G4|Gamora|Power of Gem|Deadly (At end of turn, KO all character dice that were engaged with this charcter.)|Gamora can only be blocked by 2 or more character dice. ',							
+'042G4|Gamora|Solar Sacrifice|Gamora cannot be blocked by lower level character dice.|* Gamora cannot be blocked by level 1 character dice.',							
+'042G4|Gamora|Black Vortex|When fielded, if you control a non-Gamora [GG] character die, KO target level 1 character die.',							
+'064A4|Hulk|Primal Fury|Intimidate (When fielded, removed target opposing character die from the Field Zone until end of turn - place it next to your character cards.)',							
+'074A4|Hulk|Trembling On The Brink of Infinity|When fielded, KO all opposing level 1 character dice.',							
+'054A4|Hulk|Explosive Beginnings|When Hulk blocks, or is blocked by, a non-[DCV] character die, he gets -3A',							
+'054A4|Iron Man|Anthony Stark|When Iron Man is KO\'d, gain 2 life.',							
+'054A4|Iron Man|Not All Champagne And Caviar|Iron Man cannot be targeted by opposing Global Abilities or action dice. ',							
+'054A4|Iron Man|Ponderous Footsteps|While Iron Man is active, the first time each turn an Iron Man character die is targeted by a Global Ability or action die, gain 1 life. ',							
+'051V4|Loki|Throne of Contention|When fielded, choose an affiliation other than [DCV], replacing all previous choices. Your oppoenent can pay 2 life to prevent this effect. While Loki is active, ignore the text (including Global abilities) on all cards of that affiliation. ',							
+'051V4|Loki|Chains of Destiny|When fielded, choose an affiliation other than [DCV], replacing all previous choices. Your oppoenent can pay 2 life to prevent this effect. While Loki is active, ignore the text (including Global abilities) on all cards of that affiliation. ',							
+'061V4|Loki|Father of Mayhem|When fielded, select target non-Loki character die you control and taget opposing character die, and swap control of them. At the end of your turn, return the opposing character (if active) and your opponent returns your character (if active). (Controlled dice that leave the field go immediately to their owner\'s Prep Area.)',							
+'042V4|Red Skull|Cut off One Head...|When an opposing character die is KO\'d, Red Skull gets +1A and +1D (until end of turn).',							
+'042V4|Red Skull|Grim Visage|If an opposing character die was KO\'d this turn, Red Skull may be fielded for free.',							
+'052V4|Red Skull|Dust of Death|While Red Skull is active, when an opposing character die is KO\'d, its controller chooses one:|&#149; They lose 1 life.|&#149; You gain 1 life.',							
+'042G4|Star-Lord|Space Boy!|While Star-Lord is active, when a non-Star Lord [GG] character die attacks, Prep a die from your bag (for each die that attacks).',							
+'042G4|Star-Lord|Spartoian Blood|If you control a non-Star-Lord [GG] character die, prevent all damage to Star-Lord.',							
+'042G4|Star-Lord|Human / Spartoi Hybrid|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)',							
+'063A4|Thor|Donald Black|When fielded, deal 1 damage to every character die in the FIield Zone. Prep a die from your bag for each character die KO\'d by this effect.',							
+'063A4|Thor|Wayward Son|When fielded, deal X damage to target character die, where X is the number of [B] symbols in your Reserve Pool.',							
+'063A4|Thor|Every Problem is a Nail|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|Global: Pay [B]. Once per turn, the next action die you purchase this turn costs [2] less (minimum 1.)',						
+'051A4|Vision|Unearthly, Inhuman|Vision can block up to two character dice. ',							
+'041A4|Vision|Synthetic Human|When Vision blocks a [F] or a [B] character die, deal 1 damage to target opponent.',							
+'041A4|Vision|Created by Ultron-5|Vision cannot be targeted by Global Abilities or action dice.',							
+'023A4|Wasp|Partner-In-Peril|Amplify (When you use an action die, spin this character up 1 level.)',							
+'033A4|Wasp|Flitting About|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When you use Attune, (on this card or another), Wasp gets +1A and +1D (until end of turn).',					
+'033A4|Wasp|Love and Loss|While Wasp is active, when an opponent uses an action die, deal 1 damage to that opponent.',							
+'03003|Big Entrance|Basic Action Card|Impulse - You may add this die to your bag. (Impulse abilities happen when you purchase the die with Impulse.)|Dice purchased this turn cost [1] less than there printed coast (no matter how many Big Entrance dice are used, minimum 1), and gain Impulse - You may add this die to your bag.',							
+'04003|Blam! Blam! Blam!|Basic Action Card|Deal X damage to all opposing character dice, where X is the lowest D value among all active opposing character dice. If no opposing character dice are KO\'d by this effect. Prep this die.',							
+'02003|Confront The Mighty|Basic Action Card|Target character die you control has A equal to D of target opposing character die (until end of turn). Those two character dice deal damage to each other equal to their A.',							
+'04003|Crowd Fighting|Basic Action Card|Choose an active character die. Deal damage equal to that character die\'s level to all opposing character dice.',							
+'04003|I Want You!|Basic Action Card|Continuous: At the beginning of your opponent\'s turn, choose an energy type. All character dice of that energy type must attack this turn and deal no combat damage. If any of those character dice are unblocked, they remain in the Field Zone rather than being placed in the Used Pile at end of turn. At the end of your opponent\'s Attack Step send this die to your Used Pile. ',							
+'03003|Raised Shields|Basic Action Card|Two target character dice you control get +1A and +1D.|*/** ALso, they gain Overcrush.|Global: Pay [B]. Target character die gets +1A.',							
+'04003|Squad Goals|Basic Action Card|Draw and roll a die for each different energy type among your active character dice. (Sidekicks do not have an energy type.) (Rolled dice are placed in the Reserve Pool.)',							
+'03003|Take Cover|Basic Action Card|Character dice you control get +2D.|*/** Also, target character die you control gets an additional +3D.|Global: Pay [S]. Target character die gets +1D (until end of turn).',							
+'03003|Under Surveillance|Basic Action Card|Target character die is considered to be level 1 (A and D values, fielding cost, and bursts if any) and is unblockable (until end of turn).|Global: Pay [M][M]. Spin target character die down 1 level.',							
+'03003|Wormhole|Basic Action Card|Continous: Whenever you could usa Global Ability, you may send this die to your Used Pile. If you do, return all dice controlled by a player other than their owner to their owner\'s Field Zone, and return all dice temporarily in the Field Zone to where they originally came from.',							
+    ];
 
     //BEGIN THOR HACK
     var thor_aff = { 0:'0', I:'MIH', A:'2', V:'6', F:'ASF', G:'G',  S:'MSTARK', M:'MYSTIC', g:'GA', H:'F'};
@@ -698,7 +761,7 @@
     '241K4Ghost Rider|Robbie Reyes|If Ghost Rider is your only character die in the Field Zone, he may block 2 character dice.',
     '244G4Groot|The Monster from Planet X|While Groot is active, the first time damage is dealt to you each turn, reduce that damage by 1.|* Instead, reduce that damage by 2.|Global: Pay [S][S]. Gain 1 life. Use this ability only once per turn.',
     '272A4Hulk|Emerald Dawn|When one of your character dice is KO\'d, spin Hulk up 1 level. When Hulk attacks, you may spin him down 1 level. If you do, he deals 2 damage to each opposing character die.',
-    '253A4Ironheart|Reverse-Engineered|When fielded. you may add a die fro your Used Pile to your bag.|* You may add up to 2 dice instead.',
+    '253A4Ironheart|Reverse-Engineered|When fielded you may add a die fro your Used Pile to your bag.|* You may add up to 2 dice instead.',
     '24104Knowhere|Hive of Scum and Villainy|You may spin all character dice in your Reserve Pool to level 3. You may field level 3 character dice for [1] this turn instead of their printed Fielding Cost.',
     '241V4Madame Masque|Nefaria\'s Schemes|While Madame Masque is active, your opponent\'s "When fielded" abilities do not trigger.',
     '252F4Madame Web|Cassandra Webb|When Madame Web attacks, move target opposing character die to her character card until end of turn.',
@@ -3922,7 +3985,8 @@
     //Sidekick Card
     'Rigorous Training':'011 011 011',
 
-
+	//AI
+	
 
     };
     var gender = {
