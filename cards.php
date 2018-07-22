@@ -49,7 +49,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -156,6 +156,8 @@
      I:['avengers','shield'],
      J:['avengers','gotg'],
      JLC:'cs',
+     JLTA:['thunderbolts','avengers'],
+     JLVT:['villains','thunderbolts'],
      L:'lords',
      M:'monster',
      MBOM:'brotherhoodofmutants',
@@ -212,7 +214,68 @@
       affiliation_add_one(nr, affiliation_map[aff], set_idx);
         }
     }
-//BEGIN AVENGERS HACK
+    
+
+       //BEGIN JUSTICE LIKE LIGHTNING Hack
+    var hq_aff = { 0:'0',  V:'6', J:'7', S:'WFS'};
+    var hq = [
+    '052J4Batman|Warring on All Criminals|If you control 2 or more Sidekick character dice, you may field Batman for free.',
+	'052J4Batman|Strikes Terror Into Criminal Hearts|While Batman is active, while your Sidekick character dice are attacking, they get +2A.',
+	'052J4Batman|Plays Too Rough|Batman gets +1A and +1D for each Sidekick character die in the Field Zone (both players\'). If your opponent has an active [DCV] charactere die, Batman gains Overcrush.',
+	'032V4Catwoman|The Cat|When fielded, if you have an active non-Catwoman [DCV] character, spin this Catwoman die up 1 level.',
+	'042V4Catwoman|Irena Dubrovna|When fielded, Prep a die from your bag. If the Prepped die is a [DCV] character die, Prep a second die from your bag.',
+	'042V4Catwoman||When fielded, you may reroll an active Sidekick character die you control. If it rolls an energy face, you may send that die to the Used Pile to KO target opposing character die with an energy type that matches the energy type rolled. If it rolled a ? face, you may send it to the Used Pile to KO any target opposing character die instead. (A rerolled character face remains int he Field Zone, and an energy face not sent to Used moves to the Reserve Pool.)',
+	'043V4Deadshot|Nice Shooting|When Deadshot attacks, if you have 2 or more [B] energy in your Reserve Pool, deal 3 damage to target character die.',
+	'043V4Deadshot|"Death Doesn\'t Scare Me"|When Deadshot is KO\'d, deal 1 damage to all opposing character dice. ',
+	'041V4Harley Quinn|Harlequin|When fielded, if The Joker is active, Prep a die from your bag.',
+	'041V4Harley Quinn|Crazy Crusade|While Harley Quinn is active, when you field a non-Harley Quinn [DCV] character die, each Harley Quinn die you control gets +2A and +2D (until the end of turn).',
+	'041V4Harley Quinn|Gotham State Graduate|When Harley Quinn is KO\'d, reroll all active character dice, KO any that roll energy faces.',
+	'03404Harley\'s Hyena|Screwball Scavenger|While Harley\'s Hyena is active, at the start of your turn, both players draw a die. Place the die with the highest purchase cost into its owner\'s Prep Area. Place the other die in its owner\'s Used Pile. (Sidekicks have a purchase cost of 0. If both dice have an equal purchase cost, place both in their Owner\'s Used Pile.)',
+	'03404Harley\'s Hyena|Mommy\'s Baby|When Harley\'s Hyena attacks, both players draw a die. If the die you draw has a higher purchase cost, this Harley\'s Hyena die gets +3A and return that die to your bag. If not, place that die in your Used Pile. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
+	'03404Harley\'s Hyena|Bud and Lou|When Harley\'s Hyena attacks, both players draw a die. The player of players who draw the die the lowest purchase cost die takes 2 damage. Then return those dice to their bags. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
+	'031V4Poison Ivy|Red|When Poison Ivy blocks or is blocked by a non-[DCV] character die, she gains Deadly (until the end of turn). Prevent all damage dealt to Poison Ivy by non-[DCV] character dice.',
+	'041V4Poison Ivy|Budding Interest|While Poison Ivy is active, when an opposing non-[DCV] character die is KO\'d, it\'s controller loses 1 life.',
+	'041V4Poison Ivy|Flower Child|While Poison Ivy is active, when you field a [DCV] character die, deal 1 damage to target opponent.',
+	'053S4Power Girl|Kara Zor El|While Power Girl is active, if you control at least one active [DCV] character, at the end of your Main Step, roll an unpruchased Basic Action Die. If it rolls an energy face, Power Girl cannot attack. If it rolls an action face, Power Girl gets +2A and +2D (until end of turn). Return unpurchased Basic Action Die to its card.',
+	'063S4Power Girl|Kryptonian|When fielded, gain 1 life for each opposing non-Sidekick character die.',
+	'044V4The Joker|Laughing Boy|When fielded, if Harley Quinn is active, Prep a die from you bag.',
+	'054V4The Joker|Mr. J|When fielded, choose an energy type, replacing all pervious choices. While The Joker is active, when an opponent fields a character die of that energy type, deal 1 damage to that opponent.',
+	'04003Relaxing|Basic Action Card|Draw a die from your bag. Name a die. Draw a second die. If the second die is the die you named then roll it, and draw a third die. Otherwise, move the second die to your Used Pile.|** Instead, if you named the second die incorrectly, roll it.',
+	'03003Target Lock|Basic Action Card|Continuous: Place Target Lock on an opposing character card (it is still in the Field Zone). Each time your opponent draws a card\'s die during their Clear and Draw Step, they send it to their Used Pile and you Prep a die from your bag. At the end fo your opponent\'s Clear and Draw step, send Target Lock to your Used Pile.',
+	'02003Thrown Brick|Basic Action Card|Deal 1 damage to target character die. If that character die is not KO\'d, Prep ad die from your bag and add this die to your Prep Area (instead of the Used Pile).',
+	];
+       //BEGIN JUSTICE LIKE LIGHTNING Hack
+    var jll_aff = { 0:'0',  V:'6', v:'JLVT/CWT', w:'CWT/JLVT', a:'JLTA', T:'CWT'};
+    var jll = [
+'032a4Ant-Man|Petty Theft|Awaken: Ant-Man is unblockable (unil end of turn). (When this die spins up 1 or more levels, you may use this effect.)',
+'032a4Ant-Man|Through the Cracks|Amplify: (When you use an action die, spin this character up 1 level.)',
+'032a4Ant-Man|12mm Marvel|Ant-Man cannot be blocked by higher level character dice or Sidekick character dice.',
+'054v4Atlas|Erik Josten|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|* Atlas must attack (if able).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|* Atlas must attack (if able).',
+'064v4Atlas|Allegiance to Zemo|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Atlas is active when flipped to this side, you may spin target non-Atlas character die to level 3.|* Also, you may spin target [CWTB] charcter die to level 3.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Atlas is active when flipped to this side, you may give target character die Overcrush and Iron Will.',
+'064v4Atlas|Purged of Pym Particles|Amplify: (When you use an action die, spin this character up 1 level.)|When Atlas uses Amplify, flip this card.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.||(Begin the game with this side face down.)|While Atlas is active, your [CWTB] character dice gains Overcrush. If Atlas is not active, flip this card.',
+'061v4Citizen V|Justice Like Lightning|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, you may flip any number of other [CWTB] cards.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|While Citizen V is active, your non-[DCV] character dice get +1A and +1D.',
+'061v4Citizen V|New World Order|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)|When fielded, target character die gets +2D (until end of turn). When Citizen V uses Infiltrate, flip this card.||(Begin the game with this side face down.)|Retaliation (If an affiliated character is KO\'d, deal 1 damage to an opposing player.)|While Citizen V is active, your [DCV] character dice get +1A and Overcrush. If Citizen V is not active, immediately flip this card.',
+'061w4Citizen V|The Mask of Helmut|When fielded, target character die gets +2A (until end of turn).|While Citizen V is active, if a non-Citizen V character die damages an opponent, flip this card.||(Begin the game with this side face down.)|While Citizen V is active, your [DCV] character dice get +1A and +1D. If Citizen V is not active, flip this card.',
+'033a4Hawkeye|Worlds Greatest Marksman|When fielded, KO target opposing Sidekick charcter die.',
+'033a4Hawkeye|Preternatural Skills|When fielded, spin target oppoing character die to level 1.',
+'053a4Hawkeye|Taking Aim|When fielded, deal damage to target opponent equal to Hawkeye\'s level. |Global: Pay [B]. Deal 1 damage to target Sidekick character die.',
+'043v4MACH-1|Abe Jenkins|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When MACH-1 attacks, he gets +1A and +1D (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|Overcrush',
+'043v4MACH-1|Need For Speed|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, of ir MACH-1 is active when flipped to this side, your [CWTB] dice cannot be blocked by lower level character dice (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if MACH-1 is active when flipped to this side, your [CWTB] character dice get +2A (until end of turn).',
+'043v4MACH-1|Mobile Armored Cyber-Harness|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When MACH-1 uses Attune two or more times in a turn, flip this card.||(Begin the game with this side face down.)|Attune|While MACH-1 is active, when you field a [CWTB] charcter die deal 2 damage to target character die. If MACH-1 is not active, flip this card.',
+'043v4Meterorite|Dr. Karla Sofen|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, your character dice get +1A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|While Meteorite is active, your opponent cannot attack with more than two character dice.',
+'043v4Meterorite|Daughter of the Kree|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meterorite is active when flipped to this side, when you field a [CWTB] character die (this turn), Prep a die from your bag (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meterorite is active when flipped to this side, when you field a [CWTB] character die, target [CWTB] character die you control gets +2A (until end of turn).',
+'043v4Meterorite|Precious Minerals|While Meteorite is active, other than at the beginning of your turn, when the character card of one of your active characters flips, flip this card.||(Begin the game with this side face down.)|When you flip a character card, Meteorite gets +1A and +1D (until end of turn). If you have at least 3 active [CWTB] characters Meteorite gets Overcrush. If Meteorite is not active, flip this card.',
+'053v4Songbird|A Caged Bird Sings|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, opposing charcter dice get -3A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, deal 2 damage to all opposing charcter dice. ',
+'033v4Songbird|Melissa Gold|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, KO target Sidekick character die.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|Intimidate (When fielded, remove target opposing charcter die from the Field Zone until end of turn - place it next to your character cards.)|Songbird can only use Intimidate on character dice with purchase cost of 4 or less.',
+'023v4Songbird|Shifting Alliances|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)',
+'033v4Techno|Paul Norbert Ebersol|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, your [CWTB] character dice cannot be targeted by your opponents (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, your [CWTB] character dice cannot have their damage prevented by opposing effects (until end of turn).',
+'033v4Techno|The Fix Is In|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, target [CWTB] character die gains Fast (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, target [CWTB] character die gets +XA, where X is the number of your active [CWTB] characters (until end of turn).',
+'033v4Techno|Downloaded Consciousness|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When Techno uses Attune, flip this card.||(Begin the game with this side face down.)|Attune|While Techno is active, your [CWTB] character cards and dice can\'t have their text ignored. If Techno is not active, flip this card.',
+    ];
+    
+    
+    
+//BEGIN KREE INVAISION HACK
     var ki_aff = { 0:'0', A:'2', V:'6', G:'G'};
     // Dice / Genders
     var ki =[
@@ -4018,6 +4081,21 @@
 	'AI@Star-Lord':'135 146 257*',
 	'AI@Thor':'153 164 276',
 	
+	//KI
+	"KI@Drax":"124 235 246",
+	"Kree Captain":"031 132 133",
+	"Kree Soldier":"011 112 122",
+	"Supreme Intelligence":"144 256 278",
+
+	
+	//JLL
+	"JLL@Ant-Man":"021 031 152",
+	"Atlas":"023 145 388*",
+	"Citizen V":"022 154 176",
+	"MACH-1":"032 143 254",
+	"Meterorite":"031 142 254",
+	"JLL@Songbird":"012 022 123",
+	"Techno":"133 143 144",
 
     };
     var gender = {
@@ -4277,6 +4355,7 @@
     'Thor (F)':1,
     'Earth X Thor':1,
     
+    'Meteorite':1,
  
     };
 

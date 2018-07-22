@@ -230,12 +230,14 @@
   <input type="checkbox" id="set24" checked>Thor
   <input type="checkbox" id="set25" checked>AI
   <input type="checkbox" id="set26" checked>KI
+  <input type="checkbox" id="set27" checked>JLL
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
   <input type="checkbox" id="set12" checked>GAF
   <input type="checkbox" id="set17" checked>BAT
   <input type="checkbox" id="set19" checked>SWW
+  <input type="checkbox" id="set28" checked>HQ
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
@@ -1344,8 +1346,9 @@
   init(40,thor,'THOR','thor',[],thor_aff);
   init(41,sk_op2017,'sk2017','avx');
   init(42,ai,'AI','ai',[],ai_aff);
-  init(43,ai,'KI','ki',[],ki_aff);
-
+  init(43,ki,'KI','ki',[],ki_aff);
+  init(44,jll,'JLL','jll',[],jll_aff); 
+  init(45,hq,'HQ','hq',[],hq_aff); 
   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
@@ -1955,6 +1958,8 @@
 	  toa:'toa',
 	  tmnt:'tmnt',
 	  hhs:'hhs',
+	  jll:'jll',
+	  hq:'hq',
 	  //op sets
 	  sk2017:'sk2017',
 	  m2017:'m2017',
