@@ -27,7 +27,7 @@
     var iconid = {
      M:'e1', F:'e2', B:'e3', S:'e4',
      EQ:'eq', TDF:'aA',
-     AV:'a2', VM:'a4', GG:'aG', ZO:'aD', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22',
+     AV:'a2', VM:'a4', GG:'aG', ZO:'aDZOM', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22',
      GOOD:'dg',
      DCV:"WVbw",WT:"WTbw",
      WL:"WLbw",WLG:"WGbw", WLB:"WBbw", WLY:"WYbw", WLI:"WIbw", WLK:"WKbw", WLR:"WRbw", WC:"WCbw",
@@ -80,7 +80,7 @@
     { name:'shield', pic: 'aF' },
     { name:'gotg', pic: 'aG' },
     { name:'exiles', pic:'aMEX'},
-    { name:'zombie', pic: 'aD' },
+    { name:'zombie', pic: 'aDZOM' },
     { name:'sinistersix', pic: 'aASS1' },
     { name:'spideyfriends', pic: 'aASF' },
     { name:'newwarriors', pic: 'aCWW' },
@@ -142,7 +142,7 @@
      CWW:'newwarriors',
      CWT:'thunderbolts',
      CWTV:['thunderbolts', 'villain'],
-     D:'zombie',
+     DZOM:'zombie',
      DCGA:'teamarrow',
      DCNG:'newgods',
      DCSS:'suicidesquad',
@@ -2132,7 +2132,7 @@
     '572V3Professor Zoom™|Thief|Fast|If you used Cosmic Treadmill this turn, you may pay [2] less to purchase Professor Zoom.',
     ];
     var asm_aff = {
-    0:'0',X:'1',A:'2',V:'4',G:'G',Z:'D',F:'ASF',S:'ASS',M:'MK',T:'CWT',
+    0:'0',X:'1',A:'2',V:'4',G:'G',Z:'DZOM',F:'ASF',S:'ASS',M:'MK',T:'CWT',
     };
     var asm = [
     '051V4Carnage|Cletus Kassidy|While Carnage is active, when an opponent uses an action die, Carnage deals them 2 damage.',
@@ -2436,6 +2436,9 @@
     '47291Black Lantern Superman™|Krypton\'s Fall|When fielded, KO all Superman Dice. At the beginning of each turn, each player loses life equal to the highest level of a die they control.|Global: Once per turn, after your reroll, if you have at least one of each energy type in your Reserve Pool, gain [1] energy.',
     '47491Black Lantern Wonder Woman|Undead Warrior|When fielded, KO all Wonder Woman Dice. At the beginning of each player\'s turn, that player chooses a fielded non-[WLK] character and moves it to the Used Pile. If they cannot, they lose 2 life.',
     ];
+	var aou_aff = {
+    0:'0',1:'1',2:'2',4:'4',G:'G',J:'J',I:'I',D:'DZOM',F:'F',
+    };
     var aou = [
     '02124Black Widow|Natasha|Black Widow can\'t be blocked unless your opponent spins down one of their character dice.',
     '02124Black Widow|Spy|Teamwatch - When you field a character who shares an affiliation with Black Widow, Black Widow can\'t be blocked by only one character this turn.',
