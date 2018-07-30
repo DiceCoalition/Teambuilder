@@ -342,9 +342,10 @@
   <select id="informat">
    <option value="">No Format</option>
    <option value="G">Golden Era</option>
-   <option value="M">Modern Era</option>   
+   <option value="K">Modern Era</option>     
    <option value="P">PDC Prime</option>
-   <option value="K">Modern Era (2018)</option>
+   <option value="M">Modern Era (2017)</option>
+   
   </select>
   </span>
   </div>
