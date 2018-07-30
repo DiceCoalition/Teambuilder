@@ -342,9 +342,10 @@
   <select id="informat">
    <option value="">No Format</option>
    <option value="G">Golden Era</option>
-   <option value="M">Modern Era</option>   
+   <option value="K">Modern Era</option>     
    <option value="P">PDC Prime</option>
-   <option value="K">Modern Era (2018)</option>
+   <option value="M">Modern Era (2017)</option>
+   
   </select>
   </span>
   </div>
@@ -1203,6 +1204,9 @@
   pj = pj.replace("Effect", "<strong>Effect</strong>");
   pj = pj.replace("Amplify", "<strong>Amplify</strong>");
   pj = pj.replace("Impulse", "<strong>Impulse</strong>");
+  pj = pj.replace("Swarm", "<strong>Swarm</strong>");
+  pj = pj.replace("Fabricate", "<strong>Fabricate</strong>");
+
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
@@ -1313,7 +1317,7 @@
   init(8,dcjl,'JL','jl');
    init(9,dctw,'JLop','jl',['jl']);
    init(10,bff_op,'BFFop','bff',['bff']);
-  init(11,aou,'AoU','aou');
+  init(11,aou,'AoU','aou',[], aou_aff);
   init(12,wol,'WoL','wol',[],wol_aff);
    init(13,wol_op,'WoLop','wol',['jl','wol'],wol_aff);
    init(14,aou_op,'M2015','aou',['aou','avx']);
@@ -1339,7 +1343,6 @@
   init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
   init(35,sww,'SWW','sww',[],bat_aff);
   init(36,smc,'SMC','smc',[],asm_aff);
-
   init(37,gotg,'GotG','gotg',[],gotg_aff);
   init(38,xfc,'XFC','xfc',[],xfc_aff);
   init(39,toa,'TOA','toa');
