@@ -1203,6 +1203,8 @@
   pj = pj.replace("Effect", "<strong>Effect</strong>");
   pj = pj.replace("Amplify", "<strong>Amplify</strong>");
   pj = pj.replace("Impulse", "<strong>Impulse</strong>");
+  pj = pj.replace("Swarm", "<strong>Swarm</strong>");
+  pj = pj.replace("Fabricate", "<strong>Fabricate</strong>");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
