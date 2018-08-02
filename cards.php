@@ -169,6 +169,7 @@
      JLVT:['villains','thunderbolts'],
      KCDG:['chaos','death guard'],
      KC:'chaos',
+     KISW:['imperium','spacewolves'],
      KIUM:['imperium','ultramarines'],
      KO:'orks',
      KSW:'spacewolves',
@@ -234,7 +235,7 @@
        
     //BEGIN 40k SPACE WOLVES Hack
     
-	var sw_aff = { S:'KSW'};
+	var sw_aff = { S:'KISW'};
   	var sw = [
    
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
