@@ -237,14 +237,22 @@
   <input type="checkbox" id="set12" checked>GAF
   <input type="checkbox" id="set17" checked>BAT
   <input type="checkbox" id="set19" checked>SWW
-  <input type="checkbox" id="set28" checked>HQ
+  <input type="checkbox" id="set28" checked>HQ 
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
   <input type="checkbox" id="set10" checked>TMNT
   <input type="checkbox" id="set15" checked>HHS
   <input type="checkbox" id="set3" checked>YGO
-  <button id="setall" type="button">All</button>
+<!-- 
+  <input type="checkbox" id="set29" checked>BOU 
+  <input type="checkbox" id="set30" checked>ORK 
+  <input type="checkbox" id="set31" checked>SW 
+ -->
+
+ 
+    
+   <button id="setall" type="button">All</button>
   <button id="setnone" type="button">None</button>
   </span>
   <br>
@@ -342,10 +350,9 @@
   <select id="informat">
    <option value="">No Format</option>
    <option value="G">Golden Era</option>
-   <option value="K">Modern Era</option>     
+   <option value="M">Modern Era</option>   
    <option value="P">PDC Prime</option>
-   <option value="M">Modern Era (2017)</option>
-   
+   <option value="K">Modern Era (2018)</option>
   </select>
   </span>
   </div>
@@ -1205,9 +1212,13 @@
   pj = pj.replace("Amplify", "<strong>Amplify</strong>");
   pj = pj.replace("Impulse", "<strong>Impulse</strong>");
   pj = pj.replace("Swarm", "<strong>Swarm</strong>");
-  pj = pj.replace("Fabricate", "<strong>Fabricate</strong>");
-
-  if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
+  pj = pj.replace("Frag", "<strong>Frag</strong>");
+  pj = pj.replace("Range", "<strong>Range</strong>");
+  pj = pj.replace("Range 1", "<strong>Range 1</strong>");
+  pj = pj.replace("Range 2", "<strong>Range 2</strong>");
+  pj = pj.replace("Range 3", "<strong>Range</strong>");
+      
+      if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1317,7 +1328,7 @@
   init(8,dcjl,'JL','jl');
    init(9,dctw,'JLop','jl',['jl']);
    init(10,bff_op,'BFFop','bff',['bff']);
-  init(11,aou,'AoU','aou',[], aou_aff);
+  init(11,aou,'AoU','aou');
   init(12,wol,'WoL','wol',[],wol_aff);
    init(13,wol_op,'WoLop','wol',['jl','wol'],wol_aff);
    init(14,aou_op,'M2015','aou',['aou','avx']);
@@ -1343,6 +1354,7 @@
   init(34,dc_op2017,'DC2017','bat',dc_op2017_dice,dc_op2017_aff);
   init(35,sww,'SWW','sww',[],bat_aff);
   init(36,smc,'SMC','smc',[],asm_aff);
+
   init(37,gotg,'GotG','gotg',[],gotg_aff);
   init(38,xfc,'XFC','xfc',[],xfc_aff);
   init(39,toa,'TOA','toa');
@@ -1350,9 +1362,14 @@
   init(41,sk_op2017,'sk2017','avx');
   init(42,ai,'AI','ai',[],ai_aff);
   init(43,ki,'KI','ki',[],ki_aff);
-  init(44,jll,'JLL','jll',[],jll_aff); 
+  init(44,jll,'JLL','jll',[],jll_aff);
   init(45,hq,'HQ','hq',[],hq_aff); 
-  
+  init(46,bou,'BOU','bou',[],bou_aff);
+  init(47,ork,'ORK','ork',[],ork_aff); 
+  init(48,sw,'SW','sw',[],sw_aff);  
+
+
+   
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
   }
@@ -1534,6 +1551,13 @@
     if (E(name + i).checked) res += 1<<i;
       return res;
   }
+  function getactivesets(count) {
+	  var res2 = [];
+	  var element = E('search_set_on');
+	  for (var i = 0; i < count; i++)
+		if (E('set' + i).checked) res2.push(set_names[i]);
+	  return res2;
+  }
   var lastfilter = {};
   var lastsearch = "";
   function filter() {
@@ -1542,7 +1566,7 @@
       set.name = E('filt1').value.toLowerCase();
       set.text = E('filt2').value.toLowerCase();
       set.type = set.energy = set.rarity = set.gender = set.set = 0;
-      set.set = getcheckboxval('set',set_names.length);
+      set.set = getactivesets(set_names.length);//getcheckboxval('set',set_names.length);
       set.type = getcheckboxval('type',3);
       set.energy = getcheckboxval('energy',5);
       set.rarity = getcheckboxval('rarity',6);
@@ -1575,15 +1599,21 @@
       var k3 = set.type, k4 = set.energy, k5 = set.rarity, k6, k7 = set.gender;
       var incol = set.incollection;
       var infor = set.informat;
-      var sets = set.set === undefined ? -1 : set.set;
+	  var sets = set.set === undefined ? [] : set.set;
+      //var sets = set.set === undefined ? -1 : set.set;
       var rows = [];
       k6 = 1 << set.cost_max + 1;
       k6 -= 1 << set.cost_min;
       if (!sets) sets = -1;
       if (k6 < 0) k6 = 0;
-	  if(sets>0){
+	  /*if(sets>0){
 		  for (var i = 0; i < set_names.length; i++) {
 		if (sets & (1 << i)) rows.extend(trs_by_set[i]);
+		  }
+	  }*/
+	  if(sets.length > 0){
+		 for (var i = 0; i < set_names.length; i++) {
+			if (sets.indexOf(set_names[i]) > -1) rows.extend(trs_by_set[i]);
 		  }
 	  }
       function f0(e) {
@@ -1963,6 +1993,10 @@
 	  hhs:'hhs',
 	  jll:'jll',
 	  hq:'hq',
+	  bou:'bou',
+	  ork:'ork',
+	  sw:'sw',
+
 	  //op sets
 	  sk2017:'sk2017',
 	  m2017:'m2017',
