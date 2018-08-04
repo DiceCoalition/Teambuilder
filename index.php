@@ -1212,12 +1212,13 @@
   pj = pj.replace("Amplify", "<strong>Amplify</strong>");
   pj = pj.replace("Impulse", "<strong>Impulse</strong>");
   pj = pj.replace("Swarm", "<strong>Swarm</strong>");
+  pj = pj.replace("Fabricate", "<strong>Fabricate</strong>");
   pj = pj.replace("Frag", "<strong>Frag</strong>");
   pj = pj.replace("Range", "<strong>Range</strong>");
   pj = pj.replace("Range 1", "<strong>Range 1</strong>");
   pj = pj.replace("Range 2", "<strong>Range 2</strong>");
   pj = pj.replace("Range 3", "<strong>Range</strong>");
-      
+  pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");   
       if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {

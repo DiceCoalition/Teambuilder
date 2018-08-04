@@ -234,7 +234,7 @@
 
        
     //BEGIN 40k SPACE WOLVES Hack
-    
+
 	var sw_aff = { S:'KISW'};
   	var sw = [
    
@@ -404,7 +404,7 @@
 '061v4Citizen V|New World Order|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)|When fielded, target character die gets +2D (until end of turn). When Citizen V uses Infiltrate, flip this card.||(Begin the game with this side face down.)|Retaliation (If an affiliated character is KO\'d, deal 1 damage to an opposing player.)|While Citizen V is active, your [DCV] character dice get +1A and Overcrush. If Citizen V is not active, immediately flip this card.',
 '061w4Citizen V|The Mask of Helmut|When fielded, target character die gets +2A (until end of turn).|While Citizen V is active, if a non-Citizen V character die damages an opponent, flip this card.||(Begin the game with this side face down.)|While Citizen V is active, your [DCV] character dice get +1A and +1D. If Citizen V is not active, flip this card.',
 '033a4Hawkeye|Worlds Greatest Marksman|When fielded, KO target opposing Sidekick charcter die.',
-'033a4Hawkeye|Preternatural Skills|When fielded, spin target oppoing character die to level 1.',
+'033a4Hawkeye|Preternatural Skills|When fielded, spin target opposing character die to level 1.',
 '053a4Hawkeye|Taking Aim|When fielded, deal damage to target opponent equal to Hawkeye\'s level. |Global: Pay [B]. Deal 1 damage to target Sidekick character die.',
 '043v4MACH-1|Abe Jenkins|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When MACH-1 attacks, he gets +1A and +1D (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|Overcrush',
 '043v4MACH-1|Need For Speed|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, of ir MACH-1 is active when flipped to this side, your [CWTB] dice cannot be blocked by lower level character dice (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if MACH-1 is active when flipped to this side, your [CWTB] character dice get +2A (until end of turn).',
@@ -445,8 +445,8 @@
 '033G4Rocket Raccoon|For the Love of Battle|When Rocket Raccoon attacks, he gets +1A and +1D for each other attacking [GG] character die (until end of turn).',
 '043G4Rocket Raccoon|One of a Kind?|While Rocket Raccoon is active, when you field a non-Rocket Raccoon [GG] character die, Rocket Raccoon gets +2A (until end of turn).',
 '071V4Supreme Intelligence|Supremor|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |For each character with "Kree" in its name die fabricated to purchase this die, gain 1 life. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
-'071V4Supreme Intelligence|Guiding Hand of the Kree|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |If you fabricated 2 character dice with "Kree" in its name die fabricated to purchase Supreme Intelligence, add it to your bag. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
-'071V4Supreme Intelligence|Assimilated Hivemind|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |While Supreme Intelligence is active, when you feilde a character die with "Kree" in its name, character dice you control get +1A and +1D (until end of turn).|Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Guiding Hand of the Kree|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |If you fabricated 2 character dice with "Kree" in its name to purchase Supreme Intelligence, add it to your bag. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Assimilated Hivemind|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |While Supreme Intelligence is active, when you field a character die with "Kree" in its name, character dice you control get +1A and +1D (until end of turn).|Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
 '081V4Thanos|Reality Gem|Overcrush|You may return a [DCV] character die you control in the Field Zone to its card to reduce the cost of this character die by [3] (as many times as you\'d like) (to a minimum of 1).',
 '081V4Thanos|Prove Love For Lady Death|Overcrush|When Thanos deals Overcrush damage to an opponent, double that damage. ',
 '091V4Thanos|Go, Cull Obsidian|Thanos costs [1] less to purchase for each of your active [DCV] character dice.|While Thanos is active, your non-Thanos character dice get +1A and +1D.',
@@ -486,7 +486,7 @@
 '054A4Iron Man|Not All Champagne And Caviar|Iron Man cannot be targeted by opposing Global Abilities or action dice. ',							
 '054A4Iron Man|Ponderous Footsteps|While Iron Man is active, the first time each turn an Iron Man character die is targeted by a Global Ability or action die, gain 1 life. ',							
 '051V4Loki|Throne of Contention|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.) ',							
-'051V4Loki|Chains of Destiny|When fielded, choose an affiliation other than [DCV], replacing all previous choices. Your oppoenent can pay 2 life to prevent this effect. While Loki is active, ignore the text (including Global abilities) on all cards of that affiliation. ',							
+'051V4Loki|Chains of Destiny|When fielded, choose an affiliation other than [DCV], replacing all previous choices. Your opponent can pay 2 life to prevent this effect. While Loki is active, ignore the text (including Global abilities) on all cards of that affiliation. ',							
 '061V4Loki|Father of Mayhem|When fielded, select target non-Loki character die you control and taget opposing character die, and swap control of them. At the end of your turn, return the opposing character (if active) and your opponent returns your character (if active). (Controlled dice that leave the field go immediately to their owner\'s Prep Area.)',							
 '042V4Red Skull|Cut off One Head...|When an opposing character die is KO\'d, Red Skull gets +1A and +1D (until end of turn).',							
 '042V4Red Skull|Grim Visage|If an opposing character die was KO\'d this turn, Red Skull may be fielded for free.',							
@@ -508,7 +508,7 @@
 '02003Confront The Mighty|Basic Action Card|Target character die you control has A equal to D of target opposing character die (until end of turn). Those two character dice deal damage to each other equal to their A.',							
 '04003Crowd Fighting|Basic Action Card|Choose an active character die. Deal damage equal to that character die\'s level to all opposing character dice.',							
 '04003I Want You!|Basic Action Card|Continuous: At the beginning of your opponent\'s turn, choose an energy type. All character dice of that energy type must attack this turn and deal no combat damage. If any of those character dice are unblocked, they remain in the Field Zone rather than being placed in the Used Pile at end of turn. At the end of your opponent\'s Attack Step send this die to your Used Pile. ',							
-'03003Raised Shields|Basic Action Card|Two target character dice you control get +1A and +1D.|*/** ALso, they gain Overcrush.|Global: Pay [B]. Target character die gets +1A.',							
+'03003Raised Shields|Basic Action Card|Two target character dice you control get +1A and +1D.|*/** Also, they gain Overcrush.|Global: Pay [B]. Target character die gets +1A.',							
 '04003Squad Goals|Basic Action Card|Draw and roll a die for each different energy type among your active character dice. (Sidekicks do not have an energy type.) (Rolled dice are placed in the Reserve Pool.)',							
 '03003Take Cover|Basic Action Card|Character dice you control get +2D.|*/** Also, target character die you control gets an additional +3D.|Global: Pay [S]. Target character die gets +1D (until end of turn).',							
 '03003Under Surveillance|Basic Action Card|Target character die is considered to be level 1 (A and D values, fielding cost, and bursts if any) and is unblockable (until end of turn).|Global: Pay [M][M]. Spin target character die down 1 level.',							
@@ -4225,7 +4225,7 @@
 
 	//AI
 	'Arnim Zola':'023 124 134',
-	'AI@Star-Lord':'135 146 257*',
+	'AI@Star-Lord':'132 253 254',
 	'AI@Thor':'153 164 276',
 	
 	//KI
@@ -4244,6 +4244,13 @@
 	"JLL@Songbird":"012 022 123",
 	"Techno":"133 143 144",
 	
+<<<<<<< HEAD
+=======
+	//HQ
+	"HQ@Batman":"144 255 375",
+	"Harley\'s Hyena":"013 124 134",
+	"HQ@Harley Quinn":"022 133 144",
+>>>>>>> 57412f856fe81cdcf015814aba170c2383d54af1
 	
 	//40l BSU
 	"Foetid Bloat-Drone":"025 145 147",
