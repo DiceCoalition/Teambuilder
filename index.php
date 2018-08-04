@@ -350,9 +350,9 @@
   <select id="informat">
    <option value="">No Format</option>
    <option value="G">Golden Era</option>
-   <option value="M">Modern Era</option>   
+   <option value="K">Modern Era</option>   
    <option value="P">PDC Prime</option>
-   <option value="K">Modern Era (2018)</option>
+   <option value="M">Modern Era (2017)</option>
   </select>
   </span>
   </div>
@@ -1218,7 +1218,7 @@
   pj = pj.replace("Range 1", "<strong>Range 1</strong>");
   pj = pj.replace("Range 2", "<strong>Range 2</strong>");
   pj = pj.replace("Range 3", "<strong>Range</strong>");
-  pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");   
+  pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");
       if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
@@ -1329,7 +1329,7 @@
   init(8,dcjl,'JL','jl');
    init(9,dctw,'JLop','jl',['jl']);
    init(10,bff_op,'BFFop','bff',['bff']);
-  init(11,aou,'AoU','aou');
+  init(11,aou,'AoU','aou', [], aou_aff);
   init(12,wol,'WoL','wol',[],wol_aff);
    init(13,wol_op,'WoLop','wol',['jl','wol'],wol_aff);
    init(14,aou_op,'M2015','aou',['aou','avx']);
