@@ -28,7 +28,7 @@
     var iconid = {
      M:'e1', F:'e2', B:'e3', S:'e4',
      EQ:'eq', TDF:'aA',
-     AV:'a2', VM:'a4', GG:'aG', ZO:'aD', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22',
+     AV:'a2', VM:'a4', GG:'aG', ZO:'aDZOM', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22',
      GOOD:'dg',
      DCV:"WVbw",WT:"WTbw",
      WL:"WLbw",WLG:"WGbw", WLB:"WBbw", WLY:"WYbw", WLI:"WIbw", WLK:"WKbw", WLR:"WRbw", WC:"WCbw",
@@ -85,7 +85,7 @@
     { name:'shield', pic: 'aF' },
     { name:'gotg', pic: 'aG' },
     { name:'exiles', pic:'aMEX'},
-    { name:'zombie', pic: 'aD' },
+    { name:'zombie', pic: 'aDZOM' },
     { name:'sinistersix', pic: 'aASS1' },
     { name:'spideyfriends', pic: 'aASF' },
     { name:'newwarriors', pic: 'aCWW' },
@@ -151,7 +151,7 @@
      CWW:'newwarriors',
      CWT:'thunderbolts',
      CWTV:['thunderbolts', 'villain'],
-     D:'zombie',
+     DZOM:'zombie',
      DCGA:'teamarrow',
      DCNG:'newgods',
      DCSS:'suicidesquad',
@@ -169,8 +169,8 @@
      JLVT:['villains','thunderbolts'],
      KCDG:['chaos','death guard'],
      KC:'chaos',
-     KISW:['imperium','spacewolves'],
      KIUM:['imperium','ultramarines'],
+	 KIUM:['imperium','ultramarines'],
      KO:'orks',
      KSW:'spacewolves',
      KUM:'ultramarines',
@@ -234,7 +234,7 @@
 
        
     //BEGIN 40k SPACE WOLVES Hack
-
+    
 	var sw_aff = { S:'KISW'};
   	var sw = [
    
@@ -394,12 +394,12 @@
        //BEGIN JUSTICE LIKE LIGHTNING Hack
     var jll_aff = { 0:'0',  V:'6', v:'JLVT/CWT', w:'CWT/JLVT', a:'JLTA', T:'CWT'};
     var jll = [
-'032a4Ant-Man|Petty Theft|Awaken: Ant-Man is unblockable (unil end of turn). (When this die spins up 1 or more levels, you may use this effect.)',
+'032a4Ant-Man|Petty Theft|Awaken: Ant-Man is unblockable (until end of turn). (When this die spins up 1 or more levels, you may use this effect.)',
 '032a4Ant-Man|Through the Cracks|Amplify: (When you use an action die, spin this character up 1 level.)',
 '032a4Ant-Man|12mm Marvel|Ant-Man cannot be blocked by higher level character dice or Sidekick character dice.',
 '054v4Atlas|Erik Josten|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|* Atlas must attack (if able).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|* Atlas must attack (if able).',
 '064v4Atlas|Allegiance to Zemo|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Atlas is active when flipped to this side, you may spin target non-Atlas character die to level 3.|* Also, you may spin target [CWTB] charcter die to level 3.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Atlas is active when flipped to this side, you may give target character die Overcrush and Iron Will.',
-'064v4Atlas|Purged of Pym Particles|Amplify: (When you use an action die, spin this character up 1 level.)|When Atlas uses Amplify, flip this card.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.||(Begin the game with this side face down.)|While Atlas is active, your [CWTB] character dice gains Overcrush. If Atlas is not active, flip this card.',
+'064v4Atlas|Purged of Pym Particles|Amplify: (When you use an action die, spin this character up 1 level.)|When Atlas uses Amplify, flip this card.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.||(Begin the game with this side face down.)|While Atlas is active, your [CWTB] character dice gain Overcrush. If Atlas is not active, flip this card.',
 '061v4Citizen V|Justice Like Lightning|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, you may flip any number of other [CWTB] cards.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|While Citizen V is active, your non-[DCV] character dice get +1A and +1D.',
 '061v4Citizen V|New World Order|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)|When fielded, target character die gets +2D (until end of turn). When Citizen V uses Infiltrate, flip this card.||(Begin the game with this side face down.)|Retaliation (If an affiliated character is KO\'d, deal 1 damage to an opposing player.)|While Citizen V is active, your [DCV] character dice get +1A and Overcrush. If Citizen V is not active, immediately flip this card.',
 '061w4Citizen V|The Mask of Helmut|When fielded, target character die gets +2A (until end of turn).|While Citizen V is active, if a non-Citizen V character die damages an opponent, flip this card.||(Begin the game with this side face down.)|While Citizen V is active, your [DCV] character dice get +1A and +1D. If Citizen V is not active, flip this card.',
@@ -407,17 +407,17 @@
 '033a4Hawkeye|Preternatural Skills|When fielded, spin target opposing character die to level 1.',
 '053a4Hawkeye|Taking Aim|When fielded, deal damage to target opponent equal to Hawkeye\'s level. |Global: Pay [B]. Deal 1 damage to target Sidekick character die.',
 '043v4MACH-1|Abe Jenkins|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When MACH-1 attacks, he gets +1A and +1D (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|Overcrush',
-'043v4MACH-1|Need For Speed|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, of ir MACH-1 is active when flipped to this side, your [CWTB] dice cannot be blocked by lower level character dice (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if MACH-1 is active when flipped to this side, your [CWTB] character dice get +2A (until end of turn).',
+'043v4MACH-1|Need For Speed|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if MACH-1 is active when flipped to this side, your [CWTB] dice cannot be blocked by lower level character dice (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if MACH-1 is active when flipped to this side, your [CWTB] character dice get +2A (until end of turn).',
 '043v4MACH-1|Mobile Armored Cyber-Harness|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When MACH-1 uses Attune two or more times in a turn, flip this card.||(Begin the game with this side face down.)|Attune|While MACH-1 is active, when you field a [CWTB] charcter die deal 2 damage to target character die. If MACH-1 is not active, flip this card.',
-'043v4Meterorite|Dr. Karla Sofen|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, your character dice get +1A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|While Meteorite is active, your opponent cannot attack with more than two character dice.',
-'043v4Meterorite|Daughter of the Kree|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meterorite is active when flipped to this side, when you field a [CWTB] character die (this turn), Prep a die from your bag (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meterorite is active when flipped to this side, when you field a [CWTB] character die, target [CWTB] character die you control gets +2A (until end of turn).',
-'043v4Meterorite|Precious Minerals|While Meteorite is active, other than at the beginning of your turn, when the character card of one of your active characters flips, flip this card.||(Begin the game with this side face down.)|When you flip a character card, Meteorite gets +1A and +1D (until end of turn). If you have at least 3 active [CWTB] characters Meteorite gets Overcrush. If Meteorite is not active, flip this card.',
-'053v4Songbird|A Caged Bird Sings|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, opposing charcter dice get -3A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, deal 2 damage to all opposing charcter dice. ',
+'043v4Meteorite|Dr. Karla Sofen|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, your character dice get +1A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|While Meteorite is active, your opponent cannot attack with more than two character dice.',
+'043v4Meteorite|Daughter of the Kree|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meteorite is active when flipped to this side, when you field a [CWTB] character die (this turn), Prep a die from your bag (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Meteorite is active when flipped to this side, when you field a [CWTB] character die, target [CWTB] character die you control gets +2A (until end of turn).',
+'043v4Meteorite|Precious Minerals|While Meteorite is active, other than at the beginning of your turn, when the character card of one of your active characters flips, flip this card.||(Begin the game with this side face down.)|When you flip a character card, Meteorite gets +1A and +1D (until end of turn). If you have at least 3 active [CWTB] characters Meteorite gets Overcrush. If Meteorite is not active, flip this card.',
 '033v4Songbird|Melissa Gold|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, KO target Sidekick character die.||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|Intimidate (When fielded, remove target opposing charcter die from the Field Zone until end of turn - place it next to your character cards.)|Songbird can only use Intimidate on character dice with purchase cost of 4 or less.',
+'053v4Songbird|A Caged Bird Sings|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, opposing charcter dice get -3A (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, deal 2 damage to all opposing charcter dice. ',
 '023v4Songbird|Shifting Alliances|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)',
 '033v4Techno|Paul Norbert Ebersol|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, your [CWTB] character dice cannot be targeted by your opponents (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, your [CWTB] character dice cannot have their damage prevented by opposing effects (until end of turn).',
 '033v4Techno|The Fix Is In|Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, target [CWTB] character die gains Fast (until end of turn).||Flip [FLIP] (At the start of your turn, you may flip this character to its other side.)|When fielded, or if Techno is active when flipped to this side, target [CWTB] character die gets +XA, where X is the number of your active [CWTB] characters (until end of turn).',
-'033v4Techno|Downloaded Consciousness|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When Techno uses Attune, flip this card.||(Begin the game with this side face down.)|Attune|While Techno is active, your [CWTB] character cards and dice can\'t have their text ignored. If Techno is not active, flip this card.',
+'033v4Techno|Downloaded Consciousness|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When Techno uses Attune, flip this card.|Global: Pay [B]. Spin any number of your Sidekick dice in your Field Zone and Reserve Pool to their [B] side (if active, move them to your Reserve Pool).||(Begin the game with this side face down.)|Attune|While Techno is active, your [CWTB] character cards and dice can\'t have their text ignored. If Techno is not active, flip this card.',
     ];
     
     
@@ -444,9 +444,9 @@
 '033G4Rocket Raccoon|Rocky|Rocket Raccoon gets +2D for each active non-Rocket Raccoon [GG] character.',
 '033G4Rocket Raccoon|For the Love of Battle|When Rocket Raccoon attacks, he gets +1A and +1D for each other attacking [GG] character die (until end of turn).',
 '043G4Rocket Raccoon|One of a Kind?|While Rocket Raccoon is active, when you field a non-Rocket Raccoon [GG] character die, Rocket Raccoon gets +2A (until end of turn).',
-'071V4Supreme Intelligence|Supremor|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |For each character with "Kree" in its name die fabricated to purchase this die, gain 1 life. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
-'071V4Supreme Intelligence|Guiding Hand of the Kree|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |If you fabricated 2 character dice with "Kree" in its name to purchase Supreme Intelligence, add it to your bag. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
-'071V4Supreme Intelligence|Assimilated Hivemind|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in it\'s name. |While Supreme Intelligence is active, when you field a character die with "Kree" in its name, character dice you control get +1A and +1D (until end of turn).|Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Supremor|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in its name. |For each character with "Kree" in its name die fabricated to purchase this die, gain 1 life. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Guiding Hand of the Kree|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in its name. |If you fabricated 2 character dice with "Kree" in its name die fabricated to purchase Supreme Intelligence, add it to your bag. |Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
+'071V4Supreme Intelligence|Assimilated Hivemind|Fabricate 2-5: At least one of the fabricated character dice must be a character with "Kree" in its name. |While Supreme Intelligence is active, when you field a character die with "Kree" in its name, character dice you control get +1A and +1D (until end of turn).|Global: Pay [2]. Once per turn, move a die with purchase cost 2 or less from your Used Pile to your Prep Area (Sidekick dice are considered to have a purchase cost of 0).',
 '081V4Thanos|Reality Gem|Overcrush|You may return a [DCV] character die you control in the Field Zone to its card to reduce the cost of this character die by [3] (as many times as you\'d like) (to a minimum of 1).',
 '081V4Thanos|Prove Love For Lady Death|Overcrush|When Thanos deals Overcrush damage to an opponent, double that damage. ',
 '091V4Thanos|Go, Cull Obsidian|Thanos costs [1] less to purchase for each of your active [DCV] character dice.|While Thanos is active, your non-Thanos character dice get +1A and +1D.',
@@ -464,9 +464,9 @@
 '052A4Black Panther|The Orphan King|Black Panther cannot be blocked by [DCV] character dice or Sidekick character dice.',							
 '052A4Black Panther|Look Homeward|Black Panther gets +1A and +1D for each opposing [DCV] character.',							
 '052A4Black Panther|Vibranium Daggers|When Black Panther is KO\'d, KO target opposing [DCV] character die.',							
-'022A4Black Widow|Crimson Shadow|When Black Widow attacks, if an opponent controls a higher level character die, deal that opponent 1 damage. |Global: Pay [F]. Once per turn, target character die must attacke this turn (if able).',							
-'022A4Black Widow|Red Alert|When fielded, you may KO target Sidekick character die.|Global: Pay [F]. Once per turn, target character die must attacke this turn (if able).',							
-'022A4Black Widow|The Widow\'s Bite|When fielded, your other character dice get +1A (until end of turn).',							
+'022A4Black Widow|Crimson Shadow|When Black Widow attacks, if an opponent controls a higher level character die, deal that opponent 1 damage. |Global: Pay [F]. Once per turn, target character die must attack this turn (if able).',							
+'022A4Black Widow|Red Alert|When fielded, you may KO target Sidekick character die.|Global: Pay [F]. Once per turn, target character die must attack this turn (if able).',							
+'022A4Black Widow|The Widow\'s Bite|When fielded, your other character dice get +1A (until end of turn).|Global: Pay [F]. Once per turn, target character die must attack this turn (if able).',					
 '054A4Captain America|Living Legend|While Captain America is active, your Sidekick character dice get +2D.',							
 '044A4Captain America|Stars and Stripes Forever|While Captain America is active, when you use an action die, you may field a Sidekick die from your Used Pile.',							
 '044A4Captain America|The Good Old Days|While Captain America is active, when a Sidekick character die you control is KO\'d, Prep a die from your bag. If it is not a Sidekick die, Captain America gets +1A and +1D (until end of turn).',							
@@ -512,7 +512,7 @@
 '04003Squad Goals|Basic Action Card|Draw and roll a die for each different energy type among your active character dice. (Sidekicks do not have an energy type.) (Rolled dice are placed in the Reserve Pool.)',							
 '03003Take Cover|Basic Action Card|Character dice you control get +2D.|*/** Also, target character die you control gets an additional +3D.|Global: Pay [S]. Target character die gets +1D (until end of turn).',							
 '03003Under Surveillance|Basic Action Card|Target character die is considered to be level 1 (A and D values, fielding cost, and bursts if any) and is unblockable (until end of turn).|Global: Pay [M][M]. Spin target character die down 1 level.',							
-'03003Wormhole|Basic Action Card|Continuous: Whenever you could usa Global Ability, you may send this die to your Used Pile. If you do, return all dice controlled by a player other than their owner to their owner\'s Field Zone, and return all dice temporarily in the Field Zone to where they originally came from.',							
+'03003Wormhole|Basic Action Card|Continuous: Whenever you could use a Global Ability, you may send this die to your Used Pile. If you do, return all dice controlled by a player other than their owner to their owner\'s Field Zone, and return all dice temporarily in the Field Zone to where they originally came from.',							
     ];
 
     //BEGIN THOR HACK
@@ -2279,7 +2279,7 @@
     '572V3Professor Zoom™|Thief|Fast|If you used Cosmic Treadmill this turn, you may pay [2] less to purchase Professor Zoom.',
     ];
     var asm_aff = {
-    0:'0',X:'1',A:'2',V:'4',G:'G',Z:'D',F:'ASF',S:'ASS',M:'MK',T:'CWT',
+    0:'0',X:'1',A:'2',V:'4',G:'G',Z:'DZOM',F:'ASF',S:'ASS',M:'MK',T:'CWT',
     };
     var asm = [
     '051V4Carnage|Cletus Kassidy|While Carnage is active, when an opponent uses an action die, Carnage deals them 2 damage.',
@@ -2583,6 +2583,9 @@
     '47291Black Lantern Superman™|Krypton\'s Fall|When fielded, KO all Superman Dice. At the beginning of each turn, each player loses life equal to the highest level of a die they control.|Global: Once per turn, after your reroll, if you have at least one of each energy type in your Reserve Pool, gain [1] energy.',
     '47491Black Lantern Wonder Woman|Undead Warrior|When fielded, KO all Wonder Woman Dice. At the beginning of each player\'s turn, that player chooses a fielded non-[WLK] character and moves it to the Used Pile. If they cannot, they lose 2 life.',
     ];
+	var aou_aff = {
+    0:'0',1:'1',2:'2',4:'4',G:'G',J:'J',I:'I',D:'DZOM',F:'F',
+    };
     var aou = [
     '02124Black Widow|Natasha|Black Widow can\'t be blocked unless your opponent spins down one of their character dice.',
     '02124Black Widow|Spy|Teamwatch - When you field a character who shares an affiliation with Black Widow, Black Widow can\'t be blocked by only one character this turn.',
@@ -4240,17 +4243,14 @@
 	"Atlas":"023 145 388*",
 	"Citizen V":"022 154 176",
 	"MACH-1":"032 143 254",
-	"Meterorite":"031 142 254",
+	"Meteorite":"031 142 254",
 	"JLL@Songbird":"012 022 123",
 	"Techno":"133 143 144",
 	
-<<<<<<< HEAD
-=======
 	//HQ
 	"HQ@Batman":"144 255 375",
 	"Harley\'s Hyena":"013 124 134",
 	"HQ@Harley Quinn":"022 133 144",
->>>>>>> 57412f856fe81cdcf015814aba170c2383d54af1
 	
 	//40l BSU
 	"Foetid Bloat-Drone":"025 145 147",
