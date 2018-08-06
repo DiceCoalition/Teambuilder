@@ -155,14 +155,14 @@
       <span class="show_mode1 hide"><span class="show_teamlist hide"><table class="m mm s">
   <tr>
   <td class="edit"></td><td class="edit"></td><td class="team"></td><td class="collection"></td><td class="collection"></td><td></td>
-  <td id="teamsort1">&nbsp<div class="tt">Sort by Card #</div></td>
-  <td id="teamsort2">&nbsp<div class="tt">Sort by Card Name</div></td>
-  <td id="teamsort3">&nbsp<div class="tt">Sort by Cost</div></td>
-  <td id="teamsort4">&nbsp<div class="tt">Sort by Energy Type</div></td>
-  <td id="teamsort5">&nbsp<div class="tt">Sort by Affiliation</div></td>
-  <td id="teamsort6">&nbsp<div class="tt">Sort by Max dice</div></td>
-  <td id="teamsort7">&nbsp<div class="tt">Sort by Rarity</div></td>
-  <td class="extra" id="teamsort8">&nbsp<div class="tt">Sort by D&amp;D Alignment</div></td>
+  <td id="teamsort1">&nbsp;<div class="tt">Sort by Card #</div></td>
+  <td id="teamsort2">&nbsp;<div class="tt">Sort by Card Name</div></td>
+  <td id="teamsort3">&nbsp;<div class="tt">Sort by Cost</div></td>
+  <td id="teamsort4">&nbsp;<div class="tt">Sort by Energy Type</div></td>
+  <td id="teamsort5">&nbsp;<div class="tt">Sort by Affiliation</div></td>
+  <td id="teamsort6">&nbsp;<div class="tt">Sort by Max dice</div></td>
+  <td id="teamsort7">&nbsp;<div class="tt">Sort by Rarity</div></td>
+  <td class="extra" id="teamsort8">&nbsp;<div class="tt">Sort by D&amp;D Alignment</div></td>
   <td class="extra"></td>
   </tr>
       </table></span></span>
@@ -253,6 +253,9 @@
  
     
    <button id="setall" type="button">All</button>
+   <button id="setmarvel" type="button">Marvel</button>
+   <button id="setdc" type="button">DC</button>
+   <button id="setdnd" type="button">D&D</button>
   <button id="setnone" type="button">None</button>
   </span>
   <br>
@@ -354,7 +357,7 @@
    <option value="P">PDC Prime</option>
    <option value="M">Modern Era (2017)</option>
   </select>
-  </span>
+  </span>  
   </div>
   <br>
   <input id="filt0" type="text" placeholder="#">
@@ -407,6 +410,9 @@
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
+  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27];
+  var dcsets = [4,6,9,12,17,19,28];
+  var dndsets =[2,8,23];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
   function escapeHtml(x) {
       return x.replace(/[&<>"'\/]/g, function(s){return entityMap[s]});
@@ -1918,6 +1924,33 @@
       update_affiliations();
       filter();
   }
+  function selectsets(val) {
+      for(var i = 0; i < set_names.length; i++) {
+		  if(val === 'marvel'){
+			  if(marvelsets.indexOf(i) > -1){
+				  E('set' + i).checked = true;
+			  }else{
+				  E('set' + i).checked = false;
+			  }			  
+		  }
+		  else if(val === 'dc'){
+			  if(dcsets.indexOf(i) > -1){
+				  E('set' + i).checked = true;
+			  }else{
+				  E('set' + i).checked = false;
+			  }
+		  }
+		  else if(val === 'dnd'){
+			  if(dndsets.indexOf(i) > -1){
+				  E('set' + i).checked = true;
+			  }else{
+				  E('set' + i).checked = false;
+			  }
+		  }		
+      }
+      update_affiliations();
+      filter();
+  }
   function num2cardname(a) {
       return a%1000 + setnames[a/1000|0];
   }
@@ -2196,6 +2229,9 @@
     E('teamsort'+i).addEventListener('click',function(x){return function() { teamsort(x) }}(i),false);
   E('clear').addEventListener('click',function() { clearfilters() },false);
   E('setall').addEventListener('click',function() { clearsets(true) },false);
+  E('setmarvel').addEventListener('click',function() { selectsets('marvel') },false);
+  E('setdc').addEventListener('click',function() { selectsets('dc') },false);
+  E('setdnd').addEventListener('click',function() { selectsets('dnd') },false);
   E('setnone').addEventListener('click',function() { clearsets(false) },false);
   E('showlink').addEventListener('click',function() { showlink() },false);
   var lastcardpreview = undefined;

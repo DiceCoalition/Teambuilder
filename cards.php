@@ -91,7 +91,7 @@
     { name:'newwarriors', pic: 'aCWW' },
     { name:'thunderbolts', pic: 'aCWT' },
     { name:'marvelknights', pic: 'aMK' },
-    { name:'mystic', pic: 'aMYSTIC' },
+    { name:'mystic', pic: 'aMYSTIC' },	
     { name:'deadpool', pic: 'aMDP' },
     { name:'inhumans', pic: 'aMIH' },
     { name:'starkindustries', pic: 'aMSTARK' },
@@ -179,7 +179,7 @@
      MBOM:'brotherhoodofmutants',
      MBOMV:['brotherhoodofmutants','villain'],
      MDP:'deadpool',
-     MDFD:'defenfers',
+     MDFD:'defenders',
      MIH:'inhumans',
      MIHV:['villain','inhumans'],
      MK:'marvelknights',
@@ -235,7 +235,7 @@
        
     //BEGIN 40k SPACE WOLVES Hack
     
-	var sw_aff = { S:'KISW'};
+	var sw_aff = { S:'KSW'};
   	var sw = [
    
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
