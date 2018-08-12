@@ -253,15 +253,15 @@
 '042S4Thunderwolf Cavalry|Crushing Teeth and Claws|Thunderwolf Cavalry gets +1A and +1D for each other active [DCV] character you control.',
 '042S4Thunderwolf Cavalry|Dauntless Elite|Overcrush (Damge dealt in excess of blocker\'s D is dealt to opponent.)',
 '042S4Thunderwolf Cavalry|Adamantium Jaws|When Thunderwolf Cavalry attacks, your Sidekick character dice get +1A and +1D (until end of turn).',
-'054S2Venerable Dreadnaught|Battleworn Veteran|While Venerable Dreadnaught is active, when you field a [DCV] character die, Prep a die from your bag.',
-'054S2Venerable Dreadnaught|Exalted|While Venerable Dreadnaught is active, your [DCV] character dice are free to field.',
+'054S2Venerable Dreadnaught|Battleworn Veteran|While Venerable Dreadnaught is active, when you field a [KSW] character die, Prep a die from your bag.',
+'054S2Venerable Dreadnaught|Exalted|While Venerable Dreadnaught is active, your [KSW] character dice are free to field.',
 '044S2Venerable Dreadnaught|Custodian of Knowledge|While Venerable Dreadnaught is active, your active characeter dice have Range 1.',
 '032S4Wolf Guard Terminator|Wolf Guard Terminator|Infiltrate|Reduce all damge dealt to Wolf Guard Terminator from each source to 1.',
 '032S4Wolf Guard Terminator|Heroic and Valorous|Reduce all damge dealt to Wolf Guard Terminator from each source to 1.|Wolf Guard Terminator cannot be blocked by [S] or [F] character dice.',
 '032S4Wolf Guard Terminator|The Mightiest Warrior|Range 1|Infiltrate',
 '041S4Wulfen|Cursed|When one of your character dice is KO\'d, spin each Wulfen character die up 1 level.',
-'091S4Wulfen|xxx|xxx content coming',
-'091S4Wulfen|DDD|xxx content coming',
+'041S4Wulfen|Savage|When Wulfen is blocked, spin that character die up 1 level.',
+'041S4Wulfen|Canix Helix|When a [KSW] of cost 5 or more is fielded, spin Wulfen up 1 level.',
 ];
 
     //BEGIN 40k ORKS Hack
