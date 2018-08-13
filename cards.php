@@ -22,7 +22,7 @@
      MDFD:"defenders",
      BOM:'brotherhood of evil mutant',
      MEX:'exiles',
-     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', 
+     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -47,13 +47,13 @@
      MDFD:'aMDFD',
      BOM:'aMBOM', MEX:'aMEX',
      PAWN:'pawn',
-     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', 
+     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
     var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq'];
 
-    //var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bou','ork','sw'];
+    //var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -72,7 +72,7 @@
     'ddh', 'ddo', 'ddl', 'dde', 'ddz', 'ddm',
     'turtle',
     'ytd', 'yeg',
-    'kc','kum', 'ko','ksw',
+    'kc','kum', 'ko','ksw','ki',
     ];
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
@@ -129,6 +129,7 @@
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
+	{ name:'imperium', pic: 'aKI' },
     ];
 
     var affiliation_map = {
@@ -170,9 +171,9 @@
      KCDG:['chaos','death guard'],
      KC:'chaos',
      KIUM:['imperium','ultramarines'],
-	 KIUM:['imperium','ultramarines'],
      KO:'orks',
      KSW:'spacewolves',
+	 KISW:['imperium','spacewolves'],
      KUM:'ultramarines',
      L:'lords',
      M:'monster',
@@ -235,7 +236,7 @@
        
     //BEGIN 40k SPACE WOLVES Hack
     
-	var sw_aff = { S:'KSW'};
+	var sw_aff = { S:'KISW'};
   	var sw = [
    
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
@@ -260,8 +261,8 @@
 '032S4Wolf Guard Terminator|Heroic and Valorous|Reduce all damge dealt to Wolf Guard Terminator from each source to 1.|Wolf Guard Terminator cannot be blocked by [S] or [F] character dice.',
 '032S4Wolf Guard Terminator|The Mightiest Warrior|Range 1|Infiltrate',
 '041S4Wulfen|Cursed|When one of your character dice is KO\'d, spin each Wulfen character die up 1 level.',
-'091S4Wulfen|xxx|xxx content coming',
-'091S4Wulfen|DDD|xxx content coming',
+'091S4Wulfen|Savage|When Wulfen is blocked, spin that character die up 1 level.',
+'091S4Wulfen|Canis Helix|When a [KSW] character die of cost 5 or more is fielded, spin Wulfen up 1 level.',
 ];
 
     //BEGIN 40k ORKS Hack
@@ -295,9 +296,9 @@
 
 ];
 
-    //BEGIN 40K BOU Hack
-    var bou_aff = { 0:'0',  C:'KCDG', U:'KUM'};
-    var bou = [
+    //BEGIN 40K BFU Hack
+    var bfu_aff = { 0:'0',  C:'KCDG', U:'KIUM'};
+    var bfu = [
 '054C4Foetid Bloat-Drone|Putrid Explosion|Deadly|When Foetid Bloat Drone attacks, all opposing character dice must block (if able).',
 '054C4Foetid Bloat-Drone|Plague Probe|While Foetid Bload-Drone is active, when an opposing Sidekick or level 1 character die is KO\'d, you may field a Sidekick die from your Used Pile.|Global: Pay [S]. Once per turn, on your turn, Sacrifice a Sidekick character die. If you do, draw and roll two dice (place them in your Reserve Pool).',
 '064C4Foetid Bloat-Drone|Fleshmower|When Foetid Bloat-Drone attacks, all opposing character dice get -3A (until end of turn).',

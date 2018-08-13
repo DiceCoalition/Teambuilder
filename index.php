@@ -244,11 +244,11 @@
   <input type="checkbox" id="set10" checked>TMNT
   <input type="checkbox" id="set15" checked>HHS
   <input type="checkbox" id="set3" checked>YGO
-<!-- 
-  <input type="checkbox" id="set29" checked>BOU 
+  <!--
+  <input type="checkbox" id="set29" checked>BFU 
   <input type="checkbox" id="set30" checked>ORK 
   <input type="checkbox" id="set31" checked>SW 
- -->
+-->
 
  
     
@@ -1371,7 +1371,7 @@
   init(43,ki,'KI','ki',[],ki_aff);
   init(44,jll,'JLL','jll',[],jll_aff);
   init(45,hq,'HQ','hq',[],hq_aff); 
-  init(46,bou,'BOU','bou',[],bou_aff);
+  init(46,bfu,'BFU','bfu',[],bfu_aff);
   init(47,ork,'ORK','ork',[],ork_aff); 
   init(48,sw,'SW','sw',[],sw_aff);  
 
@@ -2027,9 +2027,10 @@
 	  hhs:'hhs',
 	  jll:'jll',
 	  hq:'hq',
-	  bou:'bou',
+	  bfu:'bfu',
 	  ork:'ork',
 	  sw:'sw',
+	  imp:'imp',
 
 	  //op sets
 	  sk2017:'sk2017',
