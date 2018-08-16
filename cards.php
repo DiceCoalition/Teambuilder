@@ -261,8 +261,8 @@
 '032S4Wolf Guard Terminator|Heroic and Valorous|Reduce all damge dealt to Wolf Guard Terminator from each source to 1.|Wolf Guard Terminator cannot be blocked by [S] or [F] character dice.',
 '032S4Wolf Guard Terminator|The Mightiest Warrior|Range 1|Infiltrate',
 '041S4Wulfen|Cursed|When one of your character dice is KO\'d, spin each Wulfen character die up 1 level.',
-'091S4Wulfen|Savage|When Wulfen is blocked, spin that character die up 1 level.',
-'091S4Wulfen|Canis Helix|When a [KSW] character die of cost 5 or more is fielded, spin Wulfen up 1 level.',
+'041S4Wulfen|Savage|When Wulfen is blocked, spin that character die up 1 level.',
+'041S4Wulfen|Canis Helix|When a [KSW] character die of cost 5 or more is fielded, spin Wulfen up 1 level.',
 ];
 
     //BEGIN 40k ORKS Hack
