@@ -269,9 +269,9 @@
     
    var ork_aff = { 0:'0', O:'KO'};
    var ork = [
-'043O4Battle Wagon|Salvaged Monstrosity|Range 1|Battlewagon has Range 3, instead of Range 1, if an active, opposing character die has Range.',
-'043O4Battle Wagon|Assault Tank|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn (before damage is cleared).)',
-'043O4Battle Wagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
+'043O4Battlewagon|Salvaged Monstrosity|Range 1|Battlewagon has Range 3, instead of Range 1, if an active, opposing character die has Range.',
+'043O4Battlewagon|Assault Tank|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn (before damage is cleared).)',
+'043O4Battlewagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
 '061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazghkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
 '061O2Ghazghkul Thraka|Prophet of Gork and Mork|While Ghazghkul Thraka is active, once per turn, when you could use a Global Ability, you may KO a character die you control.|If you do, deal 1 damage to target opponent.',
 '071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deals combat camage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
@@ -308,7 +308,7 @@
 '053C4Malignant Plaguecaster|Blades of Putrefaction|When fielded, reroll each opposing level 1 or 2 character die. KO any dice that roll and energy face and return the rest to the Field Zone (on their rolled levels). Your opponent may pay [1] per character die to ignore this ability in its entirety for that character die.',
 '053C4Malignant Plaguecaster|Miasma of Pestilence|When fielded, reroll target oppoing character die. KO it if it shows an energy face. Otherwise, return it to the Field Zone (on it\'s rolled level).',
 '053C4Malignant Plaguecaster|Putrescent Vitality|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared).',
-'074C4Mortarion|Host of Plagues|When fielded, deal damage to all opposing players and character dice equal to Mortarion\'s level.',
+'074C4Mortarion|Host of Plagues|When fielded, deal damage to all opposing players and character dice equal to Mortarion\'s level.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '074C4Mortarion|Primarch of the Death Guard|Whle Mortarion is active, prevent the first damage to you from each source each turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '074C4Mortarion|Toxic Presence|When Mortarion blocks, blocked character dice deal no combat damage this turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '031C4Noxious Blightbringer|Tocsin of Misery|When fielded, deal damage to target player equal to the amount of energy in their Reserve Pool (count energy symbols, not faces that show energy).',
