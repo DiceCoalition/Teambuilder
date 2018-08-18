@@ -22,7 +22,7 @@
      MDFD:"defenders",
      BOM:'brotherhood of evil mutant',
      MEX:'exiles',
-     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', 
+     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -47,13 +47,13 @@
      MDFD:'aMDFD',
      BOM:'aMBOM', MEX:'aMEX',
      PAWN:'pawn',
-     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', 
+     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork'];
 
-    //var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bou','ork','sw'];
+    //var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -72,7 +72,7 @@
     'ddh', 'ddo', 'ddl', 'dde', 'ddz', 'ddm',
     'turtle',
     'ytd', 'yeg',
-    'kc','kum', 'ko','ksw',
+    'kc','kum', 'ko','ksw','ki',
     ];
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
@@ -91,7 +91,7 @@
     { name:'newwarriors', pic: 'aCWW' },
     { name:'thunderbolts', pic: 'aCWT' },
     { name:'marvelknights', pic: 'aMK' },
-    { name:'mystic', pic: 'aMYSTIC' },
+    { name:'mystic', pic: 'aMYSTIC' },	
     { name:'deadpool', pic: 'aMDP' },
     { name:'inhumans', pic: 'aMIH' },
     { name:'starkindustries', pic: 'aMSTARK' },
@@ -129,6 +129,7 @@
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
+	{ name:'imperium', pic: 'aKI' },
     ];
 
     var affiliation_map = {
@@ -170,16 +171,16 @@
      KCDG:['chaos','death guard'],
      KC:'chaos',
      KIUM:['imperium','ultramarines'],
-	 KIUM:['imperium','ultramarines'],
      KO:'orks',
      KSW:'spacewolves',
+	 KISW:['imperium','spacewolves'],
      KUM:'ultramarines',
      L:'lords',
      M:'monster',
      MBOM:'brotherhoodofmutants',
      MBOMV:['brotherhoodofmutants','villain'],
      MDP:'deadpool',
-     MDFD:'defenfers',
+     MDFD:'defenders',
      MIH:'inhumans',
      MIHV:['villain','inhumans'],
      MK:'marvelknights',
@@ -241,16 +242,16 @@
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
 '021S5Grey Hunter|Counter Attack|When Grey Hunter is KO\'d, deal 1 damage to all opposing character dice.',
 '021S5Grey Hunter|Fenrisian Warrior|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
-'074S2Logan Grimmar|High King of Fenris|Overcrush|Logan Grimnar can only be blocked by two or more character dice.',
-'074S2Logan Grimmar|Old Wolf|Intimidate (When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)',
-'064S2Logan Grimmar|Fangfather|Overcrush (Damge dealt in excess of blocker\'s D is dealt to opponent.)',
+'074S2Logan Grimnar|High King of Fenris|Overcrush|Logan Grimnar can only be blocked by two or more character dice.',
+'074S2Logan Grimnar|Old Wolf|Intimidate (When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)',
+'064S2Logan Grimnar|Fangfather|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)',
 '022S5Sky Claw|Hot Headed|',
 '032S5Sky Claw|Berserker|When Sky Claw is blocked, Prep a die from your bag.|Global: Pay [F]. Once per turn, target blocked character die gets +2A.',
 '032S5Sky Claw|Reckless Bloodthirst|When Sky Claw is KO\'d by combat damge, gain 2 life.|Global: Pay [F]. Once per turn, target blocked character die gets +2A.',
-'063S4Space Wolf Predator|Armoured Ceramite Plating|When fielded, both player may choose a character die from their Used Pile and roll it. If it comes up a character face, they field it for free. Otherwise, return it to the Used Pile.',
+'063S4Space Wolf Predator|Armoured Ceramite Plating|When fielded, both players may choose a character die from their Used Pile and roll it. If it comes up a character face, they field it for free. Otherwise, return it to the Used Pile.',
 '063S4Space Wolf Predator|Dozer Blade|When fielded, [KSW] character dice cost 2 less to purchase (until end of turn) (minimum 1).',
 '063S4Space Wolf Predator|Weapons Platform|When fielded, you may purchase a Basic Action Die for [1] and roll it. If it rolls an energy face, return it to its card. Otherwise, use its effect and place it in your Used Pile.',
-'042S4Thunderwolf Cavalry|Crushing Teeth and Claws|Thunderwolf Cavalry gets +1A and +1D for each other active [DCV] character you control.',
+'042S4Thunderwolf Cavalry|Crushing Teeth and Claws|Thunderwolf Cavalry gets +1A and +1D for each other active [KSW] character you control.',
 '042S4Thunderwolf Cavalry|Dauntless Elite|Overcrush (Damge dealt in excess of blocker\'s D is dealt to opponent.)',
 '042S4Thunderwolf Cavalry|Adamantium Jaws|When Thunderwolf Cavalry attacks, your Sidekick character dice get +1A and +1D (until end of turn).',
 '054S2Venerable Dreadnaught|Battleworn Veteran|While Venerable Dreadnaught is active, when you field a [KSW] character die, Prep a die from your bag.',
@@ -261,7 +262,7 @@
 '032S4Wolf Guard Terminator|The Mightiest Warrior|Range 1|Infiltrate',
 '041S4Wulfen|Cursed|When one of your character dice is KO\'d, spin each Wulfen character die up 1 level.',
 '041S4Wulfen|Savage|When Wulfen is blocked, spin that character die up 1 level.',
-'041S4Wulfen|Canix Helix|When a [KSW] of cost 5 or more is fielded, spin Wulfen up 1 level.',
+'041S4Wulfen|Canis Helix|When a [KSW] character die of cost 5 or more is fielded, spin Wulfen up 1 level.',
 ];
 
     //BEGIN 40k ORKS Hack
@@ -270,23 +271,23 @@
    var ork = [
 '043O4Battle Wagon|Salvaged Monstrosity|Range 1|Battlewagon has Range 3, instead of Range 1, if an active, opposing character die has Range.',
 '043O4Battle Wagon|Assault Tank|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn (before damage is cleared).)',
-'043O4Battle Wagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing charcter die is KO\'d by Range, Prep a die from your bag.',
-'061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazhkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
+'043O4Battle Wagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
+'061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazghkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
 '061O2Ghazghkul Thraka|Prophet of Gork and Mork|While Ghazghkul Thraka is active, once per turn, when you could use a Global Ability, you may KO a character die you control.|If you do, deal 1 damage to target opponent.',
 '071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deals combat camage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
-'054O4Mogrok|Know-It-All-Git|Range 1|While Mogrok is active, your other [KO] charcter dice get +1A and +1D.',
+'054O4Mogrok|Know-It-All-Git|Range 1|While Mogrok is active, your other [KO] character dice get +1A and +1D.',
 '054O4Mogrok|War of Kunnin\'|When Mogrok blocks and is not KO\'d, spin him up 1 level (at end of turn).|Global: Pay [S]. Target character gets +1d (until end of turn).',
 '054O4Mogrok|The Red Waaagh!|While Mogrok is active, Prep the first action die you purchase each turn.|Global: Pay [S]. Target character gets +1d (until end of turn).',
 '022O5Ork Boy|Slugga|When Ork Boy attacks, it gets +1A if at least 1 other character die also attacks.',
-'022O5Ork Boy|Shoota|When Ork Boy is KO\'d, if you control a [KO] character die other than Ork Boy, return Ork Boy to teh FIeld Zone at level 1 (clear all damage from Ork Boy).',
-'022O5Ork Boy|Rokkit|When Ork Boy is KO\'d by a higher level character die, retunr Ork Boy to the Field Zone and spin it up 1 level (clear all damage from Ork Boy).',
+'022O5Ork Boy|Shoota|When Ork Boy is KO\'d, if you control a [KO] character die other than Ork Boy, return Ork Boy to the Field Zone at level 1 (clear all damage from Ork Boy).',
+'022O5Ork Boy|Rokkit|When Ork Boy is KO\'d by a higher level character die, return Ork Boy to the Field Zone and spin it up 1 level (clear all damage from Ork Boy).',
 '021O5Ork Nob|Big Choppa|When a character die is KO\'d, Ork Nob gets +1A and +2D (until end of turn).',
 '031O5Ork Nob|Kustom Shoota|Swarm (While this character is active, if you draw this die during your Clear and Draw Step, draw and roll an extra die.)',
 '031O5Ork Nob|Power Klaw|While an [KO] character die with purchase cost 4 or greater is active, Ork Nob gets +1A and +1D and is free to field.',
 '092O2Stompa|Klawstompa|Range 2|When fielded, KO 2 target opposing character dice.',
 '092O1Stompa|Bit Mek\'s|Range 2|When fielded, KO target opposing character die and return it to its card. That character cannot be purchased next turn.',
 '082O2Stompa|Mechanical God|Overcrush|Frag',
-'043O4Stormboyz|Da Vulcha Skwad|When fielded, deal damage equal to Stormboys\'s A to target opposing charactr die.',
+'043O4Stormboyz|Da Vulcha Skwad|When fielded, deal damage equal to Stormboyz\'s A to target opposing charactr die.',
 '043O4Stormboyz|Choppa Storm|Intimidate|Global: Pay [B]. Once per turn, target character gets Range 1.',
 '043O4Stormboyz|Flashy Skyboyz|Range 2|Global: Pay [B]. Once per turn, target character gets Range 1.',
 '034O4Warbiker|Zog Off|While Warbiker is active, prevent all damage from the Range ability to your [KO] character dice.',
@@ -295,10 +296,10 @@
 
 ];
 
-    //BEGIN 40K BOU Hack
-    var bou_aff = { 0:'0',  C:'KCDG', U:'KUM'};
-    var bou = [
-'054C4Foetid Bloat-Drone|Putrid Explosion|Deadly|When Foetid Bloat Drone attacks, all opposing character dice msut block (if able).',
+    //BEGIN 40K BFU Hack
+    var bfu_aff = { 0:'0',  C:'KCDG', U:'KIUM'};
+    var bfu = [
+'054C4Foetid Bloat-Drone|Putrid Explosion|Deadly|When Foetid Bloat Drone attacks, all opposing character dice must block (if able).',
 '054C4Foetid Bloat-Drone|Plague Probe|While Foetid Bload-Drone is active, when an opposing Sidekick or level 1 character die is KO\'d, you may field a Sidekick die from your Used Pile.|Global: Pay [S]. Once per turn, on your turn, Sacrifice a Sidekick character die. If you do, draw and roll two dice (place them in your Reserve Pool).',
 '064C4Foetid Bloat-Drone|Fleshmower|When Foetid Bloat-Drone attacks, all opposing character dice get -3A (until end of turn).',
 '053C4Lord of Contagion|Manreaper|Whlle Lord of Contagion is active, when you field a [KC] character die other than Lord of Contagion, deal 1 damage to target opponent.',
@@ -307,14 +308,14 @@
 '053C4Malignant Plaguecaster|Blades of Putrefaction|When fielded, reroll each opposing level 1 or 2 character die. KO any dice that roll and energy face and return the rest to the Field Zone (on their rolled levels). Your opponent may pay [1] per character die to ignore this ability in its entirety for that character die.',
 '053C4Malignant Plaguecaster|Miasma of Pestilence|When fielded, reroll target oppoing character die. KO it if it shows an energy face. Otherwise, return it to the Field Zone (on it\'s rolled level).',
 '053C4Malignant Plaguecaster|Putrescent Vitality|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared).',
-'074C4Mortarion|Host of Plagues|When fielde, deal damage to all opposing player and character dice equal to Mortarion\'s level.',
+'074C4Mortarion|Host of Plagues|When fielded, deal damage to all opposing players and character dice equal to Mortarion\'s level.',
 '074C4Mortarion|Primarch of the Death Guard|Whle Mortarion is active, prevent the first damage to you from each source each turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
-'074C4Mortarion|Toxic Presence|When Mortarion blocks, blocked character dice deal not combat damage this turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
+'074C4Mortarion|Toxic Presence|When Mortarion blocks, blocked character dice deal no combat damage this turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '031C4Noxious Blightbringer|Tocsin of Misery|When fielded, deal damage to target player equal to the amount of energy in their Reserve Pool (count energy symbols, not faces that show energy).',
 '031C4Noxious Blightbringer|Cursed Plague Bell|Whlie Noxious Blightbringer is active, deal your opponent 1 damage each time they spend a [?] energy.',
 '031C4Noxious Blightbringer|Dolorous Knell|While Noxious Blightbringer is active, deal your opponent 1 damage each time they purchase an action die.',
 '022C4Plague Marine|Vectors of Death and Disease|While Plague Marine is active, your Sidekick character dice get +1A and +1D and are KO\'d at the end of your turn.',
-'022C4Plague Marine|Postulent Intestines|When Plague Marine attacks, you may KO a Sidekick character die. If you do, Plague Marine deal 1 damage to the KO\'d character die\'s controller.',
+'022C4Plague Marine|Postulent Intestines|When Plague Marine attacks, you may KO a Sidekick character die. If you do, Plague Marine deals 1 damage to the KO\'d character die\'s controller.',
 '022C4Plague Marine|Festering Wound|When a Sidekick character die is KO\'d, you may field a Plague Marine character die from your Used Pile or Prep Area at level 2.',
 '012C4Poxwalker|Curse of the Walking Pox|',
 '022C4Poxwalker|Diseased Horde|Swarm|Poxwalker gets +1A for each other Poxwalker character die in the Field Zone (both players\').',
@@ -330,32 +331,32 @@
 '044U4Primaris Redemptor Dreadnought|Hail of Fire|KO Primaris Redemptor Dreadnought at the end of each turn. You may pay [1] per character die to prevent this effect.',
 '023U4Primaris Reiver|Rapid Infiltrator|When Primaris Reiver is KO\'d, deal 2 damage divided as you choose to any number of opposing character dice. ',
 '033U4Primaris Reiver|Lightning Assault|Range 1 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)',
-'033U4Primaris Reiver|Master of Terror|WHen Primaris Reiver attacks, if the defending player has more life than you, deal 1 damage to that player.',
+'033U4Primaris Reiver|Master of Terror|When Primaris Reiver attacks, if the defending player has more life than you, deal 1 damage to that player.',
 '063U4Primaris Repulsor|Power of the Machine Spirit|Range 2 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)',
 '063U4Primaris Repulsor|Hover Tank|Frag (When a character die with Frag attacks and KOs one or more blocking characeter dice with combat dmage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared.)|When Primaris Repulsor attacks, at least one character die must be assigned to block it (if able).',
 '063U4Primaris Repulsor|Krakstorm Grenade Launcher|Frag (When a character die with Frag attacks and KOs one or more blocking characeter dice with combat dmage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared.)|When Primaris Repulsor is attacking, after blockers are declared, if Primaris Repulsor is unblocked, your other character dice get +2A (until end of turn).',
 '042U4Primaris Aggressor|Fire Storm|Frag (When a character die with Frag attacks and KOs one or more blocking characeter dice with combat dmage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared.)|Global: Pay [F][F]. Once per turn, all character dice get +1A (until end of turn).',
-'042U4Primaris Aggressor|Relentless Advance|Range 1 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)|While Primaris Aggressor is active, when an opposing character die is KO\'d by Range, Pre a die from your bag.',
+'042U4Primaris Aggressor|Relentless Advance|Range 1 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)|While Primaris Aggressor is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
 '042U4Primaris Aggressor|Boltstorm Gauntlets|While Primaris Aggressor is active, when an opposing character die attacks, deal 1 damage to it.|Global: Pay [F][F]. Once per turn, all character dice get +1A (until end of turn).',
 '074U2Roboute Guilliman|XIII Primarch|Regenerate|Global: Pay [S]. The first character you field this turn is free to field.',
 '074U3Roboute Guilliman|Author of the Codex|When purchased, if you control at least 2 active [KUM] character dice, Prep this die. (Roboute Guilliman does not need to be active to use this ability.)|Global: Pay [S]. The first character you field this turn is free to field.',
-'064U4Roboute Guilliman|Master of Battle|While Roboute Guilliman is active, your other [?] and Sidekick character dice get +1A and +1D.',
+'064U4Roboute Guilliman|Master of Battle|While Roboute Guilliman is active, your other [KUM] and Sidekick character dice get +1A and +1D.',
 '061C4Typhus|Nurgle\'s Gift|While Typhus is active, prevent the first point of damage to you from each source each turn.',
 '061C4Typhus|Host of the Destroyer Hive|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)',
 '071C4Typhus|Disgustingly Resillient|Range 2 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)',
 '041U4Varro Tigurius|Chief Librarian|When fielded, Prep a die from your bag.',
 '031U4Varro Tigurius|Hood of Hellfire|When fielded, name a non-Sidekick die, then draw a die. If it was the named die, Prep it, and the fielded Varro Tigurius character  die gets +2A and +2D (until end of turn). Otherwise, return the drawn die to your bag.',
 '031U4Varro Tigurius|Rod of Tigurius|While Chief Librarian Tigurius is active, your other [KUM] character dice cannot be targeted by your opponents. Varro Tigurius gets +1A and +1D for each other active [KUM] character you control. ',
-'02003Bolter Drill|Basic Action Card|Deal damage to target ooposing character die equal to the number of character dice you control.|*/** Also, deal that character die one additional damage.',
+'02003Bolter Drill|Basic Action Card|Deal damage to target opposing character die equal to the number of character dice you control.|*/** Also, deal that character die one additional damage.',
 '03003Chaos Warp|Basic Action Card|Draw and roll every die in your bag. Deal 2 damage to target player for each die showing a character face, and take 1 damage for each die showing an energy face. Place the rolled dice in your Used Pile.',
 '04003Excessive Ordinance|Basic Action Card|Deal 6 damage to target character die. |Global: Pay [B]. Target character die gets +1A (until end of turn).',
 '03003Instant War|Basic Action Card|Each player draws 3 dice and fields all Sidekick dice drawn this way. Each player places the remaining dice in their bag or Used Pile.',
-'04003Into Battle!|Basic Action Card|Prep 2 dice from your bag. If both dice are Sidekick dice, prep and additional die.|*/** Roll all dice prepped this way (place them in your Reserve Pool).',
+'04003Into Battle!|Basic Action Card|Prep 2 dice from your bag. If both dice are Sidekick dice, prep an additional die.|*/** Roll all dice prepped this way (place them in your Reserve Pool).',
 '02003Might of the Astartes|Basic Action Card|Until the beginning of your next turn, character dice cost your opponents [1] more to field.|*/** Also, character dice cost you [1] less to field (until end of turn).',
 '04003Orbital Strike|Basic Action Card|Reroll all your active character dice. Deal damage to target opponent equal to the combined A of all rolled dice showing character faces. KO the rest of the rolled dice. Skip your Attack Step this turn.|** Instead of skipping your Attack Step, you may attack with only one character dice this turn.',
 '05003Rolling Thunder|Basic Action Card|Deal 1 damage to target character die. If it isn\'t KO\'d, deal 2 damage to another different target character die. Repeat this process, increasing the damage by 1 each time until either a character die is KO\'d or there are no remaining targets.',
 '04003Seething Corruption|Basic Action Card|Until end of turn, when an opposing character die takes damage, KO it.',
-'02003Static Field|Basic Action Card|Character dice deal only 1 combat damage this turn.|Global: pay [M]. Remove target attacking character die from combat.',
+'02003Static Field|Basic Action Card|Character dice deal only 1 combat damage this turn.|Global: Pay [M]. Remove target attacking character die from combat.',
 ];
 
 
@@ -653,8 +654,8 @@
     '473A4Thor (M)|Unworthy|While Thor is active, you may sacrifice him. If you do, prevent all damage dealt to you or your character dice (until end of turn).',
     '45401Earth X Captain America|Freedom Fighter|Earth X Captain America can\'t be blocked by [DCV] character dice.|When fielded, if an opponent has more life than you, gain 4 life.|Underdog - When fielded, you may field up to 2 character dice from your Used Pile at level 1 with combined A of 4 or less.',
     '45201Earth X Machine Man|X-51|Opponents can\'t target Earth X Machine Man. Opposing action dice have no effect on Earth X Machine Man.|Underdog - Earth X Machine Man cost 2 less to purchase. (Earth X Machine Man doesn\'t need to be active to use this ability.)',
-    '45901Earth X The Skull|Telepathic Awakening|Underdog - When fielded, each player Kos all but 1 of their [M] character dice.|When fielded, your opponent\'s life total cannot go below 1 this turn.',
-    '45901Earth X Thor|She Be Worthy|When fielded, if you have less life than an opponent, KO target character die.|When fielded, KO target [DCV] character die.|Underdog - When fielded, KO target character die with fielding cost 0.',
+    '45101Earth X The Skull|Telepathic Awakening|Underdog - When fielded, each player Kos all but 1 of their [M] character dice.|When fielded, your opponent\'s life total cannot go below 1 this turn.',
+    '45301Earth X Thor|She Be Worthy|When fielded, if you have less life than an opponent, KO target character die.|When fielded, KO target [DCV] character die.|Underdog - When fielded, KO target character die with fielding cost 0.',
     ];
 
 
