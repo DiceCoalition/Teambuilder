@@ -1154,7 +1154,7 @@
     '54104Poison Ivy™|Eternal Youth|While Poison Ivy is active, when an opponent uses an action die, field a Plant Token. It has 0A and 2D.|While Poison Ivy is active, once during your turn, you may sacrifice one of your characters in the Field Zone and deal 2 damage to target player.',
     ];
     var m_op2017_aff = {
-    D:'MDP', X:'1', I:'MIH', G:'GA', E:'MEX', B:'MBOM', 0:'0'
+    D:'MDP', X:'1', I:'MIH', G:'G', E:'MEX', B:'MBOM', 0:'0'
     };
     var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'dp','uxm','aou','','avx','avx'];
     var m_op2017 = [
