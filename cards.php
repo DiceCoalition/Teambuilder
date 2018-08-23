@@ -51,9 +51,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork'];
-
-    //var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -269,9 +267,9 @@
     
    var ork_aff = { 0:'0', O:'KO'};
    var ork = [
-'043O4Battle Wagon|Salvaged Monstrosity|Range 1|Battlewagon has Range 3, instead of Range 1, if an active, opposing character die has Range.',
-'043O4Battle Wagon|Assault Tank|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn (before damage is cleared).)',
-'043O4Battle Wagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
+'043O4Battlewagon|Salvaged Monstrosity|Range 1|Battlewagon has Range 3, instead of Range 1, if an active, opposing character die has Range.',
+'043O4Battlewagon|Assault Tank|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn (before damage is cleared).)',
+'043O4Battlewagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
 '061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazghkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
 '061O2Ghazghkul Thraka|Prophet of Gork and Mork|While Ghazghkul Thraka is active, once per turn, when you could use a Global Ability, you may KO a character die you control.|If you do, deal 1 damage to target opponent.',
 '071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deals combat camage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
@@ -305,14 +303,14 @@
 '053C4Lord of Contagion|Manreaper|Whlle Lord of Contagion is active, when you field a [KC] character die other than Lord of Contagion, deal 1 damage to target opponent.',
 '043C4Lord of Contagion|Plaguereaper|Whlle Lord of Contagion is active, when a Sidekick character die is KO\'d, all other character dice get +1A and +1D (both players\')(unitl end of turn).',
 '053C4Lord of Contagion|The Plague Skull of Glothila|Range 2 (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)|While Lord of Contagion is active, when a damaged character die (either player\'s) blocks, KO it.',
-'053C4Malignant Plaguecaster|Blades of Putrefaction|When fielded, reroll each opposing level 1 or 2 character die. KO any dice that roll and energy face and return the rest to the Field Zone (on their rolled levels). Your opponent may pay [1] per character die to ignore this ability in its entirety for that character die.',
-'053C4Malignant Plaguecaster|Miasma of Pestilence|When fielded, reroll target oppoing character die. KO it if it shows an energy face. Otherwise, return it to the Field Zone (on it\'s rolled level).',
+'053C4Malignant Plaguecaster|Blades of Putrefaction|When fielded, reroll each opposing level 1 or 2 character die. KO any dice that roll an energy face and return the rest to the Field Zone (on their rolled levels). Your opponent may pay [1] per character die to ignore this ability in its entirety for that character die.',
+'053C4Malignant Plaguecaster|Miasma of Pestilence|When fielded, reroll target oppoing character die. KO it if it shows an energy face. Otherwise, return it to the Field Zone (on its rolled level).',
 '053C4Malignant Plaguecaster|Putrescent Vitality|Frag (When a character die with Frag attacks and KOs one or more blocking character dice with combat damage, deal 1 damage to all opposing character dice that did not block this turn, before damage is cleared).',
-'074C4Mortarion|Host of Plagues|When fielded, deal damage to all opposing players and character dice equal to Mortarion\'s level.',
+'074C4Mortarion|Host of Plagues|When fielded, deal damage to all opposing players and character dice equal to Mortarion\'s level.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '074C4Mortarion|Primarch of the Death Guard|Whle Mortarion is active, prevent the first damage to you from each source each turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '074C4Mortarion|Toxic Presence|When Mortarion blocks, blocked character dice deal no combat damage this turn.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
 '031C4Noxious Blightbringer|Tocsin of Misery|When fielded, deal damage to target player equal to the amount of energy in their Reserve Pool (count energy symbols, not faces that show energy).',
-'031C4Noxious Blightbringer|Cursed Plague Bell|Whlie Noxious Blightbringer is active, deal your opponent 1 damage each time they spend a [?] energy.',
+'031C4Noxious Blightbringer|Cursed Plague Bell|Whlie Noxious Blightbringer is active, deal your opponent 1 damage each time they spend a [Q] energy.',
 '031C4Noxious Blightbringer|Dolorous Knell|While Noxious Blightbringer is active, deal your opponent 1 damage each time they purchase an action die.',
 '022C4Plague Marine|Vectors of Death and Disease|While Plague Marine is active, your Sidekick character dice get +1A and +1D and are KO\'d at the end of your turn.',
 '022C4Plague Marine|Postulent Intestines|When Plague Marine attacks, you may KO a Sidekick character die. If you do, Plague Marine deals 1 damage to the KO\'d character die\'s controller.',
@@ -1154,7 +1152,7 @@
     '54104Poison Ivy™|Eternal Youth|While Poison Ivy is active, when an opponent uses an action die, field a Plant Token. It has 0A and 2D.|While Poison Ivy is active, once during your turn, you may sacrifice one of your characters in the Field Zone and deal 2 damage to target player.',
     ];
     var m_op2017_aff = {
-    D:'MDP', X:'1', I:'MIH', G:'GA', E:'MEX', B:'MBOM', 0:'0'
+    D:'MDP', X:'1', I:'MIH', G:'G', E:'MEX', B:'MBOM', 0:'0'
     };
     var m_op2017_dice = [ 'dp', 'dp', 'dp', 'dp', 'dp', 'dp', 'dp','uxm','aou','','avx','avx'];
     var m_op2017 = [
@@ -1167,7 +1165,7 @@
         '551I4Medusa|Devoted Wife|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|While Medusa is active, Black Bolt gains Iron Will.',
         '531E4Morph|Exile|While Morph is active, when one of your [MEX] character dice would be dealt damage, instead that damage is dealt to Morph.',
         '542E4Sabretooth|Exile|While Sabretooth is active, your [MEX] character dice get +1A and +1D.',
-        '594G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
+        '554G4Groot|I, Am, Grooooooot|When Groot is KO\'d, deal damage equal to his D to target character die.',
         '53003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.',
         '531B4Mystique|The Brotherhood|Deadly (At the end of turn, KO all character dice that were engaged with this character.)',
         '571B4Magneto|The Brotherhood|When Fielded, you may field a [BOM] die from your Used Pile at level 3 for free.',
@@ -4272,7 +4270,7 @@
 	"Varro Tigurius":"134 133 135",
 	
 	//40K ORKS
-	"Battle Wagon":"142 253 366",
+	"Battlewagon":"142 253 366",
 	"Ghazghkul Thraka":"154 165 388",
 	"Mogrok":"125 136 248",
 	"Ork Boy":"021 022 122",
@@ -4283,7 +4281,7 @@
 	
 	//40K SPACE WOLVES
 	"Grey Hunter":"022 132 242",
-	"Logan Grimmar":"062 173 285",
+	"Logan Grimnar":"062 173 285",
 	"Sky Claw":"022 023 133",
 	"Space Wolf Predator":"155 266 288",
 	"Thunderwolf Cavalry":"032 143 255",
