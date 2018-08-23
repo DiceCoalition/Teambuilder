@@ -4272,7 +4272,7 @@
 	"Varro Tigurius":"134 133 135",
 	
 	//40K ORKS
-	"Battle Wagon":"142 253 366",
+	"Battlewagon":"142 253 366",
 	"Ghazghkul Thraka":"154 165 388",
 	"Mogrok":"125 136 248",
 	"Ork Boy":"021 022 122",
