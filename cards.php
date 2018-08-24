@@ -4283,7 +4283,7 @@
 	
 	//40K SPACE WOLVES
 	"Grey Hunter":"022 132 242",
-	"Logan Grimmar":"062 173 285",
+	"Logan Grimnar":"062 173 285",
 	"Sky Claw":"022 023 133",
 	"Space Wolf Predator":"155 266 288",
 	"Thunderwolf Cavalry":"032 143 255",
