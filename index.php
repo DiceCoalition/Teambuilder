@@ -246,9 +246,7 @@
   <input type="checkbox" id="set3" checked>YGO
   <input type="checkbox" id="set29" checked>BFU 
   <input type="checkbox" id="set30" checked>ORK 
-  <!--
   <input type="checkbox" id="set31" checked>SW 
--->
 
  
     
