@@ -1505,7 +1505,7 @@
     '233X4Storm|Weather Delay|While Storm is active, your opponents may not reroll Basic Action Dice.',
     '25104Taskmaster|Watch and Learn|When Taskmaster attacks, you may use the "when attacks" ability of target character die as if Taskmaster had that ability.',
     '254X4Wolverine|Berserker Frenzy|Back for More - Target [MDP] character die gets +3A. <em>(Use when rolled from the Prep Area.)</em>',
-    '25304X-23|&nbsp;|Trigger Scent|If an opponent has 2 or more dice in their Prep Area, X-23 costs 1 less to purchase. <em>(X-23 does not need to be active to use this ability.)</em>',
+    '25304X-23|Trigger Scent|If an opponent has 2 or more dice in their Prep Area, X-23 costs 1 less to purchase. <em>(X-23 does not need to be active to use this ability.)</em>',
     '322S4Agent Carter|Answered the Call|While Agent Carter is active, Sidekick character cost [1] more to field.',
     '35204Agent X|"Earth-2 Counterpart"|When fielded, you may pay 2 life to draw a die. If that die is a Sidekick, place it in the Used Pile. Otherwise, place it in the Prep Area.',
     '362V4Angel Dust|Christina|When at least one of your Angel Dust character dice blocks, deal 2 damage to all attacking character dice <em>(no matter how many blocking Angel Dust dice you have)</em>.',
