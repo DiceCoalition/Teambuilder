@@ -346,7 +346,7 @@
 '031U4Varro Tigurius|Hood of Hellfire|When fielded, name a non-Sidekick die, then draw a die. If it was the named die, Prep it, and the fielded Varro Tigurius character  die gets +2A and +2D (until end of turn). Otherwise, return the drawn die to your bag.',
 '031U4Varro Tigurius|Rod of Tigurius|While Chief Librarian Tigurius is active, your other [KUM] character dice cannot be targeted by your opponents. Varro Tigurius gets +1A and +1D for each other active [KUM] character you control. ',
 '02003Bolter Drill|Basic Action Card|Deal damage to target opposing character die equal to the number of character dice you control.|*/** Also, deal that character die one additional damage.',
-'03003Chaos Warp|Basic Action Card|Draw and roll every die in your bag. Deal 2 damage to target player for each die showing a character face, and take 1 damage for each die showing an energy face. Place the rolled dice in your Used Pile.',
+'03003Chaos Warp|Basic Action Card|Draw and roll every die in your bag. Deal 1 damage to target player for each die showing a character face, and take 1 damage for each die showing an energy face. Place the rolled dice in your Used Pile.|** Also, afterwards, place a die from your Used Pile into your bag.',
 '04003Excessive Ordinance|Basic Action Card|Deal 6 damage to target character die. |Global: Pay [B]. Target character die gets +1A (until end of turn).',
 '03003Instant War|Basic Action Card|Each player draws 3 dice and fields all Sidekick dice drawn this way. Each player places the remaining dice in their bag or Used Pile.',
 '04003Into Battle!|Basic Action Card|Prep 2 dice from your bag. If both dice are Sidekick dice, prep an additional die.|*/** Roll all dice prepped this way (place them in your Reserve Pool).',
