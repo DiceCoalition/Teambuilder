@@ -1377,6 +1377,7 @@
   init(46,bfu,'BFU','bfu',[],bfu_aff);
   init(47,ork,'ORK','ork',[],ork_aff); 
   init(48,sw,'SW','sw',[],sw_aff);  
+  init(49,wd_op2018,'WD2018','avx');
 
 
    
@@ -2036,7 +2037,8 @@
 	  sw:'sw',
 	  imp:'imp',
 
-	  //op sets
+	  //op sets]
+    wd2018:'wd2018',
 	  sk2017:'sk2017',
 	  m2017:'m2017',
 	  m2016:'m2016',

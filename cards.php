@@ -230,7 +230,9 @@
         }
     }
     
-
+    var wd_op2018 = [
+        '54003Grombrindal\'s Fury|Basic Action Card|Deal 2 damage to target character die. You may then reroll this die. If it was an action face, you may repeat this effect.',
+    ];
        
     //BEGIN 40k SPACE WOLVES Hack
     
