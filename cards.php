@@ -230,14 +230,20 @@
         }
     }
     
-    var wd_op2018 = [
-        '54003Grombrindal\'s Fury|Basic Action Card|Deal 2 damage to target character die. You may then reroll this die. If it was an action face, you may repeat this effect.',
-    ];
-       
-    //BEGIN 40k SPACE WOLVES Hack
+var m_op2019_dice = ['ai','smc','thor','thor'];
+var m_op2019_aff = { I:'I', A:'2',S:'SPF',T:'MSTARK'};
+var m_op2019 = [
+    '532I4Black Widow|Agent|While Black Widow is active, reduce damage from opposing character\'s abilities by 1. Your opponent can\'t target Black Widow with Global Abilities.',
+];
+
+var wd_op2018 = [
+    '54003Grombrindal\'s Fury|Basic Action Card|Deal 2 damage to target character die. You may then reroll this die. If it was an action face, you may repeat this effect.',
+];
     
-	var sw_aff = { S:'KISW'};
-  	var sw = [
+//BEGIN 40k SPACE WOLVES Hack
+
+var sw_aff = { S:'KISW'};
+var sw = [
    
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
 '021S5Grey Hunter|Counter Attack|When Grey Hunter is KO\'d, deal 1 damage to all opposing character dice.',
