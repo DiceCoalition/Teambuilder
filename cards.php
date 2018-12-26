@@ -293,7 +293,7 @@ var sw = [
 '092O2Stompa|Klawstompa|Range 2|When fielded, KO 2 target opposing character dice.',
 '092O1Stompa|Big Mek\'s|Range 2|When fielded, KO target opposing character die and return it to its card. That character cannot be purchased next turn.',
 '082O2Stompa|Mechanical God|Overcrush|Frag',
-'043O4Stormboyz|Da Vulcha Skwad|When fielded, deal damage equal to Stormboyz\'s A to target opposing charactr die.',
+'043O4Stormboyz|Da Vulcha Skwad|When fielded, deal damage equal to Stormboyz\'s A to target opposing character die.',
 '043O4Stormboyz|Choppa Storm|Intimidate|Global: Pay [B]. Once per turn, target character gets Range 1.',
 '043O4Stormboyz|Flashy Skyboyz|Range 2|Global: Pay [B]. Once per turn, target character gets Range 1.',
 '034O4Warbiker|Zog Off|While Warbiker is active, prevent all damage from the Range ability to your [KO] character dice.',
@@ -4275,7 +4275,7 @@ var sw = [
 	"Primaris Aggressor":"133 244 255",
 	"Roboute Guilliman":"147 258 369",
 	"Typhus":"144 266 288",
-	"Varro Tigurius":"134 133 135",
+	"Varro Tigurius":"132 133 135",
 	
 	//40K ORKS
 	"Battlewagon":"142 253 366",
