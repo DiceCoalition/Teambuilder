@@ -253,7 +253,7 @@
    <button id="setall" type="button">All</button>
    <button id="setmarvel" type="button">Marvel</button>
    <button id="setdc" type="button">DC</button>
-   <button id="setdnd" type="button">D&D</button>
+   <button id="setdnd" type="button">D&amp;D</button>
   <button id="setnone" type="button">None</button>
   </span>
   <br>
@@ -1049,7 +1049,10 @@
     document.body.scrollTop = 0;
     team_update();
   }
-  function clearteam(prompt = true) {
+  function clearteam(prompt) {
+      if(prompt == undefined){
+        prompt = true;
+      }
       if(prompt) {
           if (team.length && !confirm('Clear the current team?')) return false;
       }
