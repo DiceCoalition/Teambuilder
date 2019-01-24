@@ -253,7 +253,7 @@ var sw = [
 '064S2Logan Grimnar|Fangfather|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)',
 '022S5Sky Claw|Hot Headed|',
 '032S5Sky Claw|Berserker|When Sky Claw is blocked, Prep a die from your bag.|Global: Pay [F]. Once per turn, target blocked character die gets +2A.',
-'032S5Sky Claw|Reckless Bloodthirst|When Sky Claw is KO\'d by combat damage, gain 2 life.|Global: Pay [F]. Once per turn, target blocked character die gets +2A.',
+'032S5Sky Claw|Reckless Bloodthirst|When Sky Claw is KO\'d by combat damage, gain 1 life.|Global: Pay [F]. Once per turn, target blocked character die gets +2A.',
 '063S4Space Wolf Predator|Armoured Ceramite Plating|When fielded, both players may choose a character die from their Used Pile and roll it. If it comes up a character face, they field it for free. Otherwise, return it to the Used Pile.',
 '063S4Space Wolf Predator|Dozer Blade|When fielded, [KSW] character dice cost 2 less to purchase (until end of turn) (minimum 1).',
 '063S4Space Wolf Predator|Weapons Platform|When fielded, you may purchase a Basic Action Die for [1] and roll it. If it rolls an energy face, return it to its card. Otherwise, use its effect and place it in your Used Pile.',
