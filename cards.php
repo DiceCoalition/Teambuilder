@@ -23,6 +23,7 @@
      BOM:'brotherhood of evil mutant',
      MEX:'exiles',
      KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
+     DOOM:'doompatrol',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -48,10 +49,11 @@
      BOM:'aMBOM', MEX:'aMEX',
      PAWN:'pawn',
      KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
+     DOOM:'aDOOM',
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -67,10 +69,11 @@
     'bat', 'sup',
     'ta', 'ssq', 'wl',
     'ng',
+    'doom',
     'ddh', 'ddo', 'ddl', 'dde', 'ddz', 'ddm',
     'turtle',
     'ytd', 'yeg',
-    'kc','kum', 'ko','ksw','ki',
+    'kc','kum', 'ko','ksw','ki',    
     ];
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
@@ -114,6 +117,7 @@
     { name:'suicidesquad', pic: 'aDCSS' },
     { name:'whitelantern', pic: 'aDCWL' },
     { name:'newgods', pic: 'aDCNG' },
+    { name:'doompatrol', pic: 'aDOOM' },
     { name:'harpers', pic: 'aH90' },
     { name:'order', pic: 'aO90' },
     { name:'lords', pic: 'aL90' },
@@ -127,7 +131,7 @@
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
-	{ name:'imperium', pic: 'aKI' },
+    { name:'imperium', pic: 'aKI' },    
     ];
 
     var affiliation_map = {
@@ -150,6 +154,7 @@
      CWW:'newwarriors',
      CWT:'thunderbolts',
      CWTV:['thunderbolts', 'villain'],
+     DOOM:'doompatrol',
      DZOM:'zombie',
      DCGA:'teamarrow',
      DCNG:'newgods',
@@ -164,6 +169,7 @@
      I:['avengers','shield'],
      J:['avengers','gotg'],
      JLC:'cs',
+	 JLMYSTIC:['mystic', 'justiceleague'],
      JLTA:['thunderbolts','avengers'],
      JLVT:['villains','thunderbolts'],
      KCDG:['chaos','death guard'],
@@ -206,6 +212,7 @@
      WY:'yellowlantern',
      WYC:['yellowlantern','conduit'],
      Z:'zhentarim',
+	 VMYSTLOD: ['villain','mystic','legionofdoom'],
     };
 
     var affiliation_set = {};
@@ -231,18 +238,156 @@
     }
     
 var m_op2019_dice = ['ai','smc','thor','thor'];
-var m_op2019_aff = { I:'I', A:'2',S:'SPF',T:'MSTARK'};
+var m_op2019_aff = { 0:'0', I:'I', A:'2',S:'SPF',T:'MSTARK'};
 var m_op2019 = [
     '532I4Black Widow|Agent|While Black Widow is active, reduce damage from opposing character\'s abilities by 1. Your opponent can\'t target Black Widow with Global Abilities.',
+];
+
+
+
+//BEGIN Mystics
+var myst_aff = { 0:'0', M:'MYSTIC', J:'JLMYSTIC', V:'VMYSTLOD'};
+var myst = [
+'02404Atlantis|City and Stronghold|Move any number of dice you rolled during your Roll and Reroll step from your Reserve Pool to your Prep Area|*/** Also, Prep a die from your bag.|Global: Pay [F][S]. Move a Sidekick die from your Used Pile to your Prep Area. Field a different Sidekick die from your Used Pile.',
+'04404Atlantis|Vast Kingdom|Draw every die in your bag. Place all drawn Sidekick dice in your Used Pile. Return the remaining dice to your bag. Then, draw and roll a die (it goes in your Reserve Pool).|Global: Pay [F][S]. Move a Sidekick die from your Used Pile to your Prep Area. Field a different Sidekick die from your Used Pile.',
+'02404Atlantis|Wealthy Kingdom|When you field a Sidekick character die, draw 2 dice and roll them (until end of turn).',
+'042V4Black Adam|Banished|While Black Adam is active, [DCLOD] character dice gain Deadly.',
+'042V4Black Adam|Vengeful|While Black Adam is active, when one of your [DCLOD]character dice KOs an opposing character die, the KO\'d character die\'s controller loses 1 life.',
+'042V4Black Adam|Angered|While Black Adam is active, when one of your [DCLOD] character dice KOs an oppoising character die, place the KO\'d character die in the Used Pile instead of the Prep Area.',
+'061M4Freddy Freeman|Empowered by the Gods|When fielded, you may roll a Sidekick die from your Used Pile. If you do, and if you roll an energy face, you may KO target opposing character die of the energy rolled. If you roll a [Q] face, you may KO any target opposing character die instead. Afterward, return the rolled Sidekick die to your Used Pile.',
+'061M4Freddy Freeman|Magic Power Distribution|When fielded, you may roll a Sidekick die from your Used Pile. If you do, and if you roll a non-[Q] energy face, character dice of the energy type rolled get +2A and +2D (until end of turn).',
+'061M4Freddy Freeman|Speed of Mercury|Intimidate',
+'053M4Mary Marvel|Speed of Mercury|Strike (If you field no other characters this turn, this character gets +2/+2 and Overcrush.)',
+'053M4Mary Marvel|Shazam\'s Sister|When fielded, spin all [DCV] character dice to level 1.|While Mary Marvel is active, when a [DCV] character die is fielded, spin the fielded character die to level 1.',
+'063M4Mary Marvel|Empowered by the Gods|When fielded, double the A and D of targer non-[DCV] character die other than Mary Marvel (until end of turn).',
+'044M4Phantom Stranger|Sorcery|Attune',
+'044M4Phantom Stranger|Mysticism|While Phantom Stranger is active, when an opposing character die attacks, the attacking character die deals 1 damage to all other opposing character dice.',
+'044M4Phantom Stranger|Empowering|While Phantom Stranger is active, when an action die is used, Phantom Stranger gets +1A and +1D (until end of turn).',
+'061J4Shazam|Stamina of Atlas|Strike (If you field no other chracters this turn, this character gets +2/+2 and Overcrush.)',
+'061J4Shazam|Power of Zeus|Attune|When fielded, you may roll two unpurchased Basic Action Dice. If they both roll action faces, place them in your Prep Area. Otherwise, return them to their cards.',
+'071J4Shazam|Courage of Achilles|While Shazam is active, your action dice gain Boomerang.',
+'03304Yellow Lantern Ring|The Weaponer\'s Ring|Character dice in your Reserve Pool gain Intimidate (until end of turn).',
+'04304Yellow Lantern Ring|Green Lantern Killer|When a character die blocks this turn, reroll it. If it shows anenergy face, KO it and Yellow Lantern Ring deals 1 damage to its controller. Otherwise, it remains in the Field Zone on its rolled level (it\'s still blocking)|** Instead, Yellow Lantern Ring deals its controller 2 damage for each character die that rolls an energy face.',
+'03304Yellow Lantern Ring|Used for Great Good|The next die you purchase costs [4] less (to a minimum of 1, until end of turn). After purchasing that die, you may not purchase other dice this turn. You can\'t use this action die if you\'ve already purchased a die this turn.',
+'021J4Zatanna|Being of Magic|While Zatanna is active, when you field a character die, spin if up 1 level.',
+'031J4Zatanna|Magical Lineage|While Zatanna is active, when a character die spins up, deal its controller 1 damage.|Global: Pay [F]. Once per turn, on your turn, spin targer character die up 1 level.',
+'031J4Zatanna|Master Magician\'s Daughter|Attune|While Zatanna is active, your [MYSTIC] character dice gain Attune.',
+];
+   
+//BEGIN DoomPatrol
+var doom_aff = { 0:'0', D:'DOOM', J:'7'};
+var doom = [
+'042D4Beast Boy|Shape Changer|Aftershock: Move a die from an opponent\'s Prep Area to the Used Pile.',
+'032D4Beast Boy|Metamorphosis|When fielded, move all dice showing generic or [Q] energy from your opponent\'s Reserve Pool to the Used Pile.',
+'032D4Beast Boy|Green Giveaway|When Beast Boy attacks, move a Sidekick die from the defending player\'s Prep Area to the Used Pile.',
+'032J4Black Canary|Second Life|Strike (If you field no other characters this turn, this character gets +2/+2 and Overcrush.)',
+'042J4Black Canary|Costumed Adventurer|Retaliation',
+'032J4Black Canary|Flower Shop Owner|When Black Canary attacks, [DCV] character dice cannot block (until end of turn).',
+'034D4Elasti-Girl|Size Alteration|Elasti-Girl gets +1D for each of yoru active non-Elasti-Girl character dice.',
+'034D4Elasti-Girl|Rita Farr|When Elasti-Girl blocks, spin her to level 3. When Elasti-Girl blocks, she gets +1A and +1D.',
+'024D4Elasti-Girl|Talented Actress|Elasti-Girl cannot attack the turn she is fielded.|Aftershock: Prevent 2 damage from an attacking character die, or prevent 2 damage to you (you choose).',
+'043J4Green Arrow|No Fancy Ring|When fielded, deal X damage to each opposing character die, where X is the number of your active [DCJL] characters other than Green Arrow.',
+'043J4Green Arrow|An Eye for the Moment|When fielded, draw a die. If it is a [DCJL] die, deal damage to target opposing character die equal to the drawn die\'s purchase cost, then Prep the drawn die. Otherwise, place the drawn die in the Used Pile.',
+'053J4Green Arrow|Trick Arrows|When fielded, deal X damage to target opponent, where X is the amount of energy in their Reserve Pool (count symbols, not dice)',
+'043J4Hawkman|Crime is a Disease|Intimidate',
+'033J4Hawkman|Antigravity Belt|Hawkman get +1A for each of your active [DCJL] characters.',
+'043J4Hawkman|Co-Director of Midway City Museum|When Hawkman is KO\d, Prep a die from your bag.',
+'041D4Negative Man|Radiation Production|Aftershock: KO all opposing Sidekick character dice. Deal 1 damage to each player for each of their dice KO\'d in this way.',
+'041D4Negative Man|Phasing|Deadly|* Fast',
+'051D4Negative Man|Larry Trainor|When Negative Man deals damage to an opponent, gain life equal to Negative Man\'s level.',
+'031J4Plastic Man|Basic Detective|',
+'041J4Plastic Man|Patrick O\'Brian|Retaliation|Global: Pay [M] [M]. Target character die can block an additional character die this turn.',
+'041J4Plastic Man|Elasticity|When Plastic Man blocks, you may pay [1]. If you do, Plastic Man may block an additional character die.',
+'044D4Robotman|Cliff Steele|Aftershock: KO target [DCJL] character die.',
+'044D4Robotman|Cybernetic Enhancement|When Robotman attacks or blocks, draw a die. If it is a [DCV] die, Robotman get +2A and +2D (until end of turn). Place the drawn die in the Used Pile.',
+'044D4Robotman|Superhuman Strength|When Robotman attacks or blocks, you may change Robotman\'s A and D to be equal to that of another of your attacking or blocking character dice (until end of turn).',
+];
+   
+   //BEGIN Justice
+   
+var jus_aff = { 0:'0', J: '7', V:'9'};
+var jus = [
+    '034J5Aquaman|Son of a Lighthouse Keeper|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
+    '044J5Aquaman|Saving the Seven Seas|While Aquaman is active, when a character die on a character face moves from your Reserve Pool to your Used Pile at the end of your Main Step, gain 2 like.',
+    '034J4Aquaman|Arthur Curry|While Aquaman is active, [DCJL] characters cost [1] less to buy (to a miimum of 1).',
+    '041J4Batman|Consumed by Regret|Batman must attack if there are any active [DCV] characters (any player\'s).',
+    '051J4Batman|Can\'t Trust in Luck|When Batman KOs a character die with combat damage, Prep a die from your bag.',
+    '051J4Batman|The Smart One|While Batman is active, your [DCJL] character dice other than Batman get +1A, +1D, and cost [1] less to field.',
+    '074V2Bizarro|Less Than Perfect|While there is an active, opposing [DCJL] character, Bizarro has Overcrush.|Global: Pay [S]. Switch a character die\'s A and D until end of turn.',
+    '074V2Bizarro|More Than a Monster|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
+    '032V5Black Manta|Hate Itself|When Black Manta KOs a Sidekick character die, deal 1 damage to target opponent.',
+    '032V5Black Manta|Beyond Rehabilitation|When you have an active [DCV] character other than Black Manta, Black Manta gets +2A.',
+    '022V5Black Manta|Super-Villain|When Black Manta is KO\'d, you may spin target [DCV] character die up 1 level.',
+    '051V2Brainiac|Get Inside Your Head|While Brainiac is active, only one opposing character die of each affiliation may attack each turn.',
+    '051V2Brainiac|Enemy of Every Living Thing|When Brainiac is KO\'d, reroll target non-[DCV] character die. If it rolls an energy face place it in the Used Pile. Otherwise, leave it in the Field Zone at its original level.',
+    '061V4Clayface|Matthew Hagen|When Clayface attacks, he may use the "When attacks" ability of any other active character die.',
+    '061V4Clayface|Treasure Hunter|When a Global Ability or action die increases the A or D of an opposing character die, Clayface gets +1A and +1D.',
+    '061V4Clayface|Restless|While you have [B], [F], [M], [S] energy in your Reserve Pool, Clayface gets +5A, +5D, and Overcrush. ([Q]\'s don\'t count.)|Global: Pay [M]. Once per turn, you may take a die from your Used Pile and add it to your Reserve Pool on any energy face.',
+    '062V4Gorilla Grodd|Stronger Than You|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)|Call Out (When this character die attacks, target character die is the only character die that may block this character die.)',
+    '062V4Gorilla Grodd|You Can\'t Fight Me|While Gorilla Grodd is active, all character dice must attack each turn (if able) and your character dice get +1A while attacking.',
+    '062V4Gorilla Grodd|Scientific Genius|While Gorilla Grodd is active, when a character die attacks or blocks, deal 2 damage to it.|While Gorilla Grodd is active, at least 1 character die must attack each turn.',
+    '051J4Green Lantern|Fearless|When Green Lantern attacks, you may spend [M]. If you do, deal 1 damage to the defending player for each action die in your Used Pile.',
+    '051J4Green Lantern|Human|While Green Lantern is active, your [DCJL] character dice gain "When this character die attacks, deal 1 damage to target player for each energy symbol in your Reserve Pool that matches the character die\'s energy type." ([Q] energy does not count).',
+    '061J4Green Lantern|Ring from Abin Sur|Attune|When fielded, you may purchase an action die for [1] less and place it in your Prep Area.',
+    '03202Hall of Doom|Base of Operations|Your [DCLOD] character dice get +1A and +1D (until end of turn).|*/** Instead, your [DCLOD] character dice get +2A and +2D.',
+    '02202Hall of Doom|Headquarters|At the end of this turn, your may field a [DCLOD] character die from your Used Pile at level 1.',
+    '044V4Lex Luthor|Man of More than Ambition|While Lex Luthor is active, when you use an action die, draw a die. If it is a [DCV] character die, Prep it. Otherwise, place it in your Used Pile.',
+    '044V4Lex Luthor|Leader in World Politics|While Lex Luthor is active, your opponents cannot purchase more than one action die and one characer die per turn.',
+    '064J4Martian Manhunter|A Manhunter|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)|Martian Manhunter can only be blocked by two or more character dice.',
+    '064J4Martian Manhunter|Endless Abilities|While Martian Manhunter is active, while an opponent has an active [DCV] character ie, your character dice gain Overcrush.',
+    '053V4Metallo|John Corben|While Metallo is active, when you field a Sidekick character die, your may pay [B]. If you do, deal 1 damage to target opponent.',
+    '053V4Metallo|Cybernetic Body|While Metallo is active, when your opponent fields a [DCJL] character die, draw a die. If it is a [DCV] character die, you may field it at level 2. Otherwise, place it in your Used Pile or your bag.',
+    '063V4Metallo|Heart of Kryptonite|While Metallo is active, your [DCLOD] character dice are free to field and [DCJL] character dice cost [1] more to field.',
+    '023V4Parasite|Maxwell Jensen|While Parasite is active, instead of declaring Parasite as an attacker, your may add his A and D to an attacking character die. You may do this once for each of your Parasite character dice that do not attack. (This occurs when you declare attackers.)',
+    '033V4Parasite|Consumed by What We Do|When fielded, you may reduce target opposing character die\'s A and D by Parasite\'s A and D (until end of turn).',
+    '033V4Parasite|Human Atomic Furnace|When fielded, Parasite gains target character die\'s aility text (ignoring Global Abilities) until end of turn. That copy of tthat die loses its abilities until end of turn. When you target a die with Parasite, it replaces all previous choices.',
+    '051V5Poison Ivy|Criminal Beause of Love|When fielded, you may KO a character die you control. If you do, deal damage equal to the KO\'d character die\'s level to target opponent and all the character dice that opponent controls.',
+    '041V5Poison Ivy|Let Spring Come|When fielded, draw 2 dice. If both are Sidekick dice, place them in your Used Pile and deal 2 damage to all opposing character dice. Otherwise, return them to your bag.',
+    '041V5Poison Ivy|A New Leaf|While Poison Ivy is active, when an opponent purchases the last de on a card, deal that opponent 3 damage.|Global: Pay [M] [M]. Once on your turn, you may remove a die on any card from the game. You may not remove the last die on the card.',
+    '041V4Scarecrow|Fear-Based Gases|While Scarecrow is active, when a Sidekick character die is KO\'d, place it in the Used Pile instead of teh Prep Area.',
+    '041V4Scarecrow|Professor of Psychology|While Scarecrow is active, when an opposing Sidekick character die is KO\'d, its controller loses 1 life.',    
+    '041V4Scarecrow|Chose Poorly|When fielded, name an opposing card replacing all previous choices. While Scarecrow is active, dice on that card cost [3] more to purchase.',
+    '054V4Solomon Grundy|Cannot Be Killed|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
+    '054V4Solomon Grundy|Rot of the Swamp|When fielded, if you have two active non-Solomon Grundy [DCV] characters, KO target opposing character die.',
+    '064J4Superman|Bulletproof|Prevent all damage dealt to Superman by [DCV] character dice.',
+    '064J4Superman|From Krypton|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
+    '042J4The Atom|Professor|Awaken: Deal 2 damage to target opponent.',
+    '042J4The Atom|Less Than Nothing|When you use an action die, you may spin The Atom up 1 level.',
+    '042J4The Atom|Experiments in Matter Reduction|While The Atom is active, once per turn, you may spin The Atom down 1 level to spin a [DCJL] character die other than The Atom up 1 level.',
+    '042J4The Flash|Always Fast Enough|If The Flash is the first die your purchase this game, he costs [1] less to purchase.|While The Flash is active, when an opponent\'s Attune activates, the lose 1 life.',
+    '042J4The Flash|Can\'t Stop|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',    
+    '042J4The Flash|No Shadow|The Flash cannot be targeted by opposing Global Abilities or action dice.',
+    '042V4The Joker|Not Funny Anymore|While The Joker is active, when an opponent fields a character die sharing at least one energy type with another active character die that player controls, deal that opponent 2 damage.',
+    '042V4The Joker|New and Shiny|When The Joker attacks, you may roll a Basic Action die from your Used Pile. if you do, if it rolls an action face, you may use the effect of the face your rolled. Afterward, place the die in your bag (regardless of what face it rolled).',
+    '063V4The Riddler|Creature of Pure Pride|While The Riddler is active, when an opponent rolls or rerolls a die other than during the Roll and Reroll Step, deal that opponent 2 damage.',
+    '053V4The Riddler|Solved the Mystery of World Hunger|When The Riddler attacks, each player chooses and KOs one of their character dice.',
+    '043V4Toyman|Play Dead|When fielded, your opponent chooses an unpurchased Basic Action Die. Place that die in your Used Pile.',
+    '033V4Toyman|Boy Genius|',
+    '043V4Toyman|Killer Toys|Attune|When fielded, if you have more active Sidekick character dice than an opponent, deal 2 damage to that opponent.',
+    '02302Watchtower|JLA Headquarters|Your [DCJL] character dice get +1A and +1D.|*/** Instead, your [DCJL] character dice get +2A and +2D.',
+    '03302Watchtower|JLA Satellite|Prep a die from your bag. When you field a [DCJL] character die, Prep a die from your bag (until end of turn).',
+    '02302Watchtower|Watching Earth|When you field a [DCJL] character die, you may KO targer opposing [DCV] character die with purchase cost equal to or less than the fielded [DCJL] character die.',
+    '034J5Wonder Woman|Piece of Clay|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
+    '044J5Wonder Woman|A Gift|When fielded, you may spin up to 2 dice in your Reserve Pool to [Q] Faces.',
+    '044J5Wonder Woman|Amazon Ambassador to the World|When fielded, you may spin a die in your Reserve Pool that is on an energy face to another energy face.',
+    '04003Betrayal|Basic Action Card|Deal 1 damage to target opponent for each character die in their Field Zone.|** If Betrayal did at least 2 damage, put this die in your Prep Area.',
+    '04003Doom Lance|Basic Action Card|Choose one of your active character dice. Only that character die may attack this turn. All opposing character dice must block this turn (if able). When an opposing character die is KO\'d this turn, its controller loses 1 life.|** Alos, if an opponent has no active character dice at the end of the turn, that opponent loses 1 life.',
+    '02003Energy Field|Basic Action Card|Spin all active character dice up 1 level.|** Also, afterward, spin target opposing character die to level 1.|Global: Pay [M] and spin one of your active character dice down 1 level. Spin target character die up 1 level.',
+    '02003Excessive Force|Basic Action Card|Deal 6 damage to target character die. |Global: Pay [B]. Target character die gets +1A (until end of turn).',
+    '03003Investigation|Basic Action Card|Draw and roll 2 dice (add them to your Reserve Pool).',
+    '02003Ping|Basic Action Card|Deal 1 damage to target opponent.|*/** Also, this die has Boomerang.',
+    '04003Power Almighty|Basic Action Card|Spin each of your active character dice up 1 level. For each active character die you could not spin up, Prep one die from your bag.',
+    '02003Static Field|Basic Action Card|Character dice deal only 1 combat damage this turn.|Global: Pay [M]. Remove target attacking character die from combat.',
+    '02003Stretch|Basic Action Card|Move any number of dice from your Used Pile to your bag.|*/** Also, draw one die and roll it.|Global: Pay [F]. Once per turn, you may draw and roll a die. Move a die from your Reserve Pool to your Used Pile.',
+    '02003Suffering and Satisfaction|Basic Action Card|Choose an affiliation. Target character die with that affiliation gets +2A, and a different target characer die with that affiliation gets -2A. You may only use this action if two dice in the Field Zone have the same affiliation.',
 ];
 
 var wd_op2018 = [
     '54003Grombrindal\'s Fury|Basic Action Card|Deal 2 damage to target character die. You may then reroll this die. If it was an action face, you may repeat this effect.',
 ];
-    
 //BEGIN 40k SPACE WOLVES Hack
 
-var sw_aff = { S:'KISW'};
+var sw_aff = { 0:'0', S:'KISW'};
 var sw = [
    
 '021S5Grey Hunter|Son of Russ|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
@@ -2078,7 +2223,7 @@ var sw = [
     '453K1Black Lantern Firestorm|Torment of Two Spirits|When fielded, KO all Firestorm dice.|While Black Lantern Firestorm is active, your opponents must pay 2 life to block with a [M] character die <i>(they can then block with any number of [M] character dice)</i>.',
     '443K1Black Lantern Green Arrow|Black Archer|When fielded, KO all Green Arrow dice.|While Black Lantern Green Arrow is active, when an opposing character\'s ability deals you damage, that character\'s controller loses 1 life.',
     '443K1Black Lantern Martian Manhunter|Alien Afterlife|When fielded, KO all Martian Manhunter dice.|If Black Lantern Martian Manhunter blocks and KOs a character, the attacking player loses life equal to that character\'s level.',
-    '54404Bat-Mite|5th Dimension|While Bat-Mite is active, Batman™ character dice can\'t attack or block. Bat-Mite cannot be KO\'d by combat damage.',
+    '54401Bat-Mite|5th Dimension|While Bat-Mite is active, Batman™ character dice can\'t attack or block. Bat-Mite cannot be KO\'d by combat damage.',
     ];
 
     var fus = [
@@ -4297,6 +4442,27 @@ var sw = [
 	"Wolf Guard Terminator":"022 032 133",
 	"Wulfen":"022 144 365",
 
+    //MYSTICS
+    "Freddy Freeman":"155 265 377",
+    "Mary Marvel":"144 254 266",
+    "Phantom Stranger":"013 024 126",
+    "Shazam":"155 265 377",
+
+    //DOOM PATROL
+    "Elasti-Girl":"012 024 134",
+    "Negative Man":"124 125 127",
+    "Plastic Man":"114 116 128",
+    "Robotman":"132 143 254",
+
+    //JUS
+    "JUS@Batman":"143 254 265",
+    "JUS@Martian Manhunter":"134 146 268",
+    "Metallo":"144 155 266",
+    "Parasite":"022 133 234",
+    "JUS@The Atom":"011 144 155",
+    "JUS@The Joker":"123 134 245",
+    "Toyman":"031 132 142",
+
     };
     var gender = {
     "Black Widow":1,
@@ -4556,6 +4722,9 @@ var sw = [
     'Earth X Thor':1,
     
     'Meteorite':1,
+    
+    "Mary Marvel":1,
+    "Elasti-Girl":1,
  
     };
 

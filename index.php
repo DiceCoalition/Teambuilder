@@ -238,6 +238,9 @@
   <input type="checkbox" id="set17" checked>BAT
   <input type="checkbox" id="set19" checked>SWW
   <input type="checkbox" id="set28" checked>HQ 
+  <input type="checkbox" id="set32" checked>JUS
+  <input type="checkbox" id="set33" checked>DOOM 
+  <input type="checkbox" id="set34" checked>MYST 
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
@@ -247,6 +250,7 @@
   <input type="checkbox" id="set29" checked>BFU 
   <input type="checkbox" id="set30" checked>ORK 
   <input type="checkbox" id="set31" checked>SW 
+
 
  
     
@@ -409,7 +413,7 @@
   function C(t) { return document.getElementsByClassName(t); }
   
   var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27];
-  var dcsets = [4,6,9,12,17,19,28];
+  var dcsets = [4,6,9,12,17,19,28,32,33,34];
   var dndsets =[2,8,23];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
   function escapeHtml(x) {
@@ -1226,7 +1230,8 @@
   pj = pj.replace("Range 2", "<strong>Range 2</strong>");
   pj = pj.replace("Range 3", "<strong>Range</strong>");
   pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");
-      if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
+  pj = pj.replace("Strike", "<strong>Strike</strong>");
+  if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1382,6 +1387,9 @@
   init(48,sw,'SW','sw',[],sw_aff);  
   init(49,wd_op2018,'WD2018','bfu');
   init(50,m_op2019,'M2019','ai',m_op2019_dice,m_op2019_aff);
+  init(51,jus,'JUS','jus',[],jus_aff);
+  init(52,doom,'DOOM','doom',[],doom_aff);
+  init(53,myst,'MYST','myst',[],myst_aff);
 
 
    
@@ -2039,7 +2047,10 @@
 	  bfu:'bfu',
 	  ork:'ork',
 	  sw:'sw',
-	  imp:'imp',
+    imp:'imp',
+    jus:'jus',
+    doom:'doom',
+    myst:'myst',
 
 	  //op sets]
     m2019:'m2019',
@@ -2061,7 +2072,7 @@
 	  bffop:'bffop',	  	  
 	  wko16dd:'wko16dd',
 	  wko16m:'wko16m',
-	  wko16dc:'wko16dc',	  	  
+    wko16dc:'wko16dc',    	  	  
   };
   
   function tdccode(nr) {
@@ -2168,7 +2179,9 @@
       if (!s) s = -1;
       for (var i = 0; i < affiliation_properites.length; i++) {
     var m = affiliation_in_sets[affiliation_properites[i].name];
-    E('affiliationbox'+i).style.display = s & m ? 'inline' : 'none';
+    //TODO: we've got an issue trying to limit these based on the checkbox due to bitshifting beyond 32bit
+    //E('affiliationbox'+i).style.display = s & m ? 'inline' : 'none';
+    E('affiliationbox'+i).style.display = 'inline';
       }
   }
   var txt = '';
