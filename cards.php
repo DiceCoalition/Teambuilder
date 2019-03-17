@@ -248,9 +248,9 @@ var m_op2019 = [
 //BEGIN Mystics
 var myst_aff = { 0:'0', M:'MYSTIC', J:'JLMYSTIC', V:'VMYSTLOD'};
 var myst = [
-'02404Atlantis|City and Stronghold|Move any number of dice you rolled during your Roll and Reroll step from your Reserve Pool to your Prep Area|*/** Also, Prep a die from your bag.|Global: Pay [F][S]. Move a Sidekick die from your Used Pile to your Prep Area. Field a different Sidekick die from your Used Pile.',
 '04404Atlantis|Vast Kingdom|Draw every die in your bag. Place all drawn Sidekick dice in your Used Pile. Return the remaining dice to your bag. Then, draw and roll a die (it goes in your Reserve Pool).|Global: Pay [F][S]. Move a Sidekick die from your Used Pile to your Prep Area. Field a different Sidekick die from your Used Pile.',
 '02404Atlantis|Wealthy Kingdom|When you field a Sidekick character die, draw 2 dice and roll them (until end of turn).',
+'02404Atlantis|City and Stronghold|Move any number of dice you rolled during your Roll and Reroll step from your Reserve Pool to your Prep Area|*/** Also, Prep a die from your bag.|Global: Pay [F][S]. Move a Sidekick die from your Used Pile to your Prep Area. Field a different Sidekick die from your Used Pile.',
 '042V4Black Adam|Banished|While Black Adam is active, [DCLOD] character dice gain Deadly.',
 '042V4Black Adam|Vengeful|While Black Adam is active, when one of your [DCLOD]character dice KOs an opposing character die, the KO\'d character die\'s controller loses 1 life.',
 '042V4Black Adam|Angered|While Black Adam is active, when one of your [DCLOD] character dice KOs an oppoising character die, place the KO\'d character die in the Used Pile instead of the Prep Area.',
@@ -266,10 +266,10 @@ var myst = [
 '061J4Shazam|Stamina of Atlas|Strike (If you field no other chracters this turn, this character gets +2/+2 and Overcrush.)',
 '061J4Shazam|Power of Zeus|Attune|When fielded, you may roll two unpurchased Basic Action Dice. If they both roll action faces, place them in your Prep Area. Otherwise, return them to their cards.',
 '071J4Shazam|Courage of Achilles|While Shazam is active, your action dice gain Boomerang.',
-'03304Yellow Lantern Ring|The Weaponer\'s Ring|Character dice in your Reserve Pool gain Intimidate (until end of turn).',
-'04304Yellow Lantern Ring|Green Lantern Killer|When a character die blocks this turn, reroll it. If it shows anenergy face, KO it and Yellow Lantern Ring deals 1 damage to its controller. Otherwise, it remains in the Field Zone on its rolled level (it\'s still blocking)|** Instead, Yellow Lantern Ring deals its controller 2 damage for each character die that rolls an energy face.',
-'03304Yellow Lantern Ring|Used for Great Good|The next die you purchase costs [4] less (to a minimum of 1, until end of turn). After purchasing that die, you may not purchase other dice this turn. You can\'t use this action die if you\'ve already purchased a die this turn.',
-'021J4Zatanna|Being of Magic|While Zatanna is active, when you field a character die, spin if up 1 level.',
+'02304Yellow Lantern Ring|The Weaponer\'s Ring|Character dice in your Reserve Pool gain Intimidate (until end of turn).',
+'03304Yellow Lantern Ring|Green Lantern Killer|When a character die blocks this turn, reroll it. If it shows anenergy face, KO it and Yellow Lantern Ring deals 1 damage to its controller. Otherwise, it remains in the Field Zone on its rolled level (it\'s still blocking)|** Instead, Yellow Lantern Ring deals its controller 2 damage for each character die that rolls an energy face.',
+'04304Yellow Lantern Ring|Used for Great Good|The next die you purchase costs [4] less (to a minimum of 1, until end of turn). After purchasing that die, you may not purchase other dice this turn. You can\'t use this action die if you\'ve already purchased a die this turn.',
+'031J4Zatanna|Being of Magic|While Zatanna is active, when you field a character die, spin if up 1 level.',
 '031J4Zatanna|Magical Lineage|While Zatanna is active, when a character die spins up, deal its controller 1 damage.|Global: Pay [F]. Once per turn, on your turn, spin targer character die up 1 level.',
 '031J4Zatanna|Master Magician\'s Daughter|Attune|While Zatanna is active, your [MYSTIC] character dice gain Attune.',
 ];
@@ -308,7 +308,7 @@ var doom = [
 var jus_aff = { 0:'0', J: '7', V:'9'};
 var jus = [
     '034J5Aquaman|Son of a Lighthouse Keeper|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
-    '044J5Aquaman|Saving the Seven Seas|While Aquaman is active, when a character die on a character face moves from your Reserve Pool to your Used Pile at the end of your Main Step, gain 2 like.',
+    '044J5Aquaman|Saving the Seven Seas|While Aquaman is active, when a character die on a character face moves from your Reserve Pool to your Used Pile at the end of your Main Step, gain 2 life.',
     '034J4Aquaman|Arthur Curry|While Aquaman is active, [DCJL] characters cost [1] less to buy (to a miimum of 1).',
     '041J4Batman|Consumed by Regret|Batman must attack if there are any active [DCV] characters (any player\'s).',
     '051J4Batman|Can\'t Trust in Luck|When Batman KOs a character die with combat damage, Prep a die from your bag.',
@@ -344,7 +344,7 @@ var jus = [
     '051V5Poison Ivy|Criminal Beause of Love|When fielded, you may KO a character die you control. If you do, deal damage equal to the KO\'d character die\'s level to target opponent and all the character dice that opponent controls.',
     '041V5Poison Ivy|Let Spring Come|When fielded, draw 2 dice. If both are Sidekick dice, place them in your Used Pile and deal 2 damage to all opposing character dice. Otherwise, return them to your bag.',
     '041V5Poison Ivy|A New Leaf|While Poison Ivy is active, when an opponent purchases the last de on a card, deal that opponent 3 damage.|Global: Pay [M] [M]. Once on your turn, you may remove a die on any card from the game. You may not remove the last die on the card.',
-    '041V4Scarecrow|Fear-Based Gases|While Scarecrow is active, when a Sidekick character die is KO\'d, place it in the Used Pile instead of teh Prep Area.',
+    '041V4Scarecrow|Fear-Based Gases|While Scarecrow is active, when a Sidekick character die is KO\'d, place it in the Used Pile instead of the Prep Area.',
     '041V4Scarecrow|Professor of Psychology|While Scarecrow is active, when an opposing Sidekick character die is KO\'d, its controller loses 1 life.',    
     '041V4Scarecrow|Chose Poorly|When fielded, name an opposing card replacing all previous choices. While Scarecrow is active, dice on that card cost [3] more to purchase.',
     '054V4Solomon Grundy|Cannot Be Killed|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
@@ -371,9 +371,9 @@ var jus = [
     '044J5Wonder Woman|A Gift|When fielded, you may spin up to 2 dice in your Reserve Pool to [Q] Faces.',
     '044J5Wonder Woman|Amazon Ambassador to the World|When fielded, you may spin a die in your Reserve Pool that is on an energy face to another energy face.',
     '04003Betrayal|Basic Action Card|Deal 1 damage to target opponent for each character die in their Field Zone.|** If Betrayal did at least 2 damage, put this die in your Prep Area.',
-    '04003Doom Lance|Basic Action Card|Choose one of your active character dice. Only that character die may attack this turn. All opposing character dice must block this turn (if able). When an opposing character die is KO\'d this turn, its controller loses 1 life.|** Alos, if an opponent has no active character dice at the end of the turn, that opponent loses 1 life.',
+    '04003Doom Lance|Basic Action Card|Choose one of your active character dice. Only that character die may attack this turn. All opposing character dice must block this turn (if able). When an opposing character die is KO\'d this turn, its controller loses 1 life.|** Also, if an opponent has no active character dice at the end of the turn, that opponent loses 1 life.',
     '02003Energy Field|Basic Action Card|Spin all active character dice up 1 level.|** Also, afterward, spin target opposing character die to level 1.|Global: Pay [M] and spin one of your active character dice down 1 level. Spin target character die up 1 level.',
-    '02003Excessive Force|Basic Action Card|Deal 6 damage to target character die. |Global: Pay [B]. Target character die gets +1A (until end of turn).',
+    '04003Excessive Force|Basic Action Card|Deal 6 damage to target character die. |Global: Pay [B]. Target character die gets +1A (until end of turn).',
     '03003Investigation|Basic Action Card|Draw and roll 2 dice (add them to your Reserve Pool).',
     '02003Ping|Basic Action Card|Deal 1 damage to target opponent.|*/** Also, this die has Boomerang.',
     '04003Power Almighty|Basic Action Card|Spin each of your active character dice up 1 level. For each active character die you could not spin up, Prep one die from your bag.',
