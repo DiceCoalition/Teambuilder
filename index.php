@@ -357,7 +357,7 @@
    <option value="G">Golden Era</option>
    <option value="K">Modern Era</option>   
    <option value="P">Global Escalation</option>
-   <option value="M">Modern Era (2017)</option>   
+   <option value="M">Modern Era (2019)</option>   
   </select>
   </span>  
   </div>
@@ -1316,10 +1316,12 @@
   K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],
-
-  M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "15FUS" ],
+  M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
+	   "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "132TOA"],
+  //2017 M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "15FUS" ],
   G: [ "31UXM", "119YGO" ],
-  P: [ "86BAT", "83BAT", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "70AvX", "19YGO", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "58WoL", "51HHS", "53HHS", "90CW", "14WF", "115TOA", "30BAT", "2DC2016", "16SMC", "66JL", "18AvX", "126AvX", "89TOA", "132TOA"],
+  P: [ "4BAT", "86BAT", "83BAT", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "70AvX", "19YGO", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO","120XFC", "58WoL", "51HHS", "53HHS", "90CW", "14WF", "115TOA", "30BAT", "2DC2016", "16SMC", "66JL", "18AvX", "126AvX", "89TOA", "132TOA"],
   });
   /*
   PDC Prime format:
