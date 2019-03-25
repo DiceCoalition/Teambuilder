@@ -237,10 +237,17 @@
         }
     }
     
-var m_op2019_dice = ['ai','smc','thor','thor'];
-var m_op2019_aff = { 0:'0', I:'I', A:'2',S:'SPF',T:'MSTARK'};
+var m_op2019_dice = ['ai','smc','thor','imw'];
+var m_op2019_aff = { 0:'0', I:'I', A:'2',S:'ASF',T:'MSTARK', F:'F'};
 var m_op2019 = [
     '532I4Black Widow|Agent|While Black Widow is active, reduce damage from opposing character\'s abilities by 1. Your opponent can\'t target Black Widow with Global Abilities.',
+	'544F4Captain America|Trained Operative|Underdog - field Captain America for free.|When fielded, KO target [DCV] character die with purchase cost of 3 or less.',
+	'542S4Spider-Man|Sneaky Pete|Underdog - If Spider-Man is attacking alone, he is unblockable.',
+	'534S4Black Cat|Thief|Infiltrate.',
+	'531A4Kate Bishop|Straight Shooter|When fielded, deal 3 damage to target [DCV] character die.|Global: Pay [M]. Target attacking character die is no longer attacking. (It remains in the Field Zone.)',
+	'531A4??|??|??',
+	'544T4Iron Man|Armor Supply|While Iron Man is active, your Pepper Potts dice with 1A gain Infiltrate and your Pepper Potts dice with 2A or more get Overcrush.',
+	'554T4War Machine|Improv Armor|When fielded, if you have an active Iron Man, you may KO target character die.',
 ];
 
 
@@ -788,7 +795,7 @@ var sw = [
     '37204Mr. Fixit|Joe|When Mr. Fixit KOs an opposing character die with combat damage, target opponent draws 1 less die during their next Clear and Draw Step.',
     '334H4Nick Fury|The Unseen|When fielded, spin each opposing [DCV] character die down 1 level.',
     '37404Odin|Entering Odinsleep|When fielded, draw 3 dice. Field any drawn character dice with Immortal at level 3 for free. Add the rest to your Used Pile.',
-    '323S4Pepper Potts|Behind Every Great Man|While Iron Man is active, Pepper Potts gets +3A and +3D.',
+    '333S4Pepper Potts|Behind Every Great Man|While Iron Man is active, Pepper Potts gets +3A and +3D.',
     '36304Punisher|Bringing Down The Exchange|While Punisher is active, each time a character die you control is damaged during an opponent\'s turn, deal 1 damage to target opponent.',
     '353F4SP//dr|Arachnid CPU|While SP//dr is active, when an opposing non-SP//dr ability deals damage to you, deal that same amount of damage to target opponent. While SP//dr is active, when you are dealt damage, cancel any active effects of previously used action dice. ',
     '354H4Samantha Wilson|Working People, Working Together|While Samantha Wilson is active, when you field a Sidekick die, you may spin a die in your Reserve Pool on an energy face to another aenergy face (if able).|Global: Pay [S]: Prevent 1 damage to target character die or player.',
