@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="7ig431nnv3z3xpr"></script>
   <script src="https://www.w3schools.com/lib/w3.js"></script>
 	
 	<?php
@@ -176,13 +177,22 @@
       <a id="visual_team_link" class="button" target="_blank">Team Display</a>
       </span>
       <span class="button" onclick="save_team()">Save this team</span> Link to this team: <a id="teamlink" href=""></a><br>
-      <span class="button" onclick="print_team_sheet()">Print Tournament Team Sheet</span>
+      <span class="button" onclick="print_team_sheet()">Print Tournament Team Sheet</span><br>	
+      
       <span style="display:none">
       <span>TRP forum codes - <span id="trpcodes"></span></span>
       <br><span class="button button_file">Import DiceMastersDB Teams<input type="file" id="import_dmdb_teams" onchange="import_dmdb_teams_changed()"/></span>
       </span>
-    </span>
+    </span>	
   </span>
+  <span class="show_mode2">
+		<span id="dboxSave" class="button" onclick="dropbox_save()">Connect to Dropbox</span>	
+	</span>
+	<span class="show_mode2">
+		<span id="textSave" class="button" onclick="text_save()">Save to text</span><br>	 
+			
+		<span id="textLoad" >Load from text file: <input type="file" name="file" id="file"></span></br>
+	</span>
   <span class="show_empty hide"><span class="show_mode1 show_mode2 hide">Click on '+' in the result table to add cards to the team.<br></span></span>
   <span class="show_mode1 hide">
     <br><span class="button show_addrandom hide" onclick="add_random()">+ Random</span>
@@ -409,6 +419,30 @@
   "use strict";
   w3.includeHTML();
   
+  var accessParams = [];
+  
+  
+
+  if (location.protocol === 'https:' && location.href.includes('access_token')) {
+	 var accessToken = /access_token=([^&]+)/.exec(location.href)[1];
+	 var accountId = /account_id=([^&]+)/.exec(location.href)[1];
+	 var state = /state=([^&]+)/.exec(location.href)[1];
+
+	 localStorage.dboxAccessToken = accessToken;
+	 localStorage.dboxAccountId = accountId;
+	 
+	 state = atob(state);
+	 //needs to be run twice for some reason
+	 state = decodeURIComponent(state);
+	 localStorage.current_team = state;
+  }
+	  
+  if(location.protocol === 'https:' && "dboxAccessToken" in localStorage){
+	  //document.getElementById("dboxSave").innerHTML = "Save To Dropbox";
+	  document.getElementById("dboxSave").style.display = 'none';
+	  dropbox_load();
+  }
+
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
@@ -699,10 +733,11 @@
   if (localStorage !== undefined) {
       try {
         if ("saved_teams" in localStorage)
-    saved_teams = JSON.parse(localStorage.saved_teams);
+			saved_teams = JSON.parse(localStorage.saved_teams);
         if ("collection" in localStorage) {
-    import_collection(localStorage.collection);
+			import_collection(localStorage.collection);
         }
+		
       } catch(e) {
       }
   }
@@ -758,7 +793,7 @@
     s += '<tr><td><button onclick="load_team('+i+')">Load</button></td>';
     s += "<td>"+escapeHtml(saved_teams[i].name)+"</td>";
     s += '<td><button onclick="delete_team('+i+')">✖</button></td>';
-      }
+      }	  
       t.innerHTML = s;
   }
   //check team for errors.  Remove problem entries
@@ -791,7 +826,138 @@
       saved_teams.splice(nr,1);
       display_saved_teams();
       nv_save_teams();
+	  saveToDropbox();
   }
+  function dropbox_save(){
+	  var accessToken = "";
+	  if ("dboxAccountId" in localStorage && location.protocol === 'https:') {			
+			saveToDropbox();
+        }
+		else{
+			var authUrlCode = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=code&redirect_uri=https://tb.dicecoalition.com/indexTest.php&state="+btoa(encodeURIComponent(localStorage.current_team));
+			//State is limited to 500 characters, so could only send like 3 teams
+			//&state="+btoa(JSON.stringify(saved_teams));
+			var authUrlToken = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=token&redirect_uri=https://tb.dicecoalition.com/indexTest.php&state="+btoa(encodeURIComponent(localStorage.current_team));
+		  window.open(authUrlToken, "_self");
+		  
+		}	  
+  } 
+    
+  function download(strData, strFileName, strMimeType) {
+    var D = document,
+        A = arguments,
+        a = D.createElement("a"),
+        d = A[0],
+        n = A[1],
+        t = A[2] || "text/plain";
+    //build download link:
+    a.href = "data:" + strMimeType + "charset=utf-8," + escape(strData);
+
+    if (window.MSBlobBuilder) { // IE10
+        var bb = new MSBlobBuilder();
+        bb.append(strData);
+        return navigator.msSaveBlob(bb, strFileName);
+    } /* end if(window.MSBlobBuilder) */
+
+    if ('download' in a) { //FF20, CH19
+        a.setAttribute("download", n);
+        a.innerHTML = "downloading...";
+        D.body.appendChild(a);
+        setTimeout(function() {
+            var e = D.createEvent("MouseEvents");
+            e.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            a.dispatchEvent(e);
+            D.body.removeChild(a);
+        }, 66);
+        return true;
+    }; /* end if('download' in a) */
+
+    //do iframe dataURL download: (older W3)
+    var f = D.createElement("iframe");
+    D.body.appendChild(f);
+    f.src = "data:" + (A[2] ? A[2] : "application/octet-stream") + (window.btoa ? ";base64" : "") + "," + (window.btoa ? window.btoa : escape)(strData);
+    setTimeout(function() {
+        D.body.removeChild(f);
+    }, 333);
+    return true;
+}
+
+  function text_save(){      
+
+		var txtData = JSON.stringify(saved_teams);
+       download(txtData, "teams.txt", 'text/plain');    
+  }
+  
+document.getElementById('file').onchange = function(){
+  var file = this.files[0];
+  var reader = new FileReader();
+  reader.onload = function(progressEvent){
+	  if (confirm('This will overwrite your current saved teams. Continue?')) {
+    	 saved_teams = JSON.parse(this.result);
+		 nv_save_teams();
+		 saveToDropbox();
+		 display_saved_teams();
+		 alert("Teams imported!");
+	  }
+  };
+  reader.readAsText(file);
+};
+	
+  function saveToDropbox(auth){
+		if(location.protocol === 'https:' && "dboxAccessToken" in localStorage){
+			var path = "/teams.txt";
+			var content = JSON.stringify(saved_teams);
+			
+			var uploadUrl = "https://content.dropboxapi.com/2/files/upload"
+			var result;
+
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+			 if (xhr.readyState === 4) {
+			 result = xhr.responseText;
+			 //console.log(result);
+			 }
+			};
+			xhr.open("POST", uploadUrl, true);
+			xhr.setRequestHeader("Authorization", "Bearer " + localStorage.dboxAccessToken);
+			xhr.setRequestHeader("Content-type", "application/octet-stream");
+			xhr.setRequestHeader("Dropbox-API-Arg", '{"path": "' + path + '","mode":{".tag":"overwrite"}}');
+			var formData = new FormData();
+			formData.append("teams", content);
+			xhr.send(content);
+		}
+  }
+  
+  function dropbox_load(){
+	  readFromDropbox();
+  }
+  
+  function readFromDropbox(auth){
+	  if(location.protocol === 'https:' && "dboxAccessToken" in localStorage){
+	    var path = "/teams.txt";
+		var content = saved_teams;
+		
+		var uploadUrl = "https://content.dropboxapi.com/2/files/download"
+		var result;
+
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+		 if (xhr.readyState === 4) {
+		 result = xhr.responseText;
+		 //console.log(result);
+		 saved_teams = JSON.parse(xhr.responseText);
+		 nv_save_teams();
+		 display_saved_teams();
+		 }
+		};
+		xhr.open("POST", uploadUrl, true);
+		xhr.setRequestHeader("Authorization", "Bearer " + localStorage.dboxAccessToken);
+		xhr.setRequestHeader("Content-type", "application/octet-stream");
+		xhr.setRequestHeader("Dropbox-API-Arg", '{"path": "' + path + '"}');
+		xhr.send();
+	  }
+  }
+  
   function save_team() {
       var tosave = {};
       tosave.name = prompt("Team name", team_name);
@@ -807,6 +973,7 @@
       saved_teams[i] = tosave;
       display_saved_teams();
       nv_save_teams();
+	  saveToDropbox();
   }
   
   var click_minus;
