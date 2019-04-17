@@ -1231,6 +1231,7 @@
   pj = pj.replace("Range 3", "<strong>Range</strong>");
   pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");
   pj = pj.replace("Strike", "<strong>Strike</strong>");
+  pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
   } else if (pj.substring(0,7) == 'Global:' || pj.substring(0,7) == 'Ritual:') {
