@@ -834,10 +834,10 @@
 			saveToDropbox();
         }
 		else{
-			var authUrlCode = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=code&redirect_uri=https://tb.dicecoalition.com/indexTest.php&state="+btoa(encodeURIComponent(localStorage.current_team));
+			var authUrlCode = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=code&redirect_uri=https://tb.dicecoalition.com/index.php&state="+btoa(encodeURIComponent(localStorage.current_team));
 			//State is limited to 500 characters, so could only send like 3 teams
 			//&state="+btoa(JSON.stringify(saved_teams));
-			var authUrlToken = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=token&redirect_uri=https://tb.dicecoalition.com/indexTest.php&state="+btoa(encodeURIComponent(localStorage.current_team));
+			var authUrlToken = "https://www.dropbox.com/oauth2/authorize?client_id=7ig431nnv3z3xpr&response_type=token&redirect_uri=https://tb.dicecoalition.com/index.php&state="+btoa(encodeURIComponent(localStorage.current_team));
 		  window.open(authUrlToken, "_self");
 		  
 		}	  
