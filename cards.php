@@ -24,6 +24,7 @@
      MEX:'exiles',
      KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
      DOOM:'doompatrol',
+	 HELL:'hellfireclub',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -50,10 +51,11 @@
      PAWN:'pawn',
      KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
      DOOM:'aDOOM',
+	 HELL:'aHELL',
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -63,7 +65,7 @@
     'dp', 'ih',
     'si',
     'def',
-    'ex','bom',
+    'ex','bom','hel',
     'jl', 'js', 'ld', 'cs',
     'bl', 'gl', 'kl', 'il', 'pl', 'rl', 'ol', 'yl', 'tt', 'co',
     'bat', 'sup',
@@ -97,6 +99,7 @@
     { name:'inhumans', pic: 'aMIH' },
     { name:'starkindustries', pic: 'aMSTARK' },
     { name:'defenders', pic: 'aMDFD' },
+	{ name:'hellfireclub', pic: 'aHELL' },
     { name:'justiceleague', pic: 'a7' },
     { name:'jsa', pic: 'a8' },
     { name:'legionofdoom', pic: 'aJLL' },////
@@ -183,6 +186,10 @@
      M:'monster',
      MBOM:'brotherhoodofmutants',
      MBOMV:['brotherhoodofmutants','villain'],
+	 MBOMX:['xmen','brotherhoodofmutants'],
+	 XV:['xmen','villain'],
+	 HELL:['hellfireclub'],
+	 HELLV:['hellfireclub', 'villain'],
      MDP:'deadpool',
      MDFD:'defenders',
      MIH:'inhumans',
@@ -239,6 +246,147 @@
       affiliation_add_one(nr, affiliation_map[aff], set_idx);
         }
     }
+
+//rarity,cost,energy,affiliation,maxdice
+//rarity key: 0:starter, 1:common, 2:uncommon, 3:rare, 4:superrare, 5:OP
+//energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
+
+
+//BEGIN Dark X-Men
+var dxm_aff = { 0:'0', X:'1', B:'MBOM', V:'MBOMV', C:'MBOMX', H:'HELL', Y:'XV'};
+var dxm = [
+'041X4Blink|Who\'s Faster, Halfscan?|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>',
+'041X4Blink|Down the Rabbit Hole|When Blink is blocked, remove her from combat and deal 1 damage to the defending player.',
+'041X4Blink|Biomolecular Displacement Portals|While Blink is active, when a player moves a die from their Used Pile to their Prep Area, deal 1 damage to that player.',
+'022Y4Dark Beast|Imposter|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>',
+'022V4Dark Beast|Mad Scientist|When active, when a character die you control uses Corrupt, draw and roll a die.',
+'022V4Dark Beast|Human Experimentation|When Dark Beast blocks, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>. If the die you place in the Used Pile is a Sidekick die, draw and roll a die.',
+'031X4Mimic|Calvin|While active, when an opposing, non-Sidekick character die is fielded, all of your active Mimic character dice become copies of that character die until you no longer had an active Mimic character die or a new opposing, non-Sidekick character die is fielded. Your Mimic dice also retain the abilities written on this card.',
+'031X4Mimic|Best of the X-Men|When Mimic is fielded, choose target opposing character die, replacing all prior choices. Your active Mimic character dice copy the printed stats of that character die <em>(level for level)</em> until you no longer have an active Mimic character die or a new Mimic die is fielded <em>(and a different character die is chosen)</em>. While your opponent has more than one active character die of the chosen die, Mimic gets an additional +3A and +3D.',
+'041X4Mimic|Flying, Blasting, Slashing|When Mimic is fielded, choose target opposing character die. Roll Mimic and the chosen die. If eitehr rolls an energy face, KO both character dice. If both roll character faces, KO the opposing die, and all your active Mimic character dice become copies of the chosen die until you no longer have an active Mimic character die or until a new Mimic die is fielded <em>(and a different character die is copied)</em>. Your Mimic dice also retain the abilities written on this card.',
+'044X4Polaris|Lorna Dane|When Polaris is fielded, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>.',
+'044X4Polaris|Hail, Queen of Mutants|While active, each player may only use 1 Global Ability each turn.',
+'044X4Polaris|Strange Stirrings Within|While active, when an opposing acton die targets you or a character die you control, you may use a copy of its effect. You may choose new targets for that copy.',
+'041B4Rogue|Goodnight, Sugah!|When Rogue is fielded, Corrput 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest).</em>',
+'041X4Rogue|Southern Comfort|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>|When Rogue uses Infiltrate, deal an additional damage.',
+'051X4Rogue|Mother Issues|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>|While active, your Sideick character dice gain Infiltrate.',
+'034X4Sage|Psionic Firewall|While active, your opponent\'s non-Sidekick character dice cost [1] more to field.',
+'034X4Sage|Photographic Memory|When Sage is fielded, Corrput 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>.',
+'034H4Sage|Xavier\'s Mole|When Sage is KO\'d, Corrput 3 <em>(Target player draws 3 dice, places 1 in Used, and returns the rest)</em>.',
+'053X4Sunspot|Roberto da Costa|While active, when an opposing Global Ability or action die targets one of your [XMEN] character dice, deal 1 damage to taht opponent.',
+'053H4Sunspot|Lord Imperial|When Sunspot is damaged, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used and returns the rest)</em>.',
+'053H4Sunspot|Black Rook|When fielded, deal 1 damage to target opponent for each die in your Reserve Pool on a double energy face.',
+'042X4Thunderbird|Wakinyan|When Thunderbird KOs an opposing character die, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>.',
+'042X4Thunderbird|Son of The People|While Thunderbird is active, when an opposing character die is spun up, deal 1 damage to that die\'s controller.',
+'042X4Thunderbird|Buffalo Soldier|When Thunderbird is KO\'d, return any other non-Thunderbird character dice that were KO\'d this turn to the field at level 1.',
+];
+   
+//BEGIN X-Force
+var xfo_aff = { 0:'0', X:'1'};
+var xfo = [
+'043X4Cable|X-Force Team Leader|Energize - Spin all of your active character dice up one level.|If you have an active character with Energize, Cable is free to field.',
+'053X4Cable|Psionic Blasts|When Cable is blocked, deal damage equal to Cable\'s level to each character die blocking Cable.',
+'053X4Cable|Bodyslide|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>|When Cable uses Infiltrate, deal 1 extra damage for each other non-Sidekick character die that attacked this turn.',
+'021X4Dani Moonstar|Empathic Illusion Casting|When Dani Moonstar is blocked, reroll the blocking character die. If it rolls an energy face, place it in the Used Pile and deal 2 damage to its controller. <em>(If it rolls a character face it remains blocking Dani Moonstar on its new level.)</em>',
+'021X4Dani Moonstar|Cheyenne|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>',
+'021X4Dani Moonstar|Special Arrows|While Dani Moonstar is active, at the beginning of each of your opponent\'s turns, name a non-Sidekick die. If that opponent draws one or more copies of that die, deal 1 damage to that opponent.',
+'042X4Deadpool|Roll Some Energy!|Energize - Your active character dice get +1A and +1D <em>(until end of turn). (Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'052X4Deadpool|It\'s a 4th Wall Thing|When Deadpool attacks, if you have a die on a double energy face in your Reserve Pool, all oppoising character dice must block <em>(this turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
+'042X4Deadpool|We\'re X-Force!|When Deadpool is blocked, he gains +3A and Overcrush <em>(until end of turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
+'034X4Domino|Not Really A Party Girl|Energize - Deal 1 damage to target oponent and reroll this die. <em>Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'034X4Domino|It\'s Not ALL Luck|While actie, when you roll a die on a double energy face, deal 1 damage to target opposing charcter die.',
+'044X4Domino|"Mistress of Mischief"|Fast <em>(Characters with Fast deal combat damage before characters without Fast.)</em>',
+'044X4Fantomex|International Art Thief|Energize - Prevent all damage to your character dice <em>(until end of turn).(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'044X4Fantomex|Weapon XIII|Fantomex cannot be targeted by opposing Global Abilities or action dice.',
+'054X4Fantomex|Cover Fire|While Fantomex is active, when you field a character die, prevent all damage to that character die <em>(until end of turn).</em>',
+'033X4Forge|Intuitive Genius|Energize - Action dice cost you [2] less to purchase <em>(until end of turn).(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'033X4Forge|Inventor|When fielded, draw and roll a die.',
+'033X4Forge|Tribal Shaman|Attune <em>(While this character is active, when you use an action die, deal 1 damage to target player or character die.)</em>',
+'041X4Magik|Energy from Limbo|Energize - Draw and roll a die. <em>(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'041X4Magik|Limbo Control|When Magik is fielded, deal 1 damage to target opponent for each non-Sidekick character die on an energy face in your Reserve Pool.',
+'041X4Magik|Psionic Shields|While Magik is active, your opponent may not reroll more than 2 dice during their Roll and Reroll Step.',
+'021X4Psylocke|Reforming X-Force|Energize - You may field a Sidekick die from your Used Pile. <em>(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'021X4Psylocke|Telekinetic Bow and Arrow|When Psylocke is fielded, KO target opposing Sidekick character die.',
+'041X4Psylocke|Master Telepathic Combatant|When Psylocke attacks, you may KO the lowest purchase cost opposing character die.',
+];
+   
+   //BEGIN X-men Forever
+   
+var xmf_aff = { 0:'0', X: '1', H:'HELLV', B:'MBOMV'};
+var xmf = [
+    '021X5Beast|Here, Sir!|Beast can only be blocked by two or more character dice.',
+    '021X5Beast|Taming the Beast Within|When Beast KOs a blocking character die, deal 1 damage to the KO\'d die\'s controller.',
+	'031X5Beast|Atavistic Tendencies|When Beast attacks, you may pay [M]. If you do target opposing character die must block this Beast die.<em>(You may pay a [M] and perform this effect for each Beast die that attacks.)</em>|* Instead, two target opposing character dice must block this Beast die.',
+    '043H4Black Tom Cassidy|White Bishop|Attune <em>(While this character die is active, when you use an action die, deal 1 damage to target player or characer die.)</em>',
+    '043B4Black Tom Cassidy|Plans in Motion|Fast <em>(Characters with Fast deal combat damage before characters without Fast.)</em>|Call Out <em>(When this character die attacks, target character die is the only character die that may block this character die.)</em>',
+    '034B4Blob|Frederick Dukes|Intimidate <em>(When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)</em>|Blob may only use Intimidate on Sidekick character dice. Blob\'s Initimidate ability affects all opposing Sidekick character dice <em>(instead of affecting only one)</em>. Blob gets +1A <em>(until end of turn)</em> for each Sidekick character die affected by Blob\'s Intimidate ability.',
+    '044B4Blob|Big Talkin\' Costumed Clown|While Blob is active, your opponent may not purchase or field character dice with a printed cost of [2].',
+    '074X4Cerebra|Defending X-Haven|Cerebra costs [1] less to purchase for each of your different, active [XMEN] characters. <em>(Even if Cerebra isn\'t active.)</em>',
+    '064X4Cerebra|Mutant Detector|Cerebra costs [1] less to field if you have an active [XMEN] character die. <em>(Even if Cerebra isn\'t active.)</em>',
+    '064X4Cerebra|Rust Bucket|When Cerebra is KO\'d, you may move an [XMEN] character die from your Used Pile to your Prep Area.',
+    '053X4Cyclops|Present of Accounted For|While Cyclops is active, your [XMEN] character dice cost [1] less to purchase and your non-Cyclops [XMEN] characeter dice get +1A and +1D.',
+    '053X4Cyclops|Prismatic Lens|When fielded, if you control 3 or more [B] character dice, deal 2 damage to target opponent.',
+    '052H4Donald Pierce|White King|Overcrush <em>(Character dice with Overcrush deal damage in excess of blocker\'s D to opponent.)</em>.',
+    '052H4Donald Pierce|Better, Faster, Stronger|When fielded, deal X damage to target opposing character die, where X is the number of [F] energy in your Reserve Pool.',
+    '052H4Donald Pierce|Refocusing the Reavers|Regenerate <em>(Reroll when KO\'d.)</em>.',
+    '044X4Emma Frost|Mental Mistress|While Emma Frost is active, when an opponent declares a character die as an attacker or blocker, they may not attack or block with any other copies of that die this turn <em>(including Sidekick dice)</em>.',
+    '044X4Emma Frost|Not Always About "Good" or "Evil"|While you have an active [XMEN] character die other than Emma Frost, she gets +1A and +1D.|While Emma Frost is active, if you have no active non-Emma Frost [XMEN] character dice, she gains [DCV].',
+    '044H4Emma Frost|As You Say, Shaw|When fielded, you may gain control of target opposing Sidekick character die. At the end of turn, return that Sidekick die to your opponent\'s Field Zone regardless of where it ends up <em>(at level 1)</em>.',
+    '024X4Hope Summers|Messiah Complex|Hope Summers gets +1A and +1D for each of your different, active, non-Hope Summers [XMEN] characters.',
+    '034X4Hope Summers|Pluripotent Echopraxia|When fielded, chose an [XMEN] character card on your team, replacing all previous choices. Hope Summers gains that character\'s text box in addition to her own. She retains that text box until she is fielded again <em>(even if she is no longer active)</em>.',
+    '024X4Hope Summers|All of Us|When Hope Summers is Fielded, draw a die for each of your different, active, [XMEN] characters. Place any [XMEN] character dice you drew in your Prep Area. Place all other dice drawn in your Used Pile.',
+    '043X4Iceman|Right on Schedule|When Iceman takes damage during the attack step, he deals 2 damage to target opponent.',
+    '043X4Iceman|I\'m Just Me|When Iceman damages a character die, that character die cannot attack or block during the following turn.',
+    '053X4Jean Grey|One Love, One Life|When Jean Grey is fielded, spin all other [XMEN] character dice up 1 level.',
+    '053X4Jean Grey|Open Your Eyes, Scott|While active, when an opponent fields a [DCV] character die, deal 1 damage to that opponent.',
+    '033X5Jubilee|Jubilation Lee|When Jubilee attacks, she deals 1 damage to your opponent for each other attacking [B] character die.',
+    '033X5Jubilee|Wondra|When fielded, deal 2 damage to target character die or opponent.',
+    '023X5Jubilee|Olympic Gymnast|While Jubilee is active, when your field a [B] character die, deal 1 damage to target opponent.',
+    '041X4Kitty Pryde|Professor Xavier is a Jerk!|This character die cannot be blocked if it attacks with another [XMEN] character die <em>(including another Kitty Pryde die)</em>.',
+    '031X4Kitty Pryde|More Human Than You!|When fielded, non-Kitty Pryde [XMEN] character dice cost [2] less to purchase <em>(until end of turn)</em>.',
+    '031X4Kitty Pryde|Star Lord|When fielded, draw a die. If it is an [XMEN] character die, roll it and place it in your Reserve Pool. Otherwise, place it in your Used Pile.',
+    '052B4Lady Deathstrike|Yuriko Oyama|When a single Lady Deathstrike character die attacks alone, she gets +2A and +2D.',
+    '052B4Lady Deathstrike|Honor Bound|While active, when you field a [BOM] character die, Lady Deathstrike gets +1A and +1D.',
+    '062B4Lady Deathstrike|Bad to the Bone|Overcrush <em>(Character dice with Overcrush deal damage in excess of blocker\'s D to opponent.)</em>|When Lady Deathstrike damages an opponent, gain 1 life.',
+    '021H4Madelyne Pryor|Red Queen|Energy Drain <em>(Spin engaged character dice down 1 level.)</em>',
+    '031H4Madelyne Pryor|Sinister Origin|Energy Drain <em>(Spin engaged character dice down 1 level.)</em>|Your [HELL] character dice gain Energy Drain.',
+    '031H4Madelyne Pryor|Anodyne|Attune <em>(While this character is active, when you use an action die, deal 1 damage to target player or character die.)</em>',
+    '051H2Magneto|Grey King|While active, your non-Magneto [HELL] character dice get +2A and +2D.',
+    '051B2Magneto|Homo Superior|Your [BOM] characer dice get +1A and +1D for each different, active [XMEN] character <em>(both sides)</em>.',
+    '044B4Mastermind|Jason Wyngarde|Before declaring blockers, you may roll one of your active Mastermind dice. If it shows an energy face, KO it. Otherwise, remove X attacking character dice from the Attack Zone, where X is the rolled die\'s level <em>(it remains in the Field Zone at its new level)</em>.',
+    '034H4Mastermind|Probationary Member|Mastermind takes no damage during combat.',
+    '024B4Mastermind|Fracturing the Phoenix|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>',
+    '031B4Mystique|Brotherhood of Her Own|Mystique gets +2A and +2D for each different, active, non-Mystique [BOM] character <em>(both sides)</em>.',
+    '041B4Mystique|O Bitter Victory|Mystique gets +1A and +1D for each other character die in the Field Zone.',
+    '061H4Mystique|Hellfire Headmistress|When fielded, choose an opposing non-[DCV] card. This fielded character die has the printed attack and defense values of that card, matching level for level.|* This character die also gains the text of that card as long as this character die is active.',
+    '061X2Professor X|To Me, My X-Men!|While Professor X is active, whenever one of your Sidekick dice is KO\'d, gain 1 life.|Global: Pay [M]. Once during your turn, you may Prep up to 2 Sidekick dice from your Used Pile.',
+    '061X2Professor X|To the Astral Plane|When fielded, move all of your active Sidekick character dice to your Prep Area. Gain 1 life for each Sidekick character die moved in this way.|Global: Pay [M]. Once during your turn, you may Prep up to 2 Sidekick dice from your Used Pile.',
+    '051X2Professor X|Too Good For This World|When fielded, draw 2 dice. If they are both Sidekick dice, roll them and place them in your Reserve Pool. Otherwise, return both to your bag.',
+    '063X4Rachel Summers|Marvel Girl|Whenever a non-Rachel Summers [XMEN] character die is KO\'d <em>(either player\'s)</em>, spin up all your Rachel Summers dice to level 3.',    
+    '073X4Rachel Summers|Phoenix|When one or more Rachel Summers character dice attack, until end of turn, when one of your [XMEN] character dice is KO\'d, deal 2 damage to the defending player.',
+    '073X4Rachel Summers|Prestige|While Rachel Summers is active, if another [XMEN] character is KO\'d, KO all other characters <em>(except the Rachel Summers die using this effect)</em>.',
+    '042B4Sabretooth|Happy Birthday, Boy|Regenerate <em>(Reroll when KO\'d.)</em>',
+    '052B4Sabretooth|Terrible Transcendent Joy|Overcrush|Sabretooth gets +1A if you have another active [BOM] character die.',
+    '042H4Sebastian Shaw|The Harder You Hit Me|Regenerate <em>(Reroll when KO\'d.)</em>|You may only use Sebastian Shaw\'s Regenerate ability if you pay 1 life when he would be KO\'d.',
+    '042H4Sebastian Shaw|The Stronger I Become|When a [HELL] character die is fielded or KO\'d, spin each of your Sebastian Shaw dice up 1 level.',
+    '033X4Storm|Ororo Munroe|When fielded, deal 1 damage to target opponent for each action die in your Reserve Pool <em>(action or energy face)</em>.',
+    '043X4Storm|Mother Nature|When fielded, if you have an action die in your Reserve Pool <em>(on an action or energy face)</em>, reroll target active opposing character die. If it rolls an energy face, place it in the Used Pile.',
+    '023X4Storm|The Storm Goddess Comes|When fielded, you may reroll target action die in your Reserve Pool <em>(on an action or energy face, but you cannot reroll an energy die that has been partially spent)</em>.',
+    '032B4Toad|The Leader Will Be Proud|',
+    '042B4Toad|Strange Augmentation|When fielded, name an affiliation, replacing all previous choices. While Toad is active, characters of that affiliation must attack each turn <em>(if able)</em>.',
+    '062X4Wolverine|Good Doesn\'t Always Mean Nice|When Wolverine attacks, deal 1 damage to each opposing [S] character die.|* Also, deal 1 damage to each opposing [M] character die.',
+    '052X4Wolverine|Adamantium Fury|If your opponent only has character dice of one energy type in the Field Zone, Wolverine gets +2A and +2D while attacking.',
+    '03003Brave Sacrifice|Basic Action Card|Target Sidekick character die gets +2A and +2D. If it doesn\'t attack this turn, KO it.|Global: Pay [S]. Spin target Sidekick character die to level 1.',
+    '02003Counterstrike|Basic Action Card|Choose an affiliation. Prep one die of that affiliation from your Used Pile. Move all other dice of that affiliation from your Used Pile to your bag.|Global: Pay [1]. Once during your turn, Prep a Sidekick die from your Used Pile.',
+    '02003Dual Defense|Basic Action Card|Choose two of your character dice. If either of those character dice block, the other must block as well. These character dice cannot be KO\'d while blocking. These effects last until the beginning of your next turn.|** Also, these character dice cannot be targeted until the beginning of your next turn.',
+    '02003Invulnerability|Basic Action Card|Until the end of the turn, whenever one of your attacking charcter dice is KO\'d, return it to the Field Zone.|Global: Pay [B]. Target character die gets +1A.',
+    '03003Reinforcements|Basic Action Card|Choose 1, 2, or 3. Then draw that many dice. If you draw only Sidekick dice, field them. Otherwise, place all dice drawn in your Used Pile.',
+    '03003Replenish|Basic Action Card|The next time <em>(this turn)</em> that a character die you control would be damaged, prevent the first 2 damage. If that character is not KO\'d, gain 1 life.',
+    '03003Teamwork|Basic Action Card|Your active character dice get +1A and +1D for each of your other, different active characters if shares an affiliation with.',
+    '04003Too Big To Fly|Basic Action Card|KO target character die with A of 5 or greater.|Global: Pay [F]. Target character die gets +1A.',
+    '02003Way Out West|Basic Action Card|Put target character die from opponent\'s Prep Area into their Used Pile.',
+	'02003Whoever Assemble!|Basic Action Card|Choose an affiliation. Character die of that affiliation are free to field <em>(until end of turn)</em>. At the end of turn, if you did not field any chracters this turn, Prep a die from your bag.',
+];
     
 var m_op2019_dice = ['ai','smc','thor','imw'];
 var m_op2019_aff = { 0:'0', I:'I', A:'2',S:'ASF',T:'MSTARK', F:'F'};
@@ -279,8 +427,8 @@ var myst = [
 '02304Yellow Lantern Ring|The Weaponer\'s Ring|Character dice in your Reserve Pool gain Intimidate (until end of turn).',
 '03304Yellow Lantern Ring|Green Lantern Killer|When a character die blocks this turn, reroll it. If it shows anenergy face, KO it and Yellow Lantern Ring deals 1 damage to its controller. Otherwise, it remains in the Field Zone on its rolled level (it\'s still blocking)|** Instead, Yellow Lantern Ring deals its controller 2 damage for each character die that rolls an energy face.',
 '04304Yellow Lantern Ring|Used for Great Good|The next die you purchase costs [4] less (to a minimum of 1, until end of turn). After purchasing that die, you may not purchase other dice this turn. You can\'t use this action die if you\'ve already purchased a die this turn.',
-'031J4Zatanna|Being of Magic|While Zatanna is active, when you field a character die, spin if up 1 level.',
-'031J4Zatanna|Magical Lineage|While Zatanna is active, when a character die spins up, deal its controller 1 damage.|Global: Pay [F]. Once per turn, on your turn, spin targer character die up 1 level.',
+'031J4Zatanna|Being of Magic|While Zatanna is active, when you field a character die, spin it up 1 level.',
+'031J4Zatanna|Magical Lineage|While Zatanna is active, when a character die spins up, deal its controller 1 damage.|Global: Pay [F]. Once per turn, on your turn, spin target character die up 1 level.',
 '031J4Zatanna|Master Magician\'s Daughter|Attune|While Zatanna is active, your [MYSTIC] character dice gain Attune.',
 ];
    
@@ -376,7 +524,7 @@ var jus = [
     '043V4Toyman|Killer Toys|Attune|When fielded, if you have more active Sidekick character dice than an opponent, deal 2 damage to that opponent.',
     '02302Watchtower|JLA Headquarters|Your [DCJL] character dice get +1A and +1D.|*/** Instead, your [DCJL] character dice get +2A and +2D.',
     '03302Watchtower|JLA Satellite|Prep a die from your bag. When you field a [DCJL] character die, Prep a die from your bag (until end of turn).',
-    '02302Watchtower|Watching Earth|When you field a [DCJL] character die, you may KO targer opposing [DCV] character die with purchase cost equal to or less than the fielded [DCJL] character die.',
+    '02302Watchtower|Watching Earth|When you field a [DCJL] character die, you may KO target opposing [DCV] character die with purchase cost equal to or less than the fielded [DCJL] character die.',
     '034J5Wonder Woman|Piece of Clay|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)',
     '044J5Wonder Woman|A Gift|When fielded, you may spin up to 2 dice in your Reserve Pool to [Q] Faces.',
     '044J5Wonder Woman|Amazon Ambassador to the World|When fielded, you may spin a die in your Reserve Pool that is on an energy face to another energy face.',
@@ -4288,7 +4436,7 @@ var sw = [
     //'Juggernaut':'163 274 376',
     //'Kitty Pryde':'022 032 133',
     //'Magneto':'144 257 368',
-    'Mimic':'011 111 112',
+    'Mimic':'011*111*112*',
     'Morph':'022 122*123*',
     'Nocturne':'031 142 143',
     'Onslaught':'244 246 268',
@@ -4472,7 +4620,29 @@ var sw = [
     "JUS@The Atom":"011 144 155",
     "JUS@The Joker":"123 134 245",
     "Toyman":"031 132 142",
-
+	
+	//XMF
+	"Cerebra":"155 266 388",
+	"XMF@Cyclops":"142 152 164",
+	"Donald Pierce":"042 153 165",
+	"Hope Summers":"012 022 122",
+	"Lady Deathstrike":"142 253 274",
+	"Madelyne Pryor":"013 014 124",
+	"Mastermind":"012 013 114",
+	"XMF@Mystique":"011 111 211*",
+	"Rachel Summers":"155 277 388",
+	"XMF@Storm":"021 031 133",
+	"XMF@Wolverine":"152*263*384",
+	
+	//XFO
+	"Dani Moonstar":"011 021 122",
+	"Forge":"122 142 244",
+	
+	//DXM
+	"Dark Beast":"021 122 132",
+	"Sage":"013 023 024",
+	"Sunspot":"143 154 266",
+	
     };
     var gender = {
     "Black Widow":1,
@@ -4735,7 +4905,16 @@ var sw = [
     
     "Mary Marvel":1,
     "Elasti-Girl":1,
- 
+	
+	"Sage":1,
+	"Dani Moonstar":1,
+	"Cerebra":1,
+	"Hope Summers":1,
+	"Lady Deathstrike":1,
+	"Madelyne Pryor":1,
+	"Rachel Summers":1,
+	
+	
     };
 
 

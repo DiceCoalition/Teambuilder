@@ -241,6 +241,9 @@
   <input type="checkbox" id="set25" checked>AI
   <input type="checkbox" id="set26" checked>KI
   <input type="checkbox" id="set27" checked>JLL
+  <input type="checkbox" id="set35" checked>XMF
+  <input type="checkbox" id="set36" checked>XFO
+  <input type="checkbox" id="set37" checked>DXM
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -446,7 +449,7 @@
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
-  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27];
+  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37];
   var dcsets = [4,6,9,12,17,19,28,32,33,34];
   var dndsets =[2,8,23];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
@@ -1398,6 +1401,8 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Range 3", "<strong>Range</strong>");
   pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");
   pj = pj.replace("Strike", "<strong>Strike</strong>");
+  pj = pj.replace("Energize", "<strong>Energize</strong>");
+  pj = pj.replace("Corrupt", "<strong>Corrupt</strong>");
   pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1560,6 +1565,9 @@ document.getElementById('file').onchange = function(){
   init(51,jus,'JUS','jus',[],jus_aff);
   init(52,doom,'DOOM','doom',[],doom_aff);
   init(53,myst,'MYST','myst',[],myst_aff);
+  init(54,xmf,'XMF','xmf',[],xmf_aff);
+  init(55,xfo,'XFO','xfo',[],xfo_aff);
+  init(56,dxm,'DXM','dxm',[],dxm_aff);
 
 
    
@@ -2221,6 +2229,9 @@ document.getElementById('file').onchange = function(){
     jus:'jus',
     doom:'doom',
     myst:'myst',
+	xmf:'xmf',
+	xfo:'xfo',
+	dxm:'dxm',
 
 	  //op sets]
     m2019:'m2019',
