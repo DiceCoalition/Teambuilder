@@ -271,7 +271,7 @@ var dxm = [
 '041X4Rogue|Southern Comfort|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>|When Rogue uses Infiltrate, deal an additional damage.',
 '051X4Rogue|Mother Issues|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>|While active, your Sideick character dice gain Infiltrate.',
 '034X4Sage|Psionic Firewall|While active, your opponent\'s non-Sidekick character dice cost [1] more to field.',
-'034X4Sage|Photographic Memory|When Sage is fielded, Corrput 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>.',
+'034X4Sage|Photographic Memory|When Sage is fielded, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used, and returns the rest)</em>.',
 '034H4Sage|Xavier\'s Mole|When Sage is KO\'d, Corrput 3 <em>(Target player draws 3 dice, places 1 in Used, and returns the rest)</em>.',
 '053X4Sunspot|Roberto da Costa|While active, when an opposing Global Ability or action die targets one of your [XMEN] character dice, deal 1 damage to taht opponent.',
 '053H4Sunspot|Lord Imperial|When Sunspot is damaged, Corrupt 2 <em>(Target player draws 2 dice, places 1 in Used and returns the rest)</em>.',
@@ -4623,7 +4623,7 @@ var sw = [
 	
 	//XMF
 	"Cerebra":"155 266 388",
-	"XMF@Cyclops":"142 152 164",
+	"XMF@Cyclops":"142 153 164",
 	"Donald Pierce":"042 153 165",
 	"Hope Summers":"012 022 122",
 	"Lady Deathstrike":"142 253 274",
