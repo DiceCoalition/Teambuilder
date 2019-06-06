@@ -396,7 +396,7 @@ var m_op2019 = [
 	'542S4Spider-Man|Sneaky Pete|Underdog - If Spider-Man is attacking alone, he is unblockable.',
 	'534S4Black Cat|Thief|Infiltrate.',
 	'531A4Kate Bishop|Straight Shooter|When fielded, deal 3 damage to target [DCV] character die.|Global: Pay [M]. Target attacking character die is no longer attacking. (It remains in the Field Zone.)',
-	'531A4Vision|??|??',
+	'551A4Vision|Behold...|While Vision is active, prevent damage from your opponent\'s [B] character dice to your character dice.',
 	'543T4Iron Man|Armor Supply|While Iron Man is active, your Pepper Potts dice with 1A gain Infiltrate and your Pepper Potts dice with 2A or more get Overcrush. (E)',
 	'554T4War Machine|Improv Armor|When fielded, if you have an active Iron Man, you may KO target character die.',
 ];
