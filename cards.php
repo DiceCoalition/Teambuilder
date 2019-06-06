@@ -1,4 +1,4 @@
- <script>
+﻿ <script>
     "use strict";
 
     var iconname = {
@@ -324,7 +324,7 @@ var xmf = [
     '074X4Cerebra|Defending X-Haven|Cerebra costs [1] less to purchase for each of your different, active [XMEN] characters. <em>(Even if Cerebra isn\'t active.)</em>',
     '064X4Cerebra|Mutant Detector|Cerebra costs [1] less to field if you have an active [XMEN] character die. <em>(Even if Cerebra isn\'t active.)</em>',
     '064X4Cerebra|Rust Bucket|When Cerebra is KO\'d, you may move an [XMEN] character die from your Used Pile to your Prep Area.',
-    '053X4Cyclops|Present or Accounted For|While Cyclops is active, your [XMEN] character dice cost [1] less to purchase and your non-Cyclops [XMEN] characeter dice get +1A and +1D.',
+    '053X4Cyclops|Present or Accounted For|While Cyclops is active, your [XMEN] character dice cost [1] less to purchase and your non-Cyclops [XMEN] character dice get +1A and +1D.',
     '053X4Cyclops|Prismatic Lens|When fielded, if you control 3 or more [B] character dice, deal 2 damage to target opponent.',
     '052H4Donald Pierce|White King|Overcrush <em>(Character dice with Overcrush deal damage in excess of blocker\'s D to opponent.)</em>.',
     '052H4Donald Pierce|Better, Faster, Stronger|When fielded, deal X damage to target opposing character die, where X is the number of [F] energy in your Reserve Pool.',
