@@ -4262,7 +4262,7 @@ var sw = [
     'Fantomex':'133 144 255',
     'Hit-Monkey':'122 133 243',
     'Kidpool':'014 134 144',
-    'Lady Bullseye':'031 041 151',//reused CW Bullseye
+    'Lady Bullseye':'031 141 151',
     'Lady Deadpool':'033 144 255',
     'Lockjaw':'013 024 134',
     'Madame Hydra':'021 132 142',
