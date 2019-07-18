@@ -682,7 +682,7 @@ var sw = [
 	'043V4Deadshot|Nice Shooting|When Deadshot attacks, if you have 2 or more [B] energy in your Reserve Pool, deal 3 damage to target character die.',
 	'043V4Deadshot|"Death Doesn\'t Scare Me"|When Deadshot is KO\'d, deal 1 damage to all opposing character dice. ',
 	'041V4Harley Quinn|Harlequin|When fielded, if The Joker is active, Prep a die from your bag.',
-	'041V4Harley Quinn|Crazy Crusade|While Harley Quinn is active, when you field a non-Harley Quinn [DCV] character die, each Harley Quinn die you control gets +2A and +2D (until the end of turn).',
+	'041V4Harley Quinn|Crazy Crusader|While Harley Quinn is active, when you field a non-Harley Quinn [DCV] character die, each Harley Quinn die you control gets +2A and +2D (until the end of turn).',
 	'041V4Harley Quinn|Gotham State Graduate|When Harley Quinn is KO\'d, reroll all active character dice, KO any that roll energy faces.',
 	'03404Harley\'s Hyena|Screwball Scavenger|While Harley\'s Hyena is active, at the start of your turn, both players draw a die. Place the die with the highest purchase cost into its owner\'s Prep Area. Place the other die in its owner\'s Used Pile. (Sidekicks have a purchase cost of 0. If both dice have an equal purchase cost, place both in their Owner\'s Used Pile.)',
 	'03404Harley\'s Hyena|Mommy\'s Baby|When Harley\'s Hyena attacks, both players draw a die. If the die you draw has a higher purchase cost, this Harley\'s Hyena die gets +3A and return that die to your bag. If not, place that die in your Used Pile. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
