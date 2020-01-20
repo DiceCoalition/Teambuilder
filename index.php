@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <title>The Dice Coalition Team Builder</title>
+  <meta name="description" content="Dice Masters Team Builder, Database and Card Search Utility">
   <!--favicons-->
   <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -15,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, user-scalable=yes">
   <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="7ig431nnv3z3xpr"></script>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="https://dicecoalition.com/js/w3.js"></script>
 	
 	<?php
  	
@@ -131,8 +132,10 @@
 </head>
 <body style="margin:0; padding:0; background-color:#ebebebe;">
  <!--Navbar-->
-  <div w3-include-html="topbar.php"></div>
-
+  <!--<div w3-include-html="topbar.html"></div>-->
+  <div>
+   <?php include '/home/users/web/b2072/ipg.dicecoalitioncom/topbar.html';?>
+  </div>
   <!--teambuilder code resumes-->
   <div style="background-color:#0b3c5d; color:white;">
   <div style="margin: 38.4px"></div>
@@ -257,6 +260,9 @@
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
+  <input type="checkbox" id="set38" checked>TIW
+  <input type="checkbox" id="set39" checked>AIW
+  <input type="checkbox" id="set40" checked>ZHN
   <input type="checkbox" id="set10" checked>TMNT
   <input type="checkbox" id="set15" checked>HHS
   <input type="checkbox" id="set3" checked>YGO
@@ -451,7 +457,7 @@
   
   var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37];
   var dcsets = [4,6,9,12,17,19,28,32,33,34];
-  var dndsets =[2,8,23];
+  var dndsets =[2,8,23,38,39,40];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
   function escapeHtml(x) {
       return x.replace(/[&<>"'\/]/g, function(s){return entityMap[s]});
@@ -1276,7 +1282,7 @@ document.getElementById('file').onchange = function(){
   var trs_idx = set_names.indexOf(trs_name);
   var trs = (trs_by_set[trs_idx] = trs_by_set[trs_idx] || []);
   setnames[setid + 1] = setname.toLowerCase();
-  var is_dnd = trs_name === 'bff' || trs_name === 'fus' || trs_name === 'toa';
+  var is_dnd = trs_name === 'bff' || trs_name === 'fus' || trs_name === 'toa'|| trs_name === 'tiw'||trs_name === 'aiw'||trs_name === 'zhn';
   var set_dice = {};
   var setbase = (setid + 1) * 1000;
   var new_die = setbase + 1;
@@ -1368,11 +1374,11 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace(/\[([0-9A-Z]+)\]/g,function(m,id){if(iconid[id]===undefined) console.log('Undefined icon: '+id); return '<img src="'+iconid[id]+'.png" alt="'+iconname[id]+'">'});
   pj = pj.replace(/\*/g,'<img src="burst.png" alt="*">');
   pjk = pjk.replace(/\]\[/g,'] [').replace(/\[([0-9A-Z]+)\]/g,function(m,id){return iconname[id]}).toLowerCase();
-  if (!is_dnd) pj = pj.replace("Overcrush", "<strong>Overcrush</strong>");
+  pj = pj.replace("Overcrush", "<strong>Overcrush</strong>");
   pj = pj.replace("Ally", "<strong>Ally</strong>");
   pj = pj.replace("Immortal", "<strong>Immortal</strong>");
   pj = pj.replace("Underdog", "<strong>Underdog</strong>");
-  if (!is_dnd) pj = pj.replace("Regenerate", "<strong>Regenerate</strong>");
+  pj = pj.replace("Regenerate", "<strong>Regenerate</strong>");
   pj = pj.replace("Aftershock", "<strong>Aftershock</strong>");
   pj = pj.replace("Iron Will", "<strong>Iron Will</strong>");
   pj = pj.replace("Fast ", "<strong>Fast</strong> ");
@@ -1403,6 +1409,9 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Strike", "<strong>Strike</strong>");
   pj = pj.replace("Energize", "<strong>Energize</strong>");
   pj = pj.replace("Corrupt", "<strong>Corrupt</strong>");
+  pj = pj.replace("Experience", "<strong>Experience</strong>");
+  pj = pj.replace("Spark", "<strong>Spark</strong>");
+  pj = pj.replace("Obscure", "<strong>Obscure</strong>");
   pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1498,7 +1507,7 @@ document.getElementById('file').onchange = function(){
   //golden age.  Just bans Relenetless & Swords of Revealing light
   G: [ "31UXM", "119YGO" ],
   //global escalation
-  P: [ "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO","120XFC", "9DXM", "58WoL", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "32IMW", "126AvX", "22SWW", "128THOR", "89TOA", "132TOA"],
+  P: [ "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DRS", "128THOR", "89TOA", "132TOA"],
   });
   /*
   PDC Prime format:
@@ -1572,6 +1581,9 @@ document.getElementById('file').onchange = function(){
   init(54,xmf,'XMF','xmf',[],xmf_aff);
   init(55,xfo,'XFO','xfo',[],xfo_aff);
   init(56,dxm,'DXM','dxm',[],dxm_aff);
+  init(57,tiw,'TIW','tiw',[],tiw_aff);	
+  init(58,aiw,'AIW','aiw',[],aiw_aff);
+  init(59,zhn,'ZHN','zhn',[],zhn_aff);
 
 
    
@@ -2236,7 +2248,10 @@ document.getElementById('file').onchange = function(){
 	xmf:'xmf',
 	xfo:'xfo',
 	dxm:'dxm',
-
+	tiw:'tiw',
+	aiw:'aiw',
+	zhn:'zhn',
+	
 	  //op sets]
     m2019:'m2019',
     wd2018:'wd2018',

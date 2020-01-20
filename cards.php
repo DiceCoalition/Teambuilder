@@ -55,7 +55,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -127,6 +127,7 @@
     { name:'emerald', pic: 'aE90' },
     { name:'zhentarim', pic: 'aZ90' },
     { name:'monster', pic: 'aM90' },
+	{ name:'forcegrey', pic: 'aFG90' },
     { name:'turtle', pic: 'aT' },
     { name:'tdf', pic: 'aA' },
     { name:'egyptian', pic: 'aB' },
@@ -166,6 +167,7 @@
      E:'emerald',
      MEX:'exiles',
      F:'shield',
+	 FG:'forcegrey',
      G:'gotg',
      GA:['gotg','avengers'],
      H:'harpers',
@@ -250,6 +252,129 @@
 //rarity,cost,energy,affiliation,maxdice
 //rarity key: 0:starter, 1:common, 2:uncommon, 3:rare, 4:superrare, 5:OP
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
+
+//begin Adventurers in Waterdeep
+ var aiw_aff = { 0:'0', M:'M', F:'FG'};
+ var aiw = [
+    '04104n1Black Viper|Scaring Nobles, Stealing Jewels|When Black Viper attacks and is unblocked, KO target opposing character die after combat damage resolves.',
+	'04104n1Black Viper|Notorious Bandit|Infiltrate|While Black Viper is active, character dice you control deal an additional damage with Infiltrate.',
+	'04104n1Black Viper|Reviving a Legend|When fielded, choose target character die with Infiltrate. It cannot be blocked this turn.',
+    '032F4g1Brawlwin Chainminer|Hitch\'s Friend|Experience|Brawlwin gets +3A while blocking or when blocked by, character dice with 4A or more.',
+    '032F4g1Brawlwin Chainminer|Longing For Adventure|Experience|When Brawlwin KOs a character die of equal or higher level, draw two dice from your bag and Prep any non-NPC dice you draw. Place the rest in your Used Pile.|Global: Pay [1]. Spin target opposing character die up 1 level.',
+	'032F4g1Brawlwin Chainminer|Long Line of Giant-Slayers|Experience|When an opposing character of level 2 or higher is KO\'d, Brawlwin gains an Experience token.|Global: Pay [1]. Spin target opposing character die up 1 level.',
+	'054M4n1Jarlaxle|Drow Swashbuckler|Spark: Search you bag for a die and Prep it.',
+	'054M4n1Jarlaxle|Treasure Hunter|When fielded, you may search your bag for up to 4 non-NPC character dice and Prep them. During your next Clear and Draw Step, draw 1 less die for each die prepped this way.',
+	'064M4n1Jarlaxle|Shameless Flirt|When fielded, you may remove all NPC dice in your Used Pile from the game (place them on this card as a reminder). Return them to your Used Pile when Jarlaxle leaves the Field Zone.',
+	'034F4g1Dagny|Gizmos and Gadgets|Experience|Spark: Gain 1 life. You may only use this ability once per turn.',
+	'054F4g1Dagny|Surviving On Wits|Experience|While Dagny is active, at the beginning of your turn, if your opponent has more life than you, you gain one life and your opponent loses one life.',
+	'034F4g1Dagny|Cleric of Gond|Experience|While Dagny is active, when two or more of your character dice are KO\'d during a turn, gain 1 life.',
+	'05204n1Durnan|Proprietor of the Yawning Portal|When Durnan blocks, all attacking and blocking character dice deal no combat damage to opposing character dice this turn, other than Durnan and the die he is blocking.',
+	'05204n1Durnan|"You Need An Ale?"|While Durnan is active, your Adventurers cost 2 less to purchase (to a minimum of 1).',
+	'04204n1Durnan|Retired Adventurer|While Durnan is active, your Adventurers gain an Experience token when they are fielded.',
+	'03104e0Stone of Golorr|Transformed Aboleth|Draw a die from your bag. Character dice matching that die cannot be blocked this turn. Place the die in your Used Pile.|**Instead, Prep it.',
+	'05104e0Stone of Golorr|Memory Modifier|Draw a die from your bag. Deal damage to target opponent equal to that die\'s Purchase Cost. Place the die in your Used Pile.',
+	'04104e0Stone of Golorr|Wondrous Item|Draw a die from your bag. You may purchase a copy of that die for [2] and Prep it. Place the drawn die in your Used Pile.|** Instead, Prep it.',
+	'033F4n1Vajra|Blackstaff of Waterdeep|Experience|Spark: You add an Experience token to another Adventurer',
+	'043F4n1Vajra|Activating the Walking Statues|Experience|Attune|Spark: Deal 1 damage target opponent or opposing character die. (sic)',
+	'033F4n1Vajra|Commander of Force Grey|Experience|While Vajra is active, when you field and [sic] Adventurer, deal 1 damage to target opponent.',
+	'02304n0Yawning Portal|Adventurous Clientele|Your character dice are free to field this turn. When you field a non-NPC character die, Prep a die from your bag.',
+	'03304n0Yawning Portal|Accessing the Undermountain|Your character dice are free to field this turn. When you field a non-NPC character die, Prep a die from your Used Pile.',
+	'02304n0Yawning Portal|Comfortable Inn|Your character dice are free to field this turn. Until end of turn, each time you field a character dice [sic], reduce the Purchase Cost of your dice by 1 (to a minimum of 1). Dice you purchase this turn are added to your bag.',	
+  ];
+  
+  
+  //begin The Zhentarim
+ var zhn_aff = { 0:'0', M:'M', E:'E', F:'FG', L:'L', O:'O', Z:'Z'};
+ var zhn = [
+    '044Z4e1Davil Starsong|The Elf To Know|While Davil Starsong is active, when you field a character die, draw a die. If it is the same character die, field it on the same face. Otherwise, place it in your Used Pile.',
+	'044Z4e1Davil Starsong|Taproom Negotiator|While Davil Startsong is active, if you draw 2 or more non-sidekick character dice during your Clear and Draw Step, draw an additional die.',
+	'044Z4e1Davil Starsong|Master of Opportunities and Negotiations|While Davil Starsong is active, your characters with active character dice are free to field.',
+	'031M4e1Doppelganger|Monstrosity|Doppleganger gets +1A and +1D for each other unique active character die you control.',
+	'031M4e1Doppelganger|Shapechanger|Spark: Doppleganger gets +1A and +1D (until end of turn).',
+	'031M4e1Doppelganger|Thought Reader|While Doppleganger is active, when an opposing character gains an Experience token, Doppleganger gains an Experience token.',
+	'031F4g1Hitch|Human Rogue|Experience|When Hitch deals combat damage to an opponent, you may move target NPC die in your Used Pile to your Reserve Pool on an energy face.',
+	'031F4g1Hitch|Shady Past|Experience|While Hitch is active, Adventurers cost 1 less to purchase and field.',
+	'041F4g1Hitch|Roguish Charm|Experience|Obscure',
+	'041E4g1Human Warlock|Seeking Hidden Knowledge|Experience|Obscure',
+	'031L4g1Human Warlock|Pact of the Tome|Experience|Spark: Deal 1 damage to target opponent.',
+	'031O4g1Human Warlock|Delver of Secrets|Experience|While Human Warlock is active, Basic Action dice cost 1 less to purchase (to a minimum of 1).',
+	'022Z4e1Istrid Horn|Debt Collector|Experience|When fielded, move target energy die in your opponent\'s Reserve Pool to their Used Pile.',
+	'022Z4e1Istrid Horn|Moneylender|Experience|When fielded, you may choose a Global Ability. If you do, it cannot be used this turn and any of its effects immediately end.',
+	'022Z4e1Istrid Horn|Mind For Money|Experience|While Istrid Horn is active, your opponent\'s NPC dice cost 1 more to field.',
+	'033Z4e1Manshoon|Extradimensional Mansion|Experience|Spark: Gain an Experience Token|Manshoon doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'043Z4e1Manshoon|Clone Wizard|Experience|While Manshoon is active, when you use a Basic Action die, deal 1 damage to all opposing character dice.|Manshoon doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'043Z4e1Manshoon|Rekindling the Zhentarim|Experience|While Manshoon is active, when you use a global ability, deal 1 damage to target opposing character die.|Manshoon doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'032Z4n1Tashlyn Yafeera|Master of Arms|Experience|When fielded, you may purchase an Action die with gear for [1].',
+	'032Z4n1Tashlyn Yafeera|The Black Network|Experience|While Tashlyn Yafeera is active, equipped character dice get +2A and +2D.',
+	'042Z4n1Tashlyn Yafeera|Sword, Axe, Dagger, Boot Dagger|Experience|Tashlyn Yafeera gets +1A and +1D for each active Adventurer you control.',
+	'032Z4e1Ziraj|The Hunter|Experience|When Ziraj attacks, target character die must block Ziraj (until end of turn).|Ziraj doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'042Z4e1Ziraj|Half-Orc Assassin|Experience|When Ziraj is blocked, Prep a die from your bag. If Ziraj has 2 or more Experience tokens, Prep an additional die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'042Z4e1Ziraj|Hail of Black Arrows|Experience|If Ziraj attacks and KOs an opposing character die, you may deal its damage equal to its A to target character die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+  ];
+
+    //BEGIN Trouble In Waterdeep
+	var tiw_aff = { 0:'0', M:'M', F:'FG'};
+var tiw = [
+	'062M4g1Aurinax|Gold Dragon|Breath Weapon 2 (Pay [2] to deal 2 damage to your opponent and all their character dice.)|Aurinax\'s Breath Weapon deals 2 extra damage to Adventurers.',
+	'052M4g1Aurinax|Dragon of Waterdeep|Breath Weapon 1 (Pay [1] to deal 1 damage to your opponent and all their character dice.)|When Aurinax\'s Breath Weapon deals damage to an Adventurer, it cannot block this turn.',
+	'052M4g1Aurinax|Vault Guardian|Breath Weapon 2 (Pay [2] to deal 2 damage to your opponent and all their character dice.)|Aurinax counts as a Dragon. This can\'t be ignored, copied, or swapped.',
+	'044F4g1Calliope|Charasmatic Bard|Experience|When Calliope and at least 1 NPC die attack, after blockers are declared, you may swap Calliope and one of the NPC dice. If you do, and Calliope is no longer blocked the NPC die gains Overcrush.',
+	'044F4g1Calliope|Volatile Heroine|Experience (If you KO\'d an opposing [DDM] during your turn, place one Experience Token on this character die\'s card at the end of your turn.)|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
+	'044F4g1Calliope|Pirate Storyteller|Experience|While Calliope is active, your NPC dice get +1A annd +1D.',
+	'033M4n1Drow Mercenary|Hired Blade|Obscure (When you use an Action die, this character is unblockable until end of turn.)',
+	'033M4n1Drow Mercenary|Dark Elf Assasin|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)|When you attack with 2 or more character dice, Drow Mercenary deals an additional damage with Infiltrate (until end of turn).',
+	'033M4n1Drow Mercenary|Bregan D\'aerthe|Drow Mercenary cannot be blocked by only one character.',
+	'024M4e0Gazer|Beholder\'s Dream|When Gazer is KO\'d, you may move target die from an opponent\'s Prep Area to their Used Pile.',
+	'024M4e0Gazer|Tiny Beholderkin|When Gazer is KO\'d, you may draw two dice from an opponent\'s bag. Place either or both into their Used Pile, return the rest to their bag.',
+	'024M4e0Gazer|Evil Familiar|Intimidate (When fielded, remove target opposing character die from the Field Zone until end of turn.)|Gazer can only use Intimidate on a character die with 1 or less Experience Tokens.',
+	'023M4e0Grell|Skulking Aberration|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
+	'023M4e0Grell|Xanathar Guild Bodyguard|When Grell is KO\'d, you may draw 2 dice from your bag. Prep one and place the other in your Used Pile.',
+	'023M4e0Grell|Blind Ambusher|Deadly (At end of turn, KO all character dice that were engaged with this character.)',
+	'033M4e0Intellect Devourer|Mind Flayer\'s Pet|Spark: Deal 1 damage to target opponent. (Spark abilities trigger when you roll a * or ** face on a die.)',
+	'033M4e0Intellect Devourer|Brain Eating Monster|Spark: Spin target character die down 1 level.|Global: Pay [0]. Once during your turn you may spin one of your active NPC character dice to an energy face (move it to your Reserve Pool). (E)',
+	'043M4e0Intellect Devourer|Deadly Puppet Master|While Intellect Devourer is active, when an opponent spends [Q], deal 1 damage to that opponent.|Global: Pay [0]. Once during your turn you may spin one of your active NPC character dice to an energy face (move it to your Reserve Pool). (E)',
+	'042F4n1Jamilah|Shipwrecked on Chult|Experience (If you KO\'d an opposing [DDM] during your turn, place one Experience Token on this character die\'s card at the end of your turn.)|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)',
+	'042F4n1Jamilah|Rough and Tumble Fighter|Experience|When Jamilah KOs a character with combat damage, Prep a die from your bag.',
+	'042F4n1Jamilah|Champion Arm-Wrestler|Experience|Jamilah cannot be affected by opposing Global Abilities or action dice.',
+	'034F4g1Joppa|Fisherman Extraordinaire|Experience (If you KO\'d an opposing [DDM] during your turn, place one Experience Token on this character die\'s card at the end of your turn.)|Prevent all damage done to Joppa by character dice of equal or lower level.',
+	'034F4g1Joppa|Zen|Experience (If you KO\'d an opposing [DDM] during your turn, place one Experience Token on this character die\'s card at the end of your turn.)|Prevent all damage to Joppa while he is blocking.',
+	'034F4g1Joppa|Fishing Metaphors|Experience (If you KO\'d an opposing [DDM] during your turn, place one Experience Token on this character die\'s card at the end of your turn.)|Fast (This character deals damage before non-Fast characters in combat.)',
+	'022M4e1Kuo-toa|Whip of Blibdoolpoolp|Swarm|Obscure (When you use an Action die, this character is unblockable until end of turn.)',
+	'022M4e1Kuo-toa|Underdark Raider|Swarm|When fielded, Kuo-toa gains +1A (until end of turn).',
+	'032M4e1Kuo-toa|Mad Degenerate|Obscure (When you use an Action die, this character is unblockable until end of turn.)|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
+	'043M4e1Nar\'l Xibrindas|Drow Advisor|When fielded, field a Guardian Token with 1A and 1D.|If Nar\'l Xibridas would be KO\'d, you may instead KO the Guardian Token and clear all damage from Nar\'l Xibrindas.',
+	'043M4e1Nar\'l Xibrindas|Quiet Desperation|When fielded, field a Guardian Token with 1A, 1D, and Deadly.',
+	'053M4e1Nar\'l Xibrindas|Trusted Advisor|When fielded, field a Guardian Token with 2A and 2D.|While Nar\'l Xibrindas is active, at the beginning of your turn, if you have no Guardian Tokens in the Field Zone, field a Guardian Token with 2A and 2D.',
+	'051M4e1Nihiloor|Mind Flayer|When fielded, name an energy type. Remove all energy of that type from your opponent\'s Reserve Pool, including all [Q].',
+	'061M4e1Nihiloor|Plotting|When fielded, gain control of target character die of a lower level. Return that die to its owner\'s control when one of your Nihiloor dice leaves the Field Zone.|Global: Pay [M]. Once per turn, you may KO a character die you control.',
+	'061M4e1Nihiloor|Patient Aberration|When fielded, gain control of all opposing NPC character dice. Return those dice to their owner\'s control when one of your Nihiloor dice leaves the Field Zone.|Global: Pay [M]. Once per turn, you may KO a character die you control.',
+	'014M4n0Sylgar|Favored Fish|When Sylgar is KO\'d by combat damage, you may purchase a Xanathar character die for [2] and Prep it.',
+	'014M4n0Sylgar|Innocent Fish|When Sylgar is KO\'d by combat damage, you may Prep a Xanathar from your Used Pile.|* If Sylgar is KO\'d by combat damage while Xanathar is active, deal 5 damage to target opponent.',
+	'024M4n0Sylgar|Small Bowl|When Sylgar is KO\'d by combat damage, deal 2 damage to target opponent.',
+	'02304n0The God Catcher|Mighty Construct|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|Trigger: An opponent attacks with a character die with 7A or more.|Effect: Field a 10A and 10D The God Catcher token.',
+	'03304n0The God Catcher|Famous Walking Statue|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|Trigger: You use an Action die.|Effect: Field a 10A and 10D The God Catcher token. It has, "When the God Catcher attacks, target character die must block this turn (if able)."',
+	'04204n0The Great Drunkard|Gargantuan Construct|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|Trigger: You take 3 or more damage in a single turn.|Effect: Field a 6A and 6D The Great Drunkard token.',
+	'03204n0The Great Drunkard|Built for Defense|Trap (Place in your Field Zone when used. Send to your Used Pile when triggered.)|Trigger: Your opponent uses a global ability on your turn.|Effect: Field a 6A and 6D The Great Drukard token.',
+	'041F4g1Tyril|Firbolg Druid|Experience|When any of your character cards gain an Experience token, you may spin the character down 1 level. If you do, gain 2 life.',
+	'041F4g1Tyril|Sword for Hire|Experience|While Tyril is active, you may spin this character down 1 level. If you do, prevent all damage to you from target opposing character die (until end of turn).',
+	'041F4g1Tyril|Shapeshifter of the Small|Experience|While Tyril is active, once per turn, you may spin Tyril down 1 level or remove an Experience token from its card. If you do, Prep a die from your bag.',
+	'02304g1Volo|Guide Writer|Experience|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)',
+	'02304g1Volo|Travelling Scholar|Experience|When you field a character die with Experience (other than Volo), this character gains an Experience token.',
+	'02304g1Volo|Edited by Elminster|Experience|While Volo is active, your character dice with Experience are free to field.',
+	'061M4e0Xanathar|Crime Lord|Spark: Deal 1 damage to target opponent (While active, when you roll a burst face, use this effect at end of phase.)',
+	'061M4e0Xanathar|Paranoid Tyrant|Spark: Until end of turn, you may use a Global Ability for free.|Global: Pay [1]. Once per turn, you may Prep an NPC from your Used Pile.',
+	'061M4e0Xanathar|Eye on Skullport|When fielded, count the number of active character dice with Experience your opponent controls. You may remove up to that many Experience tokens from your opponent\'s character cards. Then, KO all active character dice with Experience whose cards have no Experience counters on them.',
+	'04003n0Create Bonfire|Basic Action Card|Deal 1 damage to target character or player for each different energy type ([B],[F],[M],[S]) you have in your Reserve Pool.|** Also, deal 1 additional damage if you have a [Q] energy in your Reserve Pool.',
+    '03003n0Chain Mail Armor|Basic Action Card|Equip (Attach to a character with [EQ])|Equipped character gets +4D and cannot be affected by opposing "When fielded" effects.|This die counts as Gear. This cannot be ignored.',
+	'02003n0Cloak of Elvenkind|Basic Action Card|Equip (Attach to a character with [EQ])|Equipped character die gains Infiltrate. If that character die\'s card has Infiltrate, instead it gains "Increase the damage dealt by this die\'s Infiltrate ability by 1."|Global: Pay [M][M]. Once per turn, target character die cannot block (until end of turn).',
+	'04003n0Eldritch Blast|Basic Action Card|Draw a die from your bag. Deal damage to target character die or player equal to its purchase cost. Return the die to your bag.',
+	'02003n0Heavy Armor|Basic Action Card|Equip (Attach to a character with [EQ])|Equipped character die\'s printed D is doubled.|** Character dice engaged with the equipped character lose, and cannot gain Overcrush. This die counts as Gear. This cannot be ignored.',
+	'03003n0Heist|Basic Action Card|Target opponent draws 2 dice from their bag. Place one in that opponent\'s Prep area. Roll the other die and place it in your Reserve Pool. At the end of your turn, place the rolled die in your opponent\'s Used Pile (regardless of where it is).',
+	'03003n0Shield|Basic Action Card|Your character dice cannot be targeted by opposing Global Abilities or Action dice until the beginning of your next turn.|** Prep a die from your bag.|Global: Pay [S]. Target character die gets +1D until end of turn.',
+	'02003n0Shocking Grasp|Basic Action Card|Deal 1 damage to target character die. If that character is KO\'d by this damage, you may put this die into your Prep Area.',
+	'03003n0Wand|Basic Action Card|Equip (Attach to a character with [EQ])|Equipped character die has "Spark: Deal 1 damage to target opponent."|Global: Pay [B]. Deal 1 damage to target character die, lose 1 life.',
+	'04003n0Wild Magic|Basic Action Card|Choose two of the other Basic Action Cards that players brought this game. You may use a copy of each of their effects with *.',
+];
 
 
 //BEGIN Dark X-Men
@@ -498,7 +623,7 @@ var jus = [
     '063V4Metallo|Heart of Kryptonite|While Metallo is active, your [DCLOD] character dice are free to field and [DCJL] character dice cost [1] more to field.',
     '023V4Parasite|Maxwell Jensen|While Parasite is active, instead of declaring Parasite as an attacker, your may add his A and D to an attacking character die. You may do this once for each of your Parasite character dice that do not attack. (This occurs when you declare attackers.)',
     '033V4Parasite|Consumed by What We Do|When fielded, you may reduce target opposing character die\'s A and D by Parasite\'s A and D (until end of turn).',
-    '033V4Parasite|Human Atomic Furnace|When fielded, Parasite gains target character die\'s aility text (ignoring Global Abilities) until end of turn. That copy of tthat die loses its abilities until end of turn. When you target a die with Parasite, it replaces all previous choices.',
+    '033V4Parasite|Human Atomic Furnace|When fielded, Parasite gains target character die\'s ability text (ignoring Global Abilities) until end of turn. That copy of that die loses its abilities until end of turn. When you target a die with Parasite, it replaces all previous choices.',
     '051V5Poison Ivy|Criminal Beause of Love|When fielded, you may KO a character die you control. If you do, deal damage equal to the KO\'d character die\'s level to target opponent and all the character dice that opponent controls.',
     '041V5Poison Ivy|Let Spring Come|When fielded, draw 2 dice. If both are Sidekick dice, place them in your Used Pile and deal 2 damage to all opposing character dice. Otherwise, return them to your bag.',
     '041V5Poison Ivy|A New Leaf|While Poison Ivy is active, when an opponent purchases the last de on a card, deal that opponent 3 damage.|Global: Pay [M] [M]. Once on your turn, you may remove a die on any card from the game. You may not remove the last die on the card.',
@@ -4642,6 +4767,40 @@ var sw = [
 	"Dark Beast":"021 122 132",
 	"Sage":"013 023 024",
 	"Sunspot":"143 154 266",
+	
+	//AIW
+	"Black Viper":"133 234 244",
+	"Brawlwin Chainminer":"021 022 133",
+	"Jarlaxle":"025 135 146",
+	"Dagny":"013 014 125",
+	"Durnan":"133 243 254",
+	"Vajra":"002 013 124",
+	
+	//ZHN
+	"Davil Starsong":"034 134 245",
+	"ZHN@Doppelganger":"011 122 133",
+	"Hitch":"111*112*133",
+	"Human Warlock":"012 014 125",
+	"Istrid Horn":"012 022 132",
+	"Manshoon":"002 013 124",
+	"Tashlyn Yafeera":"021 022 133",
+	"Ziraj":"013 124 125",
+	
+	//TIW
+	"Aurinax":"144 266 378",
+	"Calliope":"013 023 135",
+	"Drow Mercenary":"032 142 144",
+	"Gazer":"011 111 112",
+	"Grell":"021 131 132",
+	"Jamilah":"022 133 243",
+	"Joppa":"021 031 133",
+	"Kuo-toa":"111 121 122",
+	"Nar\'l Xibrindas":"023 133 134",
+	"Nihiloor":"115 226 337",
+	"Sylgar":"001 001*002",
+	"Tyril":"022 123 234",
+	"Volo":"001 011 012",
+	"Xanathar":"043 054 165",
 	
     };
     var gender = {
