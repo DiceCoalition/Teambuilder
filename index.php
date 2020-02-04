@@ -269,6 +269,9 @@
   <input type="checkbox" id="set29" checked>BFU 
   <input type="checkbox" id="set30" checked>ORK 
   <input type="checkbox" id="set31" checked>SW 
+  <input type="checkbox" id="set41" checked>WWE
+  <input type="checkbox" id="set42" checked>BIT
+  <input type="checkbox" id="set43" checked>TAG
 
 
  
@@ -1412,6 +1415,7 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Experience", "<strong>Experience</strong>");
   pj = pj.replace("Spark", "<strong>Spark</strong>");
   pj = pj.replace("Obscure", "<strong>Obscure</strong>");
+   pj = pj.replace("Tag Out", "<strong>Tag Out</strong>");
   pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1584,6 +1588,9 @@ document.getElementById('file').onchange = function(){
   init(57,tiw,'TIW','tiw',[],tiw_aff);	
   init(58,aiw,'AIW','aiw',[],aiw_aff);
   init(59,zhn,'ZHN','zhn',[],zhn_aff);
+  init(60,wwe,'WWE','wwe',[],wwe_aff);	
+  init(61,bit,'BIT','bit',[],bit_aff);
+  init(62,tag,'TAG','tag',[],tag_aff);
 
 
    
@@ -2251,6 +2258,9 @@ document.getElementById('file').onchange = function(){
 	tiw:'tiw',
 	aiw:'aiw',
 	zhn:'zhn',
+	wwe:'wwe',
+	tag:'tag',
+	bit:'bit',
 	
 	  //op sets]
     m2019:'m2019',

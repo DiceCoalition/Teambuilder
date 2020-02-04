@@ -25,6 +25,7 @@
      KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
      DOOM:'doompatrol',
 	 HELL:'hellfireclub',
+	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -52,10 +53,11 @@
      KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
      DOOM:'aDOOM',
 	 HELL:'aHELL',
+	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -75,7 +77,8 @@
     'ddh', 'ddo', 'ddl', 'dde', 'ddz', 'ddm',
     'turtle',
     'ytd', 'yeg',
-    'kc','kum', 'ko','ksw','ki',    
+    'kc','kum', 'ko','ksw','ki',
+	'wwe','nd','shd','nwo',
     ];
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
@@ -135,7 +138,11 @@
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
-    { name:'imperium', pic: 'aKI' },    
+    { name:'imperium', pic: 'aKI' },   
+	{ name:'wwelegends', pic:'aWWE'},
+	{ name:'newday', pic:'aNEWDAY'},
+	{ name:'theshield', pic:'aSHD'},
+	{ name:'nwo', pic:'aNWO'},
     ];
 
     var affiliation_map = {
@@ -222,6 +229,10 @@
      WYC:['yellowlantern','conduit'],
      Z:'zhentarim',
 	 VMYSTLOD: ['villain','mystic','legionofdoom'],
+	 WWE:'wwelegends',
+	 NWO:'nwo',
+	 SHD:'theshield',
+	 NEWDAY:'newday',	
     };
 
     var affiliation_set = {};
@@ -252,6 +263,129 @@
 //rarity,cost,energy,affiliation,maxdice
 //rarity key: 0:starter, 1:common, 2:uncommon, 3:rare, 4:superrare, 5:OP
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
+//crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
+
+//begin WWE Bitter Rivals Team Pack
+ var bit_aff = { 0:'0', W:'WWE'};
+ var bit = [
+    '053W4Bret "Hit Man" Hart|Master of the Sharpshooter|When Bret Hart KOs a blocking Superstar die, that die goes to the Used Pile.',
+	'053W4Bret "Hit Man" Hart|The Hit Man|Intimidate (When fielded, remove target opposing Superstar die from the Field Zone until end of turn - place it next to your Superstar cards.)|If you Intimidate a [PAWN] with Bret Hart\'s Intimidate, Prep a die.',
+	'043W4Bret "Hit Man" Hart|Slammy Award Winner|If Bret Hart is blocked, lose 2 life (per blocked Bret Hart Superstar die).',
+	'05104Kane|Controlling Hellfire|Attune (While this Superstar is active, when you use an action die, deal 1 damage to target player or Superstar die.)|While Kane is active, whenever an opposing Superstar die is KO\'d, deal 1 damage to another opposing Superstar die.',
+	'05104Kane|Brother of Destruction|While Undertaker is active, each of your active Kane Superstar dice get +3A, +3D, and Overcrush.',
+	'06104Kane|Big Red Monster|Intimidate (When fielded, remove target opposing Superstar die from the Field Zone until end of turn - place it next to your Superstar cards.)|Call out [sic] (When this Superstar die attacks, target Superstar die is the only Superstar die that may block this Superstar die.)',
+	'033W4Lita|Exhilirating|While Lita is active, when you field a [PAWN] deal 1 damage to target Superstar die.',
+	'043W4Lita|Fan Favorite|While Lita is active, at the end of your Roll and Reroll Step, you can spin any of your Sidekick dice to their level 1 Superstar face.',
+	'033W4Lita|Team Xtreme|When Lita KOs an opposing Superstar die, you may field a Sidekick die from your Used Pile.',
+	'042W4Shawn Michaels|The Heartbreak Kid|',
+	'052W4Shawn Michaels|Sweet Chin Music|If one Shawn Michaels Superstar die is the only Superstar die in your Field Zone, it gets +3A and +3D.',
+	'052W4Shawn Michaels|"Sexy Boy"|If one Shawn Michaels Superstar die is the only Superstar die in your Field Zone at the end of your turn, Prep 2 dice.',
+	'062W4Stone Cold Steve Austin|Austin 3:16|If at least one "Stone Cold" Steve Austin Superstar die attacks and isn\'t KO\'d, at the end of your turn, return any of your attacking Superstar dice that were KO\'d to the Field Zone a th the same level as one of your active "Stone Cold" Steven [sic] Austin Superstar dice. (Return KO\'d [PAWN] dice on level 1.)',
+	'052W4Stone Cold Steve Austin|The Texas Rattlesnake|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)',
+	'062W4Stone Cold Steve Austin|The Bionic Redneck|While "Stone Cold" Steve Austin is active, whenever you refill your bag, you may move up to 3 Sidekick dice from your Bag to the Used Pile before drawing (or continuing to draw) dice.',
+	'06104The Rock|The Great One|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)|Global: Pay [M], and Sacrifice one of your Superstar dice. Reduce the cost of the next die you purchase by [2].',
+	'06104The Rock|"Know Your Role"|Intimidate (When fielded, remove target opposing Superstar die from the Field Zone until end of turn - place it next to your Superstar cards.)|You may use Intimidate twice when your field The Rock.|Global: Pay [M], and Sacrifice one of your Superstar dice. Reduce the cost of the next die you purchase by [2].',
+	'07104The Rock|Attitude Era Icon|Overcrush| When The Rock damages your opponent, deal the same amount of damage to all opposing Superstar dice.|Global: Pay [M], and Sacrifice one of your Superstar dice. Reduce the cost of the next die you purchase by [2].',
+	'044W4Trish Stratus|Stratusfaction Guaranteed|When one of your Trish Stratus Superstar dice is unblocked and damages your opponent, roll that die. On a Superstar face, Prep that die (instead of going to Used).|Global: Pay [S]. Prevent 1 damage to a Superstar die or player.',
+	'044W4Trish Stratus|More Than A Manager|When Trish Stratus damages your opponent, you may pay [2] to purchase any Basic Action Die.|Global: Pay [S]. Prevent 1 damage to a Superstar die or player.',
+	'044W4Trish Stratus|The Greatest Ever|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|When Trish Stratus attacks, target Superstar die can\'t block this turn.|Global: Pay [S]. Prevent 1 damage to a Superstar die or player.',
+	'064W4Undertaker|The Deadman|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)|Call Out (When this Superstar die attacks, target Superstar die is the only Superstar die that may block this Superstar die.)',
+	'064W4Undertaker|Managed by Paul Bearer|Attune (While this Superstar is active, when you use an action die, deal 1 damage to target player or Superstar die.)| Whenever any player uses an action die, Undertaker gets +1A and +1D until end of turn.',
+	'064W4Undertaker|Last Ride|When fielded, your may move a Superstar or Sidekick die from your Used Pile to the Field Zone at level 1.'
+	];
+	
+	//begin WWE Tag Team Team Pack
+ var tag_aff = { 0:'0', D:'NEWDAY', N:'NWO', S:"SHD" };
+ var tag = [
+	'04AD4Big E|Talking Smack|Crosspulse - Draw a die and Prep it.',
+	'04AD4Big E|Powerlifter\'s Physique|While Big E is active, any combay damage to you that is more than 2 is reduced to 2.',
+	'04AD4Big E|Tag Team Champion|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)',
+	'055N4Kevin Nash|nWo Wolfpac|Crosspulse - Remove target opposing Superstar die from the Field Zone until end of turn (place it next to your Superstar cards).',
+	'045N4Kevin Nash|nWo Founder|Whenever a Kevin Nash Superstar die is dmaged while attacking and not KO\'d, deal 2 damage to your opponent.|Global: Pay [F]. Target Superstar die can\'t block this turn unless its owner pays 2 life. You can only use this Global once per Superstar die.',
+	'055N4Kevin Nash|WWE Hall of Famer|When Kevin Nash attacks, you may pay [B][F] to gain +2A, +2D, and Overcrush until end of turn. (You must pay separately for each attacking Kevin Nash Superstar die.)|Global: Pay [F]. Target Superstar die can\'t block this turn unless its owner pays 2 life. You can only use this Global once per Superstar die.',
+	'048D4Kofi Kingston|Fueled by Booty-O\'s|Crosspulse - Prep a die from your Used Pile.',
+	'048D4Kofi Kingston|Immune to Negativity|Your Kofi Kingston Superstar dice can\'t be targeted by your opponent\'s Global Abilities.',
+	'048D4Kofi Kingston|Stunning Defense|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|Regenerate (Reroll when KO\'d)',
+	'069S4Roman Reigns|It\'s My Yard|Crosspulse - Deal 2 damage to target opponent.',
+	'069S4Roman Reigns|The Big Dog|Call Out',
+	'069S4Roman Reigns|Proving Naysayers Wrong|While your opponent has less life than you do, each of your active Roman Reigns Superstar dice gets [sic] +3A',
+	'045N4Scott Hall|nWo Founder|Crosspulse - Spin all your Superstar dice up one level.|Global: Pay [B]. Target Superstar die must attack this turn.',
+	'045N4Scott Hall|nWo Wolfpac|When Scott Hall attacks, spin all your non-Scott Hall Superstar dice up one level (if able).|Global: Pay [B]. Target Superstar die must attack this turn.',
+	'055N4Scott Hall|WWE Hall of Famer|Each of your Scott Hall Superstar dice gets [sic] +1A and +1D for each level 3 Superstar die in the Field Zone (count both player\'s, including any level 3 Scott Hall Superstar dice.)|Global: Pay [B]. Target Superstar die must attack this turn.',
+	'047S4Seth Rollins|Seth "Freakin" Rollins|Crosspulse - Deal 2 damage to all opposing Superstar dice.',
+	'047S4Seth Rollins|Money in the Bank Legend|When fielded, each player selects one of their non-[PAWN] Superstar dice in the Field Zone and returns it to its card (this does not target).',
+	'047S4Seth Rollins|Hybrid Athlete|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|When Seth Rollins attacks, all [PAWN] must block a Seth Rollins Superstar die (if able).',
+	'03AN4Sting|The Vigilante|Crosspulse - Immediately field this Sting Superstar die at level 1.',
+	'02AN4Sting|Stinger Splash|',
+    '03AN4Sting|Scorpion Deathlock|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)',
+	'046D4Xavier Woods|Pancake Power|Crosspulse - Prep this die.',
+	'036D4Xavier Woods|Time for Francesca!|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|While Xavier Woods is active, you may reroll action dice on extra time during [the] Roll and Reroll Step.',
+	'036D4Xavier Woods|Unicorn Horn|If you played an Action Die this turn, your Xavier Woods Superstar dice take no combat damage.'
+	];
+	
+	//begin WWE Campaign box
+ var wwe_aff = { 0:'0', W:'WWE'};
+ var wwe = [
+    '04304AJ Styles|The Face That Runs the Place|While AJ Stles is active, whenever you field a non-AJ Styles Superstar die, each of your active AJ Styles Superstar die gets [sic] +1A and +1D (until end of turn).',
+	'04304AJ Styles|The Champ That Runs the Camp|Whenever an AJ Styles Superstar die damages your opponent, Prep a die from your Used Pile.',
+	'05304AJ Styles|The Phenomenal One|While you have less life than your opponent, each of your active AJ Styles Superstar dice gets [sic] +3A.',
+	'03104Asuka|No One is Ready|Intimidate (When fielded, remove target opposing Superstar die from the Field Zone until end of turn - place it next to your Superstar cards.)|When fielded, target opposing Sidekick die gets +1A (until end of turn).',
+	'03104Asuka|The Future|When fielded, name a non-[PAWN] Superstar die and draw a die from your bag. If you draw the named die, field it at level 3. Otherwise, add it to your Used Pile.',
+	'03104Asuka|The Empress of Tomorrow|While Asuka is active, your [M] Superstarts cost [2] less to purchase (Minimum 1).|Whenever you field a [M] Superstar die, each of your active Asuka Superstar dice gets +1A and +1D (until end of turn).',
+	'05404Becky Lynch|Maiden Ireland|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)|When fielded, reroll up to 2 target Superstar dice. Each die that does not roll a Superstar face goes to the Used Pile. Becky Lynch deals 1 damage to your opponent for each die sent to the Used Pile in this way.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
+	'04404Becky Lynch|Straight Fire|Overcrush|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
+	'05404Becky Lynch|The Man!|When Becky Lynch attacks, you may choose an unpurchased non-Continuous Basic Actin Die and roll it. If it shows an Action face, you may use its effect immediately. Return the die to its card.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
+	'021W4Bobby Heenan|The Brain|When fielded, target level 3 Superstar die can\'t be blocked (until end of turn).',
+	'021W4Bobby Heenan|The Weasel|When fielded, until the end of the turn, for each die your opponent assigns to block they lose 1 life (per Bobby Heenan die fielded this turn).',
+	'021W4Bobby Heenan|Superior Brain Power|Underdog - When fielded, spin all your Superstar dice to level 3. (You may use this effect when your opponent has more Superstar dice in their Field Zone than you do.)',
+	'053W4Bret "Hit Man" Hart|The Best There Is|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)',
+	'043W4Bret "Hit Man" Hart|The Best There Was|When Bret "Hit Man" Hart attacks, he can only be blocked by 2 or more Superstars.',
+	'043W4Bret "Hit Man" Hart|The Best There Ever Will Be|When one of your Bret "Hit Man" Hart dice attacks with no other attackers, it gets +2A and +2D.',
+	'04304Charlotte Flair|The Nature Girl|When a Charlotte Flair Superstar die damages your opponent, gain 1 life.',
+	'04304Charlotte Flair|The Genetically Superior Athlete|When Charlotte Flair is active, when an opposing [PAWN] is fielded, she deals 1 damage to your opponent.',
+	'04304Charlotte Flair|The Queen|While Charlotte Flair is active, your [PAWN] get +1A and +1D.',
+	'02304Eddie Guerrero|I Lie|If Eddie Guerrero is KO\'d by a [PAWN], return the KO\'d die to the Field Zone at level 3 at end of turn.',
+	'02304Eddie Guerrero|I Cheat|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)',
+	'02304Eddie Guerrero|I Steal|When Eddie Guerrero attacks, move all energy dice from your opponent\'s Reserve Pool to their Used Pile.',
+	'04204John Cena|You Can\'t See Me|When John Cena attacks, you may deal 1 damage to target non-[PAWN] Superstar die. If that damage KOs the targeted Superstar die, this die cannot be blocked this turn.',
+	'04204John Cena|The Champ is Here!|Call Out (When this Superstar die attacks, target Superstar die is the only Superstar die that may block this Superstar die.)',
+	'04204John Cena|The Cenation Leader|Intimidate (When fielded, remove target opposing Superstar die from the Field Zone until end of turn - place it next to your Superstar cards.)|When John Cena is active, your Superstar dice cannot be targeted by Intimidate',
+	'06404Kurt Angle|Intensity|When fielded, each player KOs all of their Superstar dice except one. You cannot field any Superstar dice this turn.|Global: Pay [S][S]. Target Superstar die gains Tag Out.',
+	'06404Kurt Angle|Integrity|Your Kurt Angle Superstar dice can\'t be targeted by your opponent\'s Global Abilities or Action Dice.|Global: Pay [S][S]. Target Superstar die gains Tag Out.',
+	'06404Kurt Angle|Intelligence|Each of your Kurt Angle Superstar dice can block up to 2 opposing Superstar dice (instead of 1).|Global: Pay [S][S]. Target Superstar die gains Tag Out.',
+	'042W4"Macho Man" Randy Savage|The Cream of the Crop|While "Macho Man" Randy Savage is active, once during your Clear and Draw Step you may send a Sidekick die you\'ve drawn to your Used Pile and draw a new die.',
+	'042W4"Macho Man" Randy Savage|Macho Madness|While "Macho Man" Randy Savage is active, whenever you draw and roll any number of dice outside your Clear and Draw Step (excluding dice drawn from this ability or copies of it),draw and roll one extra die.',
+	'042W4"Macho Man" Randy Savage|Oooh Yeah!|While "Macho Man" Randy Savage is acive, players draw an extra die during their Clear and Draw Step.',
+	'031W4Mankind|The Hardcore Legend|While Mankind is active, whenever your opponent Preps one or more dice outside their Clear and Draw Step, you may Prep a die from your bag.',
+	'041W4Mankind|The Deranged|Each of your Mankind Superstar dice gets +1A for each of your [PAWN] in the Field Zone.',
+	'031W4Mankind|Mrs. Foley\'s Baby Boy|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)',
+	'031W4Ric Flair|The Dirtiest Player in the Game|Ric Flair must attack if able.',
+	'041W4Ric Flair|WOOOOOOOOO!|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|Global: Pay [4]. Target Superstar die gets +4A.',
+	'041W4Ric Flair|The Nature Boy|Deadly (At the end of turn, KO all Superstar dice that were engaged with this Superstar.)|If this Superstar is KO\'d, at the end of the turn KO target opposing Superstar die that did not attack or block this turn.',
+	'04204Ronda Rousey|Rowdy|Fast (This Superstar deals damage before non-Fast Superstars in combat.)',
+	'04204Ronda Rousey|The Baddest Woman on the Planet|Impulse - You may pay [1] to Prep this die (Impulse abilities happen when you purchase the die with Impulse.)',
+	'04204Ronda Rousey|Bad Reputation|When Ronda Rousey KOs an opposing Superstar die, that die\'s controller loses 1 life.',
+	'02404Sasha Banks|It\'s Boss Time!|While Sasha Banks is active, your Superstar dice cost [1] less to field (minimum 0).',
+	'02404Sasha Banks|The Boss|When fielded, the next Superstar die you purchase this turn costs [2] less (minimum 1).',
+	'02404Sasha Banks|The Bank Statement|Infiltrate (When this Superstar die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)|When KO\'d, Prep a die from your bag.',
+	'02204Shinsuke Nakamura|The Artist|When fielded, you may KO target [PAWN].',
+	'03204Shinsuke Nakamura|Kinshasa|When Shinsuke Nakamura attacks, KO target opposing [PAWN].',
+	'04204Shinsuke Nakamura|The King of Strong Style|While Shinsuke Nakamura is active, whenever a Superstar die is KO\'d, its controller loses 1 life.',
+	'06404Triple H|The Cerebral Assassin|When fielded, name a non-[PAWN] Superstar die, replacing all previous choices. While Triple H is active, your opponent cannot purchase or field that die.',
+	'06404Triple H|The Game|While Triple H is active, at the beginning of each player\'s turn, that player loses 1 life.|* If your opponent has more life than you, they lose 2 life instead at the beginning of their turn.',
+	'07404Triple H|Pedigree|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)|Cleave (If this Superstar die attacks and KO\'s a blocker, deal half damage rounded down to another target Superstar die your opponent controls.)',
+	'03003A Moment of Bliss|Basic Action Card|This turn, you may remove blocked attackers from combat before damage is dealt.',
+	'04003Jerry Lawler, Ringside Announcer|Basic Action Card|All blocked and blocking Superstars deal double damage this turn.|Global: Pay [F]. Target blocked or blocking Superstar deals double damage. Use this ability only once per turn.',
+	'04003Booker T, Ringside Announcer|Basic Action Card|All opposing Superstars must block if able and you may declare blockers for your opponent, assigning one per attacker until all attackers have been assigned a blocker, and then assigning the rest as you choose.|Global: Pay [S]. Target Superstar must block this turn if able.',
+	'04003Chair Smash|Basic Action Card|Continuous. Send this die to your Used Pile when [sic] during your Clear and Draw Step or when another Folding Chair [sic] is played. Whenever you could use a Global Ability, send this die to the Used Pile and deal 3 damage to target attacker or blocker.|*/** If the target is not KO\'d, Prep this die.',
+	'04003Miz TV|Basic Action Card|Target a Superstar die from each player\'s Field Zone and set them aside until end of turn (then return them to play at their previous level).',
+	'04003Money in the Bank|Basic Action Card|Choose target attacker. If that attacker damages the opponent this turn, draw and roll 3 dice. If the attacker is unblocked and would go to the Used Pile, Prep them instead.',
+	'05003Paige, Manager|Basic Action Card|Each player may add one of their unpurchased dice to their bag.|** Your opponent\'s die is sent to their Used Pile instead.',
+	'03003Paul Heyman, Manager|Basic Action Card|Each player picks one of their dice in the Field Zone. Those dice deal each other damage equal to their cost. If any die is KO\'d, that die\'s controller loses 1 life.|* Instead, they lose 2 life.|** Instead, they lose 3 life.|Global: Pay [B]. Deal 1 damage to target Superstar. Use this ability only once per turn.',
+	'03003The Kevin Owens Show|Basic Action Card|Swap a die in your Used Pile for one of your unpurchased dice that costs up to 2 more.|*/** Draw and Prep a die from your bag.',
+	'03003Walk with Elias|Basic Action Card|Secretly draw 1, 2, or 3 Dice from your bag. If your opponent guesses the number of dice you drew, put them into your Used Pile. Otherwise, Prep them.|Global: Pay [M]. Once per turn, on your turn, add 2 Sidekick dice from your Used Pile to your Prep Area.',
+	];
+
 
 //begin Adventurers in Waterdeep
  var aiw_aff = { 0:'0', M:'M', F:'FG'};
@@ -275,7 +409,7 @@
 	'05104e0Stone of Golorr|Memory Modifier|Draw a die from your bag. Deal damage to target opponent equal to that die\'s Purchase Cost. Place the die in your Used Pile.',
 	'04104e0Stone of Golorr|Wondrous Item|Draw a die from your bag. You may purchase a copy of that die for [2] and Prep it. Place the drawn die in your Used Pile.|** Instead, Prep it.',
 	'033F4n1Vajra|Blackstaff of Waterdeep|Experience|Spark: You add an Experience token to another Adventurer',
-	'043F4n1Vajra|Activating the Walking Statues|Experience|Attune|Spark: Deal 1 damage target opponent or opposing character die. (sic)',
+	'043F4n1Vajra|Activating the Walking Statues|Experience|Attune|Spark: Deal 1 damage [to] target opponent or opposing character die.',
 	'033F4n1Vajra|Commander of Force Grey|Experience|While Vajra is active, when you field and [sic] Adventurer, deal 1 damage to target opponent.',
 	'02304n0Yawning Portal|Adventurous Clientele|Your character dice are free to field this turn. When you field a non-NPC character die, Prep a die from your bag.',
 	'03304n0Yawning Portal|Accessing the Undermountain|Your character dice are free to field this turn. When you field a non-NPC character die, Prep a die from your Used Pile.',
@@ -868,10 +1002,10 @@ var sw = [
 '054G4Groot|Chlorokinesis|While Groot is active, prevent 1 damage to you from each attacking character die.|Global: Pay [S]. Choose an affiliation of a character die you have fielded this turn. Move a character die with that affiliation from your Used Pile to your bag.',
 '054G4Groot|I Am Groot!|While Groot is active, when one of your character dice blocks and is not KO\'d, Prep a die from your bag. (Do this for each eligible die, at the end of the turn.)|Global: Pay [S]. Choose an affiliation of a character die you have fielded this turn. Move a character die with that affiliation from your Used Pile to your bag.',
 '022V4Kree Captain|Warmonger|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
-'032V4Kree Captain|Impact Resistant Uniform|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
+'032V4Kree Captain|Impact Resistant Uniform|Swarm (While this character is active, if you draw this die during your Clear and Draw Set [sic], draw and roll an extra die.)|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
 '032V4Kree Captain|Lost Purpose|Kree Captain gets +1A and +1D for every active [DCV] character die.|Global: Pay [F][F]. Once per turn, the next character die you purchase this turn costs 3 less (minimum 1).',
-'022V4Kree Soldier|Protecting the Seat of Hala|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
-'022V4Kree Soldier|Blue Angels|Swarm (While this character is active, if you draw this die during your Clear and Draw Set (sic), draw and roll an extra die.)|When Kree Soldier damages and opponent, Prep a die from your bag.',
+'022V4Kree Soldier|Protecting the Seat of Hala|Swarm (While this character is active, if you draw this die during your Clear and Draw Set [sic], draw and roll an extra die.)|Infiltrate (When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)',
+'022V4Kree Soldier|Blue Angels|Swarm (While this character is active, if you draw this die during your Clear and Draw Set [sic], draw and roll an extra die.)|When Kree Soldier damages and opponent, Prep a die from your bag.',
 '022V4Kree Soldier|Stagnant Evolution|While Kree Soldier is active, your character dice with purchase cost of 3 or less are free to field. ',
 '041G4Mantis|This One Knows|While Mantis is blocking, if she is assigned combat damage equal to or greater than her D, prevent all damage to you from target attacking character die.',
 '031G4Mantis|Gift From the Priests of Pama|While Mantis is active, when a non-Mantis [GG] character die is KO\'d , Prep a die from your bag.',
@@ -4802,6 +4936,44 @@ var sw = [
 	"Volo":"001 011 012",
 	"Xanathar":"043 054 165",
 	
+	//WWE
+	"AJ Styles":"123 134 246",
+	"Asuka":"122 133 144",
+	"Becky Lynch":"155 177 288",
+	"Bobby Heenan":"011 012 112",
+	"Bret \"Hit Man\" Hart":"042 153 155",
+	"Charlotte Flair":"033 143 154",
+	"Eddie Guerrero":"011 122 132",
+	"John Cena":"152 262 364",
+	"Kurt Angle":"144 257 268",
+	"\"Macho Man\" Randy Savage":"031 033 144",
+	"Mankind":"014 025 127",
+	"Ric Flair":"121 132 253",
+	"Ronda Rousey":"023 133 144",
+	"Sasha Banks":"013 123 133",
+	"Shinsuke Nakamura":"121 132 142",
+	"Triple H":"155 256*267*",
+	
+	//TAG
+	"Big E":"014 125 127",
+	"Kevin Nash":"133 244 356",
+	"Kofi Kingston":"024 134 144",
+	"Roman Reigns":"153 164 277",
+	"Scott Hall":"142 244 255",
+	"Seth Rollins":"123 134 244",
+	"Sting":"021 023 133",
+	"Xavier Woods":"122 133 234",
+	
+	//BIT
+	"Kane":"146 257 267",
+	"Lita":"031 141 252",
+	"Shawn Michaels":"152 252 263",
+	"Stone Cold Steve Austin":"044 155 166",
+	"The Rock":"154 166 276",
+	"Trish Stratus":"022 033 144",
+	"Undertaker":"136 137 149"
+	
+	
     };
     var gender = {
     "Black Widow":1,
@@ -5072,6 +5244,21 @@ var sw = [
 	"Lady Deathstrike":1,
 	"Madelyne Pryor":1,
 	"Rachel Summers":1,
+	
+	"Human Warlock":1,
+	"Tashlyn Yafeera":1,
+	"Black Viper":1,
+	"Brawlwin":1,
+	"Vajra":1,
+	"Jamilah":1,
+	
+	"Asuka":1,
+	"Becky Lynch":1,
+	"Charlotte Flair":1,
+	"Ronda Rousey":1,
+	"Sasha Banks":1,
+	"Lita":1,
+	"Trish Stratus":1,
 	
 	
     };
