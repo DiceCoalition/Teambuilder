@@ -26,6 +26,7 @@
      DOOM:'doompatrol',
 	 HELL:'hellfireclub',
 	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
+	 PAWN:'sidekick',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -377,7 +378,7 @@
 	'03003A Moment of Bliss|Basic Action Card|This turn, you may remove blocked attackers from combat before damage is dealt.',
 	'04003Jerry Lawler, Ringside Announcer|Basic Action Card|All blocked and blocking Superstars deal double damage this turn.|Global: Pay [F]. Target blocked or blocking Superstar deals double damage. Use this ability only once per turn.',
 	'04003Booker T, Ringside Announcer|Basic Action Card|All opposing Superstars must block if able and you may declare blockers for your opponent, assigning one per attacker until all attackers have been assigned a blocker, and then assigning the rest as you choose.|Global: Pay [S]. Target Superstar must block this turn if able.',
-	'04003Chair Smash|Basic Action Card|Continuous. Send this die to your Used Pile when [sic] during your Clear and Draw Step or when another Folding Chair [sic] is played. Whenever you could use a Global Ability, send this die to the Used Pile and deal 3 damage to target attacker or blocker.|*/** If the target is not KO\'d, Prep this die.',
+	'04003Chair Smash|Basic Action Card|Continuous. Send this die to your Used Pile during your Clear and Draw Step, or when another Folding Chair [sic] is played. Whenever you could use a Global Ability, send this die to the Used Pile and deal 3 damage to target attacker or blocker.|*/** If the target is not KO\'d, Prep this die.',
 	'04003Miz TV|Basic Action Card|Target a Superstar die from each player\'s Field Zone and set them aside until end of turn (then return them to play at their previous level).',
 	'04003Money in the Bank|Basic Action Card|Choose target attacker. If that attacker damages the opponent this turn, draw and roll 3 dice. If the attacker is unblocked and would go to the Used Pile, Prep them instead.',
 	'05003Paige, Manager|Basic Action Card|Each player may add one of their unpurchased dice to their bag.|** Your opponent\'s die is sent to their Used Pile instead.',

@@ -200,6 +200,7 @@
   <span class="show_mode1 hide">
     <br><span class="button show_addrandom hide" onclick="add_random()">+ Random</span>
     <span class="button show_addrandombac hide" onclick="add_random_bac()">+ Random Basic Action</span>
+	 <input type="checkbox" id="teamlimits" onclick="filter()">Disable team limits</input>
   </span>
   <span class="show_mode3 hide">
   <span id="collection_status"></span><br>
@@ -383,6 +384,7 @@
   </select>
   </span>  
   </div>
+  Search operators: &=AND ~=NOT 
   <br>
   <input id="filt0" type="text" placeholder="#">
   <input id="filt1" type="text" placeholder="Filter name">
@@ -1160,6 +1162,7 @@ document.getElementById('file').onchange = function(){
   }
   
   function click_update_team() {
+	 var nolimits = E('teamlimits').checked;
     var pluses = C("inc");
     var minuses = C("dec");
     var has_name = {};
@@ -1176,8 +1179,10 @@ document.getElementById('file').onchange = function(){
         show = team_num[cur.nr] < cur.maxdice;
       } else {
         show = !has_name[cur.mainname.replace('™', '')];
-        if (cur.type == 2 && num_bac >= 2) show = false;
-        if (cur.type != 2 && num >= 8) show = false;
+		if (!nolimits){
+			if (cur.type == 2 && num_bac >= 2) show = false;
+			if (cur.type != 2 && num >= 8) show = false;
+		}
       }
       pluses[i].style.display = show ? "block" : "none";
     }
@@ -1185,8 +1190,8 @@ document.getElementById('file').onchange = function(){
       var cur = trs_all[minuses[i].id.substring(3)];
       minuses[i].style.display = team_num[cur.nr] ? "block" : "none";
     }
-    pool_oth = num >= 8 ? [] : rows.filter(function(x){return x.type!=2 && !team_num[x.nr] && !has_name[x.mainname.replace('™', '')];});
-    pool_bac = num_bac >= 2 ? [] : rows.filter(function(x){return x.type==2 && !team_num[x.nr];});
+    pool_oth = num >= 8 && !nolimits ? [] : rows.filter(function(x){return x.type!=2 && !team_num[x.nr] && !has_name[x.mainname.replace('™', '')];});
+    pool_bac = num_bac >= 2 && !nolimits? [] : rows.filter(function(x){return x.type==2 && !team_num[x.nr];});
     hideelem('addrandom');
     hideelem('addrandombac');
     if (pool_oth.length) showelem('addrandom');
