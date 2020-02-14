@@ -380,7 +380,7 @@
    <option value="G">Golden Era</option>
    <option value="M">Modern Era</option>   
    <option value="P">Global Escalation</option>
-   <!--<option value="K">Modern Era (2019)</option>   -->
+   <option value="K">Two Team Takedown Legacy</option>
   </select>
   </span>  
   </div>
@@ -1504,10 +1504,20 @@ document.getElementById('file').onchange = function(){
   }
   
   var format_bans = convert_to_map({
-	  //modern 2018 (currenly disabled
-  K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+	  //Two Team Takedown Legacy 
+  K: [  "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG",
+        "DC2016", "M2016", "WKO16DC", "WKO16M", "WKO16DD", "132TOA", 
+        "12AI", "22Drs", "19MYST", "2MYST", "16SMC", "32TOA", "4SMC", "54TOA", "4TOA", "28SWW", 
+        "34TOA", "19TOA", "10AI", "136TOA", "96THOR", "37TOA", "121TOA", "16JUS", "54HHS", "12THOR", 
+        "18BAT", "6JLL", "9KI", "112GotG", "34JUS", "13BFU", "119GotG", "47XFC", "26SWW", "71JUS", 
+        "5M2019", "19JLL", "31XFC", "102XFC", "24JLL", "114THOR", "22XMF", "87XFC", "11TOA", "24HQ", 
+        "32THOR", "24SWW", "15SWW", "1M2019", "103TOA", "42AI", "18SW", "20ORK", "58HHS", "32SWW", 
+        "134TOA", "21KI", "109TOA", "119TOA", "76THOR", "77XFC", "22SWW", "7KI", "49HHS", "64XMF", 
+        "TIW", "AIW", "ZHN", "WWE", "BIT", "TAG"],
+ /* K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
-	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],
+	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],*/
 	//Modern
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
@@ -1516,7 +1526,7 @@ document.getElementById('file').onchange = function(){
   //golden age.  Just bans Relenetless & Swords of Revealing light
   G: [ "31UXM", "119YGO" ],
   //global escalation
-  P: [ "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DRS", "128THOR", "89TOA", "132TOA"],
+  P: [ "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DrS", "128THOR", "89TOA", "132TOA"],
   });
   /*
   PDC Prime format:
