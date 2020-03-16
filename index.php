@@ -381,6 +381,7 @@
    <option value="M">Modern Era</option>   
    <option value="P">Global Escalation</option>
    <option value="K">Two Team Takedown Legacy</option>
+   <option value="N">Modern 2020</option>
   </select>
   </span>  
   </div>
@@ -1483,7 +1484,7 @@ document.getElementById('file').onchange = function(){
       affiliationflipimg:affiliationB,
       energyimg:set[i][2],
       text:txt,
-      formats:15^(format_bans[setname]||0)^(format_bans[(i+1)+setname]||0),
+      formats:31^(format_bans[setname]||0)^(format_bans[(i+1)+setname]||0),
       sk:[
     i - setbase,
     namekey,
@@ -1521,22 +1522,31 @@ document.getElementById('file').onchange = function(){
 	//Modern
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
-	   "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "132TOA"],
+	   "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "132TOA", "16SMC"],
+	   
+	/*   
+  M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "Thor", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+	*/   
   //2017 M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "15FUS" ],
-  //golden age.  Just bans Relenetless & Swords of Revealing light
-  G: [ "31UXM", "119YGO" ],
+  //golden age.  Bans Relenetless & Swords of Revealing light, Ring of Mag, Imprisoned, and Beholder
+  G: [ "31UXM", "119YGO", "63YGO", "28UXM", "3BFF" ],
   //global escalation
-  P: [ "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DrS", "128THOR", "89TOA", "132TOA"],
+  P: [ "31UXM", "119YGO", "63YGO", "28UXM", "3BFF", "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DrS", "128THOR", "89TOA", "132TOA"],
+  //Modern 2020
+  N: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "Thor", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
   });
   /*
   PDC Prime format:
   P: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS" ],  
   */
+  
   function convert_to_map(bans) {
     var map = {};
     for (var i in bans) {
-      var bit = 1 << "GMPK".indexOf(i);
+      var bit = 1 << "GMPKN".indexOf(i);
       bans[i].forEach(function (e) {map[e] = (map[e] || 0)|bit;});
     }
     return map;
@@ -1813,7 +1823,7 @@ document.getElementById('file').onchange = function(){
       set.cost_min = E('cost_min').selectedIndex;
       set.gender = getcheckboxval('gender',3);
       set.incollection = E('incollection').value;
-      set.informat = E('informat').value ? 1 << "GMPK".indexOf(E('informat').value) : 0;
+      set.informat = E('informat').value ? 1 << "GMPKN".indexOf(E('informat').value) : 0;
       set.affiliation = '';
       var all = E('search_affiliation_on').style.display === 'none';
       for (var i = 0; i < affiliation_properites.length; i++)
@@ -2030,7 +2040,7 @@ document.getElementById('file').onchange = function(){
       settextbox('filt0', set.n);
       settextbox('filt1', set.name);
       settextbox('filt2', set.text);
-      setselectbox('informat', set.format === undefined ? undefined : "GMPK".indexOf(set.format) + 1, 0);
+      setselectbox('informat', set.format === undefined ? undefined : "GMPKN".indexOf(set.format) + 1, 0);
       if (set.sort !== undefined)
     skeys = set.sort.split('.');
       filter();
