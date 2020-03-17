@@ -1225,6 +1225,7 @@ var sw = [
     '45201Earth X Machine Man|X-51|Opponents can\'t target Earth X Machine Man. Opposing action dice have no effect on Earth X Machine Man.|Underdog - Earth X Machine Man cost 2 less to purchase. (Earth X Machine Man doesn\'t need to be active to use this ability.)',
     '45101Earth X The Skull|Telepathic Awakening|Underdog - When fielded, each player Kos all but 1 of their [M] character dice.|When fielded, your opponent\'s life total cannot go below 1 this turn.',
     '45301Earth X Thor|She Be Worthy|When fielded, if you have less life than an opponent, KO target character die.|When fielded, KO target [DCV] character die.|Underdog - When fielded, KO target character die with fielding cost 0.',
+	'54003Wallop|Basic Action Card|KO target level 1 character die.  ** Instead, KO target level 1 or level 2 character die.|Global: Pay [F]. Target blocked character die deals no damage.',
     ];
 
 

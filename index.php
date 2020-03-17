@@ -1526,7 +1526,7 @@ document.getElementById('file').onchange = function(){
 	   
 	/*   
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "Thor", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
 	*/   
   //2017 M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "15FUS" ],
   //golden age.  Bans Relenetless & Swords of Revealing light, Ring of Mag, Imprisoned, and Beholder
@@ -1535,7 +1535,7 @@ document.getElementById('file').onchange = function(){
   P: [ "31UXM", "119YGO", "63YGO", "28UXM", "3BFF", "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DrS", "128THOR", "89TOA", "132TOA"],
   //Modern 2020
   N: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "Thor", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
   });
   /*
   PDC Prime format:
