@@ -1515,7 +1515,8 @@ document.getElementById('file').onchange = function(){
         "5M2019", "19JLL", "31XFC", "102XFC", "24JLL", "114THOR", "22XMF", "87XFC", "11TOA", "24HQ", 
         "32THOR", "24SWW", "15SWW", "1M2019", "103TOA", "42AI", "18SW", "20ORK", "58HHS", "32SWW", 
         "134TOA", "21KI", "109TOA", "119TOA", "76THOR", "77XFC", "22SWW", "7KI", "49HHS", "64XMF", 
-        "TIW", "AIW", "ZHN", "WWE", "BIT", "TAG"],
+        "16DXM", "20XMF", "4DXM", "129THOR" "10XFO", "5XFO", "24DXM", "51XMF", "70XMF", "66XMF",
+        "21JUS", "17BAT", "35BAT", "3JUS", "13DOOM", "10DOOM", "72THOR", "114TOA", "53AI", "23HQ"],
  /* K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],*/
