@@ -381,7 +381,7 @@
    <option value="M">Modern Era</option>   
    <option value="P">Global Escalation</option>
    <option value="K">Two Team Takedown Legacy</option>
-   <option value="N">Modern 2020</option>
+   <option value="N">Dice Fight Legacy</option>
   </select>
   </span>  
   </div>
@@ -1266,6 +1266,7 @@ document.getElementById('file').onchange = function(){
   var trs_all = [];
   var trs_by_set = [];
   var setnames = [];
+  var urlbans =[];
   function getdice(s,v) {
     v = v.replace('™', '');
     return dice[s+'@'+v] || dice[v];
@@ -1521,11 +1522,15 @@ document.getElementById('file').onchange = function(){
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],*/
 	//Modern
+	M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+   /*
+   //not sure why i'm keeping old moderns here... but i am.  
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "132TOA", "16SMC"],
 	   
-	/*   
+	   
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
 	*/   
@@ -1534,9 +1539,8 @@ document.getElementById('file').onchange = function(){
   G: [ "31UXM", "119YGO", "63YGO", "28UXM", "3BFF" ],
   //global escalation
   P: [ "31UXM", "119YGO", "63YGO", "28UXM", "3BFF", "2MYST", "4BAT", "86BAT", "83BAT", "6DOOM", "11TMNT", "81FUS", "42FUS", "29FUS", "137JL", "48GotG", "86GotG", "4XFO", "70AvX", "19YGO", "65JUS", "113FUS", "92DP", "67TOA",  "47FUS", "32TOA", "130AvX", "21JUS", "7WoL", "15FUS", "77AvX", "78AvX", "9TOA", "6THOR", "68JUS", "88YGO",  "34TOA", "118WoL", "55YGO", "76BFF", "58YGO", "21XFC", "120XFC", "9DXM", "58WoL", "98XFC", "36THOR", "51HHS", "53HHS", "90CW", "119GotG", "14WF", "115TOA", "30BAT", "2DC2016", "31XFC", "16SMC", "66JL", "18AvX", "74XFC", "45JUS", "112GotG", "35BAT", "32IMW", "126AvX", "22SWW", "22DrS", "128THOR", "89TOA", "132TOA"],
-  //Modern 2020
-  N: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+  //Dice Fight Legacy
+  N: [ "32YGO", "60YGO", "94YGO", "29DP", "69DP", "119DP", "16THOR", "56THOR", "96THOR", "57WoL", "90WoL", "121WoL", "53WoL", "87WoL", "118WoL", "64WoL", "97WoL", "127WoL", "49UXM", "81UXM", "109UXM", "8GAF", "48GAF", "87GAF", "47FUS", "85FUS", "114FUS", "46FUS", "84FUS", "113FUS", "13FUS", "14FUS", "15FUS", "58FUS", "16SMC", "17SMC","18SMC", "13WF", "14WF", "15WF", "60WF", "46JL", "84JL", "137JL", "36AvX", "100AvX", "129AvX", "71JUS", "58BFU", "4TOA", "29FUS", "137THOR", "31UXM", "119YGO", "63YGO", "28UXM", "3BFF" ],
   });
   /*
   PDC Prime format:
@@ -1850,6 +1854,7 @@ document.getElementById('file').onchange = function(){
       var incol = set.incollection;
       var infor = set.informat;
 	  var sets = set.set === undefined ? [] : set.set;
+	  var bans = set.bans;
       //var sets = set.set === undefined ? -1 : set.set;
       var rows = [];
       k6 = 1 << set.cost_max + 1;
@@ -1899,6 +1904,13 @@ document.getElementById('file').onchange = function(){
       function f9(e) {
     return 0 != (e.formats & infor);
       }
+	  function f10(e) {
+		  /*var set = parseInt(e.nr.toString().substring(0, e.nr.length-3));
+		  var cardNum = e.nr.toString().substring(e.nr.length-2, e.nr.length);
+		  cardNum = cardNum.replace(/^0+/, '');
+		  var card = cardNum+setnames[set];*/
+    return urlbans.indexOf(e.nr.toString()) == -1;
+      }
       if (incol === 'C') rows = rows.filter(function (e) { return havecards.get(e.nr)>0; });
       if (incol === 'N') rows = rows.filter(function (e) { return havecards.get(e.nr)===0; });
       if (incol === 'W') rows = rows.filter(function (e) { return havecards.get(e.nr) < wantcards.get(e.nr); });
@@ -1918,6 +1930,7 @@ document.getElementById('file').onchange = function(){
       if (k6 && k6 != 2047) rows = rows.filter(f6);
       if (k7 && k7 != 7) rows = rows.filter(f7);
       if (infor) rows = rows.filter(f9);
+	  if(urlbans.length >0) rows = rows.filter(f10);
       if (set.affiliation && set.affiliation.indexOf('0') >= 0 && set.affiliation.indexOf('1') >= 0) rows = rows.filter(f8);
       return rows;
   }
@@ -2214,6 +2227,28 @@ document.getElementById('file').onchange = function(){
       team_search = [];
       team_update();
   }
+  function setbans(set) {
+      if (!set.bans) return;
+      var cards = set.bans.split(';');  
+	var setregex = /[A-Za-z]+/g;
+	//var cardregex = /[0-9]+/g;
+	var cardregex  = /[^A-Za-z]*/;
+	for (i = 0; i < cards.length; i++) {
+		//var set = cards[i].toLowerCase().match(setregex);
+		var card = parseInt(cards[i].match(cardregex));
+		var set = cards[i].replace(card.toString(), "").toLowerCase();
+		var index = setnames.indexOf(set);
+		var newcard = index.toString() + pad(card, 3);
+		cards[i] = newcard;
+	}
+	urlbans = cards;
+  }
+	function pad(num, size) {
+		var s = num+"";
+		while (s.length < size) s = "0" + s;
+		return s;
+	}
+
   var trpsetname = {
       avx:'avx',
       avxop:'avxop',
@@ -2438,6 +2473,9 @@ document.getElementById('file').onchange = function(){
         setmode(2);
         setteam(set);
       }
+	  if (set.hasOwnProperty('bans')) {
+		  setbans(set);
+	  }
       history.replaceState("", document.title, window.location.pathname);
   }
   filter();
