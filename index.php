@@ -1400,6 +1400,7 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Suit Up", "<strong>Suit Up</strong>");
   pj = pj.replace("Boomerang", "<strong>Boomerang</strong>");
   pj = pj.replace("Call Out", "<strong>Call Out</strong>");
+  pj = pj.replace("Call out", "<strong>Call out</strong>"); //for Kane card typo bolding
   pj = pj.replace("Infiltrate", "<strong>Infiltrate</strong>");
   pj = pj.replace("Awaken", "<strong>Awaken</strong>");
   pj = pj.replace("Attune", "<strong>Attune</strong>");

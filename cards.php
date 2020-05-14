@@ -335,7 +335,7 @@
 	'03104Asuka|The Empress of Tomorrow|While Asuka is active, your [M] Superstars cost [2] less to purchase (Minimum 1).|Whenever you field a [M] Superstar die, each of your active Asuka Superstar dice gets +1A and +1D (until end of turn).',
 	'05404Becky Lynch|Maiden Ireland|Overcrush (Damage dealt in excess of blocker\'s D is dealt to opponent.)|When fielded, reroll up to 2 target Superstar dice. Each die that does not roll a Superstar face goes to the Used Pile. Becky Lynch deals 1 damage to your opponent for each die sent to the Used Pile in this way.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
 	'04404Becky Lynch|Straight Fire|Overcrush|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
-	'05404Becky Lynch|The Man!|When Becky Lynch attacks, you may choose an unpurchased non-Continuous Basic Actin Die and roll it. If it shows an Action face, you may use its effect immediately. Return the die to its card.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
+	'05404Becky Lynch|The Man!|When Becky Lynch attacks, you may choose an unpurchased non-Continuous Basic Action Die and roll it. If it shows an Action face, you may use its effect immediately. Return the die to its card.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
 	'021W4Bobby Heenan|The Brain|When fielded, target level 3 Superstar die can\'t be blocked (until end of turn).',
 	'021W4Bobby Heenan|The Weasel|When fielded, until the end of the turn, for each die your opponent assigns to block they lose 1 life (per Bobby Heenan die fielded this turn).',
 	'021W4Bobby Heenan|Superior Brain Power|Underdog - When fielded, spin all your Superstar dice to level 3. (You may use this effect when your opponent has more Superstar dice in their Field Zone than you do.)',
@@ -955,7 +955,7 @@ var sw = [
 	'044V4The Joker|Laughing Boy|When fielded, if Harley Quinn is active, Prep a die from you bag.',
 	'054V4The Joker|Mr. J|When fielded, choose an energy type, replacing all previous choices. While The Joker is active, when an opponent fields a character die of that energy type, deal 1 damage to that opponent.',
 	'04003Relaxing|Basic Action Card|Draw a die from your bag. Name a die. Draw a second die. If the second die is the die you named then roll it, and draw a third die. Otherwise, move the second die to your Used Pile.|** Instead, if you named the second die incorrectly, roll it.',
-	'03003Target Lock|Basic Action Card|Continuous: Place Target Lock on an opposing character card (it is still in the Field Zone). Each time your opponent draws a card\'s die during their Clear and Draw Step, they send it to their Used Pile and you Prep a die from your bag. At the end of your opponent\'s Clear and Draw step, send Target Lock to your Used Pile.',
+	'03003Target Lock|Basic Action Card|Continuous: Place Target Lock on an opposing character card (it is still in the Field Zone). Each time your opponent draws that card\'s die during their Clear and Draw Step, they send it to their Used Pile and you Prep a die from your bag. At the end of your opponent\'s Clear and Draw step, send Target Lock to your Used Pile.',
 	'02003Thrown Brick|Basic Action Card|Deal 1 damage to target character die. If that character die is not KO\'d, Prep a die from your bag and add this die to your Prep Area (instead of the Used Pile).',
 	];
        
