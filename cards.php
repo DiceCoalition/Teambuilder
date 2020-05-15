@@ -1158,7 +1158,7 @@ var sw = [
     '252A4Hulk|Savage Shulkie|While Hulk is active, when an opponent uses a Global Ability, spin Hulk up 1 level.|Global: Pay [F]. Target character die gets +1A until end of turn.',
     '243S4Iron Man|Demon in a Bottle|While Iron Man is active, when an opponent uses a Global Ability, he gets +1A and +1D (until end of turn).',
     '22404Jane Foster|Survivor|Ally|While Jane Foster is active, your character dice with Immortal have a fielding cost of 0.',
-    '23204Jarnbjorn|Iron Bear|Character dice you control with Immortal get +2A and +2D and gainOvercrush(until end of turn).',
+    '23204Jarnbjorn|Iron Bear|Character dice you control with Immortal get +2A and +2D and gain Overcrush(until end of turn).',
     '224I4Karnak|Exploiting Weakness|',
     '231A4Kate Bishop|Hawkingbird|When fielded, deal 1 damage to target opponent.|Global: Pay [M]. Target attacking character die is no longer attacking. (It remains in the Field Zone.)',
     '253M4Loki|Norn Stones|While Loki is active, character dice with Immortal deal only 1 damage.',
@@ -1240,7 +1240,7 @@ var sw = [
     var toa = [
     '14003n0Burning Hands|Basic Action Card|Deal 1 damage to target character die or player [PAWN] for each different energy type ([B], [F], [M], [S]) you have in your Reserve Pool.  ** Also, deal 1 additional damage if you have a [Q] energy in your Reserve Pool.',
     '14003n0Candlekeep|Basic Action Card|Choose one:|&bull; Draw 2 dice from your bag and roll them.|&bull; Prep two dice from your bag.',
-    '13003n0Cone of Cold|Basic Action Card|Deal 1 damage to target character die, deal 2 damage to a different target character die, and deal 3 damage to another different target character die. You may only use this action if there are at least 3 character dice in the Field Zone.|Pay [F]. Target blocked character die gets +2A.',
+    '13003n0Cone of Cold|Basic Action Card|Deal 1 damage to target character die, deal 2 damage to a different target character die, and deal 3 damage to another different target character die. You may only use this action if there are at least 3 character dice in the Field Zone.|Global: Pay [F]. Target blocked character die gets +2A.',
     '13003n0Create Food and Water|Basic Action Card|Draw dice from your bag until you draw a non-NPC die or your bag is empty. Prep all dice drawn this way.|Global: Pay [1]. Once per turn, draw a die from your bag. Return it to your bag or add it to your Used Pile.',
     '13003n0Guardian of Faith|Basic Action Card|Continuous: Whenever you could use a Global Ability, you can send this die to the Used Pile to have target level 1 attacking character die considered blocked without assigning a character die to block it.  */** Instead, you may target an attacking character die of any level.',
     '12003n0Heavy Armor|Basic Action Card|Equip (Attach to a character with [EQ])|Equipped character die gets +XD, where X is the character die\'s printed D value.|** Character dice engaged with the equipped character lose, and cannot gain, Overcrush.|This die counts as Gear. This cannot be ignored.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
