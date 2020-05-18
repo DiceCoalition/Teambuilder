@@ -1158,7 +1158,7 @@ var sw = [
     '252A4Hulk|Savage Shulkie|While Hulk is active, when an opponent uses a Global Ability, spin Hulk up 1 level.|Global: Pay [F]. Target character die gets +1A until end of turn.',
     '243S4Iron Man|Demon in a Bottle|While Iron Man is active, when an opponent uses a Global Ability, he gets +1A and +1D (until end of turn).',
     '22404Jane Foster|Survivor|Ally|While Jane Foster is active, your character dice with Immortal have a fielding cost of 0.',
-    '23204Jarnbjorn|Iron Bear|Character dice you control with Immortal get +2A and +2D and gain Overcrush(until end of turn).',
+    '23204Jarnbjorn|Iron Bear|Character dice you control with Immortal get +2A and +2D and gain Overcrush (until end of turn).',
     '224I4Karnak|Exploiting Weakness|',
     '231A4Kate Bishop|Hawkingbird|When fielded, deal 1 damage to target opponent.|Global: Pay [M]. Target attacking character die is no longer attacking. (It remains in the Field Zone.)',
     '253M4Loki|Norn Stones|While Loki is active, character dice with Immortal deal only 1 damage.',
