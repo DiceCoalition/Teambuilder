@@ -320,7 +320,7 @@
 	'02AN4Sting|Stinger Splash|',
     '03AN4Sting|Scorpion Deathlock|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)',
 	'046D4Xavier Woods|Pancake Power|Crosspulse - Prep this die.',
-	'036D4Xavier Woods|Time for Francesca!|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|While Xavier Woods is active, you may reroll action dice on extra time during [the] Roll and Reroll Step.',
+	'036D4Xavier Woods|Time for Francesca!|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|While Xavier Woods is active, you may reroll action dice one extra time during Roll and Reroll Step.',
 	'036D4Xavier Woods|Unicorn Horn|If you played an Action Die this turn, your Xavier Woods Superstar dice take no combat damage.'
 	];
 	
@@ -394,7 +394,7 @@
     '04104n1Black Viper|Scaring Nobles, Stealing Jewels|When Black Viper attacks and is unblocked, KO target opposing character die after combat damage resolves.',
 	'04104n1Black Viper|Notorious Bandit|Infiltrate|While Black Viper is active, character dice you control deal an additional damage with Infiltrate.',
 	'04104n1Black Viper|Reviving a Legend|When fielded, choose target character die with Infiltrate. It cannot be blocked this turn.',
-    '032F4g1Brawlwin Chainminer|Hitch\'s Friend|Experience|Brawlwin gets +3A while blocking or when blocked by, character dice with 4A or more.',
+    '032F4g1Brawlwin Chainminer|Hitch\'s Friend|Experience|Brawlwin gets +3A while blocking or when blocked by, [sic] character dice with 4A or more.',
     '032F4g1Brawlwin Chainminer|Longing For Adventure|Experience|When Brawlwin KOs a character die of equal or higher level, draw two dice from your bag and Prep any non-NPC dice you draw. Place the rest in your Used Pile.|Global: Pay [1]. Spin target opposing character die up 1 level.',
 	'032F4g1Brawlwin Chainminer|Long Line of Giant-Slayers|Experience|When an opposing character of level 2 or higher is KO\'d, Brawlwin gains an Experience token.|Global: Pay [1]. Spin target opposing character die up 1 level.',
 	'054M4n1Jarlaxle|Drow Swashbuckler|Spark: Search you bag for a die and Prep it.',
@@ -1099,7 +1099,7 @@ var sw = [
     '12003Odin\'s Fury|Basic Action Card|Target character die gets +2A and +1D until end of turn.|Global: Pay [2M]. Once during your turn, you may remove one of your character dice from the Field Zone until end of turn.',
     '12003Released from the Ice|Basic Action Card|Prep a die from your Used Pile.',
     '15003Shockwave|Basic Action Card|KO all level 1 character dice.  */** Also, deal 3 damage to target opponent.|Global: Pay [1]. Target level 1 character die is unaffected by action dice this turn.',
-    '12003Surprise Attack|Basic Action Card|Deal 1 damage to target character die.  */** Instead, deal 2 damage.',
+    '12003Surprise Attack|Basic Action Card|Deal 1 damage to target character die.|*/** Instead, deal 2 damage.',
     '14003Villainous Pact|Basic Action Card|Your opponent chooses one non-Villain character die. All other non-Villain character dice cannot block this turn.|Global: Pay [M]. Once per turn, on your turn, if you have no dice in your Prep Area, you may Prep a die from your bag.',
     '131V4Absorbing Man|Carl "Crusher" Creel|When Absorbing Man attacks or blocks, he may copy the A and/or D value of the character die Absorbing Man is blocking or blocked by.',
     '15104Balder|The Brave|While Balder is blocking or blocked, if both Balder and one of the character dice Balder is engaged with are KO\'d, return Balder to the Field Zone at the same level.',

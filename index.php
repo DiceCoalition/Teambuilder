@@ -1420,12 +1420,12 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Strike", "<strong>Strike</strong>");
   pj = pj.replace("Energize", "<strong>Energize</strong>");
   pj = pj.replace("Corrupt", "<strong>Corrupt</strong>");
-  pj = pj.replace("Experience", "<strong>Experience</strong>");  
+//   pj = pj.replace("Experience", "<strong>Experience</strong>");  
   pj = pj.replace("Energy Drain 2", "<strong>Energy Drain 2</strong>");
   pj = pj.replace("Energy Drain", "<strong>Energy Drain</strong>");
   pj = pj.replace("Spark", "<strong>Spark</strong>");
   pj = pj.replace("Obscure", "<strong>Obscure</strong>");
-   pj = pj.replace("Tag Out", "<strong>Tag Out</strong>");
+  pj = pj.replace("Tag Out", "<strong>Tag Out</strong>");
   pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1435,6 +1435,8 @@ document.getElementById('file').onchange = function(){
   } else if (pj.substring(0,6) == 'Global') {
       pj = '<strong>Global</strong>'+pj.substring(6);
       pc = ' class="global"';
+  } else if (pj.substring(0,10) == 'Experience') {
+      pj = '<strong>Experience</strong>'+pj.substring(10);
   } else if (pj.substring(0,13) == 'Retaliation -') {
       pj = '<strong>Retaliation</strong> -'+pj.substring(13);
   } else if (pj.substring(0,8) == 'Zombie -') {
