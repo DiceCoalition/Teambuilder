@@ -1047,7 +1047,7 @@ var sw = [
 '061V4Dormammu|Call Upon the Shadowy Shapes|While Dormammu is active, non-[DCV] character dice cost your opponents [1] more to purchase.',							
 '071V4Dormammu|From Here To Eternity|While Dormammu is active, character dice cost [1] more to field and Global Abilities cost [1] to use. ',							
 '061V4Dormammu|Crimson Bands of Cyttorak|While Dormammu is active, at the end of each player\'s turn, KO the character die with the lowest purchase cost controlled by the active player (you break ties) (Sidekick character dice are considered to have a purchase cost of 0).',							
-'042G4Gamora|Power of Gem|Deadly (At end of turn, KO all character dice that were engaged with this charcter.)|Gamora can only be blocked by 2 or more character dice. ',							
+'042G4Gamora|Power Gem|Deadly (At end of turn, KO all character dice that were engaged with this charcter.)|Gamora can only be blocked by 2 or more character dice. ',							
 '042G4Gamora|Solar Sacrifice|Gamora cannot be blocked by lower level character dice.|* Gamora cannot be blocked by level 1 character dice.',							
 '042G4Gamora|Black Vortex|When fielded, if you control a non-Gamora [GG] character die, KO target level 1 character die.',							
 '064A4Hulk|Primal Fury|Intimidate (When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)',							
