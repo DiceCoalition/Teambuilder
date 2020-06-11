@@ -2225,6 +2225,8 @@ document.getElementById('file').onchange = function(){
   }
   function setteam(set) {
       if (!set.cards) return;
+	  //Wallop was re-coded to be in the m2019 OP instead of Thor set.  Adding this to be backwards compatible with old team lists
+	  set.cards = set.cards.replace("137thor", "9m2019");
       var cards = set.cards.split(';');
       if (!clearteam()) return;
       if (set.name) team_name = set.name;
