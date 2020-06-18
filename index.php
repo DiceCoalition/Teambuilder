@@ -1512,17 +1512,8 @@ document.getElementById('file').onchange = function(){
   
   var format_bans = convert_to_map({
 	  //Two Team Takedown Legacy 
-  K: [  "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG",
-        "DC2016", "M2016", "WKO16DC", "WKO16M", "WKO16DD", "132TOA", 
-        "12AI", "22Drs", "19MYST", "2MYST", "16SMC", "32TOA", "4SMC", "54TOA", "4TOA", "28SWW", 
-        "34TOA", "19TOA", "10AI", "136TOA", "96THOR", "37TOA", "121TOA", "16JUS", "54HHS", "12THOR", 
-        "18BAT", "6JLL", "9KI", "112GotG", "34JUS", "13BFU", "119GotG", "47XFC", "26SWW", "71JUS", 
-        "5M2019", "19JLL", "31XFC", "102XFC", "24JLL", "114THOR", "22XMF", "87XFC", "11TOA", "24HQ", 
-        "32THOR", "24SWW", "15SWW", "1M2019", "103TOA", "42AI", "18SW", "20ORK", "58HHS", "32SWW", 
-        "134TOA", "21KI", "109TOA", "119TOA", "76THOR", "77XFC", "22SWW", "7KI", "49HHS", "64XMF", 
-        "16DXM", "20XMF", "4DXM", "129THOR", "10XFO", "5XFO", "24DXM", "51XMF", "70XMF", "66XMF",
-        "21JUS", "17BAT", "35BAT", "3JUS", "13DOOM", "10DOOM", "72THOR", "114TOA", "53AI", "23HQ"],
+    K: [  "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL", "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017", "DC2016", "M2016", "WKO16DC", "WKO16M", "WKO16DD", 
+        "12AI", "19MYST", "2MYST", "10AI", "16JUS", "6JLL", "9KI", "34JUS", "13BFU", "71JUS", "5M2019", "19JLL", "24JLL", "22XMF", "24HQ", "1M2019", "42AI", "18SW", "20ORK", "21KI", "7KI", "64XMF", "16DXM", "20XMF", "4DXM", "10XFO", "5XFO", "24DXM", "51XMF", "70XMF", "66XMF", "21JUS", "3JUS", "13DOOM", "10DOOM", "53AI", "23HQ", "3TIW", "17BIT", "21WWE", "7WWE", "12TIW", "14ZHN", "1M2019", "13TAG", "21KI", "9KI", "51WWE", "50WWE"],
  /* K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],*/
