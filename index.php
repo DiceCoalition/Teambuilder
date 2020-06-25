@@ -248,6 +248,8 @@
   <input type="checkbox" id="set35" checked>XMF
   <input type="checkbox" id="set36" checked>XFO
   <input type="checkbox" id="set37" checked>DXM
+  <!--//TODO: uncomment for Infinity Gauntlet
+  <input type="checkbox" id="set44" checked>IG -->
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -273,6 +275,7 @@
   <input type="checkbox" id="set41" checked>WWE
   <input type="checkbox" id="set42" checked>BIT
   <input type="checkbox" id="set43" checked>TAG
+
 
 
  
@@ -461,7 +464,7 @@
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
-  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37];
+  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37];//,44]; //TODO: uncomment for Infinity Gauntlet
   var dcsets = [4,6,9,12,17,19,28,32,33,34];
   var dndsets =[2,8,23,38,39,40];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
@@ -1426,6 +1429,8 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Spark", "<strong>Spark</strong>");
   pj = pj.replace("Obscure", "<strong>Obscure</strong>");
   pj = pj.replace("Tag Out", "<strong>Tag Out</strong>");
+  pj = pj.replace("Recruit", "<strong>Recruit</strong>");
+  pj = pj.replace("Rush", "<strong>Rush</strong>");
   pj = pj.replace("(E)", "(<a href='https://win.wizkids.com/bb/viewtopic.php?f=10&t=4588' target='_new'>E</a>)");
   if (pj.substring(0,7) == 'Heroic:' || pj.substring(0,7) == 'Fusion:') {
       pj = '<strong>'+pj.substring(0,7)+'</strong>'+pj.substring(7);
@@ -1617,6 +1622,8 @@ document.getElementById('file').onchange = function(){
   init(60,wwe,'WWE','wwe',[],wwe_aff);	
   init(61,bit,'BIT','bit',[],bit_aff);
   init(62,tag,'TAG','tag',[],tag_aff);
+  //TODO: uncomment for Infinity Gauntlet
+  //init(63,ig,'IG','ig',[],ig_aff);
 
 
    
@@ -2320,6 +2327,7 @@ document.getElementById('file').onchange = function(){
 	wwe:'wwe',
 	tag:'tag',
 	bit:'bit',
+	ig:'ig',
 	
 	  //op sets]
     m2019:'m2019',
