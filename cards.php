@@ -60,7 +60,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag'];//, 'ig'];//TODO: uncomment for Infinity Gauntlet
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -470,8 +470,8 @@
 	'055N4Kevin Nash|nWo Wolfpac|Crosspulse - Remove target opposing Superstar die from the Field Zone until end of turn (place it next to your Superstar cards).',
 	'045N4Kevin Nash|nWo Founder|Whenever a Kevin Nash Superstar die is dmaged while attacking and not KO\'d, deal 2 damage to your opponent.|Global: Pay [F]. Target Superstar die can\'t block this turn unless its owner pays 2 life. You can only use this Global once per Superstar die.',
 	'055N4Kevin Nash|WWE Hall of Famer|When Kevin Nash attacks, you may pay [B][F] to gain +2A, +2D, and Overcrush until end of turn. (You must pay separately for each attacking Kevin Nash Superstar die.)|Global: Pay [F]. Target Superstar die can\'t block this turn unless its owner pays 2 life. You can only use this Global once per Superstar die.',
-	'048D4Kofi Kingston|Fueled by Booty-O\'s|Crosspulse - Prep a die from your Used Pile.',
-	'048D4Kofi Kingston|Immune to Negativity|Your Kofi Kingston Superstar dice can\'t be targeted by your opponent\'s Global Abilities.',
+	'038D4Kofi Kingston|Fueled by Booty-O\'s|Crosspulse - Prep a die from your Used Pile.',
+	'038D4Kofi Kingston|Immune to Negativity|Your Kofi Kingston Superstar dice can\'t be targeted by your opponent\'s Global Abilities.',
 	'048D4Kofi Kingston|Stunning Defense|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|Regenerate (Reroll when KO\'d)',
 	'069S4Roman Reigns|It\'s My Yard|Crosspulse - Deal 2 damage to target opponent.',
 	'069S4Roman Reigns|The Big Dog|Call Out',
