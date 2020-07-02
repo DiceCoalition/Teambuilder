@@ -248,8 +248,7 @@
   <input type="checkbox" id="set35" checked>XMF
   <input type="checkbox" id="set36" checked>XFO
   <input type="checkbox" id="set37" checked>DXM
-  <!--//TODO: uncomment for Infinity Gauntlet
-  <input type="checkbox" id="set44" checked>IG -->
+  <input type="checkbox" id="set44" checked>IG
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -464,7 +463,7 @@
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
-  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37];//,44]; //TODO: uncomment for Infinity Gauntlet
+  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37,44]; 
   var dcsets = [4,6,9,12,17,19,28,32,33,34];
   var dndsets =[2,8,23,38,39,40];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
@@ -1622,8 +1621,7 @@ document.getElementById('file').onchange = function(){
   init(60,wwe,'WWE','wwe',[],wwe_aff);	
   init(61,bit,'BIT','bit',[],bit_aff);
   init(62,tag,'TAG','tag',[],tag_aff);
-  //TODO: uncomment for Infinity Gauntlet
-  //init(63,ig,'IG','ig',[],ig_aff);
+  init(63,ig,'IG','ig',[],ig_aff);
 
 
    

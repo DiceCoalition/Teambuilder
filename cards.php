@@ -60,7 +60,7 @@
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag'];//, 'ig'];//TODO: uncomment for Infinity Gauntlet
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -320,7 +320,7 @@
  '141G4Nebula|Sister to Gamora|While Nebula is active, if you opponent draws and rolls more than 4 dice during their Clear and Draw Step, they lose 2 life.',
  '124I4Pip the Troll|In Search of Warlock|',
  '134B4Proxima Midnight|The Black Order|When fielded, KO a character die you control. If you do, the next die you purchase this turn costs [2] less (minimum 1).',
- '133G4Rocket Raccoon|I\'m the Baddest!|When fielded, deal damage equal to Rocket Racoon\'s A to target opposing character die.',
+ '133G4Rocket Raccoon|I\'m the Baddest!|When fielded, deal damage equal to Rocket Raccoon\'s A to target opposing character die.',
  '132V3Sandman|Fistful|While Sandman is active, when your opponent fields a level 3 character die, spin all your Sandman dice to level 3.',
  '164A4She-Hulk|Greeny|While She-Hulk is active, at the start of your turn (before your Clear and Draw Step), you may field a non-Sidekick character die from your Used Pile at level 1.',
  '14204Spider-Man|Back to Basics|Intimidate (When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)|Spider-Man can only use Intimidate on [DCV], [H], or [BO].',
@@ -355,7 +355,7 @@
  '244A3Iron Man|Multi-Billionaire|Energize - Gain 2 life.',
  '241V4Kang|Time Duplicates|Regenerate (Reroll when KO\'d)|Global: Pay [M]. If a character die would deal you 7 or more combat damage, it instead deals you only 4 combat damage.',
  '253V4Loki|Illusions Abound|When fielded, spin target opposing character die to an energy face (of your choice).',
- '24104Moon Knight|Immagining Help|Recruit - [IW]',
+ '24104Moon Knight|Imagining Help|Recruit - [IW]',
  '254A4Ms. Marvel|Inhuman Lineage|Regenerate (Reroll when KO\'d.)',
  '241G4Nebula|Cold-Blooded|When fielded, deal 3 damage to target character die and lose 1 life.',
  '244I4Pip the Troll|Prince Gofern|While Pip the Troll is active, your opponents pay [1] more to use each Global Ability.',
@@ -384,7 +384,7 @@
  '364A4Captain Marvel|Inspirational Avenger|While Captain Marvel is active, when one of your non-Captain Marvel [AV] character dice deals combat damage, Prep a die from your bag.',
  '332B4Corvus Glaive|Grim Lieutenant|When fielded, you may move a non-Sidekick die from your Used Pile to its card. If you do, dead 2 damage to target character die or player.',
  '361I4Doctor Strange|Celebrated Neurosurgeon|Energize - spin up to two target character dice to energy faces (of your choice).|Global: Pay [M]. Target character die must attack this turn.',
- '334I4Drax|The Pacifist|When fielded, choose an opposing card, cancelling all previous choices. Your opponent may not purchase or field that character until Draw leaves the Field Zone.|Global: Pay [S][S]. Target character die gets +1A and +1D.',
+ '334I4Drax|The Pacifist|When fielded, choose an opposing card, cancelling all previous choices. Your opponent may not purchase or field that character until Drax leaves the Field Zone.|Global: Pay [S][S]. Target character die gets +1A and +1D.',
  '351B4Ebony Maw|Supernatural Persuasion|When fielded, reroll target opposing character die. Your character dice cost [2] less to purchase this turn (for each Ebony Maw die fielded this turn).|Global: Pay [F][M]. Target character gains the [DCV] affiliation until the end of the turn.',
  '332G4Gamora|Angela\'s Ally|Rush - [B] (If you draw this die during your Clear and Draw Step, draw and roll an extra die for each [B] die)',
  '34304Ghost Rider|Pyrokinesis|Energize - Spin all of your character dice in the Field Zone to level 3.',
@@ -402,8 +402,8 @@
  '364B4Proxima Midnight|Killer for Hire|When fielded, KO all opposing level 1 character dice.',
  '333G4Rocket Raccoon|and Grow!|Awaken - Reroll a die in your Reserve Pool.',
  '332V3Sandman|Sinister|While you have the character dice in the Field Zone with the highest fielding cost showing (or tied for the highest), your active Sandman character dice have their printed A doubled (on all levels).',
- '364A4She-Hulk|Los Angele Native|While She-Hulk is active, when your opponent draws and rolls more than 4 dice during their Roll and Reroll Step, you may spin target character die to an energy face (of your choice).',
- '34204Spider-Man|Public Menace|When Spiderman attacks, spin target character die to an energy face (of your choice).',
+ '364A4She-Hulk|Los Angeles Native|While She-Hulk is active, when your opponent draws and rolls more than 4 dice during their Roll and Reroll Step, you may spin target character die to an energy face (of your choice).',
+ '34204Spider-Man|Public Menace|When Spider-Man attacks, spin target character die to an energy face (of your choice).',
  '342G4Star-Lord|King of Spartax|Rush - non-Star-Lord [GG] (If you draw this die during your Clear and Draw Step, draw and roll an extra die for each [GG] die.)|Energize - up to two target character dice gain Call Out.',
  '344B4Supergiant|Mind Control|Regenerate (Reroll when KO\'d.)|When fielded, you may use a copy of target character die\'s When Fielded ability.',
  '381B4Thanos|Enemy of Life|Energize - Target character die gets +4A.|Thanos costs [2] less to purchase (minimum 1) while your opponent has 20 life.',
@@ -5146,6 +5146,7 @@ var sw = [
 	"Black Swan":"144 155*166**",
 	"IG@Black Widow":"012 022 123",
 	"Corvus Glaive":"021 131 031",
+	'IG@Drax':'124 235 246',
 	"Ebony Maw":"012 022 133",
 	"Iron Lad":"022 035 156*",
 	"Pip the Troll":"111 012 022",
