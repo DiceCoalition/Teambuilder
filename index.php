@@ -1517,7 +1517,7 @@ document.getElementById('file').onchange = function(){
   var format_bans = convert_to_map({
 	  //Two Team Takedown Legacy 
   K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL", "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017", "DC2016", "M2016", "WKO16DC", "WKO16M", "WKO16DD", 
-       "12AI", "19MYST", "2MYST", "10AI", "16JUS", "6JLL", "9KI", "34JUS", "13BFU", "71JUS", "5M2019", "19JLL", "24JLL", "22XMF", "24HQ", "1M2019", "42AI", "18SW", "20ORK", "21KI", "7KI", "64XMF", "16DXM", "20XMF", "4DXM", "10XFO", "5XFO", "24DXM", "51XMF", "70XMF", "66XMF", "21JUS", "3JUS", "13DOOM", "10DOOM", "53AI", "23HQ", "90XFC", "58BFU", "3TIW", "17BIT", "21WWE", "7WWE", "12TIW", "14ZHN", "13TAG", "51WWE", "50WWE"],
+       "12AI", "19MYST", "2MYST", "10AI", "16JUS", "6JLL", "9KI", "34JUS", "13BFU", "71JUS", "5M2019", "19JLL", "24JLL", "22XMF", "24HQ", "1M2019", "42AI", "18SW", "20ORK", "21KI", "7KI", "64XMF", "16DXM", "20XMF", "4DXM", "10XFO", "5XFO", "24DXM", "51XMF", "70XMF", "66XMF", "21JUS", "3JUS", "13DOOM", "10DOOM", "53AI", "23HQ", "58BFU", "3TIW", "17BIT", "21WWE", "7WWE", "12TIW", "14ZHN", "13TAG", "51WWE", "50WWE"],
  /* K: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
        "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
 	   "1DC2016", "2DC2016","3DC2016","4DC2016", "1M2016", "2M2016"],*/
