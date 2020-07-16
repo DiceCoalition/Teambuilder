@@ -395,7 +395,7 @@
  '344G4Iron Man|Smart Guy on Earth|Rush - [F] (If you draw this die during your Clear and Draw Step, draw and roll and extra die for each [F] die.)|When fielded, spin target opposing level 1 character die to an energy face (of your choice).',
  '351V4Kang|Peerless General|While Kang is active, each of your attacking character dice can only be blocked by 2 or more character dice.|Global: Pay [M]. If a character would deal you 7 or more combat damage, it instead deals you only 4 combat damage.',
  '363V4Loki|Preventative Measures|When fielded, choose an opposing character card, replacing all previous choices. While Loki is active, when your opponent fields a character die from that card, Loki deals it 3 damage.',
- '35101Moon Knight|One-Man Avenger|At the beginning of the game, chooe one of your [AV] character cards. For the remainder of the game, Moon Knight is considered to have the text of that card (including Global Abilities) instead of this text (replacing their name with his own, if applicable).',
+ '35101Moon Knight|One-Man Avenger|At the beginning of the game, choose one of your [AV] character cards. For the remainder of the game, Moon Knight is considered to have the text of that card (including Global Abilities) instead of this text (replacing their name with his own, if applicable).',
  '354A4Ms. Marvel|Standing Against Hate|Overcrush (Character dice with Overcrush deal damage in excess of blocker\'s D to opponent.)',
  '351G4Nebula|Space Pirate|Awaken - Deal 1 damage to target character die, and 2 damage to target player.',
  '354I4Pip the Troll|Contagious Debauchery|When fielded, spin up to two opposing character dice to energy faces (of your choice).',
@@ -743,7 +743,7 @@ var xmf = [
     '021X5Beast|Here, Sir!|Beast can only be blocked by two or more character dice.',
     '021X5Beast|Taming the Beast Within|When Beast KOs a blocking character die, deal 1 damage to the KO\'d die\'s controller.',
 	'031X5Beast|Atavistic Tendencies|When Beast attacks, you may pay [M]. If you do target opposing character die must block this Beast die.<em>(You may pay a [M] and perform this effect for each Beast die that attacks.)</em>|* Instead, two target opposing character dice must block this Beast die.',
-    '043H4Black Tom Cassidy|White Bishop|Attune <em>(While this character die is active, when you use an action die, deal 1 damage to target player or characer die.)</em>',
+    '043H4Black Tom Cassidy|White Bishop|Attune <em>(While this character die is active, when you use an action die, deal 1 damage to target player or character die.)</em>',
     '043B4Black Tom Cassidy|Plans in Motion|Fast <em>(Characters with Fast deal combat damage before characters without Fast.)</em>|Call Out <em>(When this character die attacks, target character die is the only character die that may block this character die.)</em>',
     '034B4Blob|Frederick Dukes|Intimidate <em>(When fielded, remove target opposing character die from the Field Zone until end of turn - place it next to your character cards.)</em>|Blob may only use Intimidate on Sidekick character dice. Blob\'s Initimidate ability affects all opposing Sidekick character dice <em>(instead of affecting only one)</em>. Blob gets +1A <em>(until end of turn)</em> for each Sidekick character die affected by Blob\'s Intimidate ability.',
     '044B4Blob|Big Talkin\' Costumed Clown|While Blob is active, your opponent may not purchase or field character dice with a printed cost of [2].',
@@ -778,7 +778,7 @@ var xmf = [
     '031H4Madelyne Pryor|Sinister Origin|Energy Drain <em>(Spin engaged character dice down 1 level.)</em>|Your [HELL] character dice gain Energy Drain.',
     '031H4Madelyne Pryor|Anodyne|Attune <em>(While this character is active, when you use an action die, deal 1 damage to target player or character die.)</em>',
     '051H2Magneto|Grey King|While active, your non-Magneto [HELL] character dice get +2A and +2D.',
-    '051B2Magneto|Homo Superior|Your [BOM] characer dice get +1A and +1D for each different, active [XMEN] character <em>(both sides)</em>.',
+    '051B2Magneto|Homo Superior|Your [BOM] character dice get +1A and +1D for each different, active [XMEN] character <em>(both sides)</em>.',
     '044B4Mastermind|Jason Wyngarde|Before declaring blockers, you may roll one of your active Mastermind dice. If it shows an energy face, KO it. Otherwise, remove X attacking character dice from the Attack Zone, where X is the rolled die\'s level <em>(it remains in the Field Zone at its new level)</em>.',
     '034H4Mastermind|Probationary Member|Mastermind takes no damage during combat.',
     '024B4Mastermind|Fracturing the Phoenix|Infiltrate <em>(When this character die is unblocked, you may return this die to the Field Zone and it deals your opponent 1 damage.)</em>',
@@ -811,7 +811,7 @@ var xmf = [
     '03003Teamwork|Basic Action Card|Your active character dice get +1A and +1D for each of your other, different active characters if shares an affiliation with.',
     '04003Too Big To Fly|Basic Action Card|KO target character die with A of 5 or greater.|Global: Pay [F]. Target character die gets +1A.',
     '02003Way Out West|Basic Action Card|Put target character die from opponent\'s Prep Area into their Used Pile.',
-	'02003Whoever Assemble!|Basic Action Card|Choose an affiliation. Character die of that affiliation are free to field <em>(until end of turn)</em>. At the end of turn, if you did not field any chracters this turn, Prep a die from your bag.',
+	'02003Whoever Assemble!|Basic Action Card|Choose an affiliation. Character die of that affiliation are free to field <em>(until end of turn)</em>. At the end of turn, if you did not field any characters this turn, Prep a die from your bag.',
 ];
     
 var m_op2019_dice = ['ai','smc','thor','imw'];
@@ -848,7 +848,7 @@ var myst = [
 '044M4Phantom Stranger|Sorcery|Attune',
 '044M4Phantom Stranger|Mysticism|While Phantom Stranger is active, when an opposing character die attacks, the attacking character die deals 1 damage to all other opposing character dice.',
 '044M4Phantom Stranger|Empowering|While Phantom Stranger is active, when an action die is used, Phantom Stranger gets +1A and +1D (until end of turn).',
-'061J4Shazam|Stamina of Atlas|Strike (If you field no other chracters this turn, this character gets +2/+2 and Overcrush.)',
+'061J4Shazam|Stamina of Atlas|Strike (If you field no other characters this turn, this character gets +2/+2 and Overcrush.)',
 '061J4Shazam|Power of Zeus|Attune|When fielded, you may roll two unpurchased Basic Action Dice. If they both roll action faces, place them in your Prep Area. Otherwise, return them to their cards.',
 '071J4Shazam|Courage of Achilles|While Shazam is active, your action dice gain Boomerang.',
 '02304Yellow Lantern Ring|The Weaponer\'s Ring|Character dice in your Reserve Pool gain Intimidate (until end of turn).',
@@ -917,7 +917,7 @@ var jus = [
     '03202Hall of Doom|Base of Operations|Your [DCLOD] character dice get +1A and +1D (until end of turn).|*/** Instead, your [DCLOD] character dice get +2A and +2D.',
     '02202Hall of Doom|Headquarters|At the end of this turn, your may field a [DCLOD] character die from your Used Pile at level 1.',
     '044V4Lex Luthor|Man of More than Ambition|While Lex Luthor is active, when you use an action die, draw a die. If it is a [DCV] character die, Prep it. Otherwise, place it in your Used Pile.',
-    '044V4Lex Luthor|Leader in World Politics|While Lex Luthor is active, your opponents cannot purchase more than one action die and one characer die per turn.',
+    '044V4Lex Luthor|Leader in World Politics|While Lex Luthor is active, your opponents cannot purchase more than one action die and one character die per turn.',
     '064J4Martian Manhunter|A Manhunter|Strike (This character gets +2A, +2D, and Overcrush so long as it is the only character die you fielded this turn.)|Martian Manhunter can only be blocked by two or more character dice.',
     '064J4Martian Manhunter|Endless Abilities|While Martian Manhunter is active, while an opponent has an active [DCV] character ie, your character dice gain Overcrush.',
     '053V4Metallo|John Corben|While Metallo is active, when you field a Sidekick character die, you may pay [B]. If you do, deal 1 damage to target opponent.',
@@ -964,7 +964,7 @@ var jus = [
     '04003Power Almighty|Basic Action Card|Spin each of your active character dice up 1 level. For each active character die you could not spin up, Prep one die from your bag.',
     '02003Static Field|Basic Action Card|Character dice deal only 1 combat damage this turn.|Global: Pay [M]. Remove target attacking character die from combat.',
     '02003Stretch|Basic Action Card|Move any number of dice from your Used Pile to your bag.|*/** Also, draw one die and roll it.|Global: Pay [F]. Once per turn, you may draw and roll a die. Move a die from your Reserve Pool to your Used Pile.',
-    '02003Suffering and Satisfaction|Basic Action Card|Choose an affiliation. Target character die with that affiliation gets +2A, and a different target characer die with that affiliation gets -2A. You may only use this action if two dice in the Field Zone have the same affiliation.',
+    '02003Suffering and Satisfaction|Basic Action Card|Choose an affiliation. Target character die with that affiliation gets +2A, and a different target character die with that affiliation gets -2A. You may only use this action if two dice in the Field Zone have the same affiliation.',
 ];
 
 var wd_op2018 = [
@@ -1457,7 +1457,7 @@ var sw = [
     '123M4e1Yuan-ti Pureblood|Lesser Humanoid|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|When you use an action die, your Yuan-ti Pureblood character dice cannot be blocked (until end of turn).',
     '124M4e0Zombie|Lesser Undead|When Zombie KOs an NPC character die, choose one:|• Field a Zombie character die in your Used Pile at level 2.|• Spin all of your active Zombie character Dice up 1 level.',
     '232H4g1Aasimar Paladin|Greater Harper|Experience|Prevent half (rounded up) of the combat damage dealt to Aasimar Paladin by Evil character dice.',
-    '263M4e1Acererak|The Eternal|Attune (While this character is active, when you use an action die, deal 1damae to target player or character die.)|While Acererak is active, when you use an action die, the next Evil character you purchase this turn costs 2 less (to a minimum of 1).|Global: Pay [1]. Once per turn, reroll target action die in your Reserve Pool or Field Zone.',
+    '263M4e1Acererak|The Eternal|Attune (While this character is active, when you use an action die, deal 1 damage to target player or character die.)|While Acererak is active, when you use an action die, the next Evil character you purchase this turn costs 2 less (to a minimum of 1).|Global: Pay [1]. Once per turn, reroll target action die in your Reserve Pool or Field Zone.',
     '254M4n0Allosaurus|Greater Beast|When Allosaurus attacks, it gets +2A (until end of turn).',
     '264M4n0Amber Golem|Greater Construct|Fabricate 2-5: You may KO 2 character dice with total purchase cost [5] or more to purchase this die for free.|When Amber Golem KOs a blocking character die, you may pay [1] to move the KO\'d die to your opponent\'s Used Pile (instead of the Prep Area).',
     '25204g1Artus Cimber|Friend of Dragonbait|While Artus Cimber is active, your non-Evil character dice get +2A and +2D when blocking, or when blocked by, Evil character dice (until end of turn).',
