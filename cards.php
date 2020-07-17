@@ -428,7 +428,7 @@
  '43204Spider-Man|Superior Team-Up|Spider-Man\'s card is considered to have the affiliations of all the character cards on your team.',
  '442G4Star-Lord|Power Gem|Energize - Up to two target character dice get +2A (until end of turn).',
  '471B4Thanos|Preparing the Way|Overcrush|Once per turn, when you field a Black Order character die, you may KO target character die you control. If you do, Thanos costs [2] less (minimum 1).',
- '46304Thor|Jormungand\'s Fear|Whie Thor is active, when you field a character die, deal 2 damage to target character die or player.|Global: Pay [B]. Once per turn, the next action die you purchase this turn costs 2 less (minimum 1.)',
+ '46304Thor|Jormungand\'s Fear|While Thor is active, when you field a character die, deal 2 damage to target character die or player.|Global: Pay [B]. Once per turn, the next action die you purchase this turn costs 2 less (minimum 1.)',
  '433I4Turk Barrett|Mind Gem|Energize - You may deal 1 damage to target character die. While Turk Barret is active, when you spend [M] energy to use a Gloal Ability or field a character die, deal 1 damage to target character die.|* This die gains Infiltrate.',
  ];
 
