@@ -808,7 +808,7 @@ var xmf = [
     '02003Invulnerability|Basic Action Card|Until the end of the turn, whenever one of your attacking character dice is KO\'d, return it to the Field Zone.|Global: Pay [B]. Target character die gets +1A.',
     '03003Reinforcements|Basic Action Card|Choose 1, 2, or 3. Then draw that many dice. If you draw only Sidekick dice, field them. Otherwise, place all dice drawn in your Used Pile.',
     '03003Replenish|Basic Action Card|The next time <em>(this turn)</em> that a character die you control would be damaged, prevent the first 2 damage. If that character is not KO\'d, gain 1 life.',
-    '03003Teamwork|Basic Action Card|Your active character dice get +1A and +1D for each of your other, different active characters if shares an affiliation with.',
+    '03003Teamwork|Basic Action Card|Your active character dice get +1A and +1D for each of your other, different active characters it shares an affiliation with.',
     '04003Too Big To Fly|Basic Action Card|KO target character die with A of 5 or greater.|Global: Pay [F]. Target character die gets +1A.',
     '02003Way Out West|Basic Action Card|Put target character die from opponent\'s Prep Area into their Used Pile.',
 	'02003Whoever Assemble!|Basic Action Card|Choose an affiliation. Character die of that affiliation are free to field <em>(until end of turn)</em>. At the end of turn, if you did not field any characters this turn, Prep a die from your bag.',
