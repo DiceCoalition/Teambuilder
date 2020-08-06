@@ -1256,7 +1256,7 @@ var sw = [
     var thor_aff = { 0:'0', I:'MIH', A:'2', V:'6', F:'ASF', G:'G',  S:'MSTARK', M:'MYSTIC', g:'GA', H:'F'};
     // Dice / Genders
     var thor =[
-    '14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it’s A (until end of turn).',
+    '14003Archnemesis!|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it’s A (until end of turn).',
     '13003Big Entrance|Basic Action Card|When purchased, you may add this die to your bag. When used, dice purchased this turn cost 1 less than their printed cost (minimum 1), and may be put directly into your dice bag instead of your Used Pile. (No matter how many Big Entrance dice are used.)',
     '13003Don the Helm|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
     '14003Flying Hammer|Basic Action Card|KO target level 1 character die.  ** Instead, KO target level 1 or level 2 character die.|Global: Pay [F]. Target blocked character die deals no damage.',
