@@ -1,5 +1,6 @@
 ﻿ <script>
     "use strict";
+   
 
     var iconname = {
      M:"mask",F:"fist",B:"bolt",S:"shield",
@@ -529,7 +530,7 @@
 	'031W4Ric Flair|The Dirtiest Player in the Game|Ric Flair must attack if able.',
 	'041W4Ric Flair|WOOOOOOOOO!|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|Global: Pay [4]. Target Superstar die gets +4A.',
 	'041W4Ric Flair|The Nature Boy|Deadly (At the end of turn, KO all Superstar dice that were engaged with this Superstar.)|If this Superstar is KO\'d, at the end of the turn, KO target opposing Superstar die that did not attack or block this turn.',
-	'04204Ronda Rousey|Rowdy|Fast (This Superstar deals damage before non- Fast Superstars in combat.)',
+	'04204Ronda Rousey|Rowdy|Fast (This Superstar deals damage before non-Fast Superstars in combat.)',
 	'04204Ronda Rousey|The Baddest Woman on the Planet|Impulse - You may pay [1] to Prep this die (Impulse abilities happen when you purchase the die with Impulse.)',
 	'04204Ronda Rousey|Bad Reputation|When Ronda Rousey KOs an opposing Superstar die, that die\'s controller loses 1 life.',
 	'02404Sasha Banks|It\'s Boss Time!|While Sasha Banks is active, your Superstar dice cost [1] less to field (minimum 0).',
@@ -2100,7 +2101,7 @@ var sw = [
     '02003Upgrade - Fortification|Basic Action Card|Target character die you control gains Iron Will. Lose 2 life if that character die isn\'t a [S] character die.',
     '02003Upgrade - Proton Cannon|Basic Action Card|Target character die you control gains Overcrush. KO that character die at end of turn if it isn\'t a [F] character die.',
     '02003Upgrade - Smokescreen|Basic Action Card|Target character die you control gets +1A. If it is a level 1 [M] character die, it can\'t be blocked this turn.',
-    '02003Upgrade - Unibeam|Basic Action Card|Target character die you control gets +2A. If it is a [B] character die, it also gains Fast .',
+    '02003Upgrade - Unibeam|Basic Action Card|Target character die you control gets +2A. If it is a [B] character die, it also gains Fast.',
     ];
     var hhs = [
     '02403April|No Mere Damsel|Ally <em>(This die counts as a Sidekick in the Field Zone.)</em>|Turtle Power <em>(While April is active, other [TURTLE] character dice cost 1 less to purchase, to a minimum of 1.)</em>',
@@ -2169,7 +2170,7 @@ var sw = [
     '152V4Angel Dust|Chicagoan|When Angel Dust blocks or is blocked, she gets +XA and +XD where X is equal to the combined total level of all character dice she is engaged with.',
     '143G4Angela|Asgardian Assassin|When fielded, deal 2 damage to target non-[B] character die.',
     '141I4Black Bolt|...|When fielded, target character die you control gets +2A. If that character die is [MIH], it gets +3A instead.',
-    '153V4Black Tom Cassidy|Trusty Shillelagh|Fast <em>(Deals combat damage before character dice without Fast .)</em>|Black Tom Cassidy gets +1A and +1D for each different, opposing [XMEN] character die.',
+    '153V4Black Tom Cassidy|Trusty Shillelagh|Fast <em>(Deals combat damage before character dice without Fast.)</em>|Black Tom Cassidy gets +1A and +1D for each different, opposing [XMEN] character die.',
     '13104Blind Al|Stay in the Deadhut|When Blind Al is dealt combat damage, deal 1 damage to target opponent.',
     '132D4Bob, Agent of Hydra|Hiding Behind You|While Bob, Agent of Hydra is active, [MDP] character dice get +1A.',
     '162X4Colossus|Rigid Morals|Back for More - Deal 1 damage to all character dice and players. <em>(Use when rolled from the Prep Area.)</em>',
@@ -2208,10 +2209,10 @@ var sw = [
     '25204Agent X|Trained by Taskmaster|When Agent X deals combat damage to an opponent, you may pay 2 life to move Agent X to the Prep Area <em>(rather than the Used Pile)</em>.',
     '25204Angel Dust|Morlock|While your life total is less than your opponent\'s, Angel Dust gets +2A and +2D.',
     '243G4Angela|Aldrif Odinsdottir|When Angela attacks, if the defending player has taken damage this turn, Angela gets +2A.',
-    '251I4Black Bolt|Let It All Out!|When fielded, all [MIH] character dice you control gain Fast . <em>(Characters with Fast deal combat damage before character dice without Fast.)</em>',
+    '251I4Black Bolt|Let It All Out!|When fielded, all [MIH] character dice you control gain Fast. <em>(Characters with Fast deal combat damage before character dice without Fast.)</em>',
     '253V4Black Tom Cassidy|Concussive Blast|When fielded, KO target opposing [XMEN] character die.',
     '23104Blind Al|Laxatives in your Food|When fielded, if you have been dealt damage this turn, deal 1 damage to target opponent.',
-    '232D4Bob, Agent of Hydra|Hydra Doesn\'t Offer Dental|While Bob, Agent of Hydra, is active, [MDP] character dice gain Fast . <em>(Characters with Fast deal combat damage before character dice without Fast.)</em>',
+    '232D4Bob, Agent of Hydra|Hydra Doesn\'t Offer Dental|While Bob, Agent of Hydra, is active, [MDP] character dice gain Fast. <em>(Characters with Fast deal combat damage before character dice without Fast.)</em>',
     '272X4Colossus|Former Juggernaut|When fielded, deal 2 damage to all level 1 character dice.',
     '252D4Deadpool|Mmmmmm Chimichangas...|Deadly <em>(At end of turn, KO all character dice that were engaged with this character.)</em>|When fielded, deal 2 damage to all players.',
     '242D4Dogpool|Woof|Back for More - Target [MDP] character die gets +1A and +1D. <em>(Use when rolled from the Prep Area.)</em>',
@@ -2429,7 +2430,7 @@ var sw = [
     '351V4Ra\'s Al Ghul™|League of Assassins|When fielded, KO target level 3 character die.',
     '32A04Rip Hunter™\'s Chalkboard|WHEN AM I?|Add all dice in your bag to your Used Pile. For each [M] or [S] character added to your Used Pile in this way, give target character die +1A and +1D <em>(if a die added to your Used Pile in this way is [M] and [S] give +2A and +2D instead)</em> <em>(until end of turn)</em>.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
     '342V4Roy Harper™|Arsenal|When fielded, KO target opposing [TT] character die unless its owner pays [1].',
-    '32704S.T.A.R. Labs™|Science and Technology|All of your [B] character dice gain Fast . All of your [S] character dice get +2D <em>(until end of turn)</em>.|*/** Instead, all of your [B] and [S] character dice get +2D and gain Fast <em>(until end of turn)</em>. <em>(Character dice with Fast deal combat damage before non-Fast characters.)</em>|Global: Pay [B][S]. Move a Sidekick die from your Used Pile to your Prep Area and field another Sidekick die from your Used Pile.',
+    '32704S.T.A.R. Labs™|Science and Technology|All of your [B] character dice gain Fast. All of your [S] character dice get +2D <em>(until end of turn)</em>.|*/** Instead, all of your [B] and [S] character dice get +2D and gain Fast <em>(until end of turn)</em>. <em>(Character dice with Fast deal combat damage before non-Fast characters.)</em>|Global: Pay [B][S]. Move a Sidekick die from your Used Pile to your Prep Area and field another Sidekick die from your Used Pile.',
     '331A4Speedy™|Accomplished Archer|While Speedy is attacking, when your opponent deals blockers, Speedy deals each of those character dice 1 damage.',
     '343T4Static™|Taser Punch|While Static is active, whenever your opponent rolls 2 or more dice at once, KO target Sidekick unless your opponent takes 1 damage.',
     '364J4Superman™|Up, Up, and Away!|When you purchase this die, add it to your bag. While Superman is active, your action dice cost [2] less <em>(to a minimum of 1)</em>.',
