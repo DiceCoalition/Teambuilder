@@ -1301,7 +1301,7 @@ var sw = [
     '143F4SP//dr|Mechanized|While SP//dr is active, double all damage dealt to [DCV] character dice.',
     '144H4Samantha Wilson|Project: Rebirth|While Samantha Wilson is active, when you field a Sidekick die, draw and roll a die.|Global: Pay [S]. Prevent 1 damage to target character die or player.',
     '15104Sif|The Stunning|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) While Thor is active, Sif gets +3A.',
-    '171V4Surtur|The Fire Giant|Breath Weapon 2(Pay [2] to deal 2 damage to your opponent and all their character dice.)',
+    '171V4Surtur|The Fire Giant|Breath Weapon 2 (Pay [2] to deal 2 damage to your opponent and all their character dice.)',
     '13404The Bifrost|Rainbow Road|Until the end of the turn, when you field a character die, you may move one copy of that character die from your Used pile to the Field Zone at the same level.',
     '163A4Thor (M)|A Journey Into Mystery|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)|Global: Pay [2B]. Once per turn, deal 1 damage to target character die.',
     '164A4Thor (F)|Warrior\'s Spirit|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.) Thor cannot be damaged by [DCV] character dice or action dice.|Global: Pay [S]. Target attacking character die goes to the Used Pile if KO\'d this turn.',
