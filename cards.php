@@ -869,7 +869,7 @@ var doom = [
 '032J4Black Canary|Second Life|Strike (If you field no other characters this turn, this character gets +2/+2 and Overcrush.)',
 '042J4Black Canary|Costumed Adventurer|Retaliation',
 '032J4Black Canary|Flower Shop Owner|When Black Canary attacks, [DCV] character dice cannot block (until end of turn).',
-'034D4Elasti-Girl|Size Alteration|Elasti-Girl gets +1D for each of yoru active non-Elasti-Girl character dice.',
+'034D4Elasti-Girl|Size Alteration|Elasti-Girl gets +1D for each of your active non-Elasti-Girl character dice.',
 '034D4Elasti-Girl|Rita Farr|When Elasti-Girl blocks, spin her to level 3. When Elasti-Girl blocks, she gets +1A and +1D.',
 '024D4Elasti-Girl|Talented Actress|Elasti-Girl cannot attack the turn she is fielded.|Aftershock: Prevent 2 damage from an attacking character die, or prevent 2 damage to you (you choose).',
 '043J4Green Arrow|No Fancy Ring|When fielded, deal X damage to each opposing character die, where X is the number of your active [DCJL] characters other than Green Arrow.',
@@ -2431,7 +2431,7 @@ var sw = [
     '32A04Rip Hunter™\'s Chalkboard|WHEN AM I?|Add all dice in your bag to your Used Pile. For each [M] or [S] character added to your Used Pile in this way, give target character die +1A and +1D <em>(if a die added to your Used Pile in this way is [M] and [S] give +2A and +2D instead)</em> <em>(until end of turn)</em>.|Global: Pay [S]. The first die you purchase this turn is added to your Prep Area instead of your Used Pile.',
     '342V4Roy Harper™|Arsenal|When fielded, KO target opposing [TT] character die unless its owner pays [1].',
     '32704S.T.A.R. Labs™|Science and Technology|All of your [B] character dice gain Fast. All of your [S] character dice get +2D <em>(until end of turn)</em>.|*/** Instead, all of your [B] and [S] character dice get +2D and gain Fast <em>(until end of turn)</em>. <em>(Character dice with Fast deal combat damage before non-Fast characters.)</em>|Global: Pay [B][S]. Move a Sidekick die from your Used Pile to your Prep Area and field another Sidekick die from your Used Pile.',
-    '331A4Speedy™|Accomplished Archer|While Speedy is attacking, when your opponent deals blockers, Speedy deals each of those character dice 1 damage.',
+    '331A4Speedy™|Accomplished Archer|While Speedy is attacking, when your opponent declares blockers, Speedy deals each of those character dice 1 damage.',
     '343T4Static™|Taser Punch|While Static is active, whenever your opponent rolls 2 or more dice at once, KO target Sidekick unless your opponent takes 1 damage.',
     '364J4Superman™|Up, Up, and Away!|When you purchase this die, add it to your bag. While Superman is active, your action dice cost [2] less <em>(to a minimum of 1)</em>.',
     '342T4The Atom™|Littlest Big Man|While The Atom is active, whenever you could use a Global Ability you may spin him to level 1 and spin another target character die to level 3.',
@@ -5036,7 +5036,7 @@ var sw = [
 
     //DOOM PATROL
     "Elasti-Girl":"012 024 134",
-    "Negative Man":"124 125 127",
+    "Negative Man":"124 125*127*",
     "Plastic Man":"114 116 128",
     "Robotman":"132 143 254",
 
