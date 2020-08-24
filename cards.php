@@ -416,7 +416,7 @@
  '346H4Typhoid Mary|Red Rubber Boots|Typhoid Mary costs [1] less to purchase if you have an active [H] character die. When fielded, choose an opposing character card, replacing all previous choices. While Typhoid Mary is active, ignore that card\'s text (including Global Abilities).',
  '322M4Wong|Second Rate Jarvis|When fielded, if you spent one or more [M] energy to field Wong, reroll target opposing character die.',
  '461I4Adam Warlock|Leader of the Infinity Watch|While active, when a die with Energize is spent as energy and leaves the Reserve Pool, roll it. On any energy face, use its Energize effect. (This die does not return to the Reserve Pool, regardless of the result.)',
- '441I4Black Widow|Intelligence Assets|While you have [F] in your Reserve Pool, Black Widow gets +2A. While you three or more [F] in your Reserve Pool, she gets an additional +1A.',
+ '441I4Black Widow|Intelligence Assets|While you have [F] in your Reserve Pool, Black Widow gets +2A. While you have three or more [F] in your Reserve Pool, she gets an additional +1A.',
  '453V4Bullseye|Accuracy|Energize - Deal 3 damage distributed how you choose among up to 3 target character dice.',
  '474A4Captain Marvel|Reality Gem|Energize - Reroll all opposing character dice.',
  '461I4Doctor Strange|Trusting in Destiny|While Doctor Strange is active, when you field an [IW] character die, you may reroll target character die.|Global: Pay [M], Target character die must attack this turn.',
