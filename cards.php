@@ -4236,7 +4236,7 @@ var sw = [
     "Punisher":"141 152 263",
     "Pyro":"031 142 152",
     "Quicksilver":"031 132 143",
-    "Red Hulk":"166*277*388",
+    "Red Hulk":"165*277*388",
     "Rogue":"123 245 256",
     "Sabretooth":"133 144 254",
     "Scarlet Witch":"013 033 153",
