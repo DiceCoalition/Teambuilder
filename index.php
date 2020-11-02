@@ -387,7 +387,7 @@
   </select>
   </span>  
   </div>
-  Search operators: &=AND ~=NOT 
+  Search operators: &=AND ~=NOT ^=Starts With
   <br>
   <input id="filt0" type="text" placeholder="#">
   <input id="filt1" type="text" placeholder="Filter name">
@@ -1845,10 +1845,16 @@ document.getElementById('file').onchange = function(){
       makesearchlink();
   }
   function regexfilter(v) {
-      if (v.indexOf("&") >= 0 || v.indexOf("|") >=0 || v.indexOf("~") >=0) {
+      if (v.indexOf("&") >= 0 || v.indexOf("|") >=0 || v.indexOf("~") >=0 || v.indexOf("^") >=0){
     return new RegExp(v.split(/ *\| */).map(function(a){return '^'+a.split(/ *\& */).map(function(a){
-        var aa = a.replace(/^~ */,'');
-        return (a === aa ? "(?=.*" : "(?!.*")+aa.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')+")";
+		if(a.startsWith("^")){
+			var aa = a.replace('^', '');
+			return "(?="+aa.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')+")";
+		}
+		else{
+			var aa = a.replace(/^~ */,'');
+			return (a === aa ? "(?=.*" : "(?!.*")+aa.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')+")";
+		}
     }).join('')}).join('|'));
       }
   }

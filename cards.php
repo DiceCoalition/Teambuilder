@@ -23,7 +23,7 @@
      MDFD:"defenders",
      BOM:'brotherhood of evil mutant',
      MEX:'exiles',
-     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
+     KC:'chaos', KDG:'deathguard', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
      DOOM:'doompatrol',
 	 HELL:'hellfireclub',
 	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
@@ -53,7 +53,7 @@
      MDFD:'aMDFD',
      BOM:'aMBOM', MEX:'aMEX',
      PAWN:'pawn',
-     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
+     KC:'aKC', KDG:'aKDG', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
      DOOM:'aDOOM',
 	 HELL:'aHELL',
 	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
@@ -140,6 +140,7 @@
     { name:'tdf', pic: 'aA' },
     { name:'egyptian', pic: 'aB' },
     { name:'chaos', pic: 'aKC' },
+	{ name:'deathguard', pic: 'aKDG' },
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
@@ -192,7 +193,7 @@
 	 JLMYSTIC:['mystic', 'justiceleague'],
      JLTA:['thunderbolts','avengers'],
      JLVT:['villains','thunderbolts'],
-     KCDG:['chaos','death guard'],
+     KCDG:['chaos','deathguard'],
      KC:'chaos',
      KIUM:['imperium','ultramarines'],
      KO:'orks',
@@ -3012,7 +3013,7 @@ var sw = [
     // GAF dice
     '552G4Roy Harper™|Adolescent Archer|Fast |When Roy Harper attacks, you may pay [B] to give him +1A and -1D <em>(until end of turn).</em>.',
     // GAF dice
-    '555V3Barry Allen™|Fastest Man Alive|Fast |[DCV] character dice with Fast deal no damage to Barry Allen dice.',
+    '555J3Barry Allen™|Fastest Man Alive|Fast |[DCV] character dice with Fast deal no damage to Barry Allen dice.',
     // GAF dice
     '572V3Professor Zoom™|Thief|Fast |If you used Cosmic Treadmill this turn, you may pay [2] less to purchase Professor Zoom.',
     ];
