@@ -284,7 +284,7 @@
  '14003Besmirch|Basic Action Card|Target opposing character die loses its ability text until end of turn (not including Global Abilities.|Energize - Deal target character die 1 damage.',
  '13003Big Entrance|Basic Action Card|Impulse - You may add this die to your bag. (Impulse abilities happen when you purchase the die with Impulse.)|Dice purchased this turn cost 1 less than their printed cost (no matter how many Big Entrance dice are used, minimum 1), and gain Impulse - You may add this die to your bag.',
  '12003Counterstrike|Basic Action Card|Choose an affiliation. Prep one die of that affiliation from your Used Pile. Move all other dice of that affiliation from your Used Pile to your bag.|Global: Pay [1]. Once during your turn, Prep a Sidekick die from your Used Pile.',
- '13003Focus|Basic Action Card|Spin one target character die up or down one level.|*/** Spin two target character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
+ '13003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
  '14003Inspiring|Basic Action Card|Choose one of your character dice in the Field Zone with the lowest printed A showing. That die has its printed A replaced with the printed A (on all levels) of the character die in your Field Zone with the highest purchase cost (you choose if tied).',
  '13003Investigation|Basic Action Card|Draw and roll 2 dice (place them in your Reserve Pool).',
  '12003Nefarious Broadcast|Basic Action Card|Cancel any Persistent Global Ability effects. Neither player may use Global Abilities until end of turn.',
