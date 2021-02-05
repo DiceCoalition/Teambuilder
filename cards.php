@@ -277,6 +277,17 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
+var m_op2020_dice = ['ig'];
+var m_op2020_aff = { 0:'0', H:"HAND", S:'ASF'};
+var m_op2020 = [
+    '53204???|???|???',
+	'556H5Typhoid Mary|Violent Tendencies|Energize - Your [PAWN] character dice and [H] character dice get +2A and Overcrush at the beginning of this attack step.',
+	'53204???|???|???',
+	'542S6Spider-Man|Wall-Crawler of Forest Hills|The first Spider-Man die you purchase each game costs [1] less.|Recruit - [PAWN]|(When this die damages an opponent with combar damages, move a [PAWN] die from your Used Pile, Reserve Pool, or Prep Area into the FIeld on its level 1 character face.)',
+	'53204???|???|???',
+	'55003Slingers|Basic Action Card|At the beginning of your attack step, your opponent chooses 1 of your character dice that can\'t attack this turn. Two target character dice can\'t block this turn.|Global: Pay [M]. Target character die must attack this turn.',
+];
+
 //begin Marvel Infinity Gauntlet
  var ig_aff = { 0:'0', A:'2', I:'IWATCH', G:"G", B:"BORDER", V:"6", H:"HAND", M:"MYSTIC"};
  var ig = [

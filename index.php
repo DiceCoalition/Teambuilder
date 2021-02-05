@@ -1625,6 +1625,7 @@ document.getElementById('file').onchange = function(){
   init(61,bit,'BIT','bit',[],bit_aff);
   init(62,tag,'TAG','tag',[],tag_aff);
   init(63,ig,'IG','ig',[],ig_aff);
+  init(64,m_op2020,'M2020','ig',m_op2020_dice,m_op2020_aff);
 
 
    
@@ -2348,6 +2349,7 @@ document.getElementById('file').onchange = function(){
 	ig:'ig',
 	
 	  //op sets]
+	m2020:'m2020',
     m2019:'m2019',
     wd2018:'wd2018',
 	  sk2017:'sk2017',
