@@ -283,7 +283,7 @@ var m_op2020 = [
     '53204???|???|???',
 	'556H5Typhoid Mary|Violent Tendencies|Energize - Your [PAWN] character dice and [H] character dice get +2A and Overcrush at the beginning of this attack step.',
 	'53204???|???|???',
-	'542S6Spider-Man|Wall-Crawler of Forest Hills|The first Spider-Man die you purchase each game costs [1] less.|Recruit - [PAWN]|(When this die damages an opponent with combar damages, move a [PAWN] die from your Used Pile, Reserve Pool, or Prep Area into the FIeld on its level 1 character face.)',
+	'542S6Spider-Man|Wall-Crawler of Forest Hills|The first Spider-Man die you purchase each game costs [1] less.|Recruit - [PAWN]|(When this die damages an opponent with combat damage, move a [PAWN] die from your Used Pile, Reserve Pool, or Prep Area into the FIeld on its level 1 character face.)',
 	'53204???|???|???',
 	'55003Slingers|Basic Action Card|At the beginning of your attack step, your opponent chooses 1 of your character dice that can\'t attack this turn. Two target character dice can\'t block this turn.|Global: Pay [M]. Target character die must attack this turn.',
 ];
@@ -292,7 +292,7 @@ var m_op2020 = [
  var ig_aff = { 0:'0', A:'2', I:'IWATCH', G:"G", B:"BORDER", V:"6", H:"HAND", M:"MYSTIC"};
  var ig = [
  '14003Anger Issues|Basic Action Card|Target character die gets +3A and gains Overcrush (until end of turn).|Global: Pay [F]. Target character die gets +1A (until end of turn).',
- '14003Besmirch|Basic Action Card|Target opposing character die loses its ability text until end of turn (not including Global Abilities.|Energize - Deal target character die 1 damage.',
+ '14003Besmirch|Basic Action Card|Target opposing character die loses its ability text until end of turn (not including Global Abilities).|Energize - Deal target character die 1 damage.',
  '13003Big Entrance|Basic Action Card|Impulse - You may add this die to your bag. (Impulse abilities happen when you purchase the die with Impulse.)|Dice purchased this turn cost 1 less than their printed cost (no matter how many Big Entrance dice are used, minimum 1), and gain Impulse - You may add this die to your bag.',
  '12003Counterstrike|Basic Action Card|Choose an affiliation. Prep one die of that affiliation from your Used Pile. Move all other dice of that affiliation from your Used Pile to your bag.|Global: Pay [1]. Once during your turn, Prep a Sidekick die from your Used Pile.',
  '13003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
@@ -732,7 +732,7 @@ var xfo = [
 '042X4Deadpool|Roll Some Energy!|Energize - Your active character dice get +1A and +1D <em>(until end of turn). (Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
 '052X4Deadpool|It\'s a 4th Wall Thing|When Deadpool attacks, if you have a die on a double energy face in your Reserve Pool, all oppoising character dice must block <em>(this turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
 '042X4Deadpool|We\'re X-Force!|When Deadpool is blocked, he gains +3A and Overcrush <em>(until end of turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
-'034X4Domino|Not Really A Party Girl|Energize - Deal 1 damage to target oponent and reroll this die. <em>Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'034X4Domino|Not Really A Party Girl|Energize - Deal 1 damage to target oponent and reroll this die. <em>(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
 '034X4Domino|It\'s Not ALL Luck|While active, when you roll a die on a double energy face, deal 1 damage to target opposing charcter die.',
 '044X4Domino|"Mistress of Mischief"|Fast <em>(Characters with Fast deal combat damage before characters without Fast.)</em>',
 '044X4Fantomex|International Art Thief|Energize - Prevent all damage to your character dice <em>(until end of turn).(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
@@ -1500,7 +1500,7 @@ var sw = [
     '231M4e0Skeleton Key|Greater Undead|While Skeleton Key is active, when a Trap die is triggered, Prep a die from your bag. If it is a Trap die, Prep an additional die from your bag.',
     '254M4n0Stone Golem|Greater Construct|Fabricate 2-4: You may KO 2 character dice with total purchase cost [4] or more to purchase this die for free.|While Stone Golem is active, you may redirect 1 damage from target character die to Stone Golem each turn.',
     '231L4n1Tabaxi Rogue|Greater Lords\' Alliance|Experience|When fielded, move target opposing Trap die from the Field Zone to the Used Pile.',
-    '241M4e1Tomb Dwarf|Greater Undead|While Tomb Dwarf is active, when one of your Trap dice triggers, you may pay [1]. If you do, Prep that Trap die (instead of moving it to the Used Pile.',
+    '241M4e1Tomb Dwarf|Greater Undead|While Tomb Dwarf is active, when one of your Trap dice triggers, you may pay [1]. If you do, Prep that Trap die (instead of moving it to the Used Pile).',
     '254M4n0Tomb Guardian|Greater Construct|Fabricate 2-4: You may KO 2 character dice with total purchase cost [4] or more to purchase this die for free.|While Tomb Guardian is active, your [DDM] character dice take 2 less damage from action dice.',
     '252M4n0Triceratops|Greater Beast|When fielded, KO target level 1 character die.',
     '262M4n0Tyrannosaurus Zombie|Greater Undead|When fielded, you may purchase a Zombie character die for free and immediately field it at level 2.',
