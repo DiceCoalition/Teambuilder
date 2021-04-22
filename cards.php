@@ -23,7 +23,7 @@
      MDFD:"defenders",
      BOM:'brotherhood of evil mutant',
      MEX:'exiles',
-     KC:'chaos', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
+     KC:'chaos', KDG:'deathguard', KUM:'ultramarines', KO:'orks', KSW:'space wolves', KI:'imperium',
      DOOM:'doompatrol',
 	 HELL:'hellfireclub',
 	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
@@ -53,7 +53,7 @@
      MDFD:'aMDFD',
      BOM:'aMBOM', MEX:'aMEX',
      PAWN:'pawn',
-     KC:'aKC', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
+     KC:'aKC', KDG:'aKDG', KUM:'aKUM', KO:'aKO',KSW:'aKSW', KI:'aKI',
      DOOM:'aDOOM',
 	 HELL:'aHELL',
 	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
@@ -140,6 +140,7 @@
     { name:'tdf', pic: 'aA' },
     { name:'egyptian', pic: 'aB' },
     { name:'chaos', pic: 'aKC' },
+	{ name:'deathguard', pic: 'aKDG' },
     { name:'ultramarines', pic: 'aKUM' },    
     { name:'orks', pic: 'aKO' },
     { name:'spacewolves', pic: 'aKSW' },
@@ -192,7 +193,7 @@
 	 JLMYSTIC:['mystic', 'justiceleague'],
      JLTA:['thunderbolts','avengers'],
      JLVT:['villains','thunderbolts'],
-     KCDG:['chaos','death guard'],
+     KCDG:['chaos','deathguard'],
      KC:'chaos',
      KIUM:['imperium','ultramarines'],
      KO:'orks',
@@ -276,14 +277,25 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
+var m_op2020_dice = ['ig'];
+var m_op2020_aff = { 0:'0', H:"HAND", S:'ASF'};
+var m_op2020 = [
+    '53204???|???|???',
+	'556H5Typhoid Mary|Violent Tendencies|Energize - Your [PAWN] character dice and [H] character dice get +2A and Overcrush at the beginning of this attack step.',
+	'53204???|???|???',
+	'542S6Spider-Man|Wall-Crawler of Forest Hills|The first Spider-Man die you purchase each game costs [1] less.|Recruit - [PAWN]|(When this die damages an opponent with combat damage, move a [PAWN] die from your Used Pile, Reserve Pool, or Prep Area into the FIeld on its level 1 character face.)',
+	'53204???|???|???',
+	'55003Slingers|Basic Action Card|At the beginning of your attack step, your opponent chooses 1 of your character dice that can\'t attack this turn. Two target character dice can\'t block this turn.|Global: Pay [M]. Target character die must attack this turn.',
+];
+
 //begin Marvel Infinity Gauntlet
  var ig_aff = { 0:'0', A:'2', I:'IWATCH', G:"G", B:"BORDER", V:"6", H:"HAND", M:"MYSTIC"};
  var ig = [
  '14003Anger Issues|Basic Action Card|Target character die gets +3A and gains Overcrush (until end of turn).|Global: Pay [F]. Target character die gets +1A (until end of turn).',
- '14003Besmirch|Basic Action Card|Target opposing character die loses its ability text until end of turn (not including Global Abilities.|Energize - Deal target character die 1 damage.',
+ '14003Besmirch|Basic Action Card|Target opposing character die loses its ability text until end of turn (not including Global Abilities).|Energize - Deal target character die 1 damage.',
  '13003Big Entrance|Basic Action Card|Impulse - You may add this die to your bag. (Impulse abilities happen when you purchase the die with Impulse.)|Dice purchased this turn cost 1 less than their printed cost (no matter how many Big Entrance dice are used, minimum 1), and gain Impulse - You may add this die to your bag.',
  '12003Counterstrike|Basic Action Card|Choose an affiliation. Prep one die of that affiliation from your Used Pile. Move all other dice of that affiliation from your Used Pile to your bag.|Global: Pay [1]. Once during your turn, Prep a Sidekick die from your Used Pile.',
- '13003Focus|Basic Action Card|Spin one target character die up or down one level.|*/** Spin two target character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
+ '13003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
  '14003Inspiring|Basic Action Card|Choose one of your character dice in the Field Zone with the lowest printed A showing. That die has its printed A replaced with the printed A (on all levels) of the character die in your Field Zone with the highest purchase cost (you choose if tied).',
  '13003Investigation|Basic Action Card|Draw and roll 2 dice (place them in your Reserve Pool).',
  '12003Nefarious Broadcast|Basic Action Card|Cancel any Persistent Global Ability effects. Neither player may use Global Abilities until end of turn.',
@@ -372,7 +384,7 @@
  '224V4The Spot|Phase Shift|Energize - Target character die can\'t block this turn.',
  '26304Thor|Fortunately, I am Mighty!|If an opposing effect targets Thor, deal 2 damage to your opponent.|Global: Pay [B]. Once per turn, the next action die you purchase this turn costs 2 less (minimum 1.)',
  '252V4Tombstone|Recruitment Oriented|* When fielded, you may purchase a character die with printed purchase cost of 3 or less for free.',
- '233I4Turk Barrett|Aspiring Criminal|While you have [B] in your Reserve Pool, prevent all non-combat damage to Turk Barrett.|* When fielded, Prep a die from our bag.',
+ '233I4Turk Barrett|Aspiring Criminal|While you have [B] in your Reserve Pool, prevent all non-combat damage to Turk Barrett.|* When fielded, Prep a die from your bag.',
  '246H4Typhoid Mary|Dissociative Identity Disorder|When Typhoid Mary attacks, field a Sidekick die from your Used Pile. It can\'t attack this turn.|* Instead, field 2 Sidekick dice from your Used Pile.',
  '222M4Wong|Arcane Powerhouse|Wong gets +2A while your opponent has [M] energy in their Reserve Pool.',
  '351I4Adam Warlock|Soul Gem|When Adam Warlock is KO\'d by combat damage, move target character die to his card. When fielded, return all character dice on this card to the Field Zone at the same level.',
@@ -416,7 +428,7 @@
  '346H4Typhoid Mary|Red Rubber Boots|Typhoid Mary costs [1] less to purchase if you have an active [H] character die. When fielded, choose an opposing character card, replacing all previous choices. While Typhoid Mary is active, ignore that card\'s text (including Global Abilities).',
  '322M4Wong|Second Rate Jarvis|When fielded, if you spent one or more [M] energy to field Wong, reroll target opposing character die.',
  '461I4Adam Warlock|Leader of the Infinity Watch|While active, when a die with Energize is spent as energy and leaves the Reserve Pool, roll it. On any energy face, use its Energize effect. (This die does not return to the Reserve Pool, regardless of the result.)',
- '441I4Black Widow|Intelligence Assets|While you have [F] in your Reserve Pool, Black Widow gets +2A. While you three or more [F] in your Reserve Pool, she gets an additional +1A.',
+ '441I4Black Widow|Intelligence Assets|While you have [F] in your Reserve Pool, Black Widow gets +2A. While you have three or more [F] in your Reserve Pool, she gets an additional +1A.',
  '453V4Bullseye|Accuracy|Energize - Deal 3 damage distributed how you choose among up to 3 target character dice.',
  '474A4Captain Marvel|Reality Gem|Energize - Reroll all opposing character dice.',
  '461I4Doctor Strange|Trusting in Destiny|While Doctor Strange is active, when you field an [IW] character die, you may reroll target character die.|Global: Pay [M], Target character die must attack this turn.',
@@ -611,7 +623,7 @@
 	'042Z4n1Tashlyn Yafeera|Sword, Axe, Dagger, Boot Dagger|Experience|Tashlyn Yafeera gets +1A and +1D for each active Adventurer you control.',
 	'032Z4e1Ziraj|The Hunter|Experience|When Ziraj attacks, target character die must block Ziraj (until end of turn).|Ziraj doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
 	'042Z4e1Ziraj|Half-Orc Assassin|Experience|When Ziraj is blocked, Prep a die from your bag. If Ziraj has 2 or more Experience tokens, Prep an additional die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
-	'042Z4e1Ziraj|Hail of Black Arrows|Experience|If Ziraj attacks and KOs an opposing character die, you may deal its damage equal to its A to target character die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'042Z4e1Ziraj|Hail of Black Arrows|Experience|If Ziraj attacks and KOs an opposing character die, you may deal its damage equal to its A to target character die.|Ziraj doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
   ];
 
     //BEGIN Trouble In Waterdeep
@@ -720,7 +732,7 @@ var xfo = [
 '042X4Deadpool|Roll Some Energy!|Energize - Your active character dice get +1A and +1D <em>(until end of turn). (Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
 '052X4Deadpool|It\'s a 4th Wall Thing|When Deadpool attacks, if you have a die on a double energy face in your Reserve Pool, all oppoising character dice must block <em>(this turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
 '042X4Deadpool|We\'re X-Force!|When Deadpool is blocked, he gains +3A and Overcrush <em>(until end of turn)</em>.|Global: Pay [F]. Deal 2 damage to target blocking character die.',
-'034X4Domino|Not Really A Party Girl|Energize - Deal 1 damage to target oponent and reroll this die. <em>Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
+'034X4Domino|Not Really A Party Girl|Energize - Deal 1 damage to target oponent and reroll this die. <em>(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
 '034X4Domino|It\'s Not ALL Luck|While active, when you roll a die on a double energy face, deal 1 damage to target opposing charcter die.',
 '044X4Domino|"Mistress of Mischief"|Fast <em>(Characters with Fast deal combat damage before characters without Fast.)</em>',
 '044X4Fantomex|International Art Thief|Energize - Prevent all damage to your character dice <em>(until end of turn).(Whenever you roll this die on its double energy face, use its Energize effect.)</em>',
@@ -768,7 +780,7 @@ var xmf = [
     '053X4Jean Grey|Open Your Eyes, Scott|While active, when an opponent fields a [DCV] character die, deal 1 damage to that opponent.',
     '033X5Jubilee|Jubilation Lee|When Jubilee attacks, she deals 1 damage to your opponent for each other attacking [B] character die.',
     '033X5Jubilee|Wondra|When fielded, deal 2 damage to target character die or opponent.',
-    '023X5Jubilee|Olympic Gymnast|While Jubilee is active, when your field a [B] character die, deal 1 damage to target opponent.',
+    '023X5Jubilee|Olympic Gymnast|While Jubilee is active, when you field a [B] character die, deal 1 damage to target opponent.',
     '041X4Kitty Pryde|Professor Xavier is a Jerk!|This character die cannot be blocked if it attacks with another [XMEN] character die <em>(including another Kitty Pryde die)</em>.',
     '031X4Kitty Pryde|More Human Than You!|When fielded, non-Kitty Pryde [XMEN] character dice cost [2] less to purchase <em>(until end of turn)</em>.',
     '031X4Kitty Pryde|Star Lord|When fielded, draw a die. If it is an [XMEN] character die, roll it and place it in your Reserve Pool. Otherwise, place it in your Used Pile.',
@@ -1114,7 +1126,7 @@ var sw = [
 	'041V4Harley Quinn|Gotham State Graduate|When Harley Quinn is KO\'d, reroll all active character dice, KO any that roll energy faces.',
 	'03404Harley\'s Hyena|Screwball Scavenger|While Harley\'s Hyena is active, at the start of your turn, both players draw a die. Place the die with the highest purchase cost into its owner\'s Prep Area. Place the other die in its owner\'s Used Pile. (Sidekicks have a purchase cost of 0. If both dice have an equal purchase cost, place both in their Owner\'s Used Pile.)',
 	'03404Harley\'s Hyena|Mommy\'s Baby|When Harley\'s Hyena attacks, both players draw a die. If the die you draw has a higher purchase cost, this Harley\'s Hyena die gets +3A and return that die to your bag. If not, place that die in your Used Pile. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
-	'03404Harley\'s Hyena|Bud and Lou|When Harley\'s Hyena attacks, both players draw a die. The player of players who draw the die the lowest purchase cost die takes 2 damage. Then return those dice to their bags. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
+	'03404Harley\'s Hyena|Bud and Lou|When Harley\'s Hyena attacks, both players draw a die. The player or players who draw the die the lowest purchase cost die takes 2 damage. Then return those dice to their bags. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
 	'031V4Poison Ivy|Red|When Poison Ivy blocks or is blocked by a non-[DCV] character die, she gains Deadly (until the end of turn). Prevent all damage dealt to Poison Ivy by non-[DCV] character dice.',
 	'041V4Poison Ivy|Budding Interest|While Poison Ivy is active, when an opposing non-[DCV] character die is KO\'d, it\'s controller loses 1 life.',
 	'041V4Poison Ivy|Flower Child|While Poison Ivy is active, when you field a [DCV] character die, deal 1 damage to target opponent.',
@@ -1212,7 +1224,7 @@ var sw = [
 '071A4Doctor Strange|Strange Tales|Attune|When fielded, when you use an action die (this turn), you may reroll that action die and place it in your Prep Area if it rolls an action face.',							
 '071A4Doctor Strange|Never Have you Known His Like|While Doctor Strange is active, when an action die is used, you may use a copy of its effect. You may choose new targets for the copy.',							
 '061V4Dormammu|Call Upon the Shadowy Shapes|While Dormammu is active, non-[DCV] character dice cost your opponents [1] more to purchase.',							
-'071V4Dormammu|From Here To Eternity|While Dormammu is active, character dice cost [1] more to field and Global Abilities cost [1] to use. ',							
+'071V4Dormammu|From Here To Eternity|While Dormammu is active, character dice cost [1] more to field and Global Abilities cost [1] more to use. ',							
 '061V4Dormammu|Crimson Bands of Cyttorak|While Dormammu is active, at the end of each player\'s turn, KO the character die with the lowest purchase cost controlled by the active player (you break ties) (Sidekick character dice are considered to have a purchase cost of 0).',							
 '042G4Gamora|Power Gem|Deadly (At end of turn, KO all character dice that were engaged with this charcter.)|Gamora can only be blocked by 2 or more character dice. ',							
 '042G4Gamora|Solar Sacrifice|Gamora cannot be blocked by lower level character dice.|* Gamora cannot be blocked by level 1 character dice.',							
@@ -1488,7 +1500,7 @@ var sw = [
     '231M4e0Skeleton Key|Greater Undead|While Skeleton Key is active, when a Trap die is triggered, Prep a die from your bag. If it is a Trap die, Prep an additional die from your bag.',
     '254M4n0Stone Golem|Greater Construct|Fabricate 2-4: You may KO 2 character dice with total purchase cost [4] or more to purchase this die for free.|While Stone Golem is active, you may redirect 1 damage from target character die to Stone Golem each turn.',
     '231L4n1Tabaxi Rogue|Greater Lords\' Alliance|Experience|When fielded, move target opposing Trap die from the Field Zone to the Used Pile.',
-    '241M4e1Tomb Dwarf|Greater Undead|While Tomb Dwarf is active, when one of your Trap dice triggers, you may pay [1]. If you do, Prep that Trap die (instead of moving it to the Used Pile.',
+    '241M4e1Tomb Dwarf|Greater Undead|While Tomb Dwarf is active, when one of your Trap dice triggers, you may pay [1]. If you do, Prep that Trap die (instead of moving it to the Used Pile).',
     '254M4n0Tomb Guardian|Greater Construct|Fabricate 2-4: You may KO 2 character dice with total purchase cost [4] or more to purchase this die for free.|While Tomb Guardian is active, your [DDM] character dice take 2 less damage from action dice.',
     '252M4n0Triceratops|Greater Beast|When fielded, KO target level 1 character die.',
     '262M4n0Tyrannosaurus Zombie|Greater Undead|When fielded, you may purchase a Zombie character die for free and immediately field it at level 2.',
@@ -3012,7 +3024,7 @@ var sw = [
     // GAF dice
     '552G4Roy Harper™|Adolescent Archer|Fast |When Roy Harper attacks, you may pay [B] to give him +1A and -1D <em>(until end of turn).</em>.',
     // GAF dice
-    '555V3Barry Allen™|Fastest Man Alive|Fast |[DCV] character dice with Fast deal no damage to Barry Allen dice.',
+    '555J3Barry Allen™|Fastest Man Alive|Fast |[DCV] character dice with Fast deal no damage to Barry Allen dice.',
     // GAF dice
     '572V3Professor Zoom™|Thief|Fast |If you used Cosmic Treadmill this turn, you may pay [2] less to purchase Professor Zoom.',
     ];
@@ -4236,7 +4248,7 @@ var sw = [
     "Punisher":"141 152 263",
     "Pyro":"031 142 152",
     "Quicksilver":"031 132 143",
-    "Red Hulk":"166*277*388",
+    "Red Hulk":"165*277*388",
     "Rogue":"123 245 256",
     "Sabretooth":"133 144 254",
     "Scarlet Witch":"013 033 153",
