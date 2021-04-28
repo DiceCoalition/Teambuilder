@@ -557,7 +557,7 @@ var m_op2020 = [
 	'03003A Moment of Bliss|Basic Action Card|This turn, you may remove blocked attackers from combat before damage is dealt.',
 	'04003Jerry Lawler, Ringside Announcer|Basic Action Card|All blocked and blocking Superstars deal double damage this turn.|Global: Pay [F]. Target blocked or blocking Superstar deals double damage. Use this ability only once per turn.',
 	'04003Booker T, Ringside Announcer|Basic Action Card|All opposing Superstars must block if able and you may declare blockers for your opponent, assigning one per attacker until all attackers have been assigned a blocker, and then assigning the rest as you choose.|Global: Pay [S]. Target Superstar must block this turn if able.',
-	'04003Chair Smash|Basic Action Card|Continuous. Send this die to your Used Pile during your Clear and Draw Step, or when another Folding Chair [sic] is played. Whenever you could use a Global Ability, send this die to the Used Pile and deal 3 damage to target attacker or blocker.|*/** If the target is not KO\'d, Prep this die.',
+	'04003Chair Smash|Basic Action Card|Continuous: Send this die to your Used Pile during your Clear and Draw Step, or when another Folding Chair [sic] is played. Whenever you could use a Global Ability, send this die to the Used Pile and deal 3 damage to target attacker or blocker.|*/** If the target is not KO\'d, Prep this die.',
 	'04003Miz TV|Basic Action Card|Target a Superstar die from each player\'s Field Zone and set them aside until end of turn (then return them to play at their previous level).',
 	'04003Money in the Bank|Basic Action Card|Choose target attacker. If that attacker damages the opponent this turn, draw and roll 3 dice. If the attacker is unblocked and would go to the Used Pile, Prep them instead.',
 	'05003Paige, Manager|Basic Action Card|Each player may add one of their unpurchased dice to their bag.|** Your opponent\'s die is sent to their Used Pile instead.',
@@ -623,7 +623,7 @@ var m_op2020 = [
 	'042Z4n1Tashlyn Yafeera|Sword, Axe, Dagger, Boot Dagger|Experience|Tashlyn Yafeera gets +1A and +1D for each active Adventurer you control.',
 	'032Z4e1Ziraj|The Hunter|Experience|When Ziraj attacks, target character die must block Ziraj (until end of turn).|Ziraj doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
 	'042Z4e1Ziraj|Half-Orc Assassin|Experience|When Ziraj is blocked, Prep a die from your bag. If Ziraj has 2 or more Experience tokens, Prep an additional die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
-	'042Z4e1Ziraj|Hail of Black Arrows|Experience|If Ziraj attacks and KOs an opposing character die, you may deal its damage equal to its A to target character die.|Ziraj does\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
+	'042Z4e1Ziraj|Hail of Black Arrows|Experience|If Ziraj attacks and KOs an opposing character die, you may deal its damage equal to its A to target character die.|Ziraj doesn\'t count as an Adventurer. This effect can\'t be ignored or swapped.',
   ];
 
     //BEGIN Trouble In Waterdeep
@@ -780,7 +780,7 @@ var xmf = [
     '053X4Jean Grey|Open Your Eyes, Scott|While active, when an opponent fields a [DCV] character die, deal 1 damage to that opponent.',
     '033X5Jubilee|Jubilation Lee|When Jubilee attacks, she deals 1 damage to your opponent for each other attacking [B] character die.',
     '033X5Jubilee|Wondra|When fielded, deal 2 damage to target character die or opponent.',
-    '023X5Jubilee|Olympic Gymnast|While Jubilee is active, when your field a [B] character die, deal 1 damage to target opponent.',
+    '023X5Jubilee|Olympic Gymnast|While Jubilee is active, when you field a [B] character die, deal 1 damage to target opponent.',
     '041X4Kitty Pryde|Professor Xavier is a Jerk!|This character die cannot be blocked if it attacks with another [XMEN] character die <em>(including another Kitty Pryde die)</em>.',
     '031X4Kitty Pryde|More Human Than You!|When fielded, non-Kitty Pryde [XMEN] character dice cost [2] less to purchase <em>(until end of turn)</em>.',
     '031X4Kitty Pryde|Star Lord|When fielded, draw a die. If it is an [XMEN] character die, roll it and place it in your Reserve Pool. Otherwise, place it in your Used Pile.',
@@ -1126,7 +1126,7 @@ var sw = [
 	'041V4Harley Quinn|Gotham State Graduate|When Harley Quinn is KO\'d, reroll all active character dice, KO any that roll energy faces.',
 	'03404Harley\'s Hyena|Screwball Scavenger|While Harley\'s Hyena is active, at the start of your turn, both players draw a die. Place the die with the highest purchase cost into its owner\'s Prep Area. Place the other die in its owner\'s Used Pile. (Sidekicks have a purchase cost of 0. If both dice have an equal purchase cost, place both in their Owner\'s Used Pile.)',
 	'03404Harley\'s Hyena|Mommy\'s Baby|When Harley\'s Hyena attacks, both players draw a die. If the die you draw has a higher purchase cost, this Harley\'s Hyena die gets +3A and return that die to your bag. If not, place that die in your Used Pile. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
-	'03404Harley\'s Hyena|Bud and Lou|When Harley\'s Hyena attacks, both players draw a die. The player of players who draw the die the lowest purchase cost die takes 2 damage. Then return those dice to their bags. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
+	'03404Harley\'s Hyena|Bud and Lou|When Harley\'s Hyena attacks, both players draw a die. The player or players who draw the die the lowest purchase cost die takes 2 damage. Then return those dice to their bags. (Sidekicks have a purchase cost of 0.)(Repeat this for each Harley\'s Hyena die that attacks.)',
 	'031V4Poison Ivy|Red|When Poison Ivy blocks or is blocked by a non-[DCV] character die, she gains Deadly (until the end of turn). Prevent all damage dealt to Poison Ivy by non-[DCV] character dice.',
 	'041V4Poison Ivy|Budding Interest|While Poison Ivy is active, when an opposing non-[DCV] character die is KO\'d, it\'s controller loses 1 life.',
 	'041V4Poison Ivy|Flower Child|While Poison Ivy is active, when you field a [DCV] character die, deal 1 damage to target opponent.',
