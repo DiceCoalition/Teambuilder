@@ -4985,7 +4985,7 @@ var sw = [
 	"KI@Drax":"124 235 246",
 	"Kree Captain":"031 132 133",
 	"Kree Soldier":"011 112 122",
-	"Supreme Intelligence":"144 256 278",
+	"Supreme Intelligence":"144 256 276",
 
 	
 	//JLL
