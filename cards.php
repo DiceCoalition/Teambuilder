@@ -471,7 +471,7 @@ var m_op2020 = [
 	'044W4Trish Stratus|The Greatest Ever|Tag Out (After blockers are declared, you may Prep this die from the Field Zone to give target Superstar die +2A and +2D until end of turn.)|When Trish Stratus attacks, target Superstar die can\'t block this turn.|Global: Pay [S]. Prevent 1 damage to a Superstar die or player.',
 	'064W4Undertaker|The Deadman|Immortal (Except when purchased, when this die would go to the Used Pile, instead add it to your bag.)|Call Out (When this Superstar die attacks, target Superstar die is the only Superstar die that may block this Superstar die.)',
 	'064W4Undertaker|Managed by Paul Bearer|Attune (While this Superstar is active, when you use an action die, deal 1 damage to target player or Superstar die.)| Whenever any player uses an action die, Undertaker gets +1A and +1D until end of turn.',
-	'064W4Undertaker|Last Ride|When fielded, your may move a Superstar or Sidekick die from your Used Pile to the Field Zone at level 1.'
+	'064W4Undertaker|Last Ride|When fielded, you may move a Superstar or Sidekick die from your Used Pile to the Field Zone at level 1.'
 	];
 	
 	//begin WWE Tag Team Team Pack
