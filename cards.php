@@ -5448,7 +5448,7 @@ var sw = [
 	"Human Warlock":1,
 	"Tashlyn Yafeera":1,
 	"Black Viper":1,
-	"Brawlwin":1,
+	"Brawlwin Chainminer":1,
 	"Vajra":1,
 	"Jamilah":1,
 	
@@ -5460,7 +5460,9 @@ var sw = [
 	"Lita":1,
 	"Trish Stratus":1,
 	
-	
+	"Black Swan":1,
+	"Proxima Midnight":1,
+	"Supergiant":1
     };
 
 
