@@ -1142,7 +1142,7 @@ var sw = [
 
 
        //BEGIN JUSTICE LIKE LIGHTNING Hack
-    var jll_aff = { 0:'0',  V:'6', v:'JLVT/CWT', w:'CWT/JLVT', a:'JLTA', T:'CWT'};
+    var jll_aff = { 0:'0',  V:'6', v:'CWTV', w:'CWT/JLVT', a:'JLTA', T:'CWT'};
     var jll = [
 '032a4Ant-Man|Petty Theft|Awaken - Ant-Man is unblockable (until end of turn). (When this die spins up 1 or more levels, you may use this effect.)',
 '032a4Ant-Man|Through the Cracks|Amplify (When you use an action die, spin this character up 1 level.)',
