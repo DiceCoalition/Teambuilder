@@ -249,7 +249,6 @@
   <input type="checkbox" id="set36" checked>XFO
   <input type="checkbox" id="set37" checked>DXM
   <input type="checkbox" id="set44" checked>IG
-  <input type="checkbox" id="set45" checked>DPS
   <input type="checkbox" id="set4" checked>JL
   <input type="checkbox" id="set6" checked>WoL
   <input type="checkbox" id="set9" checked>WF
@@ -1427,7 +1426,6 @@ document.getElementById('file').onchange = function(){
   pj = pj.replace("Anti-Breath Weapon - X", "<strong>Anti-Breath Weapon - X</strong>");
   pj = pj.replace("Retaliation", "<strong>Retaliation</strong>");
   pj = pj.replace("Strike", "<strong>Strike</strong>");
-  pj = pj.replace("Founder", "<strong>Founder</strong>");  
   pj = pj.replace(/Energize/g, "<strong>Energize</strong>");
   pj = pj.replace("Corrupt", "<strong>Corrupt</strong>");
 //   pj = pj.replace("Experience", "<strong>Experience</strong>");  
@@ -1635,7 +1633,7 @@ document.getElementById('file').onchange = function(){
   init(62,tag,'TAG','tag',[],tag_aff);
   init(63,ig,'IG','ig',[],ig_aff);
   init(64,m_op2020,'M2020','ig',m_op2020_dice,m_op2020_aff);
-  init(65,dps,'DPS','dps',[],dps_aff);
+
 
    
   Array.prototype.extend = function (a) {
@@ -2356,7 +2354,6 @@ document.getElementById('file').onchange = function(){
 	tag:'tag',
 	bit:'bit',
 	ig:'ig',
-	dps:'dps',
 	
 	  //op sets]
 	m2020:'m2020',

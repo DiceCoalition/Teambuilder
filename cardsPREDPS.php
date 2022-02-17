@@ -28,8 +28,7 @@
 	 HELL:'hellfireclub',
 	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
 	 PAWN:'sidekick',
-	 IW:'infinity watch', BO:"black order", H:"hand",
-	 SHI:'shiarempire'
+	 IW:'infinity watch', BO:"black order", H:"hand"
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
@@ -58,12 +57,11 @@
      DOOM:'aDOOM',
 	 HELL:'aHELL',
 	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
-	 IW:'aIW', BO:"aBORDER", H:"aHandIco",
-	 SHI:'aSHI'
+	 IW:'aIW', BO:"aBORDER", H:"aHandIco"
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig','dps',];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -154,7 +152,6 @@
 	{ name:'infinitywatch', pic:'aIWATCH'},
 	{ name:'blackorder', pic:'aBORDER'},
 	{ name:'hand', pic:'aHAND'},
-	{ name:'shi', pic:'aSHI'},
     ];
 
     var affiliation_map = {
@@ -247,11 +244,7 @@
 	 NEWDAY:'newday',	
 	 IWATCH:'infinitywatch',
 	 BORDER:'blackorder',
-	 HAND:'hand',
-	 SHI:'shiarempire', SHIV:['shiarempire','villain'],MDPX:['deadpool','xmen'],
-	 HELLX:['hellfireclub','xmen'],
-	 HELLB:['hellfireclub','brotherhoodofmutants'],
-	 MBOMX:['xmen','brotherhoodofmutants']
+	 HAND:'hand'
     };
 
     var affiliation_set = {};
@@ -283,166 +276,6 @@
 //rarity key: 0:starter, 1:common, 2:uncommon, 3:rare, 4:superrare, 5:OP
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
-
-//begin Marvel Infinity Gauntlet
- var dps_aff = { 0:'0', X:'1',S:'SHI',H:'HELL',D:'MDP',I:'HELLX', P:'SHIV', E:"MDPX", V:'6',B:'MBOM',G:'HELLB',N:'MBOMX',M:'MBOMV'};
- var dps = [
-'14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it’s A (until end of turn).',
-'14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
-'14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
-'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
-'12003Lab Test|Basic Action Card|Continuous: You may send this die to your Used Pile to reroll one of the character dice in your Reserve Pool.',
-'14003Living the Dream|Basic Action Card|Continuous: If among all character cards on your team you have at least 3 Loyalty Counters, your character dice get +1A an Overcrush (until the end of turn).',
-'13003Making the Team|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
-'12003Mutant research Program|Basic Action Card|If you have at least 2 active Founder character dice, draw and roll 3 dice.|Otherwise, draw and roll a die.',
-'13003Mutation|Basic Action Card|Swap target character die in the Field Zone with target non-sidekick character dice in that player\'s Used Pile. Spin that character die to level 1. (This does not trigger "when fielded" effects.)|Global: Pay [M].Spin one of your character die down a level to spin another target character die up a level.',
-'13003Organic Steel|Basic Action Card|Continuous: Prevent up to 2 damage to target character die and move this die to your Used Pile. If you have an active [XMEN] character, also gain 1 life.',
-'13003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.',
-'13003Radicalization|Basic Action Card|Deal 3 damage to target [XMEN] or [BOM] character die.|**Also, KO target Sidekick character die.|Global: Pay [S]. Target character die gains [XMEN] or [BOM] (until end of turn).',
-'13003Rally|Basic Action Card|Move up to 2 Sidekick dice from your Used Pile to your Field Zone.|** Instead, move 3 Sidekicks instead.',
-'13003Take Cover|Basic Action Card|Character dice you control get +2D.|*/** Target character die gets an extra +3D.|Global: Pay [S]. Target character die gets +1D (until end of turn).',
-'15003The Front Line|Basic Action Card|Unblocked attacking character dice gain +3A until end of turn.|Global: Pay [F]. Target opposing character die can\'t block this turn unless opponent pays 1 life.',
-'13003Tight Ranks|Basic Action Card|If you have at least 3 active character dice that share a Team Affiliation, KO target character die.|Global: Pay [S]. Target character die with at least one Loyalty Counter gets -2A and -2D.',
-'124X5Angel|Wings Over the World|Energize - Target Sidekick gets +2A this turn.',
-'122X5Beast|Brawny and Brainy|Overcrush',
-'144X3Bishop|Tortured Timeline|Opposing effects can\'t cause Bishop to be rerolled, or cause you to spin a Bishop die up or down.',
-'131X3Blink|Skilled Combatant|',
-'13403Blob|Depowered from M-Day|',
-'143X4Cable|I\'ll Do This All Day|Energize - Reroll one of your character dice. ',
-'152X4Colossus|Skilled Painter|Energize - Field one of your character dice for free and spin it to level 3.|Overcrush',
-'14204Corsair|Recruiting a Crew|When fielded, place the next die you purchase this turn into your bag. ',
-'153X4Cyclops|First Class|Founder|While Cyclops is active, when you field a character die with Founder, deal 2 damage to target character die.',
-'144P4D\'Ken|Emperor|When D\'Ken attacks, Prep a die from your Used Pile.',
-'173V4Dark Phoenix|Malevolent|Dark Phoenix costs [1] less to purchase if your opponent has an [XMEN] character on their team.|When fielded, KO target character die. If it\'s an [XMEN] character die, deal your opponent 1 damage.|Global: Pay [B] and KO one of your character dice. The next die you purchase this turn costs 2 less (to a minimum of 1).',
-'142E4Deadpool|#1 Draft Pick|If this game is in the draft format, at the start of the game pick a card on your team. That card costs [1] less to purchase this game (to a minimum of 1).',
-'124P2Deathbird|Treacherous|Deadly',
-'144H4Emma Frost|Influential|While Emma Frost is active, your Sidekick dice get +1A and +1D, and gain the [HELL] affiliation.',
-'133X4Forge|More Than Firepower|When fielded, if you spent [B] energy to field Forge, Prep a die from your bag.',
-'131X4Gambit|Ace in the Hole|When fielded, you may draw and roll a die.|* Instead, draw 2 dice, Roll one and return the other to your bag.',
-'152S4Gladiator|Psi Resistance|Intimidate|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
-'143X3Iceman|Icy Interference|When Iceman attacks, spin target opposing level 1 character die to an energy face.',
-'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each or your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
-'123X4Jubilee|Rebellious Nature|Energize - If you have less life than your opponent, you may immediately field this die for free at level 2.',
-'131X4Kitty Pryde|Right of Passage|Awaken - Prep a die from your bag.',
-'134S4Lilandra|Politician|Global: Pay [S]. Once per turn, if you have purchased a character die this turn, you may draw a die from your bag and add it to your Prep Area.',
-'13104Madelyne Pryor|Dark Influence|While Madelyne Pryor is active, opposing character dice can\'t use Rush.',
-'131X4Magik|Wielder of the Soulsword|When fielded, the next action die you purchase costs [1] less (to a minimum of 1)',
-'161B2Magneto|Idealist|When one of your [M] character dice is KO\'d, put a Loyalty Counter on Magneto\'s card.  (Loyaly Counters give a character die +1A and +1D).|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area. ',
-'154V4Master Mold|Inexplicable Durability|When fielded, deal 2 damage to all [XMEN] and [BOM] character dice.',
-'153V4Mister Sinister|Geneticist|When fielded, KO up to 2 target Sidekick dice. When Mister Sinister KOs an opposing character, you may pay 1 life. If you do, your opponent loses 1 life.|Global: Pay [2B]. Target non-Sidekick character die gains Deadly.',
-'124X3Moira|It\'s Not a Dream|While Moira is active, when an opponent fields a Continuous Action die, reroll it. If it lands on an action face, they may field it normally. Otherwise, send it to the Used Pile.',
-'121X3Mystique|Relentless|When Wolverine is active, Mystique gest +2A.|Global: Pay [2M]. Target character die can\'t block this turn if it shares a Team Affiliation with a character card on your team.',
-'163X4Phoenix|Firepower|When fielded, deal 3 damage to target character die.|Energize - Deal 2 damage to target character die or player.',
-'151X4Professor X|Dreamer|If you spend an [XMEN] die to field Professor X, Prep a die from your bag.|Energize - Move an [XMEN] die from your Used Pile to your Prep Area.',
-'121X3Psylocke|Adventurer|While Wolverine is active, Psylocke gains Deadly.|When fielded, spin target character die up 1 level.',
-'141X3Rogue|Mrs. X|When fielded, you may swap Rogue\'s A with target opposing character die\'s A.',
-'15303Ronan the Accuser|Treason!|When Ronan the Accuser is fielded, lose 1 life. When Ronan the Accuser is KO\'d, your opponent loses 1 life.',
-'142B4Sabretooth|Am I Interrupting?|When fielded, KO target Wolverine characer die, or any character die with a "While Wolverine is active" ability.',
-'123X4Storm|Extreme Weather|When fielded, deal 1 damage to target character die.',
-'16104Supreme Intelligence|Kree Science Council|When a card with Kree in its name is KO\'d, put a Loyalty Counter on Supreme Intelligence\'s card. (Loyaly Counters give a character die +1A and +1D).',
-'132B4Toad|Secondary Mutation|Awaken: Deal 2 damage to target character die.|Teamwatch - Spin Toad up 1 level.',
-'14204Vulcan|Ruler of The Imperium|Global: Pay [F]. Target character die must attack this turn.',
-'142X4Wolverine|Pure of Heart|If you have no [DCV] character dice on your team, Wolverine is free to field.',
-'234X4Angel|Jean Grey\'s School|Founder|When Angel is active, other character dice with Founder get +1A.',
-'232X4Beast|First Class|Founder|While Beast is active, when a character die with Founder attacks, Prep a die from your bag.',
-'244X3Bishop|I\'m Back|If you spend this die as energy to field a character die, add this die to your Prep Area.',
-'241X4Blink|Exiles Team Leader|When Blink attacks with at least 2 other [XMEN] character dice, each of your [XMEN] character dice in the Field Zone gains Infiltrate.',
-'244B4Blob|MGH Dependent|When fielded, lose 1 life.|Intimidate. ',
-'243X4Cable|Bosom Buddies|While Cable is active, your Deadpool costs [1] less to purchase (to a minimum of 1) and has +2A.',
-'252X4Colossus|Organic Steel|While Colossus is active, the first time one of your character dice would take damage each turn you may have Colossus take that damage instead.|*Instead, prevent that damage.',
-'24204Corsair|Leading the Starjammers|If Corsair\'s A or D is increasedby an effect, you may increase the A or D of a Sidekick die you control by the same amount.',
-'243X4Cyclops|Defending the Phoenix|Energize - Deal 1 damage to target character die and reroll this die. ',
-'244P4D\'Ken|Obsessed|While D\'Ken is active, if you take combat damage this turn you may use an action die from either player\'s Used Pile.',
-'263V4Dark Phoenix|Enemy of the Shi\'ar|When fielded, KO target [SHI] or [XMEN] character die.|When Dark Phoenix  attacks, deal 2 damage to your opponent.|Global: Pay [B] and KO one of your character dice. Your next die you purchase this turn costs 2 less (to a minimum of 1).',
-'242D4Deadpool|More than a Chump Blocker|When Deadpoll attacks, he deals your opponent 1 damage.',
-'234P3Deathbird|Usurper|While Deathbird is active, when you KO an opposing character die with 3D or greater, deal 3 damage to your opponent.',
-'254H4Emma Frost|Manipulative|While Emma Frost is active, at the start of your opponent\'s Attack Step, reroll target character die they control. ',
-'243X4Forge|Support Technician|While Forge is active, your opponents must pay [1] more to purchase a die with purchase cost of 2 or less.',
-'251X4Gambit|I Like Solitaire|When fielded, if you have fielded no other character dice this turn, reroll all opposing character dice. Move any that roll an energy face to their Used Pile. You may not field any more character dice this turn. ',
-'262S4Gladiator|The Empire Must Stand|Overcrush|When Lilandra is KO\'d, put a Loyalty Counter on Gladiator\'s card. (Loyalty Counters give character +1A and +1D.)|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
-'243X4Iceman|Frozen Fists of Fury|Founder|When Iceman attacks, if Wolverine is active, deal 3 damage to target character die.',
-'243X4Jean Grey|Xavier\'s Dream|Founder|While Jean Grey and one of your Sidekick dice are active, your opponents must pay [1] extra to use a Global Ability.',
-'223X4Jubilee|Things Never Change|While Woverine is active, Jubilee gets +1A.',
-'231X4Kitty Pryde|Headmistress|While Woverine is active, Kitty Pryde gets +1A and can\'t be targeted by your opponent.',
-'244S4Lilandra|Freedom Fighter|While Lilandra is active, your oppoent must spend [1] to use each Action Die.',
-'231B4Madelyne Pryor|Sisterhood|When one of your [BOM] character dice is KO\'d besides Madelyne Pryor, put a Loyalty Counter on her card. (Loyaly Counters give a character die +1A and +1D).',
-'241X4Magik|Better than Belasco|Awaken: Roll a die from your bag.',
-'251B4Magneto|Visionary|While Magneto is active, your [BOM] character dice can only be blocked by 2 or more character dice.|Teamwatch - Prep a die from your bag.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
-'254V4Master Mold|Targeting Mutants|When fielded, KO target [BOM] character die.',
-'253V4Mister Sinister|Mutant Supremacist|When fielded, ignore all text on opposing character cards (including Global Abilities) (until end of turn).|Global: Pay [3]. Ignore target attacking character die\'s text until end of turn.',
-'234X3Moira|If It\'s Real|While Wolverine is active, Moira gets +1A.|When fielded, your X-Men character dice get +1A until end of turn.|When Moira is KO\'d, Prep a die from your Used Pile.',
-'221B4Mystique|Freedom Force|When Mystique is active, reduce damage from opposing character abilities by 1.|When Mystique is KO\'d, you may move a [BOM]  die with purchase cost 4 or more from your Used Pile to your Prep Area.',
-'263X4Phoenix|Psionic Maelstrom|When Phoenix attacks, deal 3 damage to target character die. If that character die is a [DCV] character die, you may deal 3 damage to another target character die.',
-'251X4Professor X|House of X|During your Attack Step, if Professor X doesn\'t attack, all of your [XMEN] character dice get +2A and +2D. If any of your X-Men dice were unblocked, move Professor X to your bag. |Energize - Move an [XMEN] die from your Used Pile to your Prep Area.',
-'221X2Psylocke|Telepath|When fielded, target character die gets Overcrush.',
-'231X5Rogue|Surveillance Immunity|When fielded, send target action die from the Field Zone to your opponent\'s Used Pile. Fielding Rogue doesn\'t trigger opposing effects. ',
-'26304Ronan the Accuser|No Mercy|When fielded, each player KOs a character die they control.',
-'242B4Sabretooth|Do I Smell... Weakness?|Sabretooth gets +1A for each opposing character die with 2D or less.',
-'243X4Storm|Cloud Cover|When fielded, target character die with 3A or less can\'t be blocked this turn.',
-'27104Supreme Intelligence|Psionic Collective|Intimidate|Overcrush',
-'232B4Toad|Looking for Comradery|Energize - You may spin one of the Character dice in your reserve pool from a character face to level 1.',
-'25204Vulcan|Power Suppression|Ignore the abilities of character dice blocking or blocked by Vulcan.',
-'252X4Wolverine|Hardened by Madripoor|When you have at least 3 active X-Men character dice, Wolverine gains "Energize - Spin this die to level 1',
-'344X3Angel|Air Support|Founder|While Angel is active, when an opponent targets one of your character dice, gain 1 life.',
-'322X4Beast|Combat Ready|Founder|When Beast attacks, Prep a die from your bag. The first Beast die you purchase each game costs 1 extra.',
-'334X4Bishop|Time Traveller|If you only use energy from Bishop dice to purchase a character die, Prep that die instead of adding it to your Used Pile',
-'341X4Blink|Warp Portals|While Blink is active, once per turn when your opponent uses a Global Ability you may pay [M] and 1 life to cancel that Global Ability.',
-'344B4Blob|Immovable|Each of your Blob dice may block 3 character dice instead of 1. When Blob KO\'s an opponents Sidekick die, return it to your opponents bag.',
-'363X4Cable|High Stakes|When Cable attacks, double the printed A of all your other character dice.',
-'362X4Colossus|Piotr|While Colossus is active, at the end of your turn, each of your level 2 or 3 character dice deals your opponent 2 damage (not 2 damage per Colossus die)',
-'35204Corsair|Criminal Record|When fielded, KO target [DCV] character die, or KO 2 target [DCV] character dice if your opponent has 4 or more character dice in the Field Zone.',
-'363X4Cyclops|Utopia Realized|While you have 2 or more character dice in the Field Zone, when Cyclops attacks, deal 3 damage to target character die.',
-'354P4D\'Ken|M\'Kraan Crystal|When D\'Ken attacks, Prep a die from your Used Pile. While a D\'Ken die is in your Used Pile, you take no more than 7 damage during an opponent\'s turn (further damage dealt to you is reduced to 0).',
-'353V3Dark Phoenix|Destructive Force|Whan an opposing character die damages Dark Phoenix, she deals that much damage to each opponenent.|Global: Pay [B] and KO one of your character dice. The next die you purchase this turn costs 2 less (to a minimum of 1).',
-'342E4Deadpool|Collect THIS!|While Deadpool is active, your character dice with fielding cost of 2 are free to field.',
-'334P3Deathbird|War of Kings|When fielded, target character die cannot block this turn.',
-'354I4Emma Frost|Finesse|While Emma Frost is Active, at the start of your opponents Attack Step, reroll 2 target [F] character dice your oppoenent controls. Those showing character faces are returned to the Field Zone, those on energy faces are sent to the Reserve Pool.',
-'343X4Forge|Reverse Engineer|While Forge is active, if an opponent uses an action die, roll it. If it shows an action face you may use it\'s effect.',
-'351X4Gambit|Unless I Got Someone to Play With|When fielded, reroll up to 2 target opposing character dice. Each die that doesn\'t roll a character goes to your opponent\'s Used Pile. ',
-'342S4Gladiator|Majestor Kallark|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
-'343X4Iceman|Mr Ice Guy|Founder|Energize - Double target character die\'s printed A until the end of turn.|While Iceman is active, your Sidekick dice get +1A.',
-'353X3Jean Grey|Marvel Girl|Founder|While Jean Grey is active, your opponent must pay [1] extra to use a Golbal Ability.|While you have a different [XMEN] character die in your Field Zone, Jean Grey is free to field.',
-'333X4Jubilee|Fireworks|While Jubilee is active, when you spend energy from an [XMEN] die to use a Global Ability or field a character, deal 1 damage to target opponent or character die. ',
-'321I4Kitty Pryde|Just Passing Through|Infiltrate',
-'364S4Lilandra|Grand Admiral of the Guard|While Lilandra is active, if one of your character dice attacks and is unblocked, reroll them after damage is dealt. If they land on a character face, put them in your Prep Area instead of your Used Pile.',
-'331G4Madelyne Pryor|Aspiring|While Madelyne Pryor is active, if an opponent draws an extra die during their Clear and Draw Step, Prep 2 dice from your bag (no matter how many extra dice your opponent draws, you only Prep 2 dice).',
-'341X4Magik|Sorceress of Limbo|When fielded, target character die gains Overcrush and +2A.',
-'351B4Magneto|Master of Magnetism|Teamwatch - Spin Target opposing character die to an energy face of your opponents choice.|Global: Pay[M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your prep area.',
-'354V4Master Mold|Untold Electronic Expertise|When fielded, KO target [XMEN] character die.',
-'353V4Mister Sinister|Dark Experimentation|When Mister Sinister attacks, after blockers are declared, you may pay 2 life and have him gain +3A|Global: Pay [2]. Field a Sidekick from your Used Pile, Prep a Sidekick from your Used Pile.',
-'334X3Moira|Strength of Foresight|Founder|While Moira is active, when you field an [XMEN] character die with purchase cost of 3 or more put a Loyalty Counter on Moira.|When fielded, you may send target action die from your opponent\'s Field Zone in their Used Pile.',
-'331N4Mystique|Taught by Magneto|While Mystique is active, [BOM] character dice are free to field.|Energize - You may field a [BOM] character die for free.',
-'363X4Phoenix|Eternal Flame|When Phoenix attacks, opposing character dice with less than 4A can\'t block.',
-'361X4Professor X|Uncanny Leadership|When fielded, spin an opposing die to it\'s single energy face.|Energize - Move an [XMEN] die from your Used Pile to your Prep Area.',
-'341X4Psylocke|Heiress|Psylocke gets +2A for each of your [XMEN] dice in the Prep Area.|Energize - Spin target character die up 1 level.',
-'341X4Rogue|Unity Squad|While Rogue is active, your [XMEN] character dice cost 1 less to field.|Teamwatch - Rogue gets +2A.',
-'36304Ronan the Accuser|No Exceptions|When fielded, each player loses 3 life.',
-'352B4Sabretooth|You Ready to Party?|When Sabretooth attacks, your [BOM] character dice get +2A.|Teamwatch - Target character die can\'t block this turn',
-'373X4Storm|Queen|When Fielded, reroll target character die. When Storm attacks, reroll up to 2 opposing character dice. Move each die that does roll a character goes to you opponent\'s Used Pile. Storm deals 2 damage to your opponent for each die moved.|Energize - Reroll target opposing character die',
-'3C104Supreme Intelligence|Merciless|Supreme Intelligence costs 1 less to purchase for each Loyalty Counter on it. When you purchase Ronan the Accuser, or attack with a Ronan the Accuser character die, put a Loyalty Counter on Supreme Intelligence\'s card.',
-'342B4Toad|Journey Into Misery|Teamwatch - Move a die from your opponents Prep Area to their bag.',
-'36204Vulcan|Aggession|While Vulcan is active, your opponent\'s non-fist characters get -2D.|Global: Pay [F]. Target character die must attack this turn.',
-'342X4Wolverine|Trainer|Awaken: Target sidekick character die gains Deadly.|*When you spin up another character die, spin Wolverine up also.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag',
-'434X2Angel|Xavier\'s Dream|While Angel is active, your opponent can\'t target your Sidekick dice with Global Abilities.',
-'432X4Beast|Xavier\'s Dream|While you have an active Sidekick die, Beast gets +1A.|Overcrush',
-'45204Corsair|Back from Outer Space|If 4 or more of your character dice were KO\'d this turn, you may Prep a Corsair die from this card.|Deadly',
-'463X4Cyclops|Xavier\'s Dream|While you have a Sidekick die active, when Cyclops attacks deal X damage divided how you choose among any number of target character dice, where X is the number of your character dice in the Field Zone.',
-'464P1D\'Ken|Shi\'ar Civil War|While D\'Ken is active, opposing character dice with Purchase Cost of 3 or less lose their abilities and are free to field. ',
-'443X3Iceman|Xavier\'s Dream|Founder|While you have a Sidekick die active, Iceman\'s A is equal to his D.',
-'443X5Jubilee|X-Men Field Leader|While Jubilee is active, when you field a character die she deals 1 damage to your opponent and 1 damage to target character die.',
-'441X4Kitty Pryde|Experienced Leader|While Kitty Pryde is active, each of your [XMEN] character dice get +1A and +1D.',
-'454S4Lilandra|Majestrix|Wile Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
-'461B2Magneto|Founder of the Brotherhood|While Magneto is active, when one of your [BOM] character dice is KO\'d, KO target opposing character dice.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
-'464V4Master Mold|Endless Sentinels|When fielded, when Master Mold attacks, or when Master Mold is KO\'d, place a Sentinel token with 5A and 5D into the Field Zone.',
-'463V4Mister Sinister|Biologist|While Mister Sinister is active, prevent non-combat damage dealt to your other character dice.|Global: Pay [3]. Target character die gains Overcrush.',
-'431M4Mystique|She Walks Among Us|Teamwatch - Spin target opposing character die to an energy face of your opponent\'s choice',
-'451X4Psylocke|Advanced Telekinetic Combatant|When fielded, reroll up to 2 opposing character dice. Each die that does not roll a character goes to your opponent\'s Used Pile. Psylocke deals 2 damage to your opponent for each die moved.',
-'441X4Rogue|Strength Absorption|Energize -  Target character die has 0A this turn.',
-'452X3Wolverine|Tough for the Kids|Regenerate |*If you have at least 3 different active [XMEN], Wolverine can\'t be spun to an energy face or rerolled by your opponent.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.'
- 
-];
- 
-
 
 var m_op2020_dice = ['ig'];
 var m_op2020_aff = { 0:'0', H:"HAND", S:'ASF'};
@@ -5339,20 +5172,7 @@ var sw = [
 	"Tombstone":"022 244 486*",
 	"IG@Thor":"153 164 276",
 	"Turk Barrett":"011 012 022*",
-	"Typhoid Mary":"012 114 245*",
-	
-	//DPS
-	"DPS@Beast":"021 122 132",
-	"Corsair":"034 135 145",
-	"D\'Ken":"044 155 266",
-	"Dark Phoenix":"155 277 388",
-	"Deathbird":"011 012 134",
-	"DPS@Gladiator":"055 166 077",
-	"Lilandra":"133 135 156",
-	"Master Mold":"155 266 388",
-	"Moira":"001 012*122",
-	"DPS@Storm":"021 031 133",
-	"Vulcan":"032 144 165"
+	"Typhoid Mary":"012 114 245*"
 	
     };
     var gender = {
@@ -5640,10 +5460,7 @@ var sw = [
 	"Lita":1,
 	"Trish Stratus":1,
 	
-	"Dark Phoenix":1,
-	"Deathbird":1,
-	"Lilandra":1,
-	"Moira":1,
+	
     };
 
 
