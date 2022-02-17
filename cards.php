@@ -83,9 +83,9 @@
     'ddh', 'ddo', 'ddl', 'dde', 'ddz', 'ddm',
     'turtle',
     'ytd', 'yeg',
-    'kc','kum', 'ko','ksw','ki',
+    'kc','kum', 'ko','ksw','ki','kdg',
 	'wwe','nd','shd','nwo',
-	'iw','bo','h'
+	'iw','bo','h','shi'
     ];
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
@@ -154,7 +154,7 @@
 	{ name:'infinitywatch', pic:'aIWATCH'},
 	{ name:'blackorder', pic:'aBORDER'},
 	{ name:'hand', pic:'aHAND'},
-	{ name:'shi', pic:'aSHI'},
+	{ name:'shiarempire', pic:'aSHI'},
     ];
 
     var affiliation_map = {
@@ -284,7 +284,7 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
-//begin Marvel Infinity Gauntlet
+//begin Dark Phoenix Saga
  var dps_aff = { 0:'0', X:'1',S:'SHI',H:'HELL',D:'MDP',I:'HELLX', P:'SHIV', E:"MDPX", V:'6',B:'MBOM',G:'HELLB',N:'MBOMX',M:'MBOMV'};
  var dps = [
 '14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it’s A (until end of turn).',
