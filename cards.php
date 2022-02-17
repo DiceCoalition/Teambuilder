@@ -364,7 +364,7 @@
 '243X4Jean Grey|Xavier\'s Dream|Founder|While Jean Grey and one of your Sidekick dice are active, your opponents must pay [1] extra to use a Global Ability.',
 '223X4Jubilee|Things Never Change|While Woverine is active, Jubilee gets +1A.',
 '231X4Kitty Pryde|Headmistress|While Woverine is active, Kitty Pryde gets +1A and can\'t be targeted by your opponent.',
-'244S4Lilandra|Freedom Fighter|While Lilandra is active, your oppoent must spend [1] to use each Action Die.',
+'244S4Lilandra|Freedom Fighter|While Lilandra is active, your opponent must spend [1] to use each Action Die.',
 '231B4Madelyne Pryor|Sisterhood|When one of your [BOM] character dice is KO\'d besides Madelyne Pryor, put a Loyalty Counter on her card. (Loyaly Counters give a character die +1A and +1D).',
 '241X4Magik|Better than Belasco|Awaken: Roll a die from your bag.',
 '251B4Magneto|Visionary|While Magneto is active, your [BOM] character dice can only be blocked by 2 or more character dice.|Teamwatch - Prep a die from your bag.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
