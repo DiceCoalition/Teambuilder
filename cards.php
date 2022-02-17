@@ -294,7 +294,7 @@
 '12003Lab Test|Basic Action Card|Continuous: You may send this die to your Used Pile to reroll one of the character dice in your Reserve Pool.',
 '14003Living the Dream|Basic Action Card|Continuous: If among all character cards on your team you have at least 3 Loyalty Counters, your character dice get +1A an Overcrush (until the end of turn).',
 '13003Making the Team|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
-'12003Mutant research Program|Basic Action Card|If you have at least 2 active Founder character dice, draw and roll 3 dice.|Otherwise, draw and roll a die.',
+'12003Mutant Research Program|Basic Action Card|If you have at least 2 active Founder character dice, draw and roll 3 dice.|Otherwise, draw and roll a die.',
 '13003Mutation|Basic Action Card|Swap target character die in the Field Zone with target non-sidekick character dice in that player\'s Used Pile. Spin that character die to level 1. (This does not trigger "when fielded" effects.)|Global: Pay [M].Spin one of your character die down a level to spin another target character die up a level.',
 '13003Organic Steel|Basic Action Card|Continuous: Prevent up to 2 damage to target character die and move this die to your Used Pile. If you have an active [XMEN] character, also gain 1 life.',
 '13003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.',
