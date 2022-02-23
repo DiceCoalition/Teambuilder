@@ -331,7 +331,7 @@
 '154V4Master Mold|Inexplicable Durability|When fielded, deal 2 damage to all [XMEN] and [BOM] character dice.',
 '153V4Mister Sinister|Geneticist|When fielded, KO up to 2 target Sidekick dice. When Mister Sinister KOs an opposing character, you may pay 1 life. If you do, your opponent loses 1 life.|Global: Pay [2B]. Target non-Sidekick character die gains Deadly.',
 '124X3Moira|It\'s Not a Dream|While Moira is active, when an opponent fields a Continuous Action die, reroll it. If it lands on an action face, they may field it normally. Otherwise, send it to the Used Pile.',
-'121X3Mystique|Relentless|When Wolverine is active, Mystique gest +2A.|Global: Pay [2M]. Target character die can\'t block this turn if it shares a Team Affiliation with a character card on your team.',
+'121X3Mystique|Relentless|When Wolverine is active, Mystique gets +2A.|Global: Pay [2M]. Target character die can\'t block this turn if it shares a Team Affiliation with a character card on your team.',
 '163X4Phoenix|Firepower|When fielded, deal 3 damage to target character die.|Energize - Deal 2 damage to target character die or player.',
 '151X4Professor X|Dreamer|If you spend an [XMEN] die to field Professor X, Prep a die from your bag.|Energize - Move an [XMEN] die from your Used Pile to your Prep Area.',
 '121X3Psylocke|Adventurer|While Wolverine is active, Psylocke gains Deadly.|When fielded, spin target character die up 1 level.',
