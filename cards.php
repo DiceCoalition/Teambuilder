@@ -350,7 +350,7 @@
 '244B4Blob|MGH Dependent|When fielded, lose 1 life.|Intimidate. ',
 '243X4Cable|Bosom Buddies|While Cable is active, your Deadpool costs [1] less to purchase (to a minimum of 1) and has +2A.',
 '252X4Colossus|Organic Steel|While Colossus is active, the first time one of your character dice would take damage each turn you may have Colossus take that damage instead.|*Instead, prevent that damage.',
-'24204Corsair|Leading the Starjammers|If Corsair\'s A or D is increasedby an effect, you may increase the A or D of a Sidekick die you control by the same amount.',
+'24204Corsair|Leading the Starjammers|If Corsair\'s A or D is increased by an effect, you may increase the A or D of a Sidekick die you control by the same amount.',
 '243X4Cyclops|Defending the Phoenix|Energize - Deal 1 damage to target character die and reroll this die. ',
 '244P4D\'Ken|Obsessed|While D\'Ken is active, if you take combat damage this turn you may use an action die from either player\'s Used Pile.',
 '263V4Dark Phoenix|Enemy of the Shi\'ar|When fielded, KO target [SHI] or [XMEN] character die.|When Dark Phoenix  attacks, deal 2 damage to your opponent.|Global: Pay [B] and KO one of your character dice. Your next die you purchase this turn costs 2 less (to a minimum of 1).',
