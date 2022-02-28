@@ -336,6 +336,8 @@
     <option value="8">8</option>
     <option value="9">9</option>
     <option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
   </select> - <select id="cost_max">
     <option value="0">0</option>
     <option value="1">1</option>
@@ -347,7 +349,9 @@
     <option value="7">7</option>
     <option value="8">8</option>
     <option value="9">9</option>
-    <option value="10" selected>10</option>
+    <option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12" selected>12</option>
   </select>
   </span><span class="search_category">
   <span id="search_gender_off">
