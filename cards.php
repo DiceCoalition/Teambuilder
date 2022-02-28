@@ -381,7 +381,7 @@
 '243X4Storm|Cloud Cover|When fielded, target character die with 3A or less can\'t be blocked this turn.',
 '27104Supreme Intelligence|Psionic Collective|Intimidate|Overcrush',
 '232B4Toad|Looking for Comradery|Energize - You may spin one of the Character dice in your reserve pool from a character face to level 1.',
-'25204Vulcan|Power Suppression|Ignore the abilities of character dice blocking or blocked by Vulcan.',
+'25204Vulcan|Power Suppression|Ignore the abilities of character dice blocking or blocked by Vulcan.|Global: Pay [F]. Target character die must attack this turn.',
 '252X4Wolverine|Hardened by Madripoor|When you have at least 3 active X-Men character dice, Wolverine gains "Energize - Spin this die to level 1',
 '344X3Angel|Air Support|Founder|While Angel is active, when an opponent targets one of your character dice, gain 1 life.',
 '322X4Beast|Combat Ready|Founder|When Beast attacks, Prep a die from your bag. The first Beast die you purchase each game costs 1 extra.',
