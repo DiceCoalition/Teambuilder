@@ -447,11 +447,8 @@
 var m_op2020_dice = ['ig'];
 var m_op2020_aff = { 0:'0', H:"HAND", S:'ASF'};
 var m_op2020 = [
-    '53204???|???|???',
 	'556H5Typhoid Mary|Violent Tendencies|Energize - Your [PAWN] character dice and [H] character dice get +2A and Overcrush at the beginning of this attack step.',
-	'53204???|???|???',
 	'542S6Spider-Man|Wall-Crawler of Forest Hills|The first Spider-Man die you purchase each game costs [1] less.|Recruit - [PAWN]|(When this die damages an opponent with combat damage, move a [PAWN] die from your Used Pile, Reserve Pool, or Prep Area into the FIeld on its level 1 character face.)',
-	'53204???|???|???',
 	'55003Slingers|Basic Action Card|At the beginning of your attack step, your opponent chooses 1 of your character dice that can\'t attack this turn. Two target character dice can\'t block this turn.|Global: Pay [M]. Target character die must attack this turn.',
 ];
 
