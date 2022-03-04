@@ -436,7 +436,7 @@
 '464V4Master Mold|Endless Sentinels|When fielded, when Master Mold attacks, or when Master Mold is KO\'d, place a Sentinel token with 5A and 5D into the Field Zone.',
 '463V4Mister Sinister|Biologist|While Mister Sinister is active, prevent non-combat damage dealt to your other character dice.|Global: Pay [3]. Target character die gains Overcrush.',
 '431M4Mystique|She Walks Among Us|Teamwatch - Spin target opposing character die to an energy face of your opponent\'s choice',
-'451X4Psylocke|Advanced Telekinetic Combatant|When fielded, reroll up to 2 opposing character dice. Each die that does not roll a character goes to your opponent\'s Used Pile. Psylocke deals 2 damage to your opponent for each die moved.',
+'451X4Psylocke|Advanced Telekinetic Combatant|When fielded, reroll up to 2 opposing characters. Each die that does not roll a character goes to your opponent\'s Used Pile. Psylocke deals 2 damage to your opponent for each die moved.',
 '441X4Rogue|Strength Absorption|Energize -  Target character die has 0A this turn.',
 '452X3Wolverine|Tough for the Kids|Regenerate |*If you have at least 3 different active [XMEN], Wolverine can\'t be spun to an energy face or rerolled by your opponent.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.'
  
