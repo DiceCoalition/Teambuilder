@@ -287,7 +287,7 @@
 //begin Dark Phoenix Saga
  var dps_aff = { 0:'0', X:'1',S:'SHI',H:'HELL',D:'MDP',I:'HELLX', P:'SHIV', E:"MDPX", V:'6',B:'MBOM',G:'HELLB',N:'MBOMX',M:'MBOMV'};
  var dps = [
-'14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it’s A (until end of turn).',
+'14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A (sic)(until end of turn).',
 '14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
 '14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
 '13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
@@ -421,7 +421,7 @@
 '373X4Storm|Queen|When Fielded, reroll target character die. When Storm attacks, reroll up to 2 opposing character dice. Move each die that does not roll a character goes to you opponent\'s Used Pile. Storm deals 2 damage to your opponent for each die moved.|Energize - Reroll target opposing character die',
 '3C104Supreme Intelligence|Merciless|Supreme Intelligence costs 1 less to purchase for each Loyalty Counter on it. When you purchase Ronan the Accuser, or attack with a Ronan the Accuser character die, put a Loyalty Counter on Supreme Intelligence\'s card.',
 '342B4Toad|Journey Into Misery|Teamwatch - Move a die from your opponent\'s Prep Area to their bag.',
-'36204Vulcan|Aggession|While Vulcan is active, your opponent\'s non-fist characters get -2D.|Global: Pay [F]. Target character die must attack this turn.',
+'36204Vulcan|Aggression|While Vulcan is active, your opponent\'s non-fist characters get -2D.|Global: Pay [F]. Target character die must attack this turn.',
 '342X4Wolverine|Trainer|Awaken: Target sidekick character die gains Deadly.|*When you spin up another character die, spin Wolverine up also.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag',
 '434X2Angel|Xavier\'s Dream|While Angel is active, your opponent can\'t target your Sidekick dice with Global Abilities.',
 '432X4Beast|Xavier\'s Dream|While you have an active Sidekick die, Beast gets +1A.|Overcrush',
