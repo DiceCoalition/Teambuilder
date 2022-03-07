@@ -287,7 +287,7 @@
 //begin Dark Phoenix Saga
  var dps_aff = { 0:'0', X:'1',S:'SHI',H:'HELL',D:'MDP',I:'HELLX', P:'SHIV', E:"MDPX", V:'6',B:'MBOM',G:'HELLB',N:'MBOMX',M:'MBOMV'};
  var dps = [
-'14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A (sic)(until end of turn).',
+'14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A [sic](until end of turn).',
 '14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
 '14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
 '13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
