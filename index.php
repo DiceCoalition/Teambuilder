@@ -1732,16 +1732,20 @@ document.getElementById('file').onchange = function(){
   function display_team() {
     try {
 		var teamDisp = [];
+
 		for(var i = 0; i < team.length; i++){
 			//need to make a copy of the object for color change
 			//don't want to do a reference
 			teamDisp.push(JSON.parse(JSON.stringify(team[i])));
-			var index = rows.findIndex(x => x.name === team[i].name);
-			if(index == -1){
-				teamDisp[i].html = teamDisp[i].html.replace("<tr ", "<tr style='background:red' ");
+			//don't do the red when on view team
+			if(mode !== 2){
+				var index = rows.findIndex(x => x.name === team[i].name);				
+				if(index == -1){
+					teamDisp[i].html = teamDisp[i].html.replace("<tr ", "<tr style='background:red' ");
+				}
 			}
-			
 		}
+		
         var bac = teamDisp.filter(function (a) {
             return a.type == 2
         });
