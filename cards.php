@@ -5625,7 +5625,9 @@ var sw = [
 	"Human Warlock":1,
 	"Tashlyn Yafeera":1,
 	"Black Viper":1,
-	"Brawlwin":1,
+	"Brawlwin Chainminer":1,
+	"Calliope":1,
+	"Dagny":1,
 	"Vajra":1,
 	"Jamilah":1,
 	
