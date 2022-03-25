@@ -1640,6 +1640,7 @@ document.getElementById('file').onchange = function(){
   init(63,ig,'IG','ig',[],ig_aff);
   init(64,m_op2020,'M2020','ig',m_op2020_dice,m_op2020_aff);
   init(65,dps,'DPS','dps',[],dps_aff);
+  init(66,m_op2022,'M2022','dps',m_op2022_dice,m_op2022_aff);
 
    
   Array.prototype.extend = function (a) {
