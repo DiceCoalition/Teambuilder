@@ -287,11 +287,11 @@
 var m_op2022_dice = ['dps'];
 var m_op2022_aff = { 0:'0'};
 var m_op2022 = [
-	'55004Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
-	'55003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
-	'55006Hellfire Gala|Basic Action Card|Roll 2 dice from your bag. Each player fields three Sidekick dice from their Used Pile. If there are 16 or more dice in the Field Zone, win the game.',
-	'55003Mutant Armor|Basic Action Card|Continuous: Prevent up to 2 damage to target character die and move this die to your Used Pile. If you have an active X-Men character, also gain 1 life.',
-	'55003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.'
+	'54003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
+	'53003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
+	'56003Hellfire Gala|Basic Action Card|Roll 2 dice from your bag. Each player fields three Sidekick dice from their Used Pile. If there are 16 or more dice in the Field Zone, win the game.',
+	'53003Mutant Armor|Basic Action Card|Continuous: Prevent up to 2 damage to target character die and move this die to your Used Pile. If you have an active X-Men character, also gain 1 life.',
+	'53003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.'
 ];
 
 //begin Dark Phoenix Saga
