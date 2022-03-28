@@ -441,7 +441,7 @@ var m_op2022 = [
 '443X3Iceman|Xavier\'s Dream|Founder|While you have a Sidekick die active, Iceman\'s A is equal to his D.',
 '443X5Jubilee|X-Men Field Leader|While Jubilee is active, when you field a character die she deals 1 damage to your opponent and 1 damage to target character die.',
 '441X4Kitty Pryde|Experienced Leader|While Kitty Pryde is active, each of your [XMEN] character dice get +1A and +1D.',
-'454S4Lilandra|Majestrix|Wile Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
+'454S4Lilandra|Majestrix|While Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
 '461B2Magneto|Founder of the Brotherhood|While Magneto is active, when one of your [BOM] character dice is KO\'d, KO target opposing character dice.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
 '464V4Master Mold|Endless Sentinels|When fielded, when Master Mold attacks, or when Master Mold is KO\'d, place a Sentinel token with 5A and 5D into the Field Zone.',
 '463V4Mister Sinister|Biologist|While Mister Sinister is active, prevent non-combat damage dealt to your other character dice.|Global: Pay [3]. Target character die gains Overcrush.',
