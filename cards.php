@@ -331,7 +331,7 @@ var m_op2022 = [
 '131X4Gambit|Ace in the Hole|When fielded, you may draw and roll a die.|* Instead, draw 2 dice, Roll one and return the other to your bag.',
 '152S4Gladiator|Psi Resistance|Intimidate|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
 '143X3Iceman|Icy Interference|When Iceman attacks, spin target opposing level 1 character die to an energy face.',
-'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each or your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
+'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each of your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
 '123X4Jubilee|Rebellious Nature|Energize - If you have less life than your opponent, you may immediately field this die for free at level 2.',
 '131X4Kitty Pryde|Right of Passage|Awaken - Prep a die from your bag.',
 '134S4Lilandra|Politician|Global: Pay [S]. Once per turn, if you have purchased a character die this turn, you may draw a die from your bag and add it to your Prep Area.',
@@ -5268,7 +5268,7 @@ var sw = [
 	//ZHN
 	"Davil Starsong":"034 134 245",
 	"ZHN@Doppelganger":"011 122 133",
-	"Hitch":"111*112*133",
+	"Hitch":"111*122*133",
 	"Human Warlock":"012 014 125",
 	"Istrid Horn":"012 022 132",
 	"Manshoon":"002 013 124",
