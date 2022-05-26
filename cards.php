@@ -284,13 +284,23 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
+var m_op2022_dice = ['dps'];
+var m_op2022_aff = { 0:'0'};
+var m_op2022 = [
+	'54003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
+	'53003Focus|Basic Action Card|Spin target character die up or down one level.|** Spin all character dice up or down one level.|Global: Pay [1]. Spin target character die you control down 1 level.',
+	'56003Hellfire Gala|Basic Action Card|Roll 2 dice from your bag. Each player fields three Sidekick dice from their Used Pile. If there are 16 or more dice in the Field Zone, win the game.',
+	'53003Mutant Armor|Basic Action Card|Continuous: Prevent up to 2 damage to target character die and move this die to your Used Pile. If you have an active X-Men character, also gain 1 life.',
+	'53003Power Bolt|Basic Action Card|Deal 2 damage to target character die or player.'
+];
+
 //begin Dark Phoenix Saga
  var dps_aff = { 0:'0', X:'1',S:'SHI',H:'HELL',D:'MDP',I:'HELLX', P:'SHIV', E:"MDPX", V:'6',B:'MBOM',G:'HELLB',N:'MBOMX',M:'MBOMV'};
  var dps = [
 '14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A [sic](until end of turn).',
 '14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
 '14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
-'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
+'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up this turn gets +2A.',
 '12003Lab Test|Basic Action Card|Continuous: You may send this die to your Used Pile to reroll one of the character dice in your Reserve Pool.',
 '14003Living the Dream|Basic Action Card|Continuous: If among all character cards on your team you have at least 3 Loyalty Counters, your character dice get +1A an Overcrush (until the end of turn).',
 '13003Making the Team|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
@@ -321,7 +331,7 @@
 '131X4Gambit|Ace in the Hole|When fielded, you may draw and roll a die.|* Instead, draw 2 dice, Roll one and return the other to your bag.',
 '152S4Gladiator|Psi Resistance|Intimidate|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
 '143X3Iceman|Icy Interference|When Iceman attacks, spin target opposing level 1 character die to an energy face.',
-'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each or your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
+'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each of your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
 '123X4Jubilee|Rebellious Nature|Energize - If you have less life than your opponent, you may immediately field this die for free at level 2.',
 '131X4Kitty Pryde|Right of Passage|Awaken - Prep a die from your bag.',
 '134S4Lilandra|Politician|Global: Pay [S]. Once per turn, if you have purchased a character die this turn, you may draw a die from your bag and add it to your Prep Area.',
@@ -431,7 +441,7 @@
 '443X3Iceman|Xavier\'s Dream|Founder|While you have a Sidekick die active, Iceman\'s A is equal to his D.',
 '443X5Jubilee|X-Men Field Leader|While Jubilee is active, when you field a character die she deals 1 damage to your opponent and 1 damage to target character die.',
 '441X4Kitty Pryde|Experienced Leader|While Kitty Pryde is active, each of your [XMEN] character dice get +1A and +1D.',
-'454S4Lilandra|Majestrix|Wile Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
+'454S4Lilandra|Majestrix|While Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
 '461B2Magneto|Founder of the Brotherhood|While Magneto is active, when one of your [BOM] character dice is KO\'d, KO target opposing character dice.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
 '464V4Master Mold|Endless Sentinels|When fielded, when Master Mold attacks, or when Master Mold is KO\'d, place a Sentinel token with 5A and 5D into the Field Zone.',
 '463V4Mister Sinister|Biologist|While Mister Sinister is active, prevent non-combat damage dealt to your other character dice.|Global: Pay [3]. Target character die gains Overcrush.',
@@ -1187,7 +1197,7 @@ var sw = [
 '043O4Battlewagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
 '061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazghkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
 '061O2Ghazghkul Thraka|Prophet of Gork and Mork|While Ghazghkul Thraka is active, once per turn, when you could use a Global Ability, you may KO a character die you control.|If you do, deal 1 damage to target opponent.',
-'071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deals combat camage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
+'071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deal combat damage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
 '054O4Mogrok|Know-It-All-Git|Range 1|While Mogrok is active, your other [KO] character dice get +1A and +1D.',
 '054O4Mogrok|War of Kunnin\'|When Mogrok blocks and is not KO\'d, spin him up 1 level (at end of turn).|Global: Pay [S]. Target character gets +1d (until end of turn).',
 '054O4Mogrok|The Red Waaagh!|While Mogrok is active, Prep the first action die you purchase each turn.|Global: Pay [S]. Target character gets +1d (until end of turn).',
@@ -1810,7 +1820,7 @@ var sw = [
     '334X4Angel|Championing the Cause|While Angel is active, whenever a Sidekick Die is KO\'d, you may spin target character die up 1 level.',
     '342B4Avalanche|Quake in Your Boots|While Avalanche is active, when a [DCV] character Die is fielded, deal 1 damage to all opposing character dice.',
     '341X4Banshee|Hitting the High Notes|While Banshee is active, when your opponent draws a Basic Action Die, deal 2 damage to target opponent or character die.',
-    '322X4Beast|Oh My Stars and Garters!|When Beast is KO\'d, you my Prep a Beast die from your Used Pile.',
+    '322X4Beast|Oh My Stars and Garters!|When Beast is KO\'d, you may Prep a Beast die from your Used Pile.',
     '354X4Bishop|Butterfly Effect|While Bishop is active, prevent all non-combat damage dealt to you.',
     '341E4Blink|Unhinged From Reality|Whenever you use an Action die, Blink gains Infiltrate (<em>until end of turn</em>).',
     '344B4Blob|Appetite for Destruction|When fielded, choose an opposing card, cancelling all previous choices. Your opponent may not purchase or field that card\'s dice until Blob leave the Field Zone.',
@@ -5258,7 +5268,7 @@ var sw = [
 	//ZHN
 	"Davil Starsong":"034 134 245",
 	"ZHN@Doppelganger":"011 122 133",
-	"Hitch":"111*112*133",
+	"Hitch":"111*122*133",
 	"Human Warlock":"012 014 125",
 	"Istrid Horn":"012 022 132",
 	"Manshoon":"002 013 124",
@@ -5625,7 +5635,9 @@ var sw = [
 	"Human Warlock":1,
 	"Tashlyn Yafeera":1,
 	"Black Viper":1,
-	"Brawlwin":1,
+	"Brawlwin Chainminer":1,
+	"Calliope":1,
+	"Dagny":1,
 	"Vajra":1,
 	"Jamilah":1,
 	
