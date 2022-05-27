@@ -4056,7 +4056,7 @@ var sw = [
     '34404Namor|Imperius Rex|If Namor is the only character in your field at the end of any turn, field up to two Sidekick dice from your used pile or prep area <em>(spin them to their character face)</em>.',
     '35114Professor X|Trainer|While Professor X is active, your Sidekicks get +1A and +1D <em>(no matter how many Professor X dice you have fielded)</em>.|Global: Pay [M]. Move up to 2 Sidekick dice from your used pile to your prep area.',
     '32104Psylocke|Kwannon the Assassin|When fielded, you may pay [M][M] to knock out one character.',
-    '35344Pyro|Uncontrolled|When Pyro attacks, roll all the dice in your used pile. Deal 1 damage to your opponent for each [B] rolled. Return the dice to your used pile.|Global: Pay [B]. Draw and roll 2 dice from your bag. Keep any [B] results rolled. Return the rest to your bag.',
+    '35344Pyro|Uncontrolled|When Pyro attacks, roll all the dice in your used pile. Deal 1 damage to your opponent for each [B] rolled. Return the dice to your used pile.|Global: Pay [B][B]. Draw and roll 2 dice from your bag. Keep any [B] results rolled. Return the rest to your bag.',
     '37224Red Hulk|Superhero|Heroic: When fielded, Red Hulk may pair up with a different Heroic character until the start of your next turn.|While Red Hulk is paired up, he and his partner each gain +3A.',
     '35244Sabretooth|Superpowered|Heroic: When fielded, Sabretooth may pair up with a different Heroic character until the start of your next turn.|While Sabretooth is paired up, spin him and his partner to level 3 at the end of your turn.',
     '33324Scarlet Witch|Unity Squad|On the turn after Scarlet Witch is fielded, you may make your opponent reroll one die from his initial roll <em>(before he rerolls dice)</em>.',
