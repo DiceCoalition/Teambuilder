@@ -436,7 +436,7 @@ var m_op2022 = [
 '434X2Angel|Xavier\'s Dream|While Angel is active, your opponent can\'t target your Sidekick dice with Global Abilities.',
 '432X4Beast|Xavier\'s Dream|While you have an active Sidekick die, Beast gets +1A.|Overcrush',
 '45204Corsair|Back from Outer Space|If 4 or more of your character dice were KO\'d this turn, you may Prep a Corsair die from this card.|Deadly',
-'463X4Cyclops|Xavier\'s Dream|While you have a Sidekick die active, when Cyclops attacks deal X damage divided how you choose among any number of target character dice, where X is the number of your character dice in the Field Zone.',
+'463X4Cyclops|Xavier\'s Dream|While you have a Sidekick die active, when Cyclops attacks deal X damage divided how you choose among any number of target opposing character dice, where X is the number of your character dice in the Field Zone.',
 '464P1D\'Ken|Shi\'ar Civil War|While D\'Ken is active, opposing character dice with Purchase Cost of 3 or less lose their abilities and are free to field. ',
 '443X3Iceman|Xavier\'s Dream|Founder|While you have a Sidekick die active, Iceman\'s A is equal to his D.',
 '443X5Jubilee|X-Men Field Leader|While Jubilee is active, when you field a character die she deals 1 damage to your opponent and 1 damage to target character die.',
