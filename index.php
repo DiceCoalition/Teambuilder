@@ -244,11 +244,11 @@
   <input type="checkbox" id="set24" title="The Mighty Thor" checked>Thor
   <input type="checkbox" id="set25" title="Avengers Infinity" checked>AI
   <input type="checkbox" id="set26" title="Kree Invasion" checked>KI
-  <input type="checkbox" id="set27" title="Just Like Lightning" checked>JLL
+  <input type="checkbox" id="set27" title="Justice, Like Lightning" checked>JLL
   <input type="checkbox" id="set35" title="X-men Forever" checked>XMF
-  <input type="checkbox" id="set36" title="X-Force" checked>XFO
+  <input type="checkbox" id="set36" title="Uncanny X-Force" checked>XFO
   <input type="checkbox" id="set37" title="Dark X-men" checked>DXM
-  <input type="checkbox" id="set44" title="Infinity Gauntlet" checked>IG
+  <input type="checkbox" id="set44" title="Avengers Infinity Gauntlet" checked>IG
   <input type="checkbox" id="set45" title="Dark Phoenix Saga" checked>DPS
   <input type="checkbox" id="set4" title="Justice League" checked>JL
   <input type="checkbox" id="set6" title="War of Light" checked>WoL
