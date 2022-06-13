@@ -9,7 +9,7 @@
      GOOD:"good",
      DCV:"villain",WT:"teen titan",
      WL:"lantern",WLG:"green lantern", WLB:"blue lantern", WLY:"sinestro corps", WLI:"indigo tribe", WLK:"black lantern", WLR:"red lantern", WC:"conduit",
-     Q:"?", "2M":"double mask",
+     Q:"?", "2M":"Double Mask", "BF":"Bolt Fist",
      SF:"spidey friend",4:4,XMEN:'x-men',
      DCLOD:"legion of doom",
      DDM:"monster", EVIL: "evil", NEUTRAL: "neutral", 3:3, 5:5,
@@ -35,7 +35,7 @@
     var iconid = {
      M:'e1', F:'e2', B:'e3', S:'e4',
      EQ:'eq', TDF:'aA',
-     AV:'a2', VM:'a4', GG:'aG', ZO:'aDZOM', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22',
+     AV:'a2', VM:'a4', GG:'aG', ZO:'aDZOM', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22', "BF":'e5',
      GOOD:'dg',
      DCV:"WVbw",WT:"WTbw",
      WL:"WLbw",WLG:"WGbw", WLB:"WBbw", WLY:"WYbw", WLI:"WIbw", WLK:"WKbw", WLR:"WRbw", WC:"WCbw",
@@ -60,10 +60,11 @@
 	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
 	 IW:'aIW', BO:"aBORDER", H:"aHandIco",
 	 SHI:'aSHI'
+	 
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig','dps',];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig','dps','skc'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -87,6 +88,9 @@
 	'wwe','nd','shd','nwo',
 	'iw','bo','h','shi'
     ];
+    
+    //The below table is for individual icons that are used in card text.
+    
     var affiliation_properites = [
     { name:'none', pic: 'a0' },
     { name:'xmen', pic: 'a1' },
@@ -157,6 +161,7 @@
 	{ name:'shiarempire', pic:'aSHI'},
     ];
 
+	//the table below is for affiliation icons on the card, so double and triple icons
     var affiliation_map = {
      0:'none',
      1:'xmen',
@@ -196,6 +201,7 @@
 	 JLMYSTIC:['mystic', 'justiceleague'],
      JLTA:['thunderbolts','avengers'],
      JLVT:['villains','thunderbolts'],
+     JLL:['legionofdoom'],
      KCDG:['chaos','deathguard'],
      KC:'chaos',
      KIUM:['imperium','ultramarines'],
@@ -251,7 +257,14 @@
 	 SHI:'shiarempire', SHIV:['shiarempire','villain'],MDPX:['deadpool','xmen'],
 	 HELLX:['hellfireclub','xmen'],
 	 HELLB:['hellfireclub','brotherhoodofmutants'],
-	 MBOMX:['xmen','brotherhoodofmutants']
+	 MBOMX:['xmen','brotherhoodofmutants'],
+	 
+	 //SKC affiliations
+	 
+	 WTB:['batman','teentitans'],
+	 WSJ:['justiceleague','superman'],
+	 WSBJ:['superman','batman','justiceleague'],
+	 WMV:['mystics','villain'],
     };
 
     var affiliation_set = {};
@@ -284,6 +297,171 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
+
+//begin Superman Kryptonite Crisis
+
+ var skc_aff = { 0:'0', A:'WTB', M:'JLMYSTIC', Y:'MYSTIC', S:'WFS', W:'WMV', D:'JLL', Q:'WSBJ', V:'6', N:'DCNG', W:'WSJ', T:'WT', J:'7', X:'WMV'};
+ var skc = [
+ 
+'13003Arctic Breath|Basic Action Card|Deal 1 damage to target character die.|Put a STUN token on a different target character die\'s card.|Global: Pay [F]. Target character die gets +1A.',
+'12003Banishment|Basic Action Card|Put target character die from your opponent\'s Prep Area into their Used Pile.',
+'13003Bold Last Stand|Basic Action Card|Target character die with 1A or less gets +2A and +2D. If it doesn\'t attack this turn, KO it.|Global: Pay [S]. Target character die gets +2D.',
+'13003Call to Action|Basic Action Card|Target non-Sidekick character die gets +3A.',
+'14003Daily Planet|Basic Action Card|Draw 2 dice. Prep up to 2 of them, roll the remainder.',
+'13003Feedback|Basic Action Card|When an opposing character die is KO\'d, deal 1 damage to its controller.',
+'13003Fortress of Solitude|Basic Action Card|Choose one:|	&#8226; Target character die gets +3A.|	&#8226; If an opponent controls twice as many or more character dice as you, reroll 2 target character dice.',
+'13003Huge Smash|Basic Action Card|Deal 3 damage to target character. If you control a character die with cost 5 or more, deal 3 damage to another target character die.|Global: Pay [1]. Once per turn, draw a die from your bag. Return it to your bag or add it to your Used Pile.',
+'15003Investigative Journalism|Basic Action Card|Draw 4 dice. Roll up to 3 of them, Prep the remainder.',
+'13003Man of Steel|Basic Action Card|Continuous: Move this die to your Used Pile, prevent up to 2 damage to target character die, and if you have an active [DCS] character die gain 1 life.',
+'14003Mind Control|Basic Action Card|At the start of your Attack Step, gain control of target opposing charcter die with a level lower than one of your character dice. It must attack (if able).|**Instead, you may take control of a character die of any level.',
+'14003Righteous Charge|Basic Action Card|Your attacking character dice take a maximum of 2 damage from each blocker.|** Instead they take a maximum of 1 damage from each blocker.',
+'14003Thrown Car|Basic Action Card|Up to two target character dice in your Field Zone get +1A and Overcrush until end of turn.',
+'14003Too Big to Fly|Basic Action Card|KO target character die with A of 5 or greater.|Global: Pay [F]. Target character die gets +1A.',
+'13003Truce|Basic Action Card|KO up to two character dice you control. For each character die you KO this way, you opponent must KO a character die they control. ',
+'13003Vulnerability|Basic Action Card|Choose an opposing character. If you damage target character die this turn, KO it and Prep a die from your bag.',
+'15203Anti-Monitor|Mobius|When Anti-Monitor attacks, you may KO any number of your character dice. For each that you do, your opponent KOs one of their character dice.',
+'132J4Barry Allen|The Flash|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
+'13404Bat-Signal|Terrifying Criminals|Choose target character die. If you damage target character die this turn, KO it and Prep a die from your bag.',
+'151Q4Batman|Rooftops|Energize - Draw and roll 2 dice.|Global: Pay [2M]. Each Player may field up to 2 sidekick dice from their Used Pile.',
+'132N3Big Barda|Formerly of Apokolips|Ignore all non-combat damage dealt to Big Barda.',
+'15404Bizarro|Arctic Vision|When fielded, put a Stun token on an opposing character card. (Stunned character card\'s dice cannot attack or block. The card\'s owner can pay [2] any time they could use a Global Ability to remove a Stun token.)',
+'143T4Blue Beetle|Armored Up|If Blue Beetle would take exactly 1 damage, instead reroll that Blue Beetle die and prevent the damage. ',
+'131J4Booster Gold|The Future\'s Most Famous Superhero|If no opposing character dice have Fast, Booster Gold gains Fast.',
+'13104Brainiac 5|Lost in Time|',
+'164S4Conner Kent|A Few Tricks|When fielded, put a Stun token on an opposing character card. [Stunned character card\'s dice cannot attack or block. The card\'s owner can pay [2] any time they could use a Global Ability to remove a Stun token.',
+'142V4Darkseid|Uxas|Global: Pay [BF]. Deal 1 damage to target character die, lose 1 life.',
+'142Y4Doctor Fate|Helmet of Fate|When Doctor Fate attacks, he gets +X A where X is the A of one of your character dice that isn\'t attacking.',
+'143V4Doomsday|Unimaginable Bloodlust|At the beginning of the game, choose a character die\'s name.|When fielded, KO target character die with the chosen name.|Global: Pay [B]. Target character die must attack this turn.',
+'153V4General Zod|Dru-Zod|When you use an action die, General Zod gets +1A and Fast until the end of turn.',
+'13303Green Kryptonite|Shards of Krypton|Deal 4 damage to target character die with purchase cost of 4 or more. ',
+'11103Harley Quinn|Bright Lights, Big City!|',
+'121J5Hawkgirl|Brilliant Tactician|While Hawkgirl is in your Used Pile, if you roll two ? you may field Hawkgirl at level 1.',
+'133J4Hawkman|Archaeologist|If you fielded a non-Sidekick character die besides Hawkman this turn, Hawkman gets +1A.|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global abilities (until end of turn)',
+'122S4Jimmy Olsen|Photographer|Jimmy Olsen can\'t be targeted by opposing Global Abilities.',
+'164S4Jonathan Kent|Son of Superman|Jonathan Kent cannot be targeted by opposing action dice or abilities. ',
+'134D4Lex Luthor|New Superman|While Superman is active, Lex Luthor cost 2 less to purchase.',
+'122S4Lois Lane|Army Brat|While Lois Lane is active, your Superman dice get +1A and +1D.',
+'143Y4Mary Shazam|Wisdom of Minerva|While Mary Shazam is active, when you field a non-[DCV] character die, spin it up 1 level.|When fielded, the next Shazam die you purchase costs 2 less.',
+'131X3Mister Mind|Wildlands Native|When Mister Mind deals combat damage to your opponent, you may put that Mister Mind die into your Reserve Pool on an energy face.|* Mister Mind gets +3A while your opponent has a character die with 4A or greater.',
+'132V3Monsieur Mallah|War Against Humanity|While there is a [M] in your Rerve Pool, Monsieur Mallah gets +2A.',
+'13205OMAC|Project Cadmus|',
+'153N3Orion|Raised by Highfather|Range 1: (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)|Global: Pay [F]. Spin target character die up 1 level.',
+'133V4Parademon|Shock Troops|Swarm (While this character is active, if you draw this die during your Clear and Draw Step, draw and roll an extra die.)',
+'123D2Parasite|Joshua Allen|When your opponent has a [S] character die in their field zone, Parasite gets +2A.',
+'121D4Poison Ivy|Power Over Men|Energize - Field a 0A and 2D Plant Token.|When Poison Ivy would be KO\'d, you may instead KO a Plant Token and heal all damage from Poison Ivy.',
+'141T4Raven|Daughter of Darkness|While Raven is active, when you purchase a non-[DCV] character die, you may pay [1]. If you do, add it to your bag and Raven gets +2A until end of turn.',
+'124A4Robin|Team Leader|Energize - The first [WT] die you purchase this turn costs [1] less (to a minimum of 1).',
+'151M3Shazam|Power of Hope|When fielded, roll the dice you spent to field Shazam. Prep any of those dice showing energy faces.',
+'133T4Starfire|No-Nonsense Warrior|Recruit - a [WT] character die.|Global: Pay [S]. Once per turn, if you purchased a die this turn, Prep a die from your bag. ',
+'134V3Starro|Minions|If you roll Starro at level 3, reroll Starro. When Starro attacks, you may take control of up to 2 target Sidekicks your opponent controls. They must attack (if able).',
+'134S4Supergirl|Kara Danvers|While Supegirl is active, opposing Sidekick dice get +1A and +1D.|Global: Pay [F]. Spin target character die up 1 level.',
+'144S4Superman|Last Son|While Superman is active, your opponent can\'t target your Lois Lane character dice.|You can\'t field Superman unless you control 2 or more [DCS] character dice.',
+'134V2The Joker|Toxic Immunity|When fielded, each player loses 1 life.|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
+'132T5Wally West|Faster than Superman|If Wally West is the first die you purchase this game, he costs [1] less to purchase.|Fast (Characters with Fast deal combat damage before characters without Fast.)',
+'131W4Wonder Woman|Diana Prince|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
+'25203Anti-Monitor|Sixth Dimension|Intimidate|When fielded, reroll target character die.',
+'242J3Barry Allen|Hot Pursuit|When Barry Allen attacks, if you have an active [DCS] character die, target opposing character die cannot block this turn.|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
+'23404Bat-Signal|Urban Legend|Up to 3 of your character dice gain Range 1 (until end of turn).|**Instead, all of your character dice gain Range 1.',
+'241Q4Batman|Contingencies|While you have 2 or more [S] in your Reserve Pool, Batman gets +2A and +2D.|Global: Pay [2M]. Each Player may field up to 2 sidekick dice from their Used Pile.',
+'242N4Big Barda|Absolutely Bulletproof|While Big Barda is active, when an opposing effect targets her you may pay [F]. If you do, ignore all opposing effects targeting Big Barda until end of turn.',
+'25404Bizarro|New Outlaw|If a Superman die takes damage, increase Bizarro\'s A by the same amount.',
+'243T4Blue Beetle|Technomorphy|Range 1|Prevent damage from Range dealt to Blue Beetle.',
+'241J4Booster Gold|Justice League International|When fielded, you can remove a Stun token from a character die.',
+'24104Brainiac 5|Querl Dox|When fielded, draw 2 dice. Roll one of those dice and Prep the other.',
+'254S4Conner Kent|Kon-El|Conner Kent counts as Superman for effects on your other cards.',
+'242V4Darkseid|Torment Sanction|Pay an extra [1] to field Darkseid if you don\'t have an active Parademon or [DCNG] character die.|Range 2',
+'242Y4Doctor Fate|Tower of Fate|When fielded, place target character die on Doctor Fate\'s card and Prep any dice you\'ve placed on Doctor Fate\'s card in a previous turn. If Doctor Fate is KO\'d or that die\'s owner takes damage, Prep all dice on Doctor Fate\'s card.',
+'253V1Doomsday|Phantom Zone Escapee|When Doomsday would leave the Field Zone, you may instead reroll him. If that die shows a level 1 character face you may return it to the Field Zone.|Global: Pay [B]. Target character die must attack this turn.',
+'253V4General Zod|Exiled for Treason|When fielded, General Zod copies the abilities of target [S] character die until end of turn.',
+'23304Green Kryptonite|Weakening Kryptonite|Spin up to two target character dice to level 1.',
+'22102Harley Quinn|Vengeance Unlimited|When KO\'d, you may roll a character die from your Used Pile. For each energy showing on that die, deal 1 damage to target character die. If that die shows a character face, reroll target opposing character die.',
+'231J5Hawkgirl|Fierce Warrior|Hawkgirl gets +1A for each opposing character die in the Field Zone.',
+'233J4Hawkman|Hawkworld|When fielded, deal 2 damage to target [F] character die.|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until end of turn).',
+'222S4Jimmy Olsen|Sci-Fi Enthusiast|While Jimmy Olsen is active, your Superman, Supergirl, and Lois Lane character dice get +1A and +1D.|Global: Pay [S]. The first character die you field this turn is free to field.',
+'264S4Jonathan Kent|Legacy Hero|When fielded, roll a character die from your Used Pile. If it shows a character face, field it for free, otherwise add it to your Reserve Pool.',
+'234D4Lex Luthor|Benefactor|Range 2|When Lex Luther attacks, your opponent gains 1 life.',
+'232S4Lois Lane|Reporter|When fielded, Prep a die from your bag. While Lois Lane is active, Superman gets +1A and +1D.|Global: Pay [S]. Prevent 1 damage to target character die or player.',
+'243Y4Mary Shazam|Thunderworld Adventures|When fielded, deal 1 damage to up to 2 target character dice, and the next Shazam die you purchase costs 2 less.',
+'231X4Mister Mind|Monster Society of Evil|When Mister Mind attacks, you may pay [M]. If you do, generate a 2A and 2D Tough Guy Token. It is attacking, and Mister Mind is no longer attacking.|* While Mister Mind is active, your Tough Guy tokens get +1A.',
+'232V4Monsieur Mallah|Brilliant Scientist|Monsieur Mallah gets +2A while blocking.|While Monsieur Mallah is active, at least one opposing character die must attack each turn.',
+'24203OMAC|One Machine Attack Construct|When fielded, deal 3 damage to target non-[F] character die.|*Range 3',
+'233N3Orion|Military Commander|If you don\'t have an active non-Sidekick character die, Orion costs 2 more to field.|Global: Pay [F]. Spin target character die up 1 level.',
+'243V4Parademon|Advance Force|Parademon gets +1A for each of your other Parademon dice in the Field Zone.',
+'233D3Parasite|Alien Flu|When a [S] charcter die blocks Parasite, your opponent spins it to the energy face of their choice.',
+'231D4Poison Ivy|Belle Reve Escapee|Regenerate|While Poison Ivy is active, if your opponent fields a character die and it isn\'t their 1st or 2nd character die fielded that turn, gain 2 life.',
+'241T4Raven|Darkness Manipulation|While Raven is active, when an opponent uses a Global ability, if it isn\'t the first Global Ability they\'ve used this turn, Raven deals them 1 damage.',
+'224A4Robin|Training the Titans|Energize - The first [WT] die you field this turn costs [1] less to field and gets +1A.',
+'251M4Shazam|Speed of Mercury|Fast|Shazam can\'t have Stun tokens on his card.',
+'243T4Starfire|Starbolts|Range 2',
+'244V4Starro|Tentacle Attack|When fielded, KO target opposing character die if your opponent controls more than 1 copy of that character die.',
+'244S4Supergirl|Legion of Super Heroes|Energize - Target character die gains Overcrush.|Global: Pay [F]. Spin target character die up 1 level.',
+'254S4Superman|Phantom Zone Protector|When fielded, place target character die on Superman\'s card and Prep any dice you\'ve place on Superman\'s card in a previous turn. If Superman is KO\'d or that die\'s owner takes damage, Prep all dice on Superman\'s card.',
+'234V4The Joker|Obsessive|When fielded, pick a character die replacing all previous choices. While The Joker is active, when that character die is KO\'d, your opponent moves a die from their Prep Area to their Used Pile.|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
+'232T4Wally West|Speed Force Aura|When Wally West is blocked you may have him deal his combat damage to any opposing character die instead of the one blocking him.',
+'241W4Wonder Woman|Daughter of Hippolyta|When fielded, you may reroll one of your character dice (in the Field Zone or Reserve Pool).|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
+'36204Anti-Monitor|Vanquishing the Crime Syndicate|Regenerate|When Anti-Monitor attacks, you may spend any number of [F]. For each that you do, give two target character dice +1A.',
+'372J3Barry Allen|Master of the Speed Force|When Barry Allen attacks, each attacking character die gets +1D for each of your other attacking character dice.|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
+'32404Bat-Signal|Super Carbon Arc Filaments|Roll a die from your bag.|If Batman is active, roll an additional die from your bag.|If Robin is active, prep a die from your bag.|Global: Pay [M]. Reroll target [DCV] character die.',
+'351Q4Batman|Legend of the Dark Knight|While Batman is active, when one of your character dice is KO\'d deal 1 damage to target player and 1 damage to target character die.|Global: Pay [2M]: Each player may field up to 2 Sidekick dice from their Used Pile.',
+'342N4Big Barda|Warrior|During your turn, Big Barda gets +1A for each attacking character die.',
+'35401Bizarro|Kryptonite Enhanced Intelligence|Once per turn, you may add a Bizarro die from this card to your bag. If you do, your opponent takes one of their unpurchased dice and adds it to their Used Pile.|Overcrush',
+'343T4Blue Beetle|Close Combat Expert|Fast|Prevent damage from Range dealt to Blue Beetle.',
+'341J4Booster Gold|Legion Flight Ring|When fielded, you can swap an action die in your Reserve Pool with an action die in your Prep Area or Used Pile. (Put the new die on the same face as the one that started in the Reserve Pool.)',
+'35104Brainiac 5|Coluan Prodigy|While Brainiac 5 is active, your active character dice gain Range 1 if they didn\'t already have Range.|Energize - Gain 1 life.',
+'364S3Conner Kent|Tactile Telekinesis|When fielded, roll up to 2 character dice from your Used Pile. For each energy showing on those dice, deal 1 damage to target character die. For each character face showing on those dice, reroll target opposing character die.',
+'352V4Darkseid|Anti-Life Equation|When you spend character dice as energy to field Darkseid, you may field one of those character dice for free (at level 1).',
+'362Y4Doctor Fate|Incalculable Occult Power|When fielded, choose up to 2 target character dice you control not named Doctor Fate (replacing all previous choices). Your opponent can\'t target those character dice while Doctor Fate is active.',
+'343V4Doomsday|Trapped in Oz\'s Jail|Overcrush|While Doomsday is active, opposing [S] character dice get +2D.|Global: Pay [B]. Target character die must attack this turn.',
+'363V4General Zod|Reimagining Jekuul|While General Zod is active, your Sidekick dice get +2A and count as [B] character dice in addition to being Sidekick character dice.',
+'33304Green Kryptonite|Fatal Radiation|Target character die can\'t block until end of turn. If that die is KO\'d this turn, send it to the Used Pile.|**Also, Prep a die from your bag.',
+'34104Harley Quinn|Cuckoo for Incarceration|When Harley Quinn is KO\'d by combat damage, put a Stun token on any opposing character card. (Stunned character card\'s dice cannot attack or block. The card\'s owner can pay [2] any time they could use a Global Ability to remove a Stun token.)',
+'331J4Hawkgirl|Medieval Weapons Expert|Range 1',
+'333J4Hawkman|Endless Flight|Hawkman can\'t be blocked by character dice with a purchase cost of 3 or less.|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
+'332S4Jimmy Olsen|Elastic Lad|Jimmy Olsen can block an additonal character die.',
+'364S4Jonathan Kent|Noble Values|Energize - Draw and roll 2 dice.|Global: Pay [S]. Target [F] character die gets +1D.',
+'354D4Lex Luthor|Businessman|Range 3|When a [S] character die blocks Lex Luthor, reroll Lex Luthor and the blocking die.',
+'332S3Lois Lane|Author X|When fielded, up to 1 target character die can\'t block this turn. If you targeted a character die with this ability, Lois Lane can\'t attack this turn.',
+'353Y4Mary Shazam|Super Buddies|When fielded, deal 3 damage to target character die and the next Shazam die you purchase costs 3 less.',
+'321X2Mister Mind|Library of Eternity|When Mister Mind attacks, you may use a copy of target opposing character die\'s When Attacks ability.',
+'342V4Monsieur Mallah|Superior Business Management|Monsieur Mallah can block an additional character die.|While Monsieur Mallah is active, at least one opposing character die must attack each turn.',
+'34204OMAC|Kevin Kho|Range 1|Overcrush',
+'353N3Orion|Mother Box|While Orion is active, all of your [DCNG] characters have Range 2.|Global: Pay [F]. Spin target character die up 1 level.',
+'333V4Parademon|Programmed to Serve|Swarm|Energize - Target character die gets +1A.',
+'333D3Parasite|Secret Society|While Parasite is active, opposing [S] character dice get -1A and -1D.',
+'331D4Poison Ivy|Pushed too Far|When fielded, choose an opposing character replacing all previous choices.|While Poison Ivy is active, when that character die attacks field a 0A and 2D Plant Token. While Poison Ivy is active, if a Plant Token is KO\'d, target player loses 1 life.',
+'341T4Raven|Astral Projection|While Raven is active, if she isn\'t attacking you may have one of your Sidekick dice copy her A and D.',
+'334A4Robin|Under Batman\'s Wing|While Robin is on your team, Batman gains, "Recruit - Robin."|Global: Pay [M]. The first character you field this turn is free to field.',
+'371M4Shazam|The Wizard\'s Successor|While Shazam is active, your active character dice have Range 2.',
+'353T4Starfire|Kori|Range 2|When fielded, target character die you control gains Range 2.',
+'344V4Starro|Mind Control|When fielded, send Starro to the Used Pile. Take control of target opposing character die until the end of turn.',
+'364S4Supergirl|Torquasm Rao|While Supergirl is active, if your opponent has more life than you do, draw an extra die during your Clear and Draw Step, your character dice have +2D and gain 1 life at the end of each of your turns.|Global: Pay [F]. Spin target character die up 1 level.',
+'344S4Superman|House of El|When Superman attacks, target character die has its A changed to 6 until the end of turn.',
+'344V4The Joker|Final Dance|When fielded, you may immediately KO The Joker. If you do, deal 1 damage to target Sidekick character die and reroll target non-Sidekick character die.|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
+'342T4Wally West|Cast Into the Speed Force|When fielded, you may send Wally West to the Used Pile. If you do, deal X damage to target character die where X is Wally West\'s A.',
+'341WWWonder Woman|Ambassador from Themyscira|When Wonder Woman attacks, your character dice get +1A.|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
+'461Q4Batman|Batman, Inc.|While Batman is active your Sidekick dice get +2A.|When Batman attacks, swap a Sidekick die in your Field Zone with a Robin die in your Prep Area or Used Pile (at level 1).|Global: Pay [2M]. Each player may field 2 Sidekick dice from their Used Pile.',
+'453T3Blue Beetle|Reach Armor|Range 1 If Blue Beetle would take 3 or less damage, you may instead reroll that Blue Beetle die and prevent that damage.',
+'453V4Doomsday|Unlimited Stamina|When Doomsday is KO\'d, you may spin him to any energy face.|Globaly: Pay [B]. Target character die must attack this turn.',
+'45104Harley Quinn|Gang of Harleys|While Harley Quinn is active, your Sidekick dice gain +1A, +1D, and "When fielded, deal 2 damage to target character die."',
+'431J4Hawkgirl|Reincarnated Knowledge|Energize - Field a Hawkgirl character die from your used pile at level 1.',
+'422S4Jimmy Olsen|Knack for Trouble|When Jimmy Olsen is KO\'d, you can Prep a non-Jimmy Olsen [DCS] die from your Used Pile.|Global: Pay [S]. The first character die you field this turn is free to field.',
+'422S2Lois Lane|World Famous Investigative Journalist|While Lois Lane is active, once per turn you may field a character die for free. Lois Lane can\'t be targeted by opposing action dice.|Global: Pay [S]. Prevent 1 damage to target character or player.',
+'453Y4Mary Shazam|World War III|While Mary Shazam is active, when you spend an energy she gets +1A.|While Mary Shazam\'s A is 10 or greater she gains Overcrush.|While her A is 12 or greater she can\'t be rerolled or spun to another face by opposing effects.',
+'421X4Mister Mind|Foe to the Magiclands|When Mister Mind deals combat damage to your opponent, you may put that Mister Mind die into your Reserve Pool on an energy face',
+'433V4Parademon|Wing Blades|When fielded, deal 2 damage to target character die. If that character die is KO\'d, Parademon can\'t attack this turn.|While Parademon is active, your Darkseid costs 1 less to purchase and field.',
+'434A5Robin|Flying Grayson|When fielded, deal X damage to target character die where X is the number of character dice in your Field Zone.|Global: Pay [M]. The first character you field this turn is free to field.',
+'453T4Starfire|Princess Koriand\'r|Range 3|Recruit - a [WT] character die.|Global: Pay [S]. Once per turn, if you purchased a die this turn, Prep a die from your bag.',
+'454V3Starro|The Conqueror|When fielded, take control of target opposing character die until end of turn.',
+'464S4Supergirl|Girl of Tomorrow|While Supergirl is active, your [F] character dice and other [S] character dice get +1A.|Global: Pay [F]. Spin target character die up 1 level.',
+'454S4Superman|New Krypton|If a Superman die is in your Reserve Pool, and there are no energy in your Reserve Pool, you may field all character dice in your Reserve Pool for free. ',
+'444V2The Joker|Totally Insane|When fielded, you may reroll all of your character dice in the Field Zone (all or none).|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
+'442T4Wally West|Speed Force Conduit|While Wally West is active, you get a second Attack Step during your turn. Only Wally West character dice can attack during your second Attack Step.',
+'461W4Wonder Woman|Legendary|When fielded, spin target character die to an energy face, and you may deal 2 damage to target character die.|While Wonder Woman is active, ignore opposing "When fielded" and "When attacks" abilities.|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.'
+];
+
+
+// DPS OP CARDS
+
 var m_op2022_dice = ['dps'];
 var m_op2022_aff = { 0:'0'};
 var m_op2022 = [
@@ -300,7 +478,7 @@ var m_op2022 = [
 '14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A [sic](until end of turn).',
 '14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
 '14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
-'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up this turn gets +2A.',
+'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
 '12003Lab Test|Basic Action Card|Continuous: You may send this die to your Used Pile to reroll one of the character dice in your Reserve Pool.',
 '14003Living the Dream|Basic Action Card|Continuous: If among all character cards on your team you have at least 3 Loyalty Counters, your character dice get +1A an Overcrush (until the end of turn).',
 '13003Making the Team|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
@@ -331,7 +509,7 @@ var m_op2022 = [
 '131X4Gambit|Ace in the Hole|When fielded, you may draw and roll a die.|* Instead, draw 2 dice, Roll one and return the other to your bag.',
 '152S4Gladiator|Psi Resistance|Intimidate|Global: Pay [F] when you attack. Your character dice can\'t be the target of Action Dice or Global Abilities (until the end of turn).',
 '143X3Iceman|Icy Interference|When Iceman attacks, spin target opposing level 1 character die to an energy face.',
-'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each of your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
+'143X4Jean Grey|Peaceful Coexistence|Founder|While Jean Grey is active, at the end of each or your turns, if no character dice were KO\'d that turn, put a Loyalty Counter on Jean Grey\'s card (Loyalty Counters give a character die +1A and +1D.)',
 '123X4Jubilee|Rebellious Nature|Energize - If you have less life than your opponent, you may immediately field this die for free at level 2.',
 '131X4Kitty Pryde|Right of Passage|Awaken - Prep a die from your bag.',
 '134S4Lilandra|Politician|Global: Pay [S]. Once per turn, if you have purchased a character die this turn, you may draw a die from your bag and add it to your Prep Area.',
@@ -436,12 +614,12 @@ var m_op2022 = [
 '434X2Angel|Xavier\'s Dream|While Angel is active, your opponent can\'t target your Sidekick dice with Global Abilities.',
 '432X4Beast|Xavier\'s Dream|While you have an active Sidekick die, Beast gets +1A.|Overcrush',
 '45204Corsair|Back from Outer Space|If 4 or more of your character dice were KO\'d this turn, you may Prep a Corsair die from this card.|Deadly',
-'463X4Cyclops|Xavier\'s Dream|While you have a Sidekick die active, when Cyclops attacks deal X damage divided how you choose among any number of target opposing character dice, where X is the number of your character dice in the Field Zone.',
+'463X4Cyclops|Xavier\'s Dream|While you have a Sidekick die active, when Cyclops attacks deal X damage divided how you choose among any number of target character dice, where X is the number of your character dice in the Field Zone.',
 '464P1D\'Ken|Shi\'ar Civil War|While D\'Ken is active, opposing character dice with Purchase Cost of 3 or less lose their abilities and are free to field. ',
 '443X3Iceman|Xavier\'s Dream|Founder|While you have a Sidekick die active, Iceman\'s A is equal to his D.',
 '443X5Jubilee|X-Men Field Leader|While Jubilee is active, when you field a character die she deals 1 damage to your opponent and 1 damage to target character die.',
 '441X4Kitty Pryde|Experienced Leader|While Kitty Pryde is active, each of your [XMEN] character dice get +1A and +1D.',
-'454S4Lilandra|Majestrix|While Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
+'454S4Lilandra|Majestrix|Wile Lilandra is active, your opponent must pay 2 life to use an Action Die or Global Ability.',
 '461B2Magneto|Founder of the Brotherhood|While Magneto is active, when one of your [BOM] character dice is KO\'d, KO target opposing character dice.|Global Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
 '464V4Master Mold|Endless Sentinels|When fielded, when Master Mold attacks, or when Master Mold is KO\'d, place a Sentinel token with 5A and 5D into the Field Zone.',
 '463V4Mister Sinister|Biologist|While Mister Sinister is active, prevent non-combat damage dealt to your other character dice.|Global: Pay [3]. Target character die gains Overcrush.',
@@ -479,7 +657,7 @@ var m_op2020 = [
  '13003Rally!|Basic Action Card|Move up to 2 Sidekick dice from your Used Pile to your Field Zone.|** Instead, move 3 Sidekicks instead.',
  '12003Retribution|Basic Action Card|Deal 2 damage to target opposing character die. The controller of that character die may deal 2 damage to target character die you control.|Global: Pay [F]. Target opposing character die can\'t block this turn unless its controller pays 1 life. (They pay when declaring blockers).',
  '12003Surprise Attack|Basic Action Card|Deal 1 damage to target character die.|*/** Instead, deal 2 damage.',
- '12003True Believer|Basic Action Card|Target character gets +2A and +1D until end of turn.|Global: Pay [M][M]. Once during your turn, you may remove one of your characters from the Field Zone until end of turn.',
+ '12003True Believer|Basic Action Card|Target character gets +2A and +1D until end of turn.|Global: Pay [2M]. Once during your turn, you may remove one of your characters from the Field Zone until end of turn.',
  '14003Villainous Pact|Basic Action Card|Your opponent chooses one non-[DCV] character die. All other non-[DCV] character dice cannot block this turn.|Global: Pay [M]. Once per turn, on your turn, if you have no dice in your Prep Area, you may Prep a die from your bag.',
  '151I4Adam Warlock|Golden Gladiator|Energize - You may reroll target opposing character die. ',
  '143G4Angela|Demon Hunter|When fielded, deal 1 damage to a target [B] character die, or 2 damage to a target non-[B] character die.',
@@ -1197,7 +1375,7 @@ var sw = [
 '043O4Battlewagon|Heavy Troop Transport|Range 1|While Battlewagon is active, when an opposing character die is KO\'d by Range, Prep a die from your bag.',
 '061O2Ghazghkul Thraka|WAAAGH!|Range 2|When Ghazghkul Thraka uses Range, you may KO any number of your Sidekick character dice. For each Sidekick character die KO\'d, increase his Range by 1.',
 '061O2Ghazghkul Thraka|Prophet of Gork and Mork|While Ghazghkul Thraka is active, once per turn, when you could use a Global Ability, you may KO a character die you control.|If you do, deal 1 damage to target opponent.',
-'071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deal combat damage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
+'071O2Ghazghkul Thraka|Giant Ork Warlord|When Ghazghkul Thraka deals combat camage to an opponent, you may KO any number of character dice you control. For each die KO\'d this way, deal 1 damage to target opponent.',
 '054O4Mogrok|Know-It-All-Git|Range 1|While Mogrok is active, your other [KO] character dice get +1A and +1D.',
 '054O4Mogrok|War of Kunnin\'|When Mogrok blocks and is not KO\'d, spin him up 1 level (at end of turn).|Global: Pay [S]. Target character gets +1d (until end of turn).',
 '054O4Mogrok|The Red Waaagh!|While Mogrok is active, Prep the first action die you purchase each turn.|Global: Pay [S]. Target character gets +1d (until end of turn).',
@@ -1820,7 +1998,7 @@ var sw = [
     '334X4Angel|Championing the Cause|While Angel is active, whenever a Sidekick Die is KO\'d, you may spin target character die up 1 level.',
     '342B4Avalanche|Quake in Your Boots|While Avalanche is active, when a [DCV] character Die is fielded, deal 1 damage to all opposing character dice.',
     '341X4Banshee|Hitting the High Notes|While Banshee is active, when your opponent draws a Basic Action Die, deal 2 damage to target opponent or character die.',
-    '322X4Beast|Oh My Stars and Garters!|When Beast is KO\'d, you may Prep a Beast die from your Used Pile.',
+    '322X4Beast|Oh My Stars and Garters!|When Beast is KO\'d, you my Prep a Beast die from your Used Pile.',
     '354X4Bishop|Butterfly Effect|While Bishop is active, prevent all non-combat damage dealt to you.',
     '341E4Blink|Unhinged From Reality|Whenever you use an Action die, Blink gains Infiltrate (<em>until end of turn</em>).',
     '344B4Blob|Appetite for Destruction|When fielded, choose an opposing card, cancelling all previous choices. Your opponent may not purchase or field that card\'s dice until Blob leave the Field Zone.',
@@ -4083,7 +4261,7 @@ var sw = [
     '57324Thor|The Mighty|When fielded, you may knock out an opposing [F] character and gain life equal to its level.',
     '56224Spider-Man|The Amazing|When Spider-Man attacks, you may pay [F][F][F] to make your opponent lose half his life, rounded down <em>(before damage is dealt)</em>.',
     '57202Wolverine|Walking His Own Path|When Wolverine attacks alone, double your life. This effect cannot raise your life to a value higher than 10.',
-    '58252Colossus|Phoenix Force|While Colossus is active, knock out the non-Sidekick character with the lowest cost at the end of your turn <em>(you break ties)</em>.|Global: Pay [F][F]. Double the attack and defense of one of your fielded Phoenix Force dice this turn. Limit once per turn.',
+    '58252Colossus|Phoenix Force|While Colossus is active, knock out the non-Sidekick character with the lowest cost at the end of your turn <em>(you break ties)</em>.|Global: Once per turn, pay [F][F]. Double the attack and defense of one of your fielded Phoenix Force dice this turn. Limit once per turn.',
     '57422Iron Man|Phoenix Buster|Each time Iron Man takes damage, you may move 1 Sidekick from your used pile to your prep area.',
     '58352Cyclops|Phoenix Force|When Cyclops is blocked, your opponent must immediately knock out one of his other characters if able.|Global: Pay [F][F] on your turn. Move a Phoenix Force die from your used pile to the field at its lowest level.',
     '5A351Phoenix Force|Force of Nature|While Phoenix Force is active, each of your opponent\'s characters deals no more than 1 damage to you while attacking.',
@@ -5268,7 +5446,7 @@ var sw = [
 	//ZHN
 	"Davil Starsong":"034 134 245",
 	"ZHN@Doppelganger":"011 122 133",
-	"Hitch":"111*122*133",
+	"Hitch":"111*112*133",
 	"Human Warlock":"012 014 125",
 	"Istrid Horn":"012 022 132",
 	"Manshoon":"002 013 124",
@@ -5359,7 +5537,29 @@ var sw = [
 	"Master Mold":"155 266 388",
 	"Moira":"001 012*122",
 	"DPS@Storm":"021 031 133",
-	"Vulcan":"032 144 165"
+	"Vulcan":"032 144 165",
+	
+	//SKC
+	"SKC@Barry Allen":"133 244 255",
+	"SKC@Blue Beetle":"031 141 144",
+	"Brainiac 5":"124 235 347",
+	"SKC@Conner Kent":"155 277 388",
+	"Doctor Fate":"002 032 377",
+	"SKC@Harley Quinn":"022 133 144",
+	"Jonathan Kent":"155 277 388",
+	"SKC@Lois Lane":"011 012 022",
+	"Mary Shazam":"144 254 266",
+	"Monsieur Mallah":"022 023 245",
+	"Mister Mind":"111 011 211*",
+	"OMAC":"133*133 255",
+	"SKC@Robin":"031 142 252",
+	"SKC@Shazam":"155 267 377",
+	"Starro":"011 022 277",
+	"SKC@Supergirl":"155 277 388",
+	"SKC@Superman":"146 267 278",
+	"Wally West":"133 244 255",
+	"SKC@Wonder Woman":"033 135 257"
+
 	
     };
     var gender = {
@@ -5635,9 +5835,7 @@ var sw = [
 	"Human Warlock":1,
 	"Tashlyn Yafeera":1,
 	"Black Viper":1,
-	"Brawlwin Chainminer":1,
-	"Calliope":1,
-	"Dagny":1,
+	"Brawlwin":1,
 	"Vajra":1,
 	"Jamilah":1,
 	
@@ -5653,6 +5851,9 @@ var sw = [
 	"Deathbird":1,
 	"Lilandra":1,
 	"Moira":1,
+	
+	"Mary Shazam":1,
+	
     };
 
 

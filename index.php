@@ -259,7 +259,8 @@
   <input type="checkbox" id="set28" checked>HQ 
   <input type="checkbox" id="set32" checked>JUS
   <input type="checkbox" id="set33" checked>DOOM 
-  <input type="checkbox" id="set34" checked>MYST 
+  <input type="checkbox" id="set34" checked>MYST
+  <input type="checkbox" id="set46" checked>SKC   
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
@@ -1641,6 +1642,7 @@ document.getElementById('file').onchange = function(){
   init(64,m_op2020,'M2020','ig',m_op2020_dice,m_op2020_aff);
   init(65,dps,'DPS','dps',[],dps_aff);
   init(66,m_op2022,'M2022','dps',m_op2022_dice,m_op2022_aff);
+  init(67,skc,'SKC','skc',[],skc_aff);
 
    
   Array.prototype.extend = function (a) {
@@ -2366,6 +2368,7 @@ document.getElementById('file').onchange = function(){
 	bit:'bit',
 	ig:'ig',
 	dps:'dps',
+	skc:'skc',
 	
 	  //op sets]
 	m2022:'m2022',
