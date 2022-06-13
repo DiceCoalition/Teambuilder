@@ -229,53 +229,54 @@
   <span class="show_mode0 show_mode1 show_mode3 hide">
   <div style="background-color:#bbbbbb;">
   <span class="search_category">
-  <input type="checkbox" id="set0" checked>AvX
-  <input type="checkbox" id="set1" checked>UXM
-  <input type="checkbox" id="set5" checked>AoU
-  <input type="checkbox" id="set7" checked>ASM
-  <input type="checkbox" id="set11" checked>CW
-  <input type="checkbox" id="set13" checked>DrS
-  <input type="checkbox" id="set14" checked>DP
-  <input type="checkbox" id="set16" checked>IMW
-  <input type="checkbox" id="set18" checked>Def
-  <input type="checkbox" id="set20" checked>SMC
-  <input type="checkbox" id="set21" checked>GotG
-  <input type="checkbox" id="set22" checked>XFC
-  <input type="checkbox" id="set24" checked>Thor
-  <input type="checkbox" id="set25" checked>AI
-  <input type="checkbox" id="set26" checked>KI
-  <input type="checkbox" id="set27" checked>JLL
-  <input type="checkbox" id="set35" checked>XMF
-  <input type="checkbox" id="set36" checked>XFO
-  <input type="checkbox" id="set37" checked>DXM
-  <input type="checkbox" id="set44" checked>IG
-  <input type="checkbox" id="set45" checked>DPS
-  <input type="checkbox" id="set4" checked>JL
-  <input type="checkbox" id="set6" checked>WoL
-  <input type="checkbox" id="set9" checked>WF
-  <input type="checkbox" id="set12" checked>GAF
-  <input type="checkbox" id="set17" checked>BAT
-  <input type="checkbox" id="set19" checked>SWW
-  <input type="checkbox" id="set28" checked>HQ 
-  <input type="checkbox" id="set32" checked>JUS
-  <input type="checkbox" id="set33" checked>DOOM 
-  <input type="checkbox" id="set34" checked>MYST
-  <input type="checkbox" id="set46" >SKC   
-  <input type="checkbox" id="set2" checked>BFF
-  <input type="checkbox" id="set8" checked>FUS
-  <input type="checkbox" id="set23" checked>TOA
-  <input type="checkbox" id="set38" checked>TIW
-  <input type="checkbox" id="set39" checked>AIW
-  <input type="checkbox" id="set40" checked>ZHN
-  <input type="checkbox" id="set10" checked>TMNT
-  <input type="checkbox" id="set15" checked>HHS
-  <input type="checkbox" id="set3" checked>YGO
-  <input type="checkbox" id="set29" checked>BFU 
-  <input type="checkbox" id="set30" checked>ORK 
-  <input type="checkbox" id="set31" checked>SW 
-  <input type="checkbox" id="set41" checked>WWE
-  <input type="checkbox" id="set42" checked>BIT
-  <input type="checkbox" id="set43" checked>TAG
+  <input type="checkbox" id="set0" title="Avengers Vs X-men" checked>AvX
+  <input type="checkbox" id="set1" title="Uncanny X-Men" checked>UXM
+  <input type="checkbox" id="set5" title="Age of Ultron" checked>AoU
+  <input type="checkbox" id="set7" title="Amazing Spider-man" checked>ASM
+  <input type="checkbox" id="set11" title="Civil War" checked>CW
+  <input type="checkbox" id="set13" title="Dr. Strange" checked>DrS
+  <input type="checkbox" id="set14" title="Deadpool" checked>DP
+  <input type="checkbox" id="set16" title="Iron Man and War Machine" checked>IMW
+  <input type="checkbox" id="set18" title="Defenders" checked>Def
+  <input type="checkbox" id="set20" title="Spider-man Maximum Carnage" checked>SMC
+  <input type="checkbox" id="set21" title="Guardians of the Galaxy" checked>GotG
+  <input type="checkbox" id="set22" title="X-men First Class" checked>XFC
+  <input type="checkbox" id="set24" title="The Mighty Thor" checked>Thor
+  <input type="checkbox" id="set25" title="Avengers Infinity" checked>AI
+  <input type="checkbox" id="set26" title="Kree Invasion" checked>KI
+  <input type="checkbox" id="set27" title="Just Like Lightning" checked>JLL
+  <input type="checkbox" id="set35" title="X-men Forever" checked>XMF
+  <input type="checkbox" id="set36" title="X-Force" checked>XFO
+  <input type="checkbox" id="set37" title="Dark X-men" checked>DXM
+  <input type="checkbox" id="set44" title="Infinity Gauntlet" checked>IG
+  <input type="checkbox" id="set45" title="Dark Phoenix Saga" checked>DPS
+  <input type="checkbox" id="set4" title="Justice League" checked>JL
+  <input type="checkbox" id="set6" title="War of Light" checked>WoL
+  <input type="checkbox" id="set9" title="World's Finest" checked>WF
+  <input type="checkbox" id="set12" title="Green Arrow and The Flash" checked>GAF
+  <input type="checkbox" id="set17" title="Batman" checked>BAT
+  <input type="checkbox" id="set19" title="Superman Wonder Woman" checked>SWW
+  <input type="checkbox" id="set28" title="Harley Quinn" checked>HQ 
+  <input type="checkbox" id="set32" title="Justice" checked>JUS
+  <input type="checkbox" id="set33" title="Doom Patrol" checked>DOOM 
+  <input type="checkbox" id="set34" title="Mystics" checked>MYST
+  <!-- Unchecked by defualt till after release-->
+  <input type="checkbox" id="set46" title="Superman Kryptonite Crisis (ETA July 6th)">SKC   
+  <input type="checkbox" id="set2" title="Battle for Faerun" checked>BFF
+  <input type="checkbox" id="set8" title="Faerun Under Siege" checked>FUS
+  <input type="checkbox" id="set23" title="Tomb of Annihilation" checked>TOA
+  <input type="checkbox" id="set38" title="Trouble in Waterdeep" checked>TIW
+  <input type="checkbox" id="set39" title="Adventures in Waterdeep" checked>AIW
+  <input type="checkbox" id="set40" title="The Zhentarim" checked>ZHN
+  <input type="checkbox" id="set10" title="Teenage Mutant Ninja Turtles" checked>TMNT
+  <input type="checkbox" id="set15" title="Heroes In a Half Shell" checked>HHS
+  <input type="checkbox" id="set3" title="Yu-Gi-Oh!" checked>YGO
+  <input type="checkbox" id="set29" title="Battle For Ultramar" checked>BFU 
+  <input type="checkbox" id="set30" title="Orks" checked>ORK 
+  <input type="checkbox" id="set31" title="Space Wolves" checked>SW 
+  <input type="checkbox" id="set41" title="WWE" checked>WWE
+  <input type="checkbox" id="set42" title="Bitter Rivals" checked>BIT
+  <input type="checkbox" id="set43" title="Tag Teams" checked>TAG
 
 
 
