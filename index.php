@@ -260,7 +260,7 @@
   <input type="checkbox" id="set32" checked>JUS
   <input type="checkbox" id="set33" checked>DOOM 
   <input type="checkbox" id="set34" checked>MYST
-  <input type="checkbox" id="set46" checked>SKC   
+  <input type="checkbox" id="set46" >SKC   
   <input type="checkbox" id="set2" checked>BFF
   <input type="checkbox" id="set8" checked>FUS
   <input type="checkbox" id="set23" checked>TOA
