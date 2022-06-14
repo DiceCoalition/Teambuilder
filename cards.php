@@ -570,7 +570,7 @@ var m_op2022 = [
 '27104Supreme Intelligence|Psionic Collective|Intimidate|Overcrush',
 '232B4Toad|Looking for Comradery|Energize - You may spin one of the Character dice in your reserve pool from a character face to level 1.',
 '25204Vulcan|Power Suppression|Ignore the abilities of character dice blocking or blocked by Vulcan.|Global: Pay [F]. Target character die must attack this turn.',
-'252X4Wolverine|Hardened by Madripoor|When you have at least 3 active X-Men character dice, Wolverine gains "Energize - Spin this die to level 1',
+'252X4Wolverine|Hardened by Madripoor|When you have at least 3 active X-Men character dice, Wolverine gains "Energize - Spin this die to level 1."',
 '344X3Angel|Air Support|Founder|While Angel is active, when an opponent targets one of your character dice, gain 1 life.',
 '322X4Beast|Combat Ready|Founder|When Beast attacks, Prep a die from your bag. The first Beast die you purchase each game costs 1 extra.',
 '334X4Bishop|Time Traveller|If you only use energy from Bishop dice to purchase a character die, Prep that die instead of adding it to your Used Pile',
