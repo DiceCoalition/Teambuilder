@@ -400,7 +400,7 @@
 '232T4Wally West|Speed Force Aura|When Wally West is blocked you may have him deal his combat damage to any opposing character die instead of the one blocking him.',
 '241W4Wonder Woman|Daughter of Hippolyta|When fielded, you may reroll one of your character dice (in the Field Zone or Reserve Pool).|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
 '36204Anti-Monitor|Vanquishing the Crime Syndicate|Regenerate|When Anti-Monitor attacks, you may spend any number of [F]. For each that you do, give two target character dice +1A.',
-'372J3Barry Allen|Master of the Speed Force|When Barry Allen attacks, each attacking character die gets +1D for each of your other attacking character dice.|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
+'372J3Barry Allen|Master of the Speed Force|When Barry Allen attacks, each attacking character die gets +1A and +1D for each of your other attacking character dice.|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
 '32404Bat-Signal|Super Carbon Arc Filaments|Roll a die from your bag.|If Batman is active, roll an additional die from your bag.|If Robin is active, prep a die from your bag.|Global: Pay [M]. Reroll target [DCV] character die.',
 '351Q4Batman|Legend of the Dark Knight|While Batman is active, when one of your character dice is KO\'d deal 1 damage to target player and 1 damage to target character die.|Global: Pay [2M]: Each player may field up to 2 Sidekick dice from their Used Pile.',
 '342N4Big Barda|Warrior|During your turn, Big Barda gets +1A for each attacking character die.',
