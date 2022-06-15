@@ -438,7 +438,7 @@
 '344S4Superman|House of El|When Superman attacks, target character die has its A changed to 6 until the end of turn.',
 '344V4The Joker|Final Dance|When fielded, you may immediately KO The Joker. If you do, deal 1 damage to target Sidekick character die and reroll target non-Sidekick character die.|Global: Pay [M]. Once per turn, during your turn, if you have no dice in your Prep Area, you may draw a die and place it in your Prep Area.',
 '342T4Wally West|Cast Into the Speed Force|When fielded, you may send Wally West to the Used Pile. If you do, deal X damage to target character die where X is Wally West\'s A.',
-'341WWWonder Woman|Ambassador from Themyscira|When Wonder Woman attacks, your character dice get +1A.|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
+'341W4Wonder Woman|Ambassador from Themyscira|When Wonder Woman attacks, your character dice get +1A.|Global: Pay [M]. Change the target of an action die that targets a character die to the character die of your choice.',
 '461Q4Batman|Batman, Inc.|While Batman is active your Sidekick dice get +2A.|When Batman attacks, swap a Sidekick die in your Field Zone with a Robin die in your Prep Area or Used Pile (at level 1).|Global: Pay [2M]. Each player may field 2 Sidekick dice from their Used Pile.',
 '453T3Blue Beetle|Reach Armor|Range 1 If Blue Beetle would take 3 or less damage, you may instead reroll that Blue Beetle die and prevent that damage.',
 '453V4Doomsday|Unlimited Stamina|When Doomsday is KO\'d, you may spin him to any energy face.|Globaly: Pay [B]. Target character die must attack this turn.',
@@ -5560,7 +5560,6 @@ var sw = [
 	"Wally West":"133 244 255",
 	"SKC@Wonder Woman":"033 135 257"
 
-	
     };
     var gender = {
     "Black Widow":1,
