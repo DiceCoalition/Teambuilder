@@ -5540,6 +5540,7 @@ var sw = [
 	"Vulcan":"032 144 165",
 	
 	//SKC
+	"SKC@Batman":"144 255 375",
 	"SKC@Barry Allen":"133 244 255",
 	"SKC@Blue Beetle":"031 141 144",
 	"Brainiac 5":"124 235 347",
