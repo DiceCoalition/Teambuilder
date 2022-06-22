@@ -343,7 +343,7 @@
 '122S4Lois Lane|Army Brat|While Lois Lane is active, your Superman dice get +1A and +1D.',
 '143Y4Mary Shazam|Wisdom of Minerva|While Mary Shazam is active, when you field a non-[DCV] character die, spin it up 1 level.|When fielded, the next Shazam die you purchase costs 2 less.',
 '131X3Mister Mind|Wildlands Native|When Mister Mind deals combat damage to your opponent, you may put that Mister Mind die into your Reserve Pool on an energy face.|* Mister Mind gets +3A while your opponent has a character die with 4A or greater.',
-'132V3Monsieur Mallah|War Against Humanity|While there is a [M] in your Rerve Pool, Monsieur Mallah gets +2A.',
+'132V3Monsieur Mallah|War Against Humanity|While there is a [M] in your Reserve Pool, Monsieur Mallah gets +2A.',
 '13205OMAC|Project Cadmus|',
 '153N3Orion|Raised by Highfather|Range 1: (When this character attacks, all active characters with Range deal damage equal to their Range value to target opposing character die.)|Global: Pay [F]. Spin target character die up 1 level.',
 '133V4Parademon|Shock Troops|Swarm (While this character is active, if you draw this die during your Clear and Draw Step, draw and roll an extra die.)',
