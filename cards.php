@@ -476,7 +476,7 @@ var m_op2022 = [
 '14003Archnemesis|Basic Action Card|Target character die you control and target opposing character die deal damage to each other equal to their A.|Global: Pay [S]. Target character die has D equal to it\'s A [sic](until end of turn).',
 '14003Dampening Collar|Basic Action Card|Continuous: Opposing character dice can\'t spin up. Your opponent may return an [XMEN] character die they control to its card to move this die from the Field Zone to its card.',
 '14003Explosion|Basic Action Card|Deal 2 damage to each player and character die. You may also spend any number of [B] energy, for each that you do you may deal 1 damage to target character die.|** Deal 1 additional damage to each player and character die that Explosion deals damage to.',
-'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up gets +2A.',
+'13003Greetings from Krakoa|Basic Action Card|Spin up each character whose card has a Loyalty Counter. Each of your dice that spins up this turn gets +2A.',
 '12003Lab Test|Basic Action Card|Continuous: You may send this die to your Used Pile to reroll one of the character dice in your Reserve Pool.',
 '14003Living the Dream|Basic Action Card|Continuous: If among all character cards on your team you have at least 3 Loyalty Counters, your character dice get +1A an Overcrush (until the end of turn).',
 '13003Making the Team|Basic Action Card|Roll a character die from your Used Pile. If it rolls a character face, field it for free. Otherwise, Prep it.',
