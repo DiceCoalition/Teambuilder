@@ -384,7 +384,7 @@
 '243Y4Mary Shazam|Thunderworld Adventures|When fielded, deal 1 damage to up to 2 target character dice, and the next Shazam die you purchase costs 2 less.',
 '231X4Mister Mind|Monster Society of Evil|When Mister Mind attacks, you may pay [M]. If you do, generate a 2A and 2D Tough Guy Token. It is attacking, and Mister Mind is no longer attacking.|* While Mister Mind is active, your Tough Guy tokens get +1A.',
 '232V4Monsieur Mallah|Brilliant Scientist|Monsieur Mallah gets +2A while blocking.|While Monsieur Mallah is active, at least one opposing character die must attack each turn.',
-'24203OMAC|One Machine Attack Construct|When fielded, deal 3 damage to target non-[F] character die.|*Range 1',
+'24204OMAC|One Machine Attack Construct|When fielded, deal 3 damage to target non-[F] character die.|*Range 1',
 '233N3Orion|Military Commander|If you don\'t have an active non-Sidekick character die, Orion costs 2 more to field.|Global: Pay [F]. Spin target character die up 1 level.',
 '243V4Parademon|Advance Force|Parademon gets +1A for each of your other Parademon dice in the Field Zone.',
 '233D3Parasite|Alien Flu|When a [S] charcter die blocks Parasite, your opponent spins it to the energy face of their choice.',
