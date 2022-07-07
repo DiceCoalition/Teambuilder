@@ -260,8 +260,7 @@
   <input type="checkbox" id="set32" title="Justice" checked>JUS
   <input type="checkbox" id="set33" title="Doom Patrol" checked>DOOM 
   <input type="checkbox" id="set34" title="Mystics" checked>MYST
-  <!-- Unchecked by defualt till after release-->
-  <input type="checkbox" id="set46" title="Superman Kryptonite Crisis (ETA July 6th)">SKC   
+  <input type="checkbox" id="set46" title="Superman Kryptonite Crisis" checked>SKC   
   <input type="checkbox" id="set2" title="Battle for Faerun" checked>BFF
   <input type="checkbox" id="set8" title="Faerun Under Siege" checked>FUS
   <input type="checkbox" id="set23" title="Tomb of Annihilation" checked>TOA
