@@ -264,7 +264,7 @@
 	 WTB:['batman','teentitans'],
 	 WSJ:['justiceleague','superman'],
 	 WSBJ:['superman','batman','justiceleague'],
-	 WMV:['mystics','villain'],
+	 WMV:['mystic','villain'],
     };
 
     var affiliation_set = {};
