@@ -1536,7 +1536,7 @@ document.getElementById('file').onchange = function(){
 */
 	//Modern
 	M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017", "AI", "KI", "JLL", "HQ", "BFU", "ORK", "SW", "JUS", "DOOM", "MYST", "XMF", "DXM", "XFO", "TIW", "AIW", "ZHN", "WWE", "BIT", "TAG"],
    /*
    //not sure why i'm keeping old moderns here... but i am.  
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
