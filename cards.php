@@ -1957,7 +1957,7 @@ var sw = [
     '242B4Avalanche|The Vizer of Vibration|While Avalanche is active, when you use a Basic Action Die, KO target level 1 character.',
     '231X4Banshee|Fallen Hero|While Banshee is active, deal 1 damage to target opponent when they use an Action die.',
     '222X4Beast|Into the Wild Blue Yonder|When Beast is KO\'d during your opponents turn, Prep a Basic Action Die from your Used Pile.',
-    '254X4Bishop|Back From the Frontline|While Bishop is attacking, after character dice are assigned to block, you may swap those blockers as desired before combat damage is dealt. (<em>Attacking character die must have the same number of blockers after your swap.</em>)',
+    '254X4Bishop|Back From the Future|While Bishop is attacking, after character dice are assigned to block, you may swap those blockers as desired before combat damage is dealt. (<em>Attacking character die must have the same number of blockers after your swap.</em>)',
     '241E4Blink|Prepared in the Pens|While Blink is active, when you play an Action die, spin target character die up 1 level.',
     '244B4Blob|Nothing Moves the Blob!|When fielded, capture target opposing character die until Blob leaves the Field Zone.',
     '223X4Boom Boom|Mutate 35|While Boom Boom is active, the first time you use a Global Ability each turn, deal 1 damage to target opponent.',
@@ -5371,7 +5371,7 @@ var sw = [
 	"Varro Tigurius":"132 133 135",
 	
 	//40K ORKS
-	"Battlewagon":"142 253 366",
+	"Battlewagon":"142 253 355",
 	"Ghazghkul Thraka":"154 165 388",
 	"Mogrok":"125 136 248",
 	"Ork Boy":"021 022 122",
