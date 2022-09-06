@@ -1695,7 +1695,7 @@ var sw = [
     '243V4Malekith|King of the Dark|While Malekith is active, your Sidekick character dice get +1A and +1D, and gain the [DCV] affiliation.',
     '25304Mjolnir|If He Be Worthy|Deal 1 damage to target character die for each [B] in your Reserve Pool.  */** Also deal that same amount of damage to target opponent.',
     '26204Mr. Fixit|Smashing Style|When a character die is KO\'d, Mr. Fixit gets +2A and +2D (until end of turn).',
-    '234H4Nick Fury|Agent of H|When fielded, you may KO target level 1 [DCV] character die.',
+    '234H4Nick Fury|Agent of S.H.I.E.L.D.|When fielded, you may KO target level 1 [DCV] character die.',
     '26404Odin|Wielder of Gungnir|While Odin is active, your other character dice get +1A and +1D.',
     '223S4Pepper Potts|Salt of the Earth|While a single Pepper Potts character die is the only character die in your Field Zone, she gets +3A and +3D.',
     '25304Punisher|Vengeful Widow|When Punisher is KO\'d, roll her and any Punisher character dice in your Used Pile. Deal 1 damage to target opponent for each [B] rolled, then Prep those dice.',
