@@ -317,7 +317,7 @@
 '14003Righteous Charge|Basic Action Card|Your attacking character dice take a maximum of 2 damage from each blocker.|** Instead they take a maximum of 1 damage from each blocker.',
 '14003Thrown Car|Basic Action Card|Up to two target character dice in your Field Zone get +1A and Overcrush until end of turn.',
 '14003Too Big to Fly|Basic Action Card|KO target character die with A of 5 or greater.|Global: Pay [F]. Target character die gets +1A.',
-'13003Truce|Basic Action Card|KO up to two character dice you control. For each character die you KO this way, you opponent must KO a character die they control. ',
+'13003Truce|Basic Action Card|KO up to two character dice you control. For each character die you KO this way, your opponent must KO a character die they control. ',
 '13003Vulnerability|Basic Action Card|Choose an opposing character. If you damage target character die this turn, KO it and Prep a die from your bag.',
 '15203Anti-Monitor|Mobius|When Anti-Monitor attacks, you may KO any number of your character dice. For each that you do, your opponent KOs one of their character dice.',
 '132J4Barry Allen|The Flash|Global: Once per turn, pay [F]. If you purchased a die and fielded a character this turn, Prep a die from your bag.',
