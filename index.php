@@ -1541,8 +1541,7 @@ document.getElementById('file').onchange = function(){
 	
 	//new Two Team Takedown   
 	T: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
-       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "86GotG", 
-	   "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "132TOA", "16SMC"],
+       "WoLop", "M2015", "ASM", "FUS", "WF", "CW", "GAF", "DP", "TMNT", "D2016", "DC2016", "M2016", "wko16dc", "wko16m", "wko16dd", "DrS", "IMW", "Def", "SMC", "GotG", "XFC", "THOR", "BAT", "SWW", "TOA", "HHS", "sk2017", "DC2017", "M2017"],
    /*
    //not sure why i'm keeping old moderns here... but i am.  
   M: [ "AvX", "AvXop", "UXM", "UXMop", "UXMop2", "BFF", "BFFpr", "YGO", "JL", "JLop", "BFFop", "AoU", "WoL",
