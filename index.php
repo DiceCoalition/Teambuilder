@@ -2386,6 +2386,7 @@ document.getElementById('file').onchange = function(){
 	  m2016:'m2016',
 	  m2015:'m2015',
 	  m2014:'m2014',
+	  uxmop2:'m2014',
 	  uxmop:'uxmop',
 	  avxop:'avxop',	  
 	  dc2017:'dc2017',
