@@ -2611,7 +2611,7 @@ var sw = [
     '35204Agent X|"Earth-2 Counterpart"|When fielded, you may pay 2 life to draw a die. If that die is a Sidekick, place it in the Used Pile. Otherwise, place it in the Prep Area.',
     '362V4Angel Dust|Christina|When at least one of your Angel Dust character dice blocks, deal 2 damage to all attacking character dice <em>(no matter how many blocking Angel Dust dice you have)</em>.',
     '343G4Angela|Raised as an Angel|At the end of the Roll and Reroll Step, deal 1 damage to target character die or player for each Angela die you rolled that shows an energy face. <em>(Angela does not need to be active to use this ability.)</em>',
-    '341I4Black Bolt|King of the Inhumans|When fielded, target character die you control gets +2A. If that character die has Deadly, all opposing character dice must block that die if able.',
+    '341I4Black Bolt|King of the Inhumans|When fielded, target character die you control gets +2D. If that character die has Deadly, all opposing character dice must block that die if able.',
     '343V4Black Tom Cassidy|Plant-Form Secondary Mutation|Black Tom Cassidy cannot be blocked by [XMEN] character dice. Black Tom Cassidy can block any number of [XMEN] character dice.',
     '34104Blind Al|Fought Alongside Captain America|If you have taken 4 or more combat damage in a turn, you may immediately purchase one Blind Al die for [3] less. <em>(Blind Al does not need to be active to use this ability.)</em>',
     '332D4Bob, Agent of Hydra|The H Stands for Hopeless|While Bob, Agent of Hydra, is active, [MDP] character dice cannot be targeted by opposing actions.',
