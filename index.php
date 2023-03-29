@@ -250,6 +250,7 @@
   <input type="checkbox" id="set37" title="Dark X-men" checked>DXM
   <input type="checkbox" id="set44" title="Avengers Infinity Gauntlet" checked>IG
   <input type="checkbox" id="set45" title="Dark Phoenix Saga" checked>DPS
+  <input type="checkbox" id="set47" title="Marvel Secret Wars" checked>MSW
   <input type="checkbox" id="set4" title="Justice League" checked>JL
   <input type="checkbox" id="set6" title="War of Light" checked>WoL
   <input type="checkbox" id="set9" title="World's Finest" checked>WF
@@ -471,7 +472,7 @@
   function E(t) { return document.getElementById(t); }
   function C(t) { return document.getElementsByClassName(t); }
   
-  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37,44,45]; 
+  var marvelsets = [0,1,5,7,11,13,14,16,18,20,21,22,24,25,26,27,35,36,37,44,45,47]; 
   var dcsets = [4,6,9,12,17,19,28,32,33,34,46];
   var dndsets =[2,8,23,38,39,40];
   var entityMap = {"&": "&amp;","<": "&lt;",">": "&gt;",'"': '&quot;',"'": '&#39;',"/": '&#x2F;'};
@@ -1649,7 +1650,7 @@ document.getElementById('file').onchange = function(){
   init(65,dps,'DPS','dps',[],dps_aff);
   init(66,m_op2022,'M2022','dps',m_op2022_dice,m_op2022_aff);
   init(67,skc,'SKC','skc',[],skc_aff);
-
+  init(68,msw,'MSW','msw',[],msw_aff);
    
   Array.prototype.extend = function (a) {
       a.forEach(function(x){this.push(x)},this);
@@ -2375,6 +2376,7 @@ document.getElementById('file').onchange = function(){
 	ig:'ig',
 	dps:'dps',
 	skc:'skc',
+	msw:'msw',
 	
 	  //op sets]
 	m2022:'m2022',
