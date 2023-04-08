@@ -250,7 +250,7 @@
   <input type="checkbox" id="set37" title="Dark X-men" checked>DXM
   <input type="checkbox" id="set44" title="Avengers Infinity Gauntlet" checked>IG
   <input type="checkbox" id="set45" title="Dark Phoenix Saga" checked>DPS
-  <input type="checkbox" id="set47" title="Marvel Secret Wars" checked>MSW
+  <input type="checkbox" id="set47" title="Marvel Secret Wars" >MSW
   <input type="checkbox" id="set4" title="Justice League" checked>JL
   <input type="checkbox" id="set6" title="War of Light" checked>WoL
   <input type="checkbox" id="set9" title="World's Finest" checked>WF
@@ -1336,7 +1336,7 @@ document.getElementById('file').onchange = function(){
   }[set[i][2]];
   var name = p[0].split('@')[0];
   var thisdie = getdice(setname, p[0]);
-  var type = thisdie ? 0 : p[1] === 'Basic Action Card' || setname == 'JLop' ? 2 : 1;
+  var type = thisdie ? 0 : p[1] === 'Basic Action Card' || p[1] === 'Epic Basic Action' || p[1] === 'Basic Action'  || setname == 'JLop' ? 2 : 1;
   var gend = type == 0 ? getgender(setname, p[0]) || 0 : 2;
   var t = '<tr data-nr="'+nr+'">', txt = '';
   var subname = p[1];
