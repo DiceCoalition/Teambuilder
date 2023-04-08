@@ -1292,7 +1292,12 @@ document.getElementById('file').onchange = function(){
   function gendice(s) {
       if (!s) return '';
       var totals = [gendicetotals(s),gendicetotals(s.substring(1)),gendicetotals(s.substring(2))];
-      return gendice1(0,s)+gendice1(0,s.substring(4))+gendice1(0,s.substring(8))+gendice1('1 hide',totals);
+      //TODO: Need to rework this line for showing 4 character faces
+      var dice = gendice1(0,s)+gendice1(0,s.substring(4))+gendice1(0,s.substring(8));
+      if(s.length > 12)
+          dice += gendice1(0,s.substring(12));
+      dice += gendice1('1 hide',totals);
+      return dice;
   }
   function getgender(s,v) {
     v = v.replace('™', '');
