@@ -29,11 +29,13 @@
 	 WWE:'wwe legends',NEWDAY:'newday',WSHIELD:'the shield', NWO:'nwo',
 	 PAWN:'sidekick',
 	 IW:'infinity watch', BO:"black order", H:"hand",
-	 SHI:'shiarempire'
+	 SHI:'shiarempire',
+	 TCS:'thorcorps',
+	 F4:'fantastic4',
     };
     // convert to BW: TDF, AV, VM, GG, ZO, GOOD, SF, XMEN, DCLOD, DDM, DCB, DCS
     var iconid = {
-     M:'e1', F:'e2', B:'e3', S:'e4',
+     M:'e1', F:'e2', B:'e3', S:'e4',BF:'e5', BM:'e6', BS:'e7', FM:'e8', FS:'e9', FF:'e10', MM:'e11', BB:'e33', SS:'e44', MS:'eA', 
      EQ:'eq', TDF:'aA',
      AV:'a2', VM:'a4', GG:'aG', ZO:'aDZOM', 1:'eg1c', 2:'eg2b', "2B":'e33', "2F":'e22', "BF":'e5',
      GOOD:'dg',
@@ -59,12 +61,14 @@
 	 HELL:'aHELL',
 	 WWE:'wwe',NEWDAY:'newday',WSHIELD:'shield', NWO:'nwo',
 	 IW:'aIW', BO:"aBORDER", H:"aHandIco",
-	 SHI:'aSHI'
+	 SHI:'aSHI',
+	 TCS:'aTCS',
+	 F4:'a3'
 	 
     };
     var raritycolor = ["gray","gray","green","yellow","red"];
 
-    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig','dps','skc'];
+    var set_names = ['avx','uxm','bff','ygo','jl','aou','wol','asm','fus','wf','tmnt','cw','gaf','drs','dp','hhs','imw','bat','def','sww','smc','gotg','xfc','toa','thor','ai','ki','jll','hq','bfu','ork','sw','jus','doom','myst','xmf','xfo','dxm','tiw','aiw','zhn','wwe','bit','tag', 'ig','dps','skc','msw'];
 
     var affiliation_names = [
     'no', 'xm', 'av', 'ff', 'vn', 'pf',
@@ -86,7 +90,7 @@
     'ytd', 'yeg',
     'kc','kum', 'ko','ksw','ki','kdg',
 	'wwe','nd','shd','nwo',
-	'iw','bo','h','shi'
+	'iw','bo','h','shi','tcs',
     ];
     
     //The below table is for individual icons that are used in card text.
@@ -159,6 +163,7 @@
 	{ name:'blackorder', pic:'aBORDER'},
 	{ name:'hand', pic:'aHAND'},
 	{ name:'shiarempire', pic:'aSHI'},
+	{ name:'thorcorps', pic:'aTCS'},
     ];
 
 	//the table below is for affiliation icons on the card, so double and triple icons
@@ -228,6 +233,7 @@
      MYSTIC:'mystic',
      O:'order',
      T:'turtle',
+     TCS:'thorcorps',
      WB:'bluelantern',
      WC:'conduit',
      WFB:'batman',
@@ -265,6 +271,18 @@
 	 WSJ:['justiceleague','superman'],
 	 WSBJ:['superman','batman','justiceleague'],
 	 WMV:['mystic','villain'],
+	 
+	 
+	  //MSW affiliations
+	 
+	 TCORPS:'thorcorps', 
+	 
+	 AASF:['avengers','spideyfriends'],
+	 AIWATCH:['avengers','infinitywatch'],
+	 FFIWATCH:['fantastic4','infinitywatch'],
+	 XIWATCH:['xmen','infinitywatch'],
+	 XASF:['xmen','spideyfriends']
+	 
     };
 
     var affiliation_set = {};
@@ -297,6 +315,166 @@
 //energy key: 0:generic, 1: mask, 2:fist, 3:bolt, 4:shield ... //todo add crossover
 //crossover energy: 5: BF, 6: BM, 7: BS, 8: FM, 9: FS, A: MS, 
 
+
+//begin MARVEL SECRET WARS
+var msw_aff = { 0:'0', A:'2', F:'3', G:'G', I:'IWATCH', H:'F', S:'ASF', T:'TCS', V:'6', X:'1', B:'AASF', C:'AIWATCH', D:'FFIWATCH', E:'XIWATCH', J:'XASF' };
+
+ var msw = [
+ 
+'15003Casket of Ancient Winters|Epic Basic Action|Your opponent KOs three of their character dice, moves 3 dice from their Reserve Pool to their bag, and moves 3 dice from their Prep Area to their Used Pile.',
+'16003Cosmic Cube|Epic Basic Action|Switch life totals with your opponent.',
+'14003Crimson Gem of Cyttorak|Epic Basic Action|Each player chooses a number of character dice in their Field Zone equal to the number of character dice controlled by the player who controls the fewest, and moves the rest to their bag. Players do the same for dice in Prep Area and Reserve Pool.',
+'14003Daily Bugle|Basic Action|Draw 2 dice.|Prep up to 2 of them, roll the remainder.',
+'14003Distraction|Basic Action|Target opponent chooses two of their character dice. They cannot block this turn.|Global: Pay [M]. Remove target attacking character die from combat.',
+'13003Escape!|Basic Action|Choose one:|&bull; Target character die can\'t be targeted this turn.|&bull; Prep a die from your Used Pile.',
+'13003Instant War|Basic Action|Each player draws 3 dice and fields all [PAWN] drawn this way. Each player places the remaining dice in their bag or Used Pile.',
+'12003Invulnerability|Basic Action|Until end of turn, when one of your attacking character dice is KO\'d, return it to the Field Zone.|Global: Pay [B]. Target character die gets +1 attack.',
+'13003Locked in Combat|Basic Action|Target a character die from each player\'s Field Zone and set them aside until end of turn (then return them to play at their previous level).|When they return to the Field Zone, deal each 2 damage.',
+'13003Pirate Broadcast|Basic Action|Cancel any Persistent Global Ability effects. Neither player may use Global Abilities until end of turn. Prep a die from your bag.|Global: Pay [1]. Target Global Ability cannot be used until the start of your next turn. Use this Global Ability only once per turn.',
+'12003Shocking Grasp|Basic Action|Deal 1 damage to target character die. If that character is KO\'d by this damage, you may Prep this die.',
+'14003The Beyonder|Basic Action|Reroll 2 target character dice. Gain 1 life.',
+'15003The Darkhold|Epic Basic Action|Pay X life, draw and roll X dice.',
+'14003The Infinity Gauntlet|Epic Basic Action|Reroll all character dice.',
+'14003The Siege Perilous|Epic Basic Action|Each player rolls all dice from their Prep Area and Used Pile, and each player may immediately field all of those character dice for free.',
+'14003Wallop|Basic Action|KO target level 1 character die.|** Instead, KO target level 1 or level 2 character die.|Global: Pay [F]. Target blocked character die deals no damage.',
+'12203Agent Brand|Alpha Flight|While Agent Brand is active, your character dice get +1 defense.',
+'15304Apocalypse|Obsessive|Overcrush (Character dice with Overcrush deal damage in excess of blocker\'s defense to opponent.)',
+'122E3Beast|Olympic Athleticism|Regenerate (Reroll when KO\'d)',
+'151C4Black Panther|Clutching Reality|Energize - Roll 2 dice from your bag.|When fielded, roll a die from your bag.',
+'13303Black Swan|Serving Rabum Alal|When fielded, the next [S] character die you purchase costs [2] less (to a minimum of 1).',
+'14104Captain Britain|Baron of Higher Avalon|While Captain Britain is active, your opponent can\'t field character dice at level 3.',
+'144A4Captain Marvel|Alpha Flight|While Captain Marvel is active, your Character dice get +1 attack and +1 defense.',
+'142X4Colossus|Inferno|',
+'132V3Corvus Glaive|The Black Order|When fielded, KO a character die you control. If you do, the next die you purchase this turn costs [2] less (minimum 1).',
+'133J4Dazzler|Lightbringer|When fielded, deal 4 damage to target [M] character die.',
+'132A4Falcon|Take Flight|Teamwatch - Prep a [PAWN] from your Used Pile.|Global: Pay [F]. Once during your turn, each player must field a [PAWN] from their Used Pile if able.',
+'154V4Franklin\'s Galactus|Earth Shatterer|',
+'16404God Emperor Doom|Harnessing the Beyonders|When fielded, deal 3 damage to target character die and reroll target character die.',
+'121T2Goddess of Thunder|Thor Corps|Goddess of Thunder gets +5 attack while you have another active character die with Thor in the name or subtitle.',
+'154T4Groot|Skilled Investigator.|When fielded, roll 2 dice from your bag.',
+'121F4Invisible Woman|Also Dr. Richards|Invisible Woman gets +1 attack for each of your other active [F4] character dice.|Global: Pay [M]. Target character die must block this turn.',
+'154T4Jane Foster|Doctor|When fielded, gain 2 life, and gain an extra 2 life for each of your other active characters with Thor in their name or subtitle, or the [TCS] affiliation.',
+'123H3Jimmy Woo|Agent of S.H.I.E.L.D.|Jimmy Woo can\'t be targeted by opposing effects.',
+'13103Kang|Prophetic Revelation|While Kang is active, once per turn, a player may pay 2 life to reroll a die in their Reserve Pool.',
+'154V4King Hyperion|Earth-21195|While King Hyperion is active, when an opponent uses an action die, deal 2 damage to target character die.',
+'12104Madelyne Pryor|Goblin Horde|Energize - Field a [PAWN] from your Used Pile.|While Madelyne Pryor is active, your [PAWN] get +1 defense.',
+'13104Magik|Demon Horde|While Magik is active, when you use an action die, field a [PAWN] from your Used Pile or Prep Area.',
+'133V4Mister Sinister|Bar Sinister|If Mister Sinister would be KO\'d, you may KO one of your [PAWN] instead.|When fielded, lose 1 life if you don\'t have any active [PAWN].',
+'12402Molecule Man|Owen Reece|',
+'131F3Mr. Fantastic|Stretch|Teamwatch - Move up to 2 dice from your Used Pile to your bag.',
+'134F3Namor|King of the Deep|When Namor blocks or is blocked, he gets +3 attack.|Global: Pay [S]. Target character die gets +1 defense',
+'15304Phoenix Force Cyclops|Bonded to the Force|When fielded, choose an opposing character card, cancelling all previous choices.|That character gets -5 attack while Phoenix Force Cyclops is active.',
+'13404Proxima Midnight|Impossible Endurance|Regenerate (Reroll when KO\'d)',
+'143X4Scarlet Witch|Chronokinesis|While Scarlet Witch is active, you can reroll the dice in your Reserve Pool at the end of your Main Step.',
+'14103Sheriff Strange|Isle of Agamotto|While Sheriff Strange is active, when you use an action die, rerol target character die.',
+'133S3Spider-Gwen|Ghost Spider|* Spider-Gwen can\'t be blocked.',
+'122B2Spider-Man|Peter Parker|',
+'132G4Star-Lord|Leading the Guardians|When fielded, your character dice get +1 attack (until end of turn).',
+'144T4Stormbreaker Ray|Devoted to Doom|Stormbreaker Ray can\'t be blocked by character dice with cost 2 or less',
+'152V2Terrax|The Truly Enlightened|When fielded, roll 2 dice from your bag.',
+'131V4The Maker|Stretchy, Twisted|When The Maker is blocked, you may spin this die to the level of the blocking character die.',
+'142F4Thing|""What Time Is It?"|When fielded, KO target [S] character die.',
+'143T4Thor of Higher Avalon|Thor Corps Investigator|When fielded, roll a die from your bag.',
+'133B4Ultimate Spider-Man|Life Raft Stowaway|You may field Ultimate Spider-Man for free.',
+'142X4Wolverine|Savage|Deadly (At the end of turn, KO all character dice that were engaged with this character.)',
+'23204Agent Brand|Hel-Rangers|While Agent Brand is active, your characters gain Fast.',
+'25304Apocalypse|Evil|While your life total is higher than your opponent\'s, Apocalypse gets +2 attack.',
+'232E4Beast|Genius Intellect|While Beast is active, when you field a [F] character die, choose one:|&bull; Deal 2 damage to target character die.|&bull; Target character die gets +2 attack.',
+'251D4Black Panther|Gauntlet Wielder|Energize - Your [F4] character dice get +2 attack this turn.|While Black Panther is active, your character dice get +1 attack while attacking.',
+'24303Black Swan|Defending Castle Doom|While Black Swan is active, you may KO her to prevent combat damage dealt to one of your [S] character dice this turn.',
+'25104Captain Britain|Quantum Reality Manipulation|While Captain Britain is active, at the end of your opponent\'s Roll and Reroll Step, you may reroll a die in your Reserve Pool.',
+'254A4Captain Marvel|The Last Avenger|When fielded, roll 2 dice from your Used Pile.',
+'242X4Colossus|Wielding the Soulsword|Energize - Reroll target character die.|Deadly (At the end of turn, KO all character dice that were engaged with this character.)',
+'232V4Corvus Glaive|Virtual Immortality|Regenerate (Reroll when KO\'d)',
+'233J3Dazzler|Mojoverse Rebel|When fielded, deal 4 damage to target Character die that has no Team Affiliation.',
+'232A4Falcon|Wings from Black Panther|Recruit - [PAWN].|Global: Pay [F]. Once during your turn, each player must field a [PAWN] from their Used Pile if able.',
+'274V4Franklin\'s Galactus|No Mercy|Franklin\'s Galactus costs [1] less to purchase for each die in your Prep Area (to a minimum of 1).',
+'22402God Emperor Doom|Singular Flaw|If God Emperor Doom is blocked by 4 or more character dice, return the blocked die to its card.',
+'241T4Goddess of Thunder|Stormborn|When fielded, reroll X target character dice where X is equal to the number of active [TCS] characters in your Field Zone.',
+'234T4Groot|Bark and Fight|When fielded, target character die can\'t block this turn.',
+'221F4Invisible Woman|Overcoming Malice|When blocking, Invisible Woman deals damage equal to her defense.',
+'244T4Jane Foster|Valkyrie|When fielded, deal 2 damage to target character die. If that character die has a purchase cost of 4 or more, deal it 5 damage instead.',
+'233H3Jimmy Woo|Skilled Interrogator|While Jimmy Woo is active, when you use an action die, spin target opposing character die down one level or spin target level 1 character die to an energy face.',
+'23102Kang|Hel-Ranger|While Kang is active, at the beginning of your opponent\'s Attack Step, you may KO target [PAWN]',
+'244V4King Hyperion|Squadron Sinister|King Hyperion gets +1 attack and +1 defense for each different energy type you have in your Reserve Pool. (? does not count toward energy types.)|Global: Pay [S]. Target attacking character goes to the Used Pile if KO\'d this turn.',
+'23104Madelyne Pryor|Hex Men|When fielded, place a +1 attack and +1 defense counter on the character die on your team with the least counters on it (in case of a tie, you choose).|Global: Pay [M] and 1 life. Once per turn, field a [PAWN] from your Used Pile.',
+'24103Magik|Darkchild|When fielded, deal 2 damage to all opposing character dice.|Global: Pay [B] and 1 life. Once per turn, field a [PAWN] from your Used Pile.',
+'243V4Mister Sinister|Battleworld|When Mister Sinister is KO\'d, you may KO an opposing character die of cost 4 or less.|Global: Pay [BM]. Each player chooses one of their character dice to take 3 damage.',
+'234V4Molecule Man|Megalomaniac|Deadly (At the end of turn, KO all character dice that were engaged with this character.)|Global: Pay [S]. The first character you field this turn is free to field.',
+'231F4Mr. Fantastic|Brilliant Scientist|Mr. Fantastic gets +2 attack and +2 defense while blocking.|Global: Pay [M]. Target character die must attack this turn.',
+'244D4Namor|Warring with the Surface|When fielded, each player draws 3 dice and fields all [PAWN] drawn this way. Each player places the remaining dice in their bag or Used Pile.',
+'26304Phoenix Force Cyclops|Fire of Love|When Phoenix Force Cyclops is dealt combat damage, deal that much damage to target opponent.',
+'23404Proxima Midnight|Master Combatant|When Proxima Midnight deals combat damage to an opponent, reroll that die. If it shows a character face, Prep that die.',
+'253X4Scarlet Witch|Mystic Arcana|While Scarlet Witch is active, when an opponent uses an action die, deal 3 damage to target character die.',
+'25104Sheriff Strange|Last Days|While Sheriff Strange is active, when you use an action die, your character dice get +1 attack this turn.',
+'233S4Spider-Gwen|The Spectacular|When fielded, deal 5 damage to target character die. Spider-Gwen dice can\'t attack the turn they are fielded.|Global: Pay [B]. If target die deals combat damage to your opponent, put it into your bag instead of the Used Pile.',
+'232B4Spider-Man|Spider-Tracers|Spider-Man can block an additional character die.',
+'242G3Star-Lord|Space Epic|Teamwatch - Target character die gets +2 attack (until end of turn).',
+'254T4Stormbreaker Ray|Thor Corps|Energize - Deal 2 damage to target character die.|When fielded, KO target [M] character die.',
+'252V3Terrax|Herald of Galaktus|When fielded, reroll target character die.',
+'241V4The Maker|Dark Ultimates|Teamwatch - Target character die gains Deadly.',
+'252F4Thing|The Shield|While Thing is active, your opponent can\'t target your other character dice.',
+'253T4Thor of Higher Avalon|Fighting Dissidents|While Thor of Higher Avalon is active, at the start of your opponent\'s attack step, deal 2 damage for each Team Affiliation in their Field Zone, divided any way you choose among their characters.',
+'233A4Ultimate Spider-Man|Rebellion in Manhattan|When fielded, reroll target [TCS] or [B] character die.',
+'242X3Wolverine|Your Play, Hero|When Wolverine KOs a character die, add it to owner\'s bag instead of sending it to the Prep Area.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.',
+'32204Agent Brand|Agent of S.W.O.R.D.|When fielded, two target character dice get +1 attack.',
+'36304Apocalypse|Baron|While Apocalypse is active, when you could use a Global Ability, you may pay [BM] and field [PAWN] from your Used Pile and bag until you have 4 [PAWN] in the Field Zone.',
+'332E2Beast|Mind Gem|While Beast is active, when you spend a [M] to field a character die, deal up to 2 damage to target character die.',
+'361D4Black Panther|Toppling Doomstadt|Energize - Your [F4] character dice get +2 attack this turn.|While Black Panther is active, when your opponent fields a character die, you may reroll one of their other character dice.',
+'34303Black Swan|Loyalist|While Black Swan is active, your [S] character dice get +1 attack and +1 defense.',
+'35104Captain Britain|Sorcerer|While Captain Britain is active, when you use an action die, the next die you purchase this turn costs [2] less (to a minimum of 1).',
+'354A4Captain Marvel|New Avenger|Teamwatch - Roll a die from your Prep Area and reroll target opposing character die.',
+'352X4Colossus|Fighting Limbo|Teamwatch - Put a +1 attack and +1 defense token on one of your [XMEN] characters.|Iron Will',
+'332V4Corvus Glaive|Brutal Warlord|At the end of your turn, if 4 or more opposing character dice were KOd, roll 2 dice from your bag and Prep 3 dice.',
+'323J4Dazzler|Alison Blaire|While you have an active character die with cost 4 or greater, Dazzler is free to field.|When fielded, deal 2 damage to target non-[B] character die.',
+'342A4Falcon|Dreams of Flying|When Falcon attacks, Prep a [PAWN] from your bag or Used Pile.|Recruit - [PAWN].',
+'364V4Franklin\'s Galactus|Mere Puppet|If an effect would KO or reroll another of your dice, you may KO or reroll Franklin\'s Galactus instead',
+'36403God Emperor Doom|Rabum Alal|While God Emperor Doom is active, at the start of the Attack Step, target character die\'s attack becomes 0 (until end of turn).',
+'351T4Goddess of Thunder|Sovereign of Asgard|When fielded, roll X dice from your bag and deal X damage to target character die, where X is equal to the number of active [TCS] character dice in your Field Zone.',
+'354T4Groot|I Am... Thor!|When fielded, deal 1 damage to every character die. Prep a die from your bag if any character dice are KO\'d by this damage.',
+'341F4Invisible Woman|Regent of the Uhari Throne|While Invisible Woman is active, your [F4] characters and [PAWN] get +1 attack and +1 detense.',
+'364T4Jane Foster|Mystical Teleportation|When fielded, swap any number of character dice in your Field Zone with character dice from your Used Pile or Prep Area (on the same level).|Global: Pay [1]. Spin target character die that was fielded this turn up 1 level.',
+'343H4Jimmy Woo|Department Zero|While Jimmy Woo is active, when you use an action die, gain 2 life and deal 2 damage to target character die.',
+'34104Kang|Calling Chronoallies|While Kang is active, at the start of your Clear and Draw Step you may move 3 dice from your Field Zone to your bag. If you do, you may draw an extra 3 dice from your bag.',
+'354V4King Hyperion|Baron of Utopolis|Each of your King Hyperion dice gets +1 attack for each opposing character die of a lower level.|Global: Pay [S]. Target attacking character goes to the Used Pile if KO\'d this turn.',
+'33104Madelyne Pryor|Baroness of Limbo|While Madelyne Pryor Is active, your [PAWN] dice get +1 attack.|Global: Pay [M] and 1 life. Once per turn, field a [PAWN] from your Used Pile.',
+'33103Magik|Inferno|While Magik is active, when you use an action die, place a +1 attack and +1 defense token on her card.|Global: Pay [B] and 1 life. Once per turn, field a [PAWN] from your Used Pile.',
+'353V4Mister Sinister|Twisted Experimenter|If Mister Sinister would be KO\'d, you may KO one of your [PAWN] instead.|Global: Pay [BM]. Each player chooses one of their character dice to take 3 damage.',
+'344F4Molecule Man|Dinosaur, Colorado|While Molecule Man is active, your opponent must pay [2] to block each of your [F4] character dice.',
+'331F2Mr. Fantastic|Brain-Box|When fielded, your opponent chooses an affiliation. KO two target character dice that are not that affiliation.',
+'334V4Namor|Leading the Cabal|While Namor is active, your opponent must pay 3 life to declare blockers.',
+'36304Phoenix Force Cyclops|Surviving the Multiverse|While Phoenix Force Cyclops is active, at the start of your opponent\'s Attack Step they pick an affiliation. Only [PAWN] and characters of that affiliation may attack.',
+'33404Proxima Midnight|In the Name of Sorrow!|When Proxima Midnight attacks, your other character dice take a maximum of 4 combat damage this turn.',
+'353X4Scarlet Witch|Wanda|When fielded, ignore all text on opposing character cards (until end of turn, including Global Abilities).',
+'35104Sheriff Strange|Peacekeeper|While Sheriff Strange is active, when you use an action die, roll a character die from your Used Pile.',
+'333S4Spider-Gwen|Interdimensional Travel Watch|Recruit - [B] character die.|Global: Pay [B]. If target die deals combat damage to your opponent, put it into your bag instead of the Used Pile.',
+'342B4Spider-Man|Parker Industries|Teamwatch - Prep a die from your bag.',
+'342G2Star-Lord|Star-Crossed Lovers|Star-Lord costs [2] less to purchase and 2 less to field while you have an active [GG] character die.',
+'354T4Stormbreaker Ray|Korbinite|Energize - Deal 2 damage to target [F] character die.|When fielded, KO target [F] character die.|Global: Pay [3]. Roll a character die from your Used Pile, field it if it shows a character face. Can only be used if one of your character dice was spun to an energy face or rerolled this turn.',
+'362V4Terrax|Namor\'s Cabal|While Terrax is active, when one of your character dice is KO\'d, deal 4 damage to target character die.',
+'351V4The Maker|Betrayer|When fielded, spin X of your character dice to energy faces, then spin X target opposing character dice to energy faces.',
+'362F3Thing|Brawn of the Team|When fielded, put a +1 attack and +1 defense token on each of your [F4] characters.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.',
+'353T4Thor of Higher Avalon|Doubtful|Overcrush|When fielded, KO target [S] character die.',
+'333B4Ultimate Spider-Man|Pocket Burger|Teamwatch - Gain 1 life.|When KO\'d, gain 2 life.',
+'362X3Wolverine|No More Distractions|When fielded, target a character die, replacing all previous choices. Ignore that character die\'s card text for all copies of that die (until end of turn).',
+'46304Apocalypse|Wicked Supremacist|Overcrush|While Apocalypse is active, when you field a character die, deal 2 damage to target character die.|Global: Pay [B]. Once per turn, KO one of your character dice, and the next die you purchase this turn costs [2] less (to a minimum of 1).',
+'432E4Beast|Illuminati|While Beast is active, when you field a Character at level 3, reroll target character die.',
+'441F1Black Panther|Resisting Doom|While Black Panther is active, if you attack with 6 or more different [F4] characters you win the game.',
+'47403God Emperor Doom|Destroyer Of Worlds|Iron Will|While God Emperor Doom is active, the first time an opponent uses a Global Ability each turn they lose 2 life.',
+'461F4Invisible Woman|Interdimensional Adventurer|When fielded, reroll 2 target character dice, and all of your character dice get +3 attack until end of turn.',
+'454T4Jane Foster|League of Realms|While Jane Foster is active, reduce damage from opposing character\'s abilities by 2. When Jane Foster is KO\'d, you may move a [F] with purchase cost 5 or more from your Used Pile to your Prep Area.|Global: Pay [1]. Spin target character die that was fielded this turn up 1 level.',
+'45104Kang|Rewriting History|While Kang is active, the first time each turn one of your dice would be KO\'d, rerolled, or spun to a different face by an opposing source, you may instead roll that die. If it shows a character face, it stays in the Field Zone on that face.',
+'464V4King Hyperion|Mark Milton|Each of your King Hyperion dice gets + 1 attack for every opposing character die in the Field Zone.|Global: Pay [S]. Target attacking character goes to the Used Pile if KO\'d this turn.',
+'444S2Molecule Man|Cheeseburger Eater|While Molecule Man is active, your [SF] characters cost [1] less to field, cost [1] less to purchase, and return to the field Zone after they deal combat damage to your opponent.',
+'431F2Mr. Fantastic|Rebuilding Everything|When fielded, roll a die from your bag for each of your active [F4] Character dice.',
+'45303Phoenix Force Cyclops|Fighting Against Doom|When fielded, choose an opposing character card, cancelling all previous choices. Your opponent can\'t field that character die until Phoenix Force Cyclops leaves the Field Zone.|Global: Pay [FF]. Move a Phoenix Force die from your Used Pile to the Field Zone at its lowest level.',
+'452B4Spider-Man|Black Suit|Opposing non-[F] character dice get -1 attack and -1 defense.|Global: Pay [F]. Spin an opponent\'s [F] character down 1 level.',
+'432G4Star-Lord|Black Vortex|Teamwatch - Deal 2 damage to target character die and Prep a die from your bag.',
+'462F3Thing|Idol to Millions|Iron Will|When fielded, roll 3 dice from your bag.|Global: Pay [F]. Once per turn, on your turn, Prep a die from your bag.',
+'463T4Thor of Higher Avalon|God of Thunder|While Thor of Higher Avalon is active, when you use an action die, deal 2 damage divided any way you choose among up to 2 target opposing character dice.',
+'443A4Ultimate Spider-Man|Brooklyn Visions Academy|Recruit - [S] character die.|When fielded, choose a card on your team, replacing all previous choices. It gains [SF].'
+
+ ];
 
 //begin Superman Kryptonite Crisis
 
@@ -5557,8 +5735,39 @@ var sw = [
 	"SKC@Supergirl":"155 277 388",
 	"SKC@Superman":"146 267 278",
 	"Wally West":"133 244 255",
-	"SKC@Wonder Woman":"033 135 257"
-
+	"SKC@Wonder Woman":"033 135 257",
+	
+	//MSW
+	"Agent Brand":"021 022 132",
+	"MSW@Beast":"021 122 132",
+	"MSW@Black Panther":"157 278 288",
+	"Captain Britain":"133 145 277",
+	"MSW@Captain Marvel":"143 256 267",
+	"MSW@Colossus":"144 165*277*",
+	"Dazzler":"021 133 234",
+	"MSW@Falcon":"022 133 143",
+	"Franklin\'s Galactus":"033 255 258 3AA",
+	"God Emperor Doom":"135 256 267*",
+	"Goddess of Thunder":"021 122 132",
+	"Invisible Woman":"012 023 025",
+	"MSW@Jane Foster":"145 256 368",
+	"Jimmy Woo":"012 022*124*",
+	"MSW@Kang":"133 134 245",
+	"King Hyperion":"144 255 266",
+	"MSW@Magik":"023 034 145",
+	"Molecule Man":"011 022 255",
+	"Phoenix Force Cyclops":"155 277 38A",
+	"Sheriff Strange":"033 146 258",
+	"MSW@Spider-Gwen":"022*035 046",
+	"MSW@Star-Lord":"124 235 255",
+	"Stormbreaker Ray":"146 157 278",
+	"Terrax":"155 266 277",
+	"The Maker":"115 226 227",
+	"Thing":"133 255 277",
+	"Thor of Higher Avalon":"153 164 276",
+	"Ultimate Spider-Man":"*133 143 254",
+	"MWSW@Wolverine":"132 144 154"
+	
     };
     var gender = {
     "Black Widow":1,
@@ -5845,6 +6054,10 @@ var sw = [
 	"Lita":1,
 	"Trish Stratus":1,
 	
+	"Black Swan":1,
+	"Proxima Midnigh":1,
+	"Typhoid Mary":1,
+	
 	"Dark Phoenix":1,
 	"Deathbird":1,
 	"Lilandra":1,
@@ -5853,6 +6066,14 @@ var sw = [
 	"Mary Shazam":1,
 	
 	"Groot Thor":2,
+	"Agent Brand":1,
+	"Dazzler":1,
+	"Goddess of Thunder":1,
+	"Invisible Woman":1,
+	"Spider-Gwen":1,
+
+	
+	
     };
 
 
