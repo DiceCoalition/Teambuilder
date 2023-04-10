@@ -5852,6 +5852,7 @@ var sw = [
 	
 	"Mary Shazam":1,
 	
+	"Groot Thor":2,
     };
 
 
