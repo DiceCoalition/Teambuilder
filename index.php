@@ -1287,7 +1287,10 @@ document.getElementById('file').onchange = function(){
   }
   function gendicetotals(s) {
       if (!s) return undefined;
-      return parseInt(s[0],16) + parseInt(s[4],16) + parseInt(s[8],16);
+	  var total = parseInt(s[0],16) + parseInt(s[4],16) + parseInt(s[8],16);
+	  if(s.length > 12)
+		  total += parseInt(s[12],16);
+      return total;
   }
   function gendice(s) {
       if (!s) return '';
