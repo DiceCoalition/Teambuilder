@@ -582,7 +582,7 @@ var msw_aff = { 0:'0', A:'2', F:'3', G:'G', I:'IWATCH', H:'F', S:'ASF', T:'TCS',
 '32404Bat-Signal|Super Carbon Arc Filaments|Roll a die from your bag.|If Batman is active, roll an additional die from your bag.|If Robin is active, prep a die from your bag.|Global: Pay [M]. Reroll target [DCV] character die.',
 '352Q4Batman|Legend of the Dark Knight|While Batman is active, when one of your character dice is KO\'d deal 1 damage to target player and 1 damage to target character die.|Global: Pay [2M]: Each player may field up to 2 Sidekick dice from their Used Pile.',
 '342N4Big Barda|Warrior|During your turn, Big Barda gets +1A for each attacking character die.',
-'35401Bizarro|Kryptonite Enhanced Intelligence|Once per turn, you may add a Bizarro die from this card to your bag. If you do, your opponent takes one of their unpurchased dice and adds it to their Used Pile.|Overcrush',
+'35401Bizarro|Kryptonite Enhanced Intelligence|Once per turn, you may add a Bizarro die from this card to your bag. If you do, your opponent takes one of their unpurchased character dice and adds it to their Used Pile.|Overcrush',
 '343T4Blue Beetle|Close Combat Expert|Fast|Prevent damage from Range dealt to Blue Beetle.',
 '341J4Booster Gold|Legion Flight Ring|When fielded, you can swap an action die in your Reserve Pool with an action die in your Prep Area or Used Pile. (Put the new die on the same face as the one that started in the Reserve Pool.)',
 '35104Brainiac 5|Coluan Prodigy|While Brainiac 5 is active, your active character dice gain Range 1 if they didn\'t already have Range.|Energize - Gain 1 life.',
@@ -5765,7 +5765,7 @@ var sw = [
 	"The Maker":"115 226 227",
 	"Thing":"133 255 277",
 	"Thor of Higher Avalon":"153 164 276",
-	"Ultimate Spider-Man":"*133 143 254",
+	"Ultimate Spider-Man":"133*143 254",
 	"MWSW@Wolverine":"132 144 154"
 	
     };
@@ -6065,6 +6065,7 @@ var sw = [
 	
 	"Mary Shazam":1,
 	
+	"Groot Thor":2,
 	"Agent Brand":1,
 	"Dazzler":1,
 	"Goddess of Thunder":1,
