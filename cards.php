@@ -5751,7 +5751,7 @@ var sw = [
 	"Goddess of Thunder":"021 122 132",
 	"Invisible Woman":"012 023 025",
 	"MSW@Jane Foster":"145 256 368",
-	"Jimmy Woo":"012 022*124*",
+	"Jimmy Woo":"012*022*124",
 	"MSW@Kang":"133 134 245",
 	"King Hyperion":"144 255 266",
 	"MSW@Magik":"023 034 145",
