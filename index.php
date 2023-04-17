@@ -250,7 +250,7 @@
   <input type="checkbox" id="set37" title="Dark X-men" checked>DXM
   <input type="checkbox" id="set44" title="Avengers Infinity Gauntlet" checked>IG
   <input type="checkbox" id="set45" title="Dark Phoenix Saga" checked>DPS
-  <input type="checkbox" id="set47" title="Marvel Secret Wars" >MSW
+  <input type="checkbox" id="set47" title="Marvel Secret Wars" checked>MSW
   <input type="checkbox" id="set4" title="Justice League" checked>JL
   <input type="checkbox" id="set6" title="War of Light" checked>WoL
   <input type="checkbox" id="set9" title="World's Finest" checked>WF
