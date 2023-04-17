@@ -5766,7 +5766,7 @@ var sw = [
 	"Thing":"133 255 277",
 	"Thor of Higher Avalon":"153 164 276",
 	"Ultimate Spider-Man":"133*143 254",
-	"MWSW@Wolverine":"132 144 154"
+	"MSW@Wolverine":"132 144 154"
 	
     };
     var gender = {
