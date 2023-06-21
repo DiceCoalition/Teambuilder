@@ -5763,7 +5763,7 @@ var sw = [
 	"Stormbreaker Ray":"146 157 278",
 	"Terrax":"155 266 277",
 	"The Maker":"115 226 227",
-	"Thing":"133 255 277",
+	"MSW@Thing":"133 255 277",
 	"Thor of Higher Avalon":"153 164 276",
 	"Ultimate Spider-Man":"133*143 254",
 	"MSW@Wolverine":"132 144 154"
